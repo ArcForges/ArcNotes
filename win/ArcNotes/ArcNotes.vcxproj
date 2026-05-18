@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    <RootNamespace>ArcNotes</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <TargetName>ArcNotes</TargetName>
+  </PropertyGroup>
+  <Import Project="..\ArcNotes.Win.props" />
+
+  <!-- First-party sources -->
+  <ItemGroup>
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\application.cpp" />
+    <ClCompile Include="..\..\src\mainwindow.cpp" />
+    <ClCompile Include="..\..\src\mainwindow_actions.cpp" />
+    <ClCompile Include="..\..\src\mainwindow_hosts.cpp" />
+    <ClCompile Include="..\..\src\mainwindow_print.cpp" />
+    <ClCompile Include="..\..\src\mainwindow_shell.cpp" />
+    <!-- coordinator -->
+    <ClCompile Include="..\..\src\coordinator\actionregistry.cpp" />
+    <ClCompile Include="..\..\src\coordinator\appcoordinator.cpp" />
+    <ClCompile Include="..\..\src\coordinator\dialogcoordinator.cpp" />
+    <!-- core/commands -->
+    <ClCompile Include="..\..\src\core\commands\commandbus.cpp" />
+    <ClCompile Include="..\..\src\core\commands\exportcommandhandlers.cpp" />
+    <ClCompile Include="..\..\src\core\commands\foldercommandhandlers.cpp" />
+    <ClCompile Include="..\..\src\core\commands\mediacommandhandlers.cpp" />
+    <ClCompile Include="..\..\src\core\commands\notecommandhandlers.cpp" />
+    <ClCompile Include="..\..\src\core\commands\pendingcommandtracker.cpp" />
+    <ClCompile Include="..\..\src\core\commands\searchcommandhandlers.cpp" />
+    <ClCompile Include="..\..\src\core\commands\settingscommandhandlers.cpp" />
+    <ClCompile Include="..\..\src\core\commands\tagcommandhandlers.cpp" />
+    <ClCompile Include="..\..\src\core\commands\trashcommandhandlers.cpp" />
+    <!-- core/repositories -->
+    <ClCompile Include="..\..\src\core\repositories\colormoderepository.cpp" />
+    <ClCompile Include="..\..\src\core\repositories\databaserepository.cpp" />
+    <ClCompile Include="..\..\src\core\repositories\notefolderrepository.cpp" />
+    <ClCompile Include="..\..\src\core\repositories\notehistoryrepository.cpp" />
+    <ClCompile Include="..\..\src\core\repositories\noterepository.cpp" />
+    <ClCompile Include="..\..\src\core\repositories\notesubfolderrepository.cpp" />
+    <ClCompile Include="..\..\src\core\repositories\settingsrepository.cpp" />
+    <ClCompile Include="..\..\src\core\repositories\tagrepository.cpp" />
+    <ClCompile Include="..\..\src\core\repositories\trashrepository.cpp" />
+    <!-- core/services -->
+    <ClCompile Include="..\..\src\core\services\editorformattingservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\errorpresenter.cpp" />
+    <ClCompile Include="..\..\src\core\services\exportservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\markdownrenderservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\mediaservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\notefileservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\notefolderservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\notelinkservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\noteservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\notesubfolderservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\searchservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\tagservice.cpp" />
+    <ClCompile Include="..\..\src\core\services\trashservice.cpp" />
+    <!-- core/state -->
+    <ClCompile Include="..\..\src\core\state\appstate.cpp" />
+    <ClCompile Include="..\..\src\core\state\editorstate.cpp" />
+    <ClCompile Include="..\..\src\core\state\searchstate.cpp" />
+    <ClCompile Include="..\..\src\core\state\uistate.cpp" />
+    <!-- dialogs -->
+    <ClCompile Include="..\..\src\dialogs\aboutdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\actiondialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\attachmentdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\commandbar.cpp" />
+    <ClCompile Include="..\..\src\dialogs\filedialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\imagedialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\layoutdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\linkdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\localtrashdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\markdowntabledialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\masterdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\notebookmarkdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\notedialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\notediffdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\settingsdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\storedattachmentsdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\storedimagesdialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\tabledialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\tagadddialog.cpp" />
+    <ClCompile Include="..\..\src\dialogs\textdiffdialog.cpp" />
+    <!-- helpers -->
+    <ClCompile Include="..\..\src\helpers\arcnotesmarkdownhighlighter.cpp" />
+    <ClCompile Include="..\..\src\helpers\codetohtmlconverter.cpp" />
+    <ClCompile Include="..\..\src\helpers\fakevimproxy.cpp" />
+    <ClCompile Include="..\..\src\helpers\flowlayout.cpp" />
+    <ClCompile Include="..\..\src\helpers\htmlentities.cpp" />
+    <ClCompile Include="..\..\src\helpers\nomenuiconstyle.cpp" />
+    <ClCompile Include="..\..\src\helpers\toolbarcontainer.cpp" />
+    <!-- models -->
+    <ClCompile Include="..\..\src\models\backlinklistmodel.cpp" />
+    <ClCompile Include="..\..\src\models\bookmarktablemodel.cpp" />
+    <ClCompile Include="..\..\src\models\commandmodel.cpp" />
+    <ClCompile Include="..\..\src\models\navigationoutlinemodel.cpp" />
+    <ClCompile Include="..\..\src\models\notefolderlistmodel.cpp" />
+    <ClCompile Include="..\..\src\models\notelistmodel.cpp" />
+    <ClCompile Include="..\..\src\models\notesubfoldertreemodel.cpp" />
+    <ClCompile Include="..\..\src\models\searchresultmodel.cpp" />
+    <ClCompile Include="..\..\src\models\tagtreemodel.cpp" />
+    <ClCompile Include="..\..\src\models\trashitemmodel.cpp" />
+    <!-- services -->
+    <ClCompile Include="..\..\src\services\databaseservice.cpp" />
+    <ClCompile Include="..\..\src\services\settingsservice.cpp" />
+    <!-- utils -->
+    <ClCompile Include="..\..\src\utils\cli.cpp" />
+    <ClCompile Include="..\..\src\utils\debouncer.cpp" />
+    <ClCompile Include="..\..\src\utils\gui.cpp" />
+    <ClCompile Include="..\..\src\utils\listutils.cpp" />
+    <ClCompile Include="..\..\src\utils\misc.cpp" />
+    <ClCompile Include="..\..\src\utils\schema.cpp" />
+    <ClCompile Include="..\..\src\utils\urlhandler.cpp" />
+    <ClCompile Include="..\..\src\utils\widgetbinder.cpp" />
+    <!-- viewmodels -->
+    <ClCompile Include="..\..\src\viewmodels\navigationviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\noteeditorviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\notefoldersettingsviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\notefolderviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\notelistviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\notesubfolderviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\searchviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\settingsviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\tagtreeviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\trashviewmodel.cpp" />
+    <ClCompile Include="..\..\src\viewmodels\viewmodellocator.cpp" />
+    <!-- views -->
+    <ClCompile Include="..\..\src\views\logview.cpp" />
+    <ClCompile Include="..\..\src\views\navigationview.cpp" />
+    <ClCompile Include="..\..\src\views\noteeditorview.cpp" />
+    <ClCompile Include="..\..\src\views\notefolderview.cpp" />
+    <ClCompile Include="..\..\src\views\notelistview.cpp" />
+    <ClCompile Include="..\..\src\views\notepreviewview.cpp" />
+    <ClCompile Include="..\..\src\views\noterelationview.cpp" />
+    <ClCompile Include="..\..\src\views\notesubfolderview.cpp" />
+    <ClCompile Include="..\..\src\views\searchpanelview.cpp" />
+    <ClCompile Include="..\..\src\views\tagtreeview.cpp" />
+    <!-- widgets -->
+    <ClCompile Include="..\..\src\widgets\arcnotesmarkdowntextedit.cpp" />
+    <ClCompile Include="..\..\src\widgets\combobox.cpp" />
+    <ClCompile Include="..\..\src\widgets\fontcolorwidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\graphicsview.cpp" />
+    <ClCompile Include="..\..\src\widgets\htmlpreviewwidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\label.cpp" />
+    <ClCompile Include="..\..\src\widgets\layoutpresetwidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\lineedit.cpp" />
+    <ClCompile Include="..\..\src\widgets\logwidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\navigationwidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\notefolderlistwidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\notepreviewwidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\qtexteditsearchwidget.cpp" />
+    <!-- widgets/settings -->
+    <ClCompile Include="..\..\src\widgets\settings\colormodesettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\debugoptionsettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\debugsettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\editorfontcolorsettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\editorsettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\generalsettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\interfacesettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\localtrashsettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\notefoldersettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\panelssettingswidget.cpp" />
+    <ClCompile Include="..\..\src\widgets\settings\previewfontsettingswidget.cpp" />
+  </ItemGroup>
+
+  <!-- First-party headers (with MOC metadata) -->
+  <ItemGroup>
+    <ClInclude Include="..\..\src\pch.h" />
+    <ClInclude Include="..\..\src\build_number.h" />
+    <ClInclude Include="..\..\src\release.h" />
+    <ClInclude Include="..\..\src\version.h" />
+    <ClInclude Include="..\..\src\enums\oklabelstatus.h" />
+    <!-- MOC headers: application -->
+    <ClInclude Include="..\..\src\application.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>app</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mainwindow.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>app</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: coordinator -->
+    <ClInclude Include="..\..\src\coordinator\actionregistry.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>coordinator</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coordinator\appcoordinator.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>coordinator</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coordinator\dialogcoordinator.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>coordinator</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: core/commands -->
+    <ClInclude Include="..\..\src\core\commands\commandbus.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>core</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\commands\pendingcommandtracker.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>core</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: core/state -->
+    <ClInclude Include="..\..\src\core\state\appstate.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>core</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\state\editorstate.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>core</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\state\searchstate.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>core</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\state\uistate.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>core</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: core/services -->
+    <ClInclude Include="..\..\src\core\services\errorpresenter.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>core</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: dialogs -->
+    <ClInclude Include="..\..\src\dialogs\aboutdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\actiondialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\attachmentdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\commandbar.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\filedialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\imagedialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\layoutdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\linkdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\localtrashdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\markdowntabledialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\masterdialog.h" />
+    <ClInclude Include="..\..\src\dialogs\notebookmarkdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\notedialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\notediffdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\settingsdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\storedattachmentsdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\storedimagesdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\tabledialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\tagadddialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\textdiffdialog.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>dialogs</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\linkdialoghost.h" />
+    <ClInclude Include="..\..\src\dialogs\localtrashdialoghost.h" />
+    <ClInclude Include="..\..\src\dialogs\notedialoghost.h" />
+    <ClInclude Include="..\..\src\dialogs\storedfiledialoghost.h" />
+    <!-- MOC headers: helpers -->
+    <ClInclude Include="..\..\src\helpers\arcnotesmarkdownhighlighter.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>helpers</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\helpers\fakevimproxy.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>helpers</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\helpers\codetohtmlconverter.h" />
+    <ClInclude Include="..\..\src\helpers\flowlayout.h" />
+    <ClInclude Include="..\..\src\helpers\htmlentities.h" />
+    <ClInclude Include="..\..\src\helpers\nomenuiconstyle.h" />
+    <ClInclude Include="..\..\src\helpers\toolbarcontainer.h" />
+    <!-- MOC headers: models -->
+    <ClInclude Include="..\..\src\models\backlinklistmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\bookmarktablemodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\commandmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\navigationoutlinemodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\notefolderlistmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\notelistmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\notesubfoldertreemodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\searchresultmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\tagtreemodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\trashitemmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>models</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: services -->
+    <ClInclude Include="..\..\src\services\databaseservice.h" />
+    <ClInclude Include="..\..\src\services\settingsservice.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>services</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: utils -->
+    <ClInclude Include="..\..\src\utils\cli.h" />
+    <ClInclude Include="..\..\src\utils\debouncer.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>utils</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\gui.h" />
+    <ClInclude Include="..\..\src\utils\listutils.h" />
+    <ClInclude Include="..\..\src\utils\misc.h" />
+    <ClInclude Include="..\..\src\utils\schema.h" />
+    <ClInclude Include="..\..\src\utils\urlhandler.h" />
+    <ClInclude Include="..\..\src\utils\widgetbinder.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>utils</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: viewmodels -->
+    <ClInclude Include="..\..\src\viewmodels\navigationviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\noteeditorviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\notefoldersettingsviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\notefolderviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\notelistviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\notesubfolderviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\searchviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\settingsviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\tagtreeviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\trashviewmodel.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>viewmodels</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\viewmodellocator.h" />
+    <!-- MOC headers: views -->
+    <ClInclude Include="..\..\src\views\logview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\navigationview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\noteeditorview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\notefolderview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\notelistview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\notepreviewview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\noterelationview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\notesubfolderview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\searchpanelview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\tagtreeview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>views</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: widgets -->
+    <ClInclude Include="..\..\src\widgets\arcnotesmarkdowntextedit.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\arcnotesmarkdowntextedithost.h" />
+    <ClInclude Include="..\..\src\widgets\combobox.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\fontcolorwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\graphicsview.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\htmlpreviewwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\label.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\layoutpresetwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\lineedit.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\logwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\navigationwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\notefolderlistwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\notepreviewwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\qtexteditsearchwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <!-- MOC headers: widgets/settings -->
+    <ClInclude Include="..\..\src\widgets\settings\colormodesettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\debugoptionsettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\debugsettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\editorfontcolorsettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\editorsettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\generalsettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\interfacesettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\localtrashsettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\notefoldersettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\panelssettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\previewfontsettingswidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>widgets</MocGroup>
+    </ClInclude>
+    <!-- core/data (no-MOC headers) -->
+    <ClInclude Include="..\..\src\core\data\colormodedata.h" />
+    <ClInclude Include="..\..\src\core\data\commandresult.h" />
+    <ClInclude Include="..\..\src\core\data\commands.h" />
+    <ClInclude Include="..\..\src\core\data\editorsessionsnapshot.h" />
+    <ClInclude Include="..\..\src\core\data\notedata.h" />
+    <ClInclude Include="..\..\src\core\data\notefolderdata.h" />
+    <ClInclude Include="..\..\src\core\data\notehistorydata.h" />
+    <ClInclude Include="..\..\src\core\data\notesubfolderdata.h" />
+    <ClInclude Include="..\..\src\core\data\tagdata.h" />
+    <ClInclude Include="..\..\src\core\data\trashitemdata.h" />
+  </ItemGroup>
+
+  <!-- Library headers needing MOC -->
+  <ItemGroup>
+    <ClInclude Include="..\..\src\libraries\qmarkdowntextedit\markdownhighlighter.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qmarkdowntextedit</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qmarkdowntextedit\qmarkdowntextedit.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qmarkdowntextedit</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qmarkdowntextedit\qplaintexteditsearchwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qmarkdowntextedit</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qmarkdowntextedit\linenumberarea.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qmarkdowntextedit</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\singleapplication\singleapplication.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-singleapplication</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\singleapplication\singleapplication_p.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-singleapplication</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qkeysequencewidget\qkeysequencewidget\src\qkeysequencewidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qkeysequencewidget</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qkeysequencewidget\qkeysequencewidget\src\qkeysequencewidget_p.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qkeysequencewidget</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qhotkey\QHotkey\qhotkey.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qhotkey</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qhotkey\QHotkey\qhotkey_p.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qhotkey</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\fakevim\fakevim\fakevimhandler.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-fakevim</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qlitehtml\src\qlitehtmlwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qlitehtml</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qlitehtml\src\qlitehtmlsearchwidget.h">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qlitehtml</MocGroup>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qttoolbareditor\src\toolbar_editor.hpp">
+      <RunMoc>true</RunMoc>
+      <MocGroup>lib-qttoolbareditor</MocGroup>
+    </ClInclude>
+  </ItemGroup>
+
+  <!-- Qt UIC files -->
+  <ItemGroup>
+    <QtUic Include="..\..\src\libraries\qttoolbareditor\src\toolbar_editor.ui" />
+    <QtUic Include="..\..\src\libraries\qmarkdowntextedit\qplaintexteditsearchwidget.ui" />
+    <QtUic Include="..\..\src\libraries\qlitehtml\src\qlitehtmlsearchwidget.ui" />
+  </ItemGroup>
+
+  <!-- Qt resource files, mirroring src/CMakeLists.txt RESOURCE_FILES -->
+  <ItemGroup>
+    <QtRcc Include="..\..\src\arcnotes.qrc" />
+    <QtRcc Include="..\..\src\breeze-arcnotes.qrc" />
+    <QtRcc Include="..\..\src\breeze-dark-arcnotes.qrc" />
+    <QtRcc Include="..\..\src\configurations.qrc" />
+    <QtRcc Include="..\..\src\demonotes.qrc" />
+    <QtRcc Include="..\..\src\images.qrc" />
+    <QtRcc Include="..\..\src\texts.qrc" />
+    <QtRcc Include="..\..\src\libraries\qdarkstyle\style.qrc" />
+    <QtRcc Include="..\..\src\libraries\qkeysequencewidget\qkeysequencewidget\qkeysequencewidget.qrc" />
+    <QtRcc Include="..\..\src\libraries\qmarkdowntextedit\media.qrc" />
+  </ItemGroup>
+
+  <!-- Windows resource -->
+  <ItemGroup>
+    <ResourceCompile Include="..\..\src\ArcNotes.rc" Condition="Exists('..\..\src\ArcNotes.rc')" />
+  </ItemGroup>
+
+  <Import Project="..\ArcNotes.Win.targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

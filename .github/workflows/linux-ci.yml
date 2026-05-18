@@ -1,0 +1,86 @@
+name: Linux CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: Linux x64
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      QT_QPA_PLATFORM: offscreen
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install Qt 6.11.0
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: "6.11.0"
+          target: desktop
+          arch: linux_gcc_64
+          modules: qtsvg
+          cache: true
+          setup-python: true
+          install-deps: true
+
+      - name: Export Qt environment
+        run: |
+          set -euo pipefail
+          qt6_dir="${QT_ROOT_DIR}/lib/cmake/Qt6"
+          test -f "${qt6_dir}/Qt6Config.cmake"
+          echo "QT_DIR=${QT_ROOT_DIR}" >> "${GITHUB_ENV}"
+          echo "Qt6_DIR=${qt6_dir}" >> "${GITHUB_ENV}"
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build
+          python -m pip install --upgrade pip pre-commit
+
+      - name: Install CMake 4.2.3
+        run: |
+          cmake_url='https://github.com/Kitware/CMake/releases/download/v4.2.3/cmake-4.2.3-linux-x86_64.tar.gz'
+          cmake_archive="${RUNNER_TEMP}/cmake.tar.gz"
+          cmake_root="${RUNNER_TEMP}/cmake"
+          wget -qO "${cmake_archive}" "${cmake_url}"
+          mkdir -p "${cmake_root}"
+          tar -xzf "${cmake_archive}" -C "${cmake_root}" --strip-components=1
+          echo "${cmake_root}/bin" >> "${GITHUB_PATH}"
+
+      - name: Configure
+        env:
+          CC: clang
+          CXX: clang++
+        run: cmake -S . -B build/linux-ci -G Ninja -DARC_QT6_BUILD=ON -DUSE_QLITEHTML=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+      - name: Build
+        run: cmake --build build/linux-ci --parallel
+
+      - name: Sync compile commands
+        run: cmake --build build/linux-ci --target sync-compile-commands
+
+      - name: Run pre-commit hooks
+        run: pre-commit run --all-files --show-diff-on-failure --color=always
+

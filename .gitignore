@@ -1,0 +1,41 @@
+.worktrees/
+.vs/
+*.vcxproj.user
+artifacts/
+build/
+out/
+dist/
+.compiler-cache/
+TestResults/
+CMakeCache.txt
+CMakeFiles/
+CMakeUserPresets.json
+Testing/
+**/bin/
+**/obj/
+
+# Qt/CMake generated files
+build-ArcNotes*/
+build-tests-*/
+build-tools/
+cmake-build-*/
+*.pro.user
+*.o
+qrc_*.cpp
+moc_*.cpp
+moc_*.h
+ui_*.h
+CMakeLists.txt.user*
+/src/.qmake.stash
+/src/Makefile
+/src/ArcNotes
+src/languages/*.qm
+
+# Local data
+secrets/*
+.shared
+__pycache__/
+.direnv/
+
+# Local AI assistant workspace
+.claude/

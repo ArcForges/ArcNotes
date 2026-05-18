@@ -1,0 +1,86 @@
+name: Windows CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: pwsh
+
+jobs:
+  build:
+    name: Windows x64
+    runs-on: windows-2025
+    timeout-minutes: 120
+    env:
+      MSBUILDDISABLENODEREUSE: "1"
+      QT_QPA_PLATFORM: offscreen
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install Qt 6.11.0
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: "6.11.0"
+          target: desktop
+          arch: win64_msvc2022_64
+          modules: qtsvg
+          cache: true
+          setup-python: true
+
+      - name: Export Qt environment
+        run: |
+          $qtRoot = $env:QT_ROOT_DIR
+          if (-not (Test-Path $qtRoot)) {
+            throw "Qt root directory does not exist: $qtRoot"
+          }
+
+          $qt6Dir = Join-Path $qtRoot 'lib\cmake\Qt6'
+          if (-not (Test-Path $qt6Dir)) {
+            throw "Qt6Config.cmake not found under $qt6Dir"
+          }
+
+          "QT_DIR=$qtRoot" >> $env:GITHUB_ENV
+          "Qt6_DIR=$qt6Dir" >> $env:GITHUB_ENV
+          (Join-Path $qtRoot 'bin') >> $env:GITHUB_PATH
+
+      - name: Setup MSVC developer environment
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Detect Windows SDK
+        run: |
+          $rc = Get-ChildItem 'C:\Program Files (x86)\Windows Kits\10\bin' -Recurse -Filter rc.exe |
+                Where-Object { $_.FullName -match '\\x64\\' } |
+                Sort-Object FullName |
+                Select-Object -Last 1
+          if (-not $rc) {
+            throw 'rc.exe not found in Windows SDK'
+          }
+
+          "WindowsKitRC=$($rc.DirectoryName)" >> $env:GITHUB_ENV
+          $rc.DirectoryName >> $env:GITHUB_PATH
+
+      - name: Verify tool versions
+        run: |
+          Write-Host "MSBuild: $(& msbuild -version -nologo | Select-Object -First 1)"
+          Write-Host "MSVC:    $(cl 2>&1 | Select-Object -First 1)"
+          Write-Host "QT_DIR:  $env:QT_DIR"
+          Write-Host "Qt6_DIR: $env:Qt6_DIR"
+
+      - name: Build Windows solution
+        run: msbuild ArcNotes.Win.slnx /nr:false /m /p:Configuration=Release /p:Platform=x64
+

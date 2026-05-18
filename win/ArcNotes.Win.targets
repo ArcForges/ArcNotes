@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <QtUicExe>$(QtBinDir)\uic.exe</QtUicExe>
+    <QtMocExe>$(QtBinDir)\moc.exe</QtMocExe>
+    <QtRccExe>$(QtBinDir)\rcc.exe</QtRccExe>
+    <QtMocPreprocessorArguments>-DUNICODE -D_UNICODE -DNOMINMAX -D_CRT_SECURE_NO_WARNINGS -DQAPPLICATION_CLASS=QApplication -DFAKEVIM_STATIC_DEFINE -DQTCREATOR_UTILS_STATIC_LIB -DUSE_QLITEHTML=1 -DQLITEHTML_STATIC_LIBRARY -DLITEHTML_UTF8 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_SQL_LIB -DQT_SVG_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB</QtMocPreprocessorArguments>
+    <QtMocIncludeArguments>--no-notes $(QtMocPreprocessorArguments) -I"$(ArcNotesRoot)src" -I"$(ArcNotesSrcRoot)libraries\qtcsv\src" -I"$(ArcNotesSrcRoot)libraries\qlitehtml\src" -I"$(ArcNotesSrcRoot)libraries\fakevim" -I"$(ArcNotesSrcRoot)libraries\qhotkey\QHotkey" -I"$(ArcNotesSrcRoot)libraries\qmarkdowntextedit" -I"$(QtIncludeRoot)" -I"$(QtIncludeRoot)\QtCore" -I"$(QtIncludeRoot)\QtGui" -I"$(QtIncludeRoot)\QtWidgets" -I"$(QtIncludeRoot)\QtSql" -I"$(QtIncludeRoot)\QtSvg" -I"$(QtIncludeRoot)\QtNetwork" -I"$(QtIncludeRoot)\QtXml" -I"$(QtIncludeRoot)\QtPrintSupport" -I"$(QtIncludeRoot)\QtConcurrent" -I"$(QtMkspecDir)"</QtMocIncludeArguments>
+  </PropertyGroup>
+
+  <!-- Validate Qt SDK before build -->
+  <Target Name="ValidateArcNotesQtDir" BeforeTargets="PrepareForBuild;GenerateArcNotesQtMoc;GenerateArcNotesQtUic;GenerateArcNotesQtRcc">
+    <Error Condition="'$(QtDir)' == ''" Text="QT_DIR must be set to the Qt6 SDK root before building ArcNotes Windows projects." />
+    <Error Condition="'$(QtDir)' != '' and !Exists('$(QtMocExe)')" Text="moc.exe was not found at '$(QtMocExe)'. QT_DIR must point to the Qt6 SDK root." />
+    <Error Condition="'$(QtDir)' != '' and !Exists('$(QtRccExe)')" Text="rcc.exe was not found at '$(QtRccExe)'. QT_DIR must point to the Qt6 SDK root." />
+    <Error Condition="'$(QtDir)' != '' and !Exists('$(QtLibDir)')" Text="Qt lib directory was not found at '$(QtLibDir)'." />
+  </Target>
+
+  <!-- Run UIC on .ui files to generate ui_*.h headers -->
+  <Target Name="GenerateArcNotesQtUic" BeforeTargets="ClCompile" Inputs="@(QtUic)" Outputs="@(QtUic->'$(QtUicIntermediateDir)ui_%(Filename).h')">
+    <MakeDir Directories="$(QtUicIntermediateDir)" />
+    <Exec Command="&quot;$(QtUicExe)&quot; &quot;%(QtUic.FullPath)&quot; -o &quot;$(QtUicIntermediateDir)ui_%(Filename).h&quot;" />
+  </Target>
+
+  <!-- Prepare MOC items from headers marked with RunMoc=true -->
+  <Target Name="PrepareArcNotesQtMocItems" BeforeTargets="GenerateArcNotesQtMoc">
+    <ItemGroup>
+      <QtMoc Include="@(ClInclude)" Condition="'%(ClInclude.RunMoc)' == 'true'">
+        <MocOutput>$(QtMocIntermediateDir)moc_%(Filename).cpp</MocOutput>
+        <MocOutputDirectory>$(QtMocIntermediateDir)</MocOutputDirectory>
+      </QtMoc>
+    </ItemGroup>
+  </Target>
+
+  <!-- Run moc on all marked headers -->
+  <Target Name="GenerateArcNotesQtMoc" BeforeTargets="ClCompile" DependsOnTargets="PrepareArcNotesQtMocItems" Inputs="@(QtMoc);$(MSBuildThisFileFullPath);$(ArcNotesRoot)win\ArcNotes.Win.props" Outputs="@(QtMoc->'%(MocOutput)')">
+    <MakeDir Directories="@(QtMoc->'%(MocOutputDirectory)')" />
+    <Exec Command="&quot;$(QtMocExe)&quot; $(QtMocIncludeArguments) &quot;%(QtMoc.FullPath)&quot; -o &quot;%(QtMoc.MocOutput)&quot; || exit /b 1&#xD;&#xA;if not exist &quot;%(QtMoc.MocOutput)&quot; type nul &gt; &quot;%(QtMoc.MocOutput)&quot;" />
+  </Target>
+
+  <!-- Add generated moc files to compilation -->
+  <Target Name="AddArcNotesQtMocSources" BeforeTargets="ClCompile" DependsOnTargets="GenerateArcNotesQtMoc">
+    <ItemGroup>
+      <ClCompile Include="$(QtMocIntermediateDir)moc_*.cpp" Exclude="$(QtMocIntermediateDir)moc_qkeysequencewidget.cpp" />
+    </ItemGroup>
+  </Target>
+
+  <!-- Run RCC on Qt resource files to embed icons, styles, demo notes, and other :/ assets -->
+  <Target Name="GenerateArcNotesQtRcc" BeforeTargets="ClCompile" Inputs="@(QtRcc);$(MSBuildThisFileFullPath);$(ArcNotesRoot)win\ArcNotes.Win.props" Outputs="@(QtRcc->'$(QtRccIntermediateDir)qrc_%(Filename).cpp')">
+    <MakeDir Directories="$(QtRccIntermediateDir)" />
+    <Exec Command="&quot;$(QtRccExe)&quot; --name &quot;%(QtRcc.Filename)&quot; &quot;%(QtRcc.FullPath)&quot; -o &quot;$(QtRccIntermediateDir)qrc_%(QtRcc.Filename).cpp&quot;" />
+  </Target>
+
+  <!-- Add generated Qt resource sources to compilation -->
+  <Target Name="AddArcNotesQtRccSources" BeforeTargets="ClCompile" DependsOnTargets="GenerateArcNotesQtRcc">
+    <ItemGroup>
+      <ClCompile Include="$(QtRccIntermediateDir)qrc_*.cpp" />
+    </ItemGroup>
+  </Target>
+
+
+  <!-- Add bundled library sources -->
+  <Target Name="AddArcNotesBundledLibrarySources" BeforeTargets="ClCompile">
+    <ItemGroup>
+      <!-- qmarkdowntextedit -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qmarkdowntextedit\markdownhighlighter.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qmarkdowntextedit\qmarkdowntextedit.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qmarkdowntextedit\qownlanguagedata.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qmarkdowntextedit\qplaintexteditsearchwidget.cpp" />
+
+      <!-- singleapplication -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\singleapplication\singleapplication.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\singleapplication\singleapplication_p.cpp" />
+
+      <!-- qttoolbareditor -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qttoolbareditor\src\toolbar_editor.cpp" />
+
+      <!-- qtcsv (reader only) -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qtcsv\src\sources\reader.cpp" />
+
+      <!-- qkeysequencewidget -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qkeysequencewidget\qkeysequencewidget\src\qkeysequencewidget.cpp" />
+
+      <!-- fuzzy matcher -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\fuzzy\kfuzzymatcher.cpp" />
+
+      <!-- md4c (C sources) -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\md4c\src\entity.c">
+        <CompileAs>CompileAsC</CompileAs>
+      </ClCompile>
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\md4c\src\md4c.c">
+        <CompileAs>CompileAsC</CompileAs>
+      </ClCompile>
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\md4c\src\md4c-html.c">
+        <CompileAs>CompileAsC</CompileAs>
+      </ClCompile>
+
+      <!-- QHotkey (Windows) -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qhotkey\QHotkey\qhotkey.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qhotkey\QHotkey\qhotkey_win.cpp" />
+
+      <!-- FakeVim -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\fakevim\fakevim\fakevimactions.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\fakevim\fakevim\fakevimhandler.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\fakevim\fakevim\utils\hostosinfo.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\fakevim\fakevim\utils\qtcassert.cpp" />
+
+      <!-- diff_match_patch -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\diff_match_patch\diff_match_patch.cpp" />
+
+      <!-- qlitehtml -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\container_qpainter.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\element_checkbox.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\qlitehtmlwidget.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\qlitehtmlsearchwidget.cpp" />
+
+      <!-- litehtml -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\background.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\box.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\codepoint.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\context.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\css_length.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\css_selector.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\document.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_anchor.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_base.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_before_after.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_body.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_break.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_cdata.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_comment.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_div.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_font.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_image.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_li.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_link.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_para.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_script.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_space.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_style.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_table.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_td.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_text.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_title.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\el_tr.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\element.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\html.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\html_tag.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\iterators.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\media_query.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\num_cvt.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\strtod.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\style.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\stylesheet.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\table.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\tstring_view.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\url.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\url_path.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\utf8_strings.cpp" />
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\web_color.cpp" />
+
+      <!-- gumbo (C sources) -->
+      <ClCompile Include="$(ArcNotesSrcRoot)libraries\qlitehtml\src\3rdparty\litehtml\src\gumbo\*.c">
+        <CompileAs>CompileAsC</CompileAs>
+      </ClCompile>
+    </ItemGroup>
+  </Target>
+</Project>

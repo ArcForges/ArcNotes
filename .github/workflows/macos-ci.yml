@@ -1,0 +1,71 @@
+name: macOS CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: macOS
+    runs-on: macos-latest
+    timeout-minutes: 120
+    env:
+      QT_QPA_PLATFORM: offscreen
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Install Qt 6.11.0
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: "6.11.0"
+          target: desktop
+          arch: clang_64
+          modules: qtsvg
+          cache: true
+          setup-python: true
+
+      - name: Export Qt environment
+        run: |
+          set -euo pipefail
+          qt6_dir="${QT_ROOT_DIR}/lib/cmake/Qt6"
+          test -f "${qt6_dir}/Qt6Config.cmake"
+          echo "QT_DIR=${QT_ROOT_DIR}" >> "${GITHUB_ENV}"
+          echo "Qt6_DIR=${qt6_dir}" >> "${GITHUB_ENV}"
+
+      - name: Install tools
+        run: |
+          brew install cmake ninja
+          python3 -m pip install --upgrade pip pre-commit
+
+      - name: Configure
+        env:
+          CC: clang
+          CXX: clang++
+        run: cmake -S . -B build/macos-ci -G Ninja -DARC_QT6_BUILD=ON -DUSE_QLITEHTML=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
+      - name: Build
+        run: cmake --build build/macos-ci --parallel
+
+      - name: Sync compile commands
+        run: cmake --build build/macos-ci --target sync-compile-commands
+
+      - name: Run pre-commit hooks
+        run: |
+          export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
+          pre-commit run --all-files --show-diff-on-failure --color=always
+
