@@ -1,0 +1,292 @@
+{
+  "version": 9,
+  "cmakeMinimumRequired": {
+    "major": 4,
+    "minor": 2,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "toolchainFile": "$penv{GLOBAL_VCPKG_PATH}/scripts/buildsystems/vcpkg.cmake",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true,
+        "ARC_QT6_BUILD": true,
+        "DEV_MODE": false,
+        "USE_QLITEHTML": true
+      },
+      "warnings": {
+        "dev": false
+      }
+    },
+    {
+      "name": "windows-base",
+      "hidden": true,
+      "inherits": ["base"],
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "generator": "FASTBuild",
+      "environment": {
+        "PATH": "$penv{WindowsKitRC};$penv{PATH}",
+        "FASTBUILD_CACHE_PATH": "$penv{LOCALAPPDATA}/FASTBuild/Cache"
+      },
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang-cl",
+        "CMAKE_CXX_COMPILER": "clang-cl",
+        "VCPKG_TARGET_TRIPLET": "x64-windows",
+        "CMAKE_MSVC_DEBUG_INFORMATION_FORMAT": "Embedded"
+      },
+      "vendor": {
+        "arcforges.org": {
+          "vcpkgTriplet": "x64-windows"
+        }
+      }
+    },
+    {
+      "name": "windows-debug",
+      "displayName": "Windows x64 Debug",
+      "description": "FASTBuild Debug build with Qt6",
+      "inherits": ["windows-base"],
+      "binaryDir": "${sourceDir}/build/debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "windows-release",
+      "displayName": "Windows x64 Release",
+      "description": "FASTBuild Release build with Qt6",
+      "inherits": ["windows-base"],
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "windows-ci",
+      "displayName": "Windows x64 CI",
+      "description": "FASTBuild CI build with Qt6",
+      "inherits": ["windows-base"],
+      "binaryDir": "${sourceDir}/build/windows-ci",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      },
+      "warnings": {
+        "dev": true,
+        "deprecated": true
+      }
+    },
+    {
+      "name": "linux-base",
+      "hidden": true,
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      },
+      "generator": "FASTBuild",
+      "environment": {
+        "FASTBUILD_CACHE_PATH": "/cache/fastbuild"
+      },
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true,
+        "ARC_QT6_BUILD": true,
+        "DEV_MODE": false,
+        "USE_QLITEHTML": true,
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++"
+      },
+      "warnings": {
+        "dev": false
+      }
+    },
+    {
+      "name": "linux-debug",
+      "displayName": "Linux x64 Debug",
+      "description": "FASTBuild Debug build with Qt6",
+      "inherits": ["linux-base"],
+      "binaryDir": "${sourceDir}/build/debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "linux-release",
+      "displayName": "Linux x64 Release",
+      "description": "FASTBuild Release build with Qt6",
+      "inherits": ["linux-base"],
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "linux-ci",
+      "displayName": "Linux x64 CI",
+      "description": "FASTBuild CI build with Qt6",
+      "inherits": ["linux-base"],
+      "binaryDir": "${sourceDir}/build/linux-ci",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      },
+      "warnings": {
+        "dev": true,
+        "deprecated": true
+      }
+    },
+    {
+      "name": "macos-base",
+      "hidden": true,
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      },
+      "generator": "FASTBuild",
+      "environment": {
+        "FASTBUILD_CACHE_PATH": "$penv{HOME}/Library/Caches/FASTBuild"
+      },
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true,
+        "ARC_QT6_BUILD": true,
+        "DEV_MODE": false,
+        "USE_QLITEHTML": true,
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_OSX_DEPLOYMENT_TARGET": "12.0"
+      },
+      "warnings": {
+        "dev": false
+      }
+    },
+    {
+      "name": "macos-debug",
+      "displayName": "macOS Debug",
+      "description": "FASTBuild Debug build with Qt6",
+      "inherits": ["macos-base"],
+      "binaryDir": "${sourceDir}/build/macos-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "macos-release",
+      "displayName": "macOS Release",
+      "description": "FASTBuild Release build with Qt6",
+      "inherits": ["macos-base"],
+      "binaryDir": "${sourceDir}/build/macos-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "macos-ci",
+      "displayName": "macOS CI",
+      "description": "FASTBuild CI build with Qt6",
+      "inherits": ["macos-base"],
+      "binaryDir": "${sourceDir}/build/macos-ci",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      },
+      "warnings": {
+        "dev": true,
+        "deprecated": true
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "windows-debug",
+      "displayName": "Debug",
+      "nativeToolOptions": ["-cache", "-summary"],
+      "targets": ["all"]
+    },
+    {
+      "name": "release",
+      "configurePreset": "windows-release",
+      "displayName": "Release",
+      "nativeToolOptions": ["-cache", "-summary"],
+      "targets": ["all"]
+    },
+    {
+      "name": "ci",
+      "configurePreset": "windows-ci",
+      "displayName": "CI",
+      "nativeToolOptions": ["-cache", "-summary"],
+      "targets": ["all"]
+    },
+    {
+      "name": "linux-debug",
+      "configurePreset": "linux-debug",
+      "displayName": "Linux Debug",
+      "nativeToolOptions": ["-cache", "-summary"],
+      "targets": ["all"]
+    },
+    {
+      "name": "linux-release",
+      "configurePreset": "linux-release",
+      "displayName": "Linux Release",
+      "nativeToolOptions": ["-cache", "-summary"],
+      "targets": ["all"]
+    },
+    {
+      "name": "linux-ci",
+      "configurePreset": "linux-ci",
+      "displayName": "Linux CI",
+      "nativeToolOptions": ["-cache", "-summary"],
+      "targets": ["all"]
+    },
+    {
+      "name": "macos-debug",
+      "configurePreset": "macos-debug",
+      "displayName": "macOS Debug",
+      "nativeToolOptions": ["-cache", "-summary"],
+      "targets": ["all"]
+    },
+    {
+      "name": "macos-release",
+      "configurePreset": "macos-release",
+      "displayName": "macOS Release",
+      "nativeToolOptions": ["-cache", "-summary"],
+      "targets": ["all"]
+    },
+    {
+      "name": "macos-ci",
+      "configurePreset": "macos-ci",
+      "displayName": "macOS CI",
+      "nativeToolOptions": ["-cache", "-summary"],
+      "targets": ["all"]
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "windows-ci",
+      "configurePreset": "windows-ci",
+      "displayName": "Windows CI CTest",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "linux-ci",
+      "configurePreset": "linux-ci",
+      "displayName": "Linux CI CTest",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "macos-ci",
+      "configurePreset": "macos-ci",
+      "displayName": "macOS CI CTest",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

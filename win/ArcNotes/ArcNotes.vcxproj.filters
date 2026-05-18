@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\coordinator">
+      <UniqueIdentifier>{a1000001-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{a1000002-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\commands">
+      <UniqueIdentifier>{a1000003-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\data">
+      <UniqueIdentifier>{a1000004-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\repositories">
+      <UniqueIdentifier>{a1000005-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\services">
+      <UniqueIdentifier>{a1000006-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\core\state">
+      <UniqueIdentifier>{a1000007-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\dialogs">
+      <UniqueIdentifier>{a1000008-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\enums">
+      <UniqueIdentifier>{a1000009-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\helpers">
+      <UniqueIdentifier>{a100000a-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\models">
+      <UniqueIdentifier>{a100000b-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\services">
+      <UniqueIdentifier>{a100000c-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{a100000d-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\viewmodels">
+      <UniqueIdentifier>{a100000e-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\views">
+      <UniqueIdentifier>{a100000f-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\widgets">
+      <UniqueIdentifier>{a1000010-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\widgets\settings">
+      <UniqueIdentifier>{a1000011-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries">
+      <UniqueIdentifier>{b1000001-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\qmarkdowntextedit">
+      <UniqueIdentifier>{b1000002-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\singleapplication">
+      <UniqueIdentifier>{b1000003-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\qttoolbareditor">
+      <UniqueIdentifier>{b1000004-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\qtcsv">
+      <UniqueIdentifier>{b1000005-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\qkeysequencewidget">
+      <UniqueIdentifier>{b1000006-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\fuzzy">
+      <UniqueIdentifier>{b1000007-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\md4c">
+      <UniqueIdentifier>{b1000008-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\qhotkey">
+      <UniqueIdentifier>{b1000009-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\fakevim">
+      <UniqueIdentifier>{b100000a-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\diff_match_patch">
+      <UniqueIdentifier>{b100000b-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\qlitehtml">
+      <UniqueIdentifier>{b100000c-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\litehtml">
+      <UniqueIdentifier>{b100000d-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libraries\gumbo">
+      <UniqueIdentifier>{b100000e-0000-0000-0000-000000000001}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+
+  <!-- First-party source files -->
+  <ItemGroup>
+    <ClCompile Include="..\..\src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\application.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mainwindow.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mainwindow_actions.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mainwindow_hosts.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mainwindow_print.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\mainwindow_shell.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coordinator\actionregistry.cpp">
+      <Filter>src\coordinator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coordinator\appcoordinator.cpp">
+      <Filter>src\coordinator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coordinator\dialogcoordinator.cpp">
+      <Filter>src\coordinator</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\commandbus.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\exportcommandhandlers.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\foldercommandhandlers.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\mediacommandhandlers.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\notecommandhandlers.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\pendingcommandtracker.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\searchcommandhandlers.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\settingscommandhandlers.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\tagcommandhandlers.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\commands\trashcommandhandlers.cpp">
+      <Filter>src\core\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\repositories\colormoderepository.cpp">
+      <Filter>src\core\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\repositories\databaserepository.cpp">
+      <Filter>src\core\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\repositories\notefolderrepository.cpp">
+      <Filter>src\core\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\repositories\notehistoryrepository.cpp">
+      <Filter>src\core\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\repositories\noterepository.cpp">
+      <Filter>src\core\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\repositories\notesubfolderrepository.cpp">
+      <Filter>src\core\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\repositories\settingsrepository.cpp">
+      <Filter>src\core\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\repositories\tagrepository.cpp">
+      <Filter>src\core\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\repositories\trashrepository.cpp">
+      <Filter>src\core\repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\editorformattingservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\errorpresenter.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\exportservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\markdownrenderservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\mediaservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\notefileservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\notefolderservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\notelinkservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\noteservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\notesubfolderservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\searchservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\tagservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\services\trashservice.cpp">
+      <Filter>src\core\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\state\appstate.cpp">
+      <Filter>src\core\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\state\editorstate.cpp">
+      <Filter>src\core\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\state\searchstate.cpp">
+      <Filter>src\core\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\state\uistate.cpp">
+      <Filter>src\core\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\aboutdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\actiondialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\attachmentdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\commandbar.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\filedialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\imagedialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\layoutdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\linkdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\localtrashdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\markdowntabledialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\masterdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\notebookmarkdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\notedialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\notediffdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\settingsdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\storedattachmentsdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\storedimagesdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\tabledialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\tagadddialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dialogs\textdiffdialog.cpp">
+      <Filter>src\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\helpers\arcnotesmarkdownhighlighter.cpp">
+      <Filter>src\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\helpers\codetohtmlconverter.cpp">
+      <Filter>src\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\helpers\fakevimproxy.cpp">
+      <Filter>src\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\helpers\flowlayout.cpp">
+      <Filter>src\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\helpers\htmlentities.cpp">
+      <Filter>src\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\helpers\nomenuiconstyle.cpp">
+      <Filter>src\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\helpers\toolbarcontainer.cpp">
+      <Filter>src\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\backlinklistmodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\bookmarktablemodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\commandmodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\navigationoutlinemodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\notefolderlistmodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\notelistmodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\notesubfoldertreemodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\searchresultmodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\tagtreemodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\models\trashitemmodel.cpp">
+      <Filter>src\models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\services\databaseservice.cpp">
+      <Filter>src\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\services\settingsservice.cpp">
+      <Filter>src\services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\cli.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\debouncer.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\gui.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\listutils.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\misc.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\schema.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\urlhandler.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utils\widgetbinder.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\navigationviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\noteeditorviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\notefoldersettingsviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\notefolderviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\notelistviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\notesubfolderviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\searchviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\settingsviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\tagtreeviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\trashviewmodel.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\viewmodels\viewmodellocator.cpp">
+      <Filter>src\viewmodels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\logview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\navigationview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\noteeditorview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\notefolderview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\notelistview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\notepreviewview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\noterelationview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\notesubfolderview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\searchpanelview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\views\tagtreeview.cpp">
+      <Filter>src\views</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\arcnotesmarkdowntextedit.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\combobox.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\fontcolorwidget.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\graphicsview.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\htmlpreviewwidget.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\label.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\layoutpresetwidget.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\lineedit.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\logwidget.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\navigationwidget.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\notefolderlistwidget.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\notepreviewwidget.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\qtexteditsearchwidget.cpp">
+      <Filter>src\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\colormodesettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\debugoptionsettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\debugsettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\editorfontcolorsettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\editorsettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\generalsettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\interfacesettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\localtrashsettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\notefoldersettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\panelssettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\widgets\settings\previewfontsettingswidget.cpp">
+      <Filter>src\widgets\settings</Filter>
+    </ClCompile>
+  </ItemGroup>
+
+  <!-- First-party headers -->
+  <ItemGroup>
+    <ClInclude Include="..\..\src\pch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\build_number.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\release.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\version.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\application.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\mainwindow.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\enums\oklabelstatus.h">
+      <Filter>src\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coordinator\actionregistry.h">
+      <Filter>src\coordinator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coordinator\appcoordinator.h">
+      <Filter>src\coordinator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\coordinator\dialogcoordinator.h">
+      <Filter>src\coordinator</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\commands\commandbus.h">
+      <Filter>src\core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\commands\pendingcommandtracker.h">
+      <Filter>src\core\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\colormodedata.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\commandresult.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\commands.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\editorsessionsnapshot.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\notedata.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\notefolderdata.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\notehistorydata.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\notesubfolderdata.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\tagdata.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\data\trashitemdata.h">
+      <Filter>src\core\data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\state\appstate.h">
+      <Filter>src\core\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\state\editorstate.h">
+      <Filter>src\core\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\state\searchstate.h">
+      <Filter>src\core\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\state\uistate.h">
+      <Filter>src\core\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\services\errorpresenter.h">
+      <Filter>src\core\services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\aboutdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\actiondialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\attachmentdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\commandbar.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\filedialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\imagedialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\layoutdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\linkdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\linkdialoghost.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\localtrashdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\localtrashdialoghost.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\markdowntabledialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\masterdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\notebookmarkdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\notedialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\notedialoghost.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\notediffdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\settingsdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\storedattachmentsdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\storedfiledialoghost.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\storedimagesdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\tabledialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\tagadddialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\dialogs\textdiffdialog.h">
+      <Filter>src\dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\helpers\arcnotesmarkdownhighlighter.h">
+      <Filter>src\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\helpers\codetohtmlconverter.h">
+      <Filter>src\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\helpers\fakevimproxy.h">
+      <Filter>src\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\helpers\flowlayout.h">
+      <Filter>src\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\helpers\htmlentities.h">
+      <Filter>src\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\helpers\nomenuiconstyle.h">
+      <Filter>src\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\helpers\toolbarcontainer.h">
+      <Filter>src\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\backlinklistmodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\bookmarktablemodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\commandmodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\navigationoutlinemodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\notefolderlistmodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\notelistmodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\notesubfoldertreemodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\searchresultmodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\tagtreemodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\models\trashitemmodel.h">
+      <Filter>src\models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\services\databaseservice.h">
+      <Filter>src\services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\services\settingsservice.h">
+      <Filter>src\services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\cli.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\debouncer.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\gui.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\listutils.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\misc.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\schema.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\urlhandler.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utils\widgetbinder.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\navigationviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\noteeditorviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\notefoldersettingsviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\notefolderviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\notelistviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\notesubfolderviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\searchviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\settingsviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\tagtreeviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\trashviewmodel.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\viewmodels\viewmodellocator.h">
+      <Filter>src\viewmodels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\logview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\navigationview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\noteeditorview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\notefolderview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\notelistview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\notepreviewview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\noterelationview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\notesubfolderview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\searchpanelview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\views\tagtreeview.h">
+      <Filter>src\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\arcnotesmarkdowntextedit.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\arcnotesmarkdowntextedithost.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\combobox.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\fontcolorwidget.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\graphicsview.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\htmlpreviewwidget.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\label.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\layoutpresetwidget.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\lineedit.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\logwidget.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\navigationwidget.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\notefolderlistwidget.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\notepreviewwidget.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\qtexteditsearchwidget.h">
+      <Filter>src\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\colormodesettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\debugoptionsettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\debugsettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\editorfontcolorsettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\editorsettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\generalsettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\interfacesettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\localtrashsettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\notefoldersettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\panelssettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\widgets\settings\previewfontsettingswidget.h">
+      <Filter>src\widgets\settings</Filter>
+    </ClInclude>
+  </ItemGroup>
+
+  <!-- Library headers -->
+  <ItemGroup>
+    <ClInclude Include="..\..\src\libraries\qmarkdowntextedit\markdownhighlighter.h">
+      <Filter>libraries\qmarkdowntextedit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qmarkdowntextedit\qmarkdowntextedit.h">
+      <Filter>libraries\qmarkdowntextedit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qmarkdowntextedit\qplaintexteditsearchwidget.h">
+      <Filter>libraries\qmarkdowntextedit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qmarkdowntextedit\linenumberarea.h">
+      <Filter>libraries\qmarkdowntextedit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\singleapplication\singleapplication.h">
+      <Filter>libraries\singleapplication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\singleapplication\singleapplication_p.h">
+      <Filter>libraries\singleapplication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qkeysequencewidget\qkeysequencewidget\src\qkeysequencewidget.h">
+      <Filter>libraries\qkeysequencewidget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qkeysequencewidget\qkeysequencewidget\src\qkeysequencewidget_p.h">
+      <Filter>libraries\qkeysequencewidget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qhotkey\QHotkey\qhotkey.h">
+      <Filter>libraries\qhotkey</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qhotkey\QHotkey\qhotkey_p.h">
+      <Filter>libraries\qhotkey</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\fakevim\fakevim\fakevimhandler.h">
+      <Filter>libraries\fakevim</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qlitehtml\src\qlitehtmlwidget.h">
+      <Filter>libraries\qlitehtml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\libraries\qlitehtml\src\qlitehtmlsearchwidget.h">
+      <Filter>libraries\qlitehtml</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1681 @@
+/*
+ * Copyright (c) 2014-2026 Patrizio Bekerle -- <patrizio@bekerle.com>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 2 of the License.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+ * for more details.
+ *
+ */
+
+#include "gui.h"
+
+#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
+
+#include <QAction>
+#include <QApplication>
+#include <QCheckBox>
+#include <QClipboard>
+#include <QComboBox>
+#include <QDebug>
+#include <QDialogButtonBox>
+#include <QDockWidget>
+#include <QHeaderView>
+#include <QLineEdit>
+#include <QListWidget>
+#include <QMessageBox>
+#include <QMetaObject>
+#include <QPlainTextEdit>
+#include <QProcess>
+#include <QPushButton>
+#include <QSet>
+#include <QSignalBlocker>
+#include <QStandardPaths>
+#include <QStyleFactory>
+#include <QTextBlock>
+#include <QTextCursor>
+#include <QTimer>
+#include <QTreeWidget>
+#include <QTreeWidgetItem>
+#include <QVBoxLayout>
+#include <QtGui/QGuiApplication>
+#include <QtGui/QStyleHints>
+
+#include "helpers/nomenuiconstyle.h"
+#include "services/settingsservice.h"
+#include "utils/misc.h"
+
+#define ORDER_ASCENDING 0   // Qt::AscendingOrder // = 0
+#define ORDER_DESCENDING 1  // Qt::DescendingOrder // = 1
+
+namespace {
+bool promptForColorSchemeChange(const QString& title, const QString& text, const QString& identifier, bool darkMode,
+                                bool applySettingsAfterChange) {
+    if (Utils::Gui::questionNoSkipOverride(nullptr, title, text, identifier) != QMessageBox::Yes) {
+        return false;
+    }
+
+    if (darkMode) {
+        Utils::Misc::switchToDarkMode();
+    } else {
+        Utils::Misc::switchToLightMode();
+    }
+
+    if (!applySettingsAfterChange) {
+        // During startup, MainWindow is not fully constructed yet. Its normal
+        // initStyling() call will pick up the updated dark mode settings.
+        return true;
+    }
+
+    // Defer the UI update so it runs after the current color scheme change event
+    // has been fully processed by Qt's style machinery. Calling applyDarkModeSettings()
+    // synchronously here can cause a crash (SIGSEGV at a near-null address in QtWidgets)
+    // because qApp->setStyleSheet() is invoked while Qt's internal style update is still
+    // on the call stack (see issue #3578).
+    QTimer::singleShot(0, qApp, [] { Utils::Gui::applyDarkModeSettings(); });
+
+    return true;
+}
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+bool promptForQtColorSchemeChange(Qt::ColorScheme colorScheme, bool systemChangeDetected) {
+    const bool appDarkMode = SettingsService().value(QStringLiteral("darkMode")).toBool();
+    const QString darkModeText = systemChangeDetected ? QObject::tr(
+                                                            "Your system switched to dark mode. "
+                                                            "Do you also want to turn on dark mode in "
+                                                            "ArcNotes?\n\n"
+                                                            "Updating the interface takes a short while.")
+                                                      : QObject::tr(
+                                                            "Your system seems to be in dark mode. "
+                                                            "Do you also want to turn on dark mode in "
+                                                            "ArcNotes?");
+    const QString lightModeText = systemChangeDetected ? QObject::tr(
+                                                             "Your system switched to light mode. "
+                                                             "Do you also want to turn off dark mode in "
+                                                             "ArcNotes?\n\n"
+                                                             "Updating the interface takes a short while.")
+                                                       : QObject::tr(
+                                                             "Your system seems to be in light mode. "
+                                                             "Do you also want to turn off dark mode in "
+                                                             "ArcNotes?");
+
+    if (colorScheme == Qt::ColorScheme::Dark && !appDarkMode) {
+        return promptForColorSchemeChange(QObject::tr("Dark mode detected"), darkModeText,
+                                          QStringLiteral("system-dark-mode"), true, systemChangeDetected);
+    }
+
+    if (colorScheme == Qt::ColorScheme::Light && appDarkMode) {
+        return promptForColorSchemeChange(QObject::tr("Light mode detected"), lightModeText,
+                                          QStringLiteral("system-light-mode"), false, systemChangeDetected);
+    }
+
+    return false;
+}
+#endif
+
+QVariantList currentHeaderOrder(const QHeaderView* header) {
+    QVariantList order;
+
+    if (header == nullptr) {
+        return order;
+    }
+
+    const int count = header->count();
+    order.reserve(count);
+
+    for (int visualIndex = 0; visualIndex < count; ++visualIndex) {
+        order << header->logicalIndex(visualIndex);
+    }
+
+    return order;
+}
+
+QVariantList currentHeaderWidths(const QHeaderView* header) {
+    QVariantList widths;
+
+    if (header == nullptr) {
+        return widths;
+    }
+
+    const int count = header->count();
+    widths.reserve(count);
+
+    for (int logicalIndex = 0; logicalIndex < count; ++logicalIndex) {
+        widths << header->sectionSize(logicalIndex);
+    }
+
+    return widths;
+}
+
+QString headerOrderKey(const QString& settingsKey) {
+    return settingsKey + QStringLiteral("/order");
+}
+
+QString headerWidthsKey(const QString& settingsKey) {
+    return settingsKey + QStringLiteral("/widths");
+}
+
+QString resolvedHeaderLayoutKey(QTreeWidget* treeWidget, const QString& settingsKey) {
+    if (!settingsKey.isEmpty()) {
+        return settingsKey;
+    }
+
+    if (treeWidget == nullptr) {
+        return QString();
+    }
+
+    return treeWidget->property("headerPersistenceSettingsKey").toString();
+}
+
+bool hasStoredHeaderOrder(const QString& settingsKey) {
+    if (settingsKey.isEmpty()) {
+        return false;
+    }
+
+    const SettingsService settings;
+    return settings.contains(headerOrderKey(settingsKey)) || settings.contains(settingsKey);
+}
+
+bool hasStoredHeaderWidths(const QString& settingsKey) {
+    return !settingsKey.isEmpty() && SettingsService().contains(headerWidthsKey(settingsKey));
+}
+
+void storeHeaderLayout(const QHeaderView* header, const QString& settingsKey) {
+    if ((header == nullptr) || settingsKey.isEmpty() || (header->count() <= 1)) {
+        return;
+    }
+
+    SettingsService settings;
+    settings.setValue(headerOrderKey(settingsKey), currentHeaderOrder(header));
+    settings.setValue(headerWidthsKey(settingsKey), currentHeaderWidths(header));
+}
+
+void restoreHeaderOrder(QHeaderView* header, const QString& settingsKey) {
+    if ((header == nullptr) || settingsKey.isEmpty() || (header->count() <= 1)) {
+        return;
+    }
+
+    SettingsService settings;
+    QVariantList storedOrder = settings.value(headerOrderKey(settingsKey)).toList();
+
+    if (storedOrder.isEmpty()) {
+        storedOrder = settings.value(settingsKey).toList();
+    }
+
+    const int count = header->count();
+
+    if (storedOrder.count() != count) {
+        return;
+    }
+
+    QSet<int> seenLogicalIndexes;
+
+    for (const auto& value : storedOrder) {
+        const int logicalIndex = value.toInt();
+
+        if ((logicalIndex < 0) || (logicalIndex >= count) || seenLogicalIndexes.contains(logicalIndex)) {
+            return;
+        }
+
+        seenLogicalIndexes.insert(logicalIndex);
+    }
+
+    const QSignalBlocker blocker(header);
+
+    for (int visualIndex = 0; visualIndex < count; ++visualIndex) {
+        const int logicalIndex = storedOrder.at(visualIndex).toInt();
+        const int currentVisualIndex = header->visualIndex(logicalIndex);
+
+        if (currentVisualIndex != visualIndex) {
+            header->moveSection(currentVisualIndex, visualIndex);
+        }
+    }
+}
+
+void restoreHeaderWidths(QHeaderView* header, const QString& settingsKey) {
+    if ((header == nullptr) || settingsKey.isEmpty() || (header->count() <= 1)) {
+        return;
+    }
+
+    const QVariantList storedWidths = SettingsService().value(headerWidthsKey(settingsKey)).toList();
+    const int count = header->count();
+
+    if (storedWidths.count() != count) {
+        return;
+    }
+
+    for (int logicalIndex = 0; logicalIndex < count; ++logicalIndex) {
+        const int width = storedWidths.at(logicalIndex).toInt();
+
+        if (width <= 0) {
+            return;
+        }
+    }
+
+    for (int logicalIndex = 0; logicalIndex < count; ++logicalIndex) {
+        header->resizeSection(logicalIndex, storedWidths.at(logicalIndex).toInt());
+    }
+}
+}  // namespace
+
+Qt::SortOrder Utils::Gui::toQtOrder(int order) {
+    return order == ORDER_ASCENDING ? Qt::AscendingOrder : Qt::DescendingOrder;
+}
+
+/**
+ * Checks if there is at least one child that is visible
+ */
+bool Utils::Gui::isOneTreeWidgetItemChildVisible(QTreeWidgetItem* item) {
+    for (int i = 0; i < item->childCount(); i++) {
+        QTreeWidgetItem* child = item->child(i);
+        if (!child->isHidden() || isOneTreeWidgetItemChildVisible(child)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/**
+ * Searches for text in items of a tree widget
+ */
+void Utils::Gui::searchForTextInTreeWidget(QTreeWidget* treeWidget, const QString& text,
+                                           TreeWidgetSearchFlags searchFlags) {
+    QStringList searchList;
+
+    if (searchFlags & TreeWidgetSearchFlag::EveryWordSearch) {
+        static const QRegularExpression re(QStringLiteral("\\s+"));
+        searchList = text.split(re);
+    } else {
+        searchList << text;
+    }
+
+    // get all items
+    QList<QTreeWidgetItem*> allItems = treeWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    // search text if at least one character was entered
+    if (text.size() >= 1) {
+        int searchColumnCount = searchFlags & TreeWidgetSearchFlag::AllColumnsSearch ? treeWidget->columnCount() : 1;
+
+        // hide all not found items
+        Q_FOREACH (QTreeWidgetItem* item, allItems) {
+            bool show = false;
+
+            // look in all columns that we want to search
+            for (int index = 0; index < searchColumnCount; index++) {
+                bool loopShow = true;
+
+                foreach (QString searchText, searchList) {
+                    // search for text in the columns
+                    bool loopShow2 = item->text(index).contains(searchText, Qt::CaseInsensitive);
+
+                    // also show the item if the text was found in the tooltip
+                    if (searchFlags & TreeWidgetSearchFlag::TooltipSearch) {
+                        loopShow2 |= item->toolTip(index).contains(searchText, Qt::CaseInsensitive);
+                    }
+
+                    loopShow &= loopShow2;
+                }
+
+                show |= loopShow;
+            }
+
+            // also show the item if an integer id is greater than 0
+            if (searchFlags & TreeWidgetSearchFlag::IntCheck) {
+                int id = item->data(0, Qt::UserRole).toInt();
+                show |= id <= 0;
+            }
+
+            item->setHidden(!show);
+        }
+
+        // show items again that have visible children so that they are
+        // really shown
+        Q_FOREACH (QTreeWidgetItem* item, allItems) {
+            if (isOneTreeWidgetItemChildVisible(item)) {
+                item->setHidden(false);
+                item->setExpanded(true);
+            }
+        }
+    } else {
+        // show all items otherwise
+        Q_FOREACH (QTreeWidgetItem* item, allItems) {
+            item->setHidden(false);
+        }
+    }
+}
+
+/**
+ * Searches for text in items of a list widget
+ */
+void Utils::Gui::searchForTextInListWidget(QListWidget* listWidget, const QString& text, bool searchAddProps) {
+    QList<QListWidgetItem*> allItems = listWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    // search text if at least one character was entered
+    if (text.size() >= 1) {
+        // hide all not found items
+        Q_FOREACH (QListWidgetItem* item, allItems) {
+            bool show = item->text().contains(text, Qt::CaseInsensitive);
+
+            if (searchAddProps) {
+                show |= item->toolTip().contains(text, Qt::CaseInsensitive) ||
+                        item->whatsThis().contains(text, Qt::CaseInsensitive);
+            }
+
+            item->setHidden(!show);
+        }
+    } else {
+        // show all items otherwise
+        Q_FOREACH (QListWidgetItem* item, allItems) {
+            item->setHidden(false);
+        }
+    }
+}
+
+void Utils::Gui::initTreeWidgetHeaderOrderPersistence(QTreeWidget* treeWidget, const QString& settingsKey) {
+    if ((treeWidget == nullptr) || settingsKey.isEmpty() || (treeWidget->columnCount() <= 1)) {
+        return;
+    }
+
+    auto* header = treeWidget->header();
+
+    if (header == nullptr) {
+        return;
+    }
+
+    treeWidget->setProperty("headerPersistenceSettingsKey", settingsKey);
+    header->setSectionsMovable(true);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+    header->setFirstSectionMovable(true);
+#endif
+    restoreHeaderOrder(header, settingsKey);
+    restoreHeaderWidths(header, settingsKey);
+
+    QObject::connect(header, &QHeaderView::sectionMoved, treeWidget,
+                     [header, settingsKey](int logicalIndex, int oldVisualIndex, int newVisualIndex) {
+                         Q_UNUSED(logicalIndex)
+                         Q_UNUSED(oldVisualIndex)
+                         Q_UNUSED(newVisualIndex)
+                         storeHeaderLayout(header, settingsKey);
+                     });
+    QObject::connect(header, &QHeaderView::sectionResized, treeWidget,
+                     [header, settingsKey](int logicalIndex, int oldSize, int newSize) {
+                         Q_UNUSED(logicalIndex)
+                         Q_UNUSED(oldSize)
+                         Q_UNUSED(newSize)
+                         storeHeaderLayout(header, settingsKey);
+                     });
+}
+
+bool Utils::Gui::hasTreeWidgetHeaderLayout(QTreeWidget* treeWidget, const QString& settingsKey) {
+    const QString resolvedKey = resolvedHeaderLayoutKey(treeWidget, settingsKey);
+    return hasStoredHeaderOrder(resolvedKey) || hasStoredHeaderWidths(resolvedKey);
+}
+
+void Utils::Gui::restoreTreeWidgetHeaderLayout(QTreeWidget* treeWidget, const QString& settingsKey) {
+    if ((treeWidget == nullptr) || (treeWidget->columnCount() <= 1)) {
+        return;
+    }
+
+    auto* header = treeWidget->header();
+
+    if (header == nullptr) {
+        return;
+    }
+
+    const QString resolvedKey = resolvedHeaderLayoutKey(treeWidget, settingsKey);
+
+    if (resolvedKey.isEmpty()) {
+        return;
+    }
+
+    restoreHeaderOrder(header, resolvedKey);
+    restoreHeaderWidths(header, resolvedKey);
+}
+
+/**
+ * Checks if a variant exists as user data in a tree widget
+ */
+bool Utils::Gui::userDataInTreeWidgetExists(QTreeWidget* treeWidget, const QVariant& userData, int column) {
+    return getTreeWidgetItemWithUserData(treeWidget, userData, column) != nullptr;
+}
+
+/**
+ * Returns the tree widget item of a tree widget with that has a certain user
+ * data
+ *
+ * @param treeWidget
+ * @param userData
+ * @param column
+ * @return
+ */
+QTreeWidgetItem* Utils::Gui::getTreeWidgetItemWithUserData(QTreeWidget* treeWidget, const QVariant& userData,
+                                                           int column) {
+    // get all items
+    QList<QTreeWidgetItem*> allItems = treeWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    Q_FOREACH (QTreeWidgetItem* item, allItems) {
+        if (userData == item->data(column, Qt::UserRole)) {
+            return item;
+        }
+    }
+
+    return nullptr;
+}
+
+QListWidgetItem* Utils::Gui::getListWidgetItemWithUserData(QListWidget* listWidget, const QVariant& userData) {
+    // get all items
+    QList<QListWidgetItem*> allItems = listWidget->findItems("", Qt::MatchContains);
+
+    Q_FOREACH (QListWidgetItem* item, allItems) {
+        if (userData == item->data(Qt::UserRole)) {
+            return item;
+        }
+    }
+
+    return nullptr;
+}
+
+/**
+ * Resets the bold state of all tree widget items of a tree widget
+ *
+ * @param treeWidget
+ * @param column
+ */
+void Utils::Gui::resetBoldStateOfAllTreeWidgetItems(QTreeWidget* treeWidget, int column) {
+    // get all items
+    QList<QTreeWidgetItem*> allItems = treeWidget->findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    Q_FOREACH (QTreeWidgetItem* item, allItems) {
+        auto font = item->font(column);
+        if (font.bold()) {
+            font.setBold(false);
+            item->setFont(column, font);
+        }
+    }
+}
+
+/**
+ * Shows an information message box with a checkbox to override the message box
+ * in the future
+ *
+ * @param parent
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @return
+ */
+QMessageBox::StandardButton Utils::Gui::information(QWidget* parent, const QString& title, const QString& text,
+                                                    const QString& identifier, QMessageBox::StandardButtons buttons,
+                                                    QMessageBox::StandardButton defaultButton) {
+    return showMessageBox(parent, QMessageBox::Icon::Information, title, text, identifier, buttons, defaultButton);
+}
+
+/**
+ * Shows a question message box with a checkbox to override the message box in
+ * the future
+ *
+ * @param parent
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @param skipOverrideButtons
+ * @return
+ */
+QMessageBox::StandardButton Utils::Gui::question(QWidget* parent, const QString& title, const QString& text,
+                                                 const QString& identifier, QMessageBox::StandardButtons buttons,
+                                                 QMessageBox::StandardButton defaultButton,
+                                                 QMessageBox::StandardButtons skipOverrideButtons) {
+    return showMessageBox(parent, QMessageBox::Icon::Question, title, text, identifier, buttons, defaultButton,
+                          skipOverrideButtons);
+}
+
+/**
+ * Shows a question message box with a checkbox to override the message box in
+ * the future (but no skip override buttons can be defined)
+ *
+ * @param parent
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @return
+ */
+QMessageBox::StandardButton Utils::Gui::questionNoSkipOverride(QWidget* parent, const QString& title,
+                                                               const QString& text, const QString& identifier,
+                                                               QMessageBox::StandardButtons buttons,
+                                                               QMessageBox::StandardButton defaultButton) {
+    return showMessageBox(parent, QMessageBox::Icon::Question, title, text, identifier, buttons, defaultButton,
+                          QMessageBox::NoButton);
+}
+
+/**
+ * Shows a warning message box with a checkbox to override the message box in
+ * the future
+ *
+ * @param parent
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @return
+ */
+QMessageBox::StandardButton Utils::Gui::warning(QWidget* parent, const QString& title, const QString& text,
+                                                const QString& identifier, QMessageBox::StandardButtons buttons,
+                                                QMessageBox::StandardButton defaultButton) {
+    return showMessageBox(parent, QMessageBox::Icon::Warning, title, text, identifier, buttons, defaultButton);
+}
+
+/**
+ * Shows a message box with a checkbox to override the message box in the future
+ *
+ * @param parent
+ * @param icon
+ * @param title
+ * @param text
+ * @param identifier
+ * @param buttons
+ * @param defaultButton
+ * @return
+ */
+QMessageBox::StandardButton Utils::Gui::showMessageBox(QWidget* parent, QMessageBox::Icon icon, const QString& title,
+                                                       const QString& text, const QString& identifier,
+                                                       QMessageBox::StandardButtons buttons,
+                                                       QMessageBox::StandardButton defaultButton,
+                                                       QMessageBox::StandardButtons skipOverrideButtons) {
+    SettingsService settings;
+    const QString settingsKey = "MessageBoxOverride/" + identifier;
+    auto overrideButton =
+        static_cast<QMessageBox::StandardButton>(settings.value(settingsKey, QMessageBox::NoButton).toInt());
+
+    // check if we want to override the message box
+    if ((overrideButton != QMessageBox::NoButton) && !skipOverrideButtons.testFlag(overrideButton)) {
+        return overrideButton;
+    }
+
+    QMessageBox msgBox(icon, title, text, QMessageBox::NoButton, parent);
+    auto* buttonBox = msgBox.findChild<QDialogButtonBox*>();
+    Q_ASSERT(buttonBox != nullptr);
+    auto* checkBox = new QCheckBox(
+        icon == QMessageBox::Icon::Question ? QObject::tr("Don't ask again!") : QObject::tr("Don't show again!"),
+        parent);
+
+    uint mask = QMessageBox::FirstButton;
+    while (mask <= QMessageBox::LastButton) {
+        auto sb = static_cast<uint>(buttons & mask);
+        mask <<= 1;
+        if (!sb) continue;
+        QPushButton* button = msgBox.addButton((QMessageBox::StandardButton)sb);
+
+        // choose the first accept role as the default
+        if (msgBox.defaultButton()) continue;
+        if ((defaultButton == QMessageBox::NoButton && buttonBox->buttonRole(button) == QDialogButtonBox::AcceptRole) ||
+            (defaultButton != QMessageBox::NoButton && sb == uint(defaultButton)))
+            msgBox.setDefaultButton(button);
+    }
+
+    // set the checkbox in the end, so it doesn't get the focus on the dialog
+    // this would lead to accidentally checking the checkbox
+    msgBox.setCheckBox(checkBox);
+
+    if (msgBox.exec() == -1) return QMessageBox::Cancel;
+
+    auto result = msgBox.standardButton(msgBox.clickedButton());
+
+    // store the override for the message box
+    if (checkBox->isChecked() && !skipOverrideButtons.testFlag(result)) {
+        settings.setValue(settingsKey, result);
+    }
+
+    return result;
+}
+
+/**
+ * Checks if a QMessageBox is already present on the screen
+ */
+bool Utils::Gui::isMessageBoxPresent() {
+    QWidgetList topWidgets = QApplication::topLevelWidgets();
+    foreach (QWidget* w, topWidgets) {
+        if (auto* mb = dynamic_cast<QMessageBox*>(w)) {
+            Q_UNUSED(mb)
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/**
+ * Opens a font dialog to select a font
+ *
+ * @param ok
+ * @param initial
+ * @param parent
+ * @param title
+ * @param options
+ * @return
+ */
+QFont Utils::Gui::fontDialogGetFont(bool* ok, const QFont& initial, QWidget* parent, const QString& title,
+                                    QFontDialog::FontDialogOptions options) {
+#ifdef Q_OS_MAC
+    // there was a bug in Qt 5.11.2 with the native dialog
+    // see: https://github.com/pbek/ArcNotes/issues/1033
+    options |= QFontDialog::DontUseNativeDialog;
+#endif
+
+    return QFontDialog::getFont(ok, initial, parent, title, options);
+}
+
+/**
+ * Copies the text from a copy block around initialBlock to the clipboard
+ *
+ * @param initialBlock
+ */
+void Utils::Gui::copyCodeBlockText(const QTextBlock& initialBlock) {
+    QTextBlock block = initialBlock;
+    QString codeBlockText = block.text();
+    QStringList codeBlockTextList;
+    codeBlockTextList << codeBlockText;
+
+    // check the previous blocks
+    while (true) {
+        block = block.previous();
+
+        if (!block.isValid()) {
+            break;
+        }
+
+        if (block.userState() != MarkdownHighlighter::HighlighterState::CodeBlock &&
+            block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockComment &&
+            block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTilde &&
+            block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTildeComment &&
+            block.userState() < MarkdownHighlighter::HighlighterState::CodeCpp) {
+            break;
+        }
+        codeBlockTextList.prepend(block.text());
+    }
+
+    // check the next blocks if we are not at the CodeBlockEnd
+    if (!MarkdownHighlighter::isCodeBlockEnd(initialBlock.userState())) {
+        block = initialBlock;
+
+        while (true) {
+            block = block.next();
+
+            if (!block.isValid()) {
+                break;
+            }
+
+            if (block.userState() != MarkdownHighlighter::HighlighterState::CodeBlock &&
+                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockComment &&
+                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockEnd &&
+                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTilde &&
+                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTildeComment &&
+                block.userState() != MarkdownHighlighter::HighlighterState::CodeBlockTildeEnd &&
+                block.userState() < MarkdownHighlighter::HighlighterState::CodeCpp) {
+                break;
+            }
+
+            codeBlockTextList.append(block.text());
+        }
+    }
+
+    if (!codeBlockTextList.isEmpty()) {
+        if (codeBlockTextList.first().startsWith(QLatin1String("```")) ||
+            codeBlockTextList.first().startsWith(QLatin1String("~~~")))
+            codeBlockTextList.removeFirst();
+        if (!codeBlockTextList.isEmpty() && (codeBlockTextList.last().startsWith(QLatin1String("```")) ||
+                                             codeBlockTextList.last().startsWith(QLatin1String("~~~"))))
+            codeBlockTextList.removeLast();
+    }
+    QClipboard* clipboard = QApplication::clipboard();
+    clipboard->setText(codeBlockTextList.join(QStringLiteral("\n")));
+}
+
+/**
+ * Attempts to toggle a checkbox at the cursor position
+ *
+ * @param textEdit
+ */
+bool Utils::Gui::toggleCheckBoxAtCursor(QPlainTextEdit* textEdit) {
+    auto cursor = textEdit->textCursor();
+    const int pos = cursor.position();
+
+    // select the full range of "- [ ]" text in front and after cursor
+    cursor.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 5);
+    cursor.movePosition(QTextCursor::Right, QTextCursor::KeepAnchor, 10);
+
+    bool result = false;
+    auto text = cursor.selectedText();
+    static const auto reUnchecked = QRegularExpression(R"(([-\+\*]) \[ \])");
+    static const auto reChecked = QRegularExpression(R"(([-\+\*]) \[x\])");
+    static const auto reNumberUnchecked = QRegularExpression(R"(([\d+]\.) \[ \])");
+    static const auto reNumberChecked = QRegularExpression(R"(([\d+]\.) \[x\])");
+
+    // try to toggle the checkbox
+    if (reUnchecked.match(text).hasMatch()) {
+        text.replace(reUnchecked, QStringLiteral("\\1 [x]"));
+        result = true;
+    } else if (reChecked.match(text).hasMatch()) {
+        text.replace(reChecked, QStringLiteral("\\1 [ ]"));
+        result = true;
+    } else if (reNumberUnchecked.match(text).hasMatch()) {
+        text.replace(reNumberUnchecked, QStringLiteral("\\1 [x]"));
+        result = true;
+    } else if (reNumberChecked.match(text).hasMatch()) {
+        text.replace(reNumberChecked, QStringLiteral("\\1 [ ]"));
+        result = true;
+    }
+
+    // insert the new checkbox text if it was toggled
+    if (result) {
+        cursor.insertText(text);
+        cursor.setPosition(pos);
+        textEdit->setTextCursor(cursor);
+    }
+
+    return result;
+}
+
+/**
+ * Automatically formats a Markdown table in a text edit
+ *
+ * @param textEdit
+ */
+bool Utils::Gui::autoFormatTableAtCursor(QPlainTextEdit* textEdit) {
+    QTextCursor initialCursor = textEdit->textCursor();
+    QTextCursor cursor = initialCursor;
+    cursor.movePosition(QTextCursor::EndOfBlock);
+    int endPosition = cursor.position();
+    QTextBlock initialBlock = cursor.block();
+    QTextBlock block = initialBlock;
+    // We are trimming to support leading spaces, because md4c seems to support up to 3 of it
+    // See https://github.com/pbek/ArcNotes/issues/3137
+    const QString& tableText = block.text().trimmed();
+
+    // return if text doesn't seem to be part of a table
+    if (!tableText.startsWith(QLatin1String("|"))) {
+        return false;
+    }
+
+    QList<QStringList> tableTextList;
+    tableTextList << tableText.split(QStringLiteral("|"));
+    int startPosition = block.position();
+    int maxColumns = 0;
+    bool tableWasModified = false;
+
+    // check the previous blocks
+    while (true) {
+        block = block.previous();
+
+        if (!block.isValid()) {
+            break;
+        }
+
+        QString prevBlockText = block.text().trimmed();
+        if (!prevBlockText.startsWith(QLatin1String("|"))) {
+            break;
+        }
+
+        const QStringList& stringList = prevBlockText.split(QStringLiteral("|"));
+        tableTextList.prepend(stringList);
+        startPosition = block.position();
+        maxColumns = std::max(maxColumns, (int)stringList.count());
+    }
+
+    // check the next blocks
+    block = initialBlock;
+    while (true) {
+        block = block.next();
+
+        if (!block.isValid()) {
+            break;
+        }
+
+        QString nextBlockText = block.text().trimmed();
+        if (!nextBlockText.startsWith(QLatin1String("|"))) {
+            break;
+        }
+
+        const QStringList& stringList = nextBlockText.split(QStringLiteral("|"));
+        tableTextList.append(stringList);
+        endPosition = block.position() + nextBlockText.size();
+        maxColumns = std::max(maxColumns, (int)stringList.count());
+    }
+
+    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
+    QString justifiedText;
+
+    const int lineCount = tableTextList.size();
+    if (lineCount < 2) {
+        return false;
+    }
+
+    QVector<int> colLength;
+    colLength << 1;
+
+    // for every column, store maximum column length
+    for (int col = 1; col < maxColumns; col++) {
+        int maxTextLength = 0;
+        for (int line = 0; line < lineCount; line++) {
+            const QStringList& lineTextList = tableTextList.at(line);
+
+            if (col >= lineTextList.count()) {
+                break;
+            }
+
+            const QString& text = lineTextList.at(col).trimmed();
+
+            // don't count the headline separator line, so it can shrink
+            // down to 3 characters if needed
+            if (line == 1 && headlineSeparatorRegExp.match(text).hasMatch()) {
+                continue;
+            }
+
+            maxTextLength = std::max((int)text.size(), maxTextLength);
+        }
+
+        // a minimum of 3 headline separator characters are needed for
+        // valid Markdown tables
+        maxTextLength = std::max(3, maxTextLength);
+
+        colLength << maxTextLength;
+    }
+
+    QVector<Qt::AlignmentFlag> colAlignment;
+    colAlignment << Qt::AlignLeft;
+
+    const QStringList& headerStringList = tableTextList.at(1);
+
+    // for every column, store column alignment
+    for (int col = 1; col < maxColumns - 1; col++) {
+        const QString& text = headerStringList.at(col);
+        QString trimmedText = text.trimmed();
+
+        if (!headlineSeparatorRegExp.match(trimmedText).hasMatch()) {
+            return false;
+        }
+
+        const bool startsWithCol = trimmedText.startsWith(QStringLiteral(":"));
+        const bool endsWithCol = trimmedText.endsWith(QStringLiteral(":"));
+
+        if (startsWithCol && endsWithCol) {
+            colAlignment << Qt::AlignCenter;
+        } else if (endsWithCol) {
+            colAlignment << Qt::AlignRight;
+        } else if (startsWithCol) {
+            colAlignment << Qt::AlignLeft;
+        } else {
+            // implicit left alignment
+            colAlignment << static_cast<Qt::AlignmentFlag>(0);
+        }
+    }
+
+    // justify text in tableTextList
+    // we can skip the first column in the list since it is bound to have no
+    // text
+    for (int col = 1; col < maxColumns; col++) {
+        const Qt::AlignmentFlag alignment = colAlignment.value(col, static_cast<Qt::AlignmentFlag>(0));
+        const int maxTextLength = colLength.at(col);
+
+        // do the text justification
+        for (int line = 0; line < lineCount; line++) {
+            QStringList lineTextList = tableTextList.at(line);
+
+            const int lineTextListCount = lineTextList.count();
+
+            if (col >= lineTextListCount) {
+                break;
+            }
+
+            const QString& text = lineTextList.at(col);
+
+            // stop if the text in the last column is empty
+            if (col == (lineTextListCount - 1) && text.isEmpty()) {
+                break;
+            }
+
+            QString trimmedText = text.trimmed();
+
+            if (line == 1) {
+                // heading
+                QString prefix(" ");
+                QString suffix(" ");
+
+                if (alignment == Qt::AlignCenter) {
+                    prefix = " :";
+                    suffix = ": ";
+                } else if (alignment == Qt::AlignLeft) {
+                    prefix = " :";
+                } else if (alignment == Qt::AlignRight) {
+                    suffix = ": ";
+                }
+
+                const int numSpecialChars(prefix.size() + suffix.size() - 2);
+                justifiedText = prefix + QStringLiteral("-").repeated(maxTextLength - numSpecialChars) + suffix;
+            } else {
+                if (alignment == Qt::AlignCenter) {
+                    const int leftFillSize = (maxTextLength - trimmedText.size()) / 2;
+                    const int rightFillSize = (maxTextLength - trimmedText.size()) - leftFillSize;
+                    justifiedText =
+                        QString().fill(' ', leftFillSize) + trimmedText + QString().fill(' ', rightFillSize);
+                } else if (alignment == Qt::AlignRight) {
+                    justifiedText = trimmedText.rightJustified(maxTextLength);
+                } else {
+                    justifiedText = trimmedText.leftJustified(maxTextLength);
+                }
+
+                // add padding
+                justifiedText = QStringLiteral(" ") + justifiedText + QStringLiteral(" ");
+            }
+
+            // update the tableTextList
+            if (text != justifiedText) {
+                lineTextList.replace(col, justifiedText);
+                tableTextList.replace(line, lineTextList);
+                tableWasModified = true;
+            }
+        }
+    }
+
+    // return if table doesn't need to be modified
+    if (!tableWasModified) {
+        return false;
+    }
+
+    // generate the new table text
+    QString newTableText;
+    for (int line = 0; line < lineCount; line++) {
+        newTableText += tableTextList.at(line).join(QStringLiteral("|"));
+
+        if (line < (lineCount - 1)) {
+            newTableText += QStringLiteral("\n");
+        }
+    }
+
+    // select whole table to overwrite text
+    cursor.setPosition(startPosition);
+    cursor.setPosition(endPosition, QTextCursor::KeepAnchor);
+    textEdit->setTextCursor(cursor);
+
+    // overwrite the table
+    cursor.insertText(newTableText);
+
+    return true;
+}
+
+/**
+ * Updates the interface font size from the interface font size override
+ * settings
+ */
+void Utils::Gui::updateInterfaceFontSize(int fontSize) {
+    SettingsService settings;
+    bool overrideInterfaceFontSize = settings.value(QStringLiteral("overrideInterfaceFontSize"), false).toBool();
+
+    // remove old style
+    static const QRegularExpression re(QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
+                                       QStringLiteral(".*") +
+                                       QRegularExpression::escape(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING));
+    QString stylesheet = qApp->styleSheet().remove(re);
+
+    if (overrideInterfaceFontSize) {
+        int interfaceFontSize =
+            fontSize != -1 ? fontSize : settings.value(QStringLiteral("interfaceFontSize"), 11).toInt();
+
+        stylesheet += QStringLiteral("\n") + QString(INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING) +
+                      QStringLiteral("QWidget {font-size: ") + QString::number(interfaceFontSize) +
+                      QStringLiteral("px;}") + QString(INTERFACE_OVERRIDE_STYLESHEET_POST_STRING);
+    }
+
+    qApp->setStyleSheet(stylesheet);
+}
+
+/**
+ * Sets the current index of a combo box by user data
+ */
+void Utils::Gui::setComboBoxIndexByUserData(QComboBox* comboBox, const QVariant& userData) {
+    const int index = comboBox->findData(userData);
+    comboBox->setCurrentIndex(index);
+}
+
+int Utils::Gui::getTabWidgetIndexByProperty(QTabWidget* tabWidget, const QString& propertyName,
+                                            const QVariant& propertyValue) {
+    for (int i = 0; i < tabWidget->count(); i++) {
+        const auto value = tabWidget->widget(i)->property(propertyName.toLocal8Bit());
+        if (value == propertyValue) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+/**
+ * Checks if Windows is in dark or light mode and if we want to switch to those modes too.
+ * This only works under
+ * Windows 10 (or newer).
+ */
+bool Utils::Gui::doWindowsDarkModeCheck(bool systemChangeDetected) {
+    QSettings settings(R"(HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize)",
+                       QSettings::NativeFormat);
+
+    // If setting wasn't found we are not on Windows 10 (or newer)
+    if (!settings.contains("AppsUseLightTheme")) {
+        return false;
+    }
+
+    bool windowsDarkMode = settings.value("AppsUseLightTheme") == 0;
+    bool appDarkMode = SettingsService().value("darkMode").toBool();
+
+    if (windowsDarkMode) {
+        // Check for Windows dark mode and application default mode
+        if (!appDarkMode) {
+            promptForColorSchemeChange(QObject::tr("Dark mode detected"),
+                                       QObject::tr("Your Windows system seems to be in dark mode. "
+                                                   "Do you also want to turn on dark mode in ArcNotes?"),
+                                       QStringLiteral("windows-dark-mode"), true, systemChangeDetected);
+        }
+
+        return true;
+    }
+
+    // Check for Windows light mode and application dark mode
+    if (appDarkMode) {
+        promptForColorSchemeChange(QObject::tr("Light mode detected"),
+                                   QObject::tr("Your Windows system seems to be in light mode. "
+                                               "Do you also want to turn off dark mode in ArcNotes?"),
+                                   QStringLiteral("windows-light-mode"), false, systemChangeDetected);
+    }
+
+    return true;
+}
+
+/**
+ * Checks if Linux is in dark or light mode and if we want to switch to those modes too.
+ * This only works with dbus.
+ */
+bool Utils::Gui::doLinuxDarkModeCheck(bool systemChangeDetected) {
+    //    auto result = Utils::Misc::startSynchronousProcess("/usr/bin/dbus-send", QStringList() <<
+    //                    QStringLiteral("--session") << QStringLiteral("--print-reply=literal") <<
+    //                    QStringLiteral("--reply-timeout=1000") <<
+    //                    QStringLiteral("--dest=org.freedesktop.portal.Desktop") <<
+    //                    QStringLiteral("/org/freedesktop/portal/desktop") <<
+    //                    QStringLiteral("org.freedesktop.portal.Settings.Read") <<
+    //                    QStringLiteral("string:'org.freedesktop.appearance'") <<
+    //                    QStringLiteral("string:'color-scheme'"));
+
+    //    auto parameters = QStringList() <<
+    //                    QStringLiteral("--session") << QStringLiteral("--print-reply=literal") <<
+    //                    QStringLiteral("--reply-timeout=1000") <<
+    //                    QStringLiteral("--dest=org.freedesktop.portal.Desktop") <<
+    //                    QStringLiteral("/org/freedesktop/portal/desktop") <<
+    //                    QStringLiteral("org.freedesktop.portal.Settings.Read") <<
+    //                    QStringLiteral("string:'org.freedesktop.appearance'") <<
+    //                    QStringLiteral("string:'color-scheme'");
+
+    //    auto parameters = QStringList() <<
+    //                    QStringLiteral("--session") << QStringLiteral("--print-reply=literal") <<
+    //                    QStringLiteral("--reply-timeout=1000") <<
+    //                    QStringLiteral("--dest=org.freedesktop.portal.Desktop") <<
+    //                    QStringLiteral("/org/freedesktop/portal/desktop") <<
+    //                    QStringLiteral("org.freedesktop.portal.Settings.Read") <<
+    //                    QStringLiteral("string:'org.freedesktop.appearance'
+    //                    string:'color-scheme'");
+
+    // Use dbus-send directly instead of /bin/sh -c to avoid shell interpretation
+    const QString dbusExecutable = QStandardPaths::findExecutable(QStringLiteral("dbus-send"));
+    if (dbusExecutable.isEmpty()) {
+        qWarning() << __func__ << " - 'dbus-send' not found, doLinuxDarkModeCheck returned false";
+        return false;
+    }
+
+    auto parameters = QStringList() << QStringLiteral("--session") << QStringLiteral("--print-reply=literal")
+                                    << QStringLiteral("--reply-timeout=1000")
+                                    << QStringLiteral("--dest=org.freedesktop.portal.Desktop")
+                                    << QStringLiteral("/org/freedesktop/portal/desktop")
+                                    << QStringLiteral("org.freedesktop.portal.Settings.Read")
+                                    << QStringLiteral("string:org.freedesktop.appearance")
+                                    << QStringLiteral("string:color-scheme");
+
+    QProcess process;
+    process.start(dbusExecutable, parameters);
+
+    if (!process.waitForStarted()) {
+        qWarning() << __func__ << " - 'doLinuxDarkModeCheck' returned false";
+        return false;
+    }
+
+    if (!process.waitForFinished()) {
+        qWarning() << __func__ << " - 'doLinuxDarkModeCheck' returned false";
+        return false;
+    }
+
+    //    const auto result = QString(process.readAllStandardError());
+    const int systemColorSchema = QString(process.readAll()).trimmed().right(1).toInt();
+    const bool appDarkMode = SettingsService().value("darkMode").toBool();
+
+    if (systemColorSchema == 1) {
+        // Check for Linux dark mode and application default mode
+        if (!appDarkMode) {
+            promptForColorSchemeChange(QObject::tr("Dark mode detected"),
+                                       QObject::tr("Your Linux system seems to use the dark mode. "
+                                                   "Do you also want to turn on dark mode in ArcNotes?"),
+                                       QStringLiteral("linux-dark-mode"), true, systemChangeDetected);
+        }
+
+        return true;
+    }
+
+    if (systemColorSchema == 2) {
+        // Check for Linux light mode and application dark mode
+        if (appDarkMode) {
+            promptForColorSchemeChange(QObject::tr("Light mode detected"),
+                                       QObject::tr("Your Linux system seems to use the light mode. "
+                                                   "Do you also want to turn off dark mode in ArcNotes?"),
+                                       QStringLiteral("linux-light-mode"), false, systemChangeDetected);
+        }
+
+        return true;
+    }
+
+    return false;
+}
+
+bool Utils::Gui::doSystemDarkModeCheck(bool systemChangeDetected) {
+#ifdef Q_OS_WIN32
+    // On Windows, try the registry-based check first, then fall back to Qt's colorScheme
+    // if the registry setting is unavailable.
+    if (doWindowsDarkModeCheck(systemChangeDetected)) {
+        return true;
+    }
+#endif
+
+#ifdef Q_OS_LINUX
+    // On Linux, prefer the D-Bus freedesktop portal check over Qt's colorScheme().
+    // Qt's QStyleHints::colorScheme() can incorrectly report Light on GNOME/Wayland
+    // even when the system is in dark mode (see issue #3594), whereas the portal
+    // query reads the setting GNOME and KDE both expose correctly. Only fall back
+    // to Qt when the portal check is unavailable or returns no preference.
+    if (doLinuxDarkModeCheck(systemChangeDetected)) {
+        return true;
+    }
+#endif
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
+    // Fall back to Qt's built-in color scheme detection for platforms where the
+    // OS-specific checks above are not available or did not produce a result
+    const Qt::ColorScheme colorScheme = QGuiApplication::styleHints()->colorScheme();
+
+    if (colorScheme != Qt::ColorScheme::Unknown) {
+        return promptForQtColorSchemeChange(colorScheme, systemChangeDetected);
+    }
+#else
+    Q_UNUSED(systemChangeDetected)
+#endif
+
+    return false;
+}
+
+QIcon Utils::Gui::folderIcon() {
+    static const QIcon s_folderIcon =
+        QIcon::fromTheme(QStringLiteral("folder"), QIcon(QStringLiteral(":icons/breeze-arcnotes/16x16/folder.svg")));
+    return s_folderIcon;
+}
+
+QIcon Utils::Gui::noteIcon() {
+    static const QIcon s_noteIcon =
+        QIcon::fromTheme(QStringLiteral("text-x-generic"), QIcon(":icons/breeze-arcnotes/16x16/text-x-generic.svg"));
+    return s_noteIcon;
+}
+
+QIcon Utils::Gui::favoriteNoteIcon() {
+    static const QIcon s_favoriteNoteIcon =
+        QIcon::fromTheme(QStringLiteral("favorite-favorited"),
+                         QIcon(QStringLiteral(":/icons/breeze-arcnotes/16x16/favorite-favorited.svg")));
+    return s_favoriteNoteIcon;
+}
+
+QIcon Utils::Gui::tagIcon() {
+    static const QIcon s_tagIcon =
+        QIcon::fromTheme(QStringLiteral("tag"), QIcon(QStringLiteral(":/icons/breeze-arcnotes/16x16/tag.svg")));
+    return s_tagIcon;
+}
+
+bool Utils::Gui::enableDockWidgetQuestion(QDockWidget* dockWidget) {
+    if (dockWidget->isVisible()) {
+        return true;
+    }
+    if (Utils::Gui::question(dockWidget, QObject::tr("Panel disabled"),
+                             QObject::tr("Panel <strong>%1</strong> is currently disabled, "
+                                         "do you want to turn it on again for this action to work?")
+                                 .arg(dockWidget->windowTitle()),
+                             QStringLiteral("enable-panel-question-") + dockWidget->objectName()) != QMessageBox::Yes) {
+        return false;
+    }
+
+    dockWidget->setVisible(true);
+    return true;
+}
+
+/**
+ * Checks if the cursor is currently in a Markdown table
+ *
+ * @param textEdit
+ * @param cursorColumn optional pointer to store the column index (0-based, ignoring leading empty
+ * column)
+ * @return true if cursor is in a table
+ */
+bool Utils::Gui::isTableAtCursor(QPlainTextEdit* textEdit, int* cursorColumn) {
+    QTextCursor cursor = textEdit->textCursor();
+    QTextBlock block = cursor.block();
+    const QString& tableText = block.text().trimmed();
+
+    // Check if text is part of a table
+    if (!tableText.startsWith(QLatin1String("|"))) {
+        return false;
+    }
+
+    // If cursorColumn is provided, calculate which column the cursor is in
+    if (cursorColumn != nullptr) {
+        const QString blockText = block.text();
+        const int posInBlock = cursor.positionInBlock();
+
+        // Find the leading whitespace offset
+        int leadingSpaces = 0;
+        while (leadingSpaces < blockText.length() && blockText[leadingSpaces].isSpace()) {
+            leadingSpaces++;
+        }
+
+        // Adjust position to account for leading spaces
+        const int adjustedPos = posInBlock - leadingSpaces;
+
+        // Count pipes before cursor position
+        int col = 0;
+        for (int i = 0; i < adjustedPos && i < tableText.length(); i++) {
+            if (tableText[i] == '|') {
+                col++;
+            }
+        }
+
+        // Markdown tables have an empty first column (before first pipe)
+        // so we subtract 1 to get the actual column index
+        *cursorColumn = std::max(0, col - 1);
+    }
+
+    return true;
+}
+
+/**
+ * Inserts a column to the left of the cursor position in a Markdown table
+ *
+ * @param textEdit
+ * @return true if a column was inserted
+ */
+bool Utils::Gui::insertTableColumnLeft(QPlainTextEdit* textEdit) {
+    int cursorColumn = 0;
+    if (!isTableAtCursor(textEdit, &cursorColumn)) {
+        return false;
+    }
+
+    QTextCursor initialCursor = textEdit->textCursor();
+    QTextCursor cursor = initialCursor;
+    cursor.movePosition(QTextCursor::EndOfBlock);
+    QTextBlock initialBlock = cursor.block();
+    QTextBlock block = initialBlock;
+
+    // Collect all table rows
+    QList<QTextBlock> tableBlocks;
+    tableBlocks << block;
+    int startPosition = block.position();
+    int endPosition = cursor.position();
+
+    // Check previous blocks
+    block = initialBlock;
+    while (true) {
+        block = block.previous();
+        if (!block.isValid() || !block.text().trimmed().startsWith(QLatin1String("|"))) {
+            break;
+        }
+        tableBlocks.prepend(block);
+        startPosition = block.position();
+    }
+
+    // Check next blocks
+    block = initialBlock;
+    while (true) {
+        block = block.next();
+        if (!block.isValid() || !block.text().trimmed().startsWith(QLatin1String("|"))) {
+            break;
+        }
+        tableBlocks.append(block);
+        QString nextBlockText = block.text().trimmed();
+        endPosition = block.position() + block.text().size();
+    }
+
+    // Build new table with added column
+    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
+    QString newTableText;
+
+    for (int lineIdx = 0; lineIdx < tableBlocks.size(); lineIdx++) {
+        const QString& lineText = tableBlocks.at(lineIdx).text().trimmed();
+        QStringList parts = lineText.split(QStringLiteral("|"));
+
+        // Insert empty column at cursorColumn + 1 (accounting for empty first element)
+        const int insertIdx = cursorColumn + 1;
+
+        if (lineIdx == 1 && insertIdx < parts.size()) {
+            // This is the header separator line
+            const QString& nextColText = parts.at(insertIdx).trimmed();
+            if (headlineSeparatorRegExp.match(nextColText).hasMatch()) {
+                // Insert separator matching the next column's alignment
+                parts.insert(insertIdx, QStringLiteral(" --- "));
+            } else {
+                parts.insert(insertIdx, QStringLiteral("     "));
+            }
+        } else {
+            parts.insert(insertIdx, QStringLiteral("     "));
+        }
+
+        newTableText += parts.join(QStringLiteral("|"));
+        if (lineIdx < tableBlocks.size() - 1) {
+            newTableText += QStringLiteral("\n");
+        }
+    }
+
+    // Replace the table
+    cursor.setPosition(startPosition);
+    cursor.setPosition(endPosition, QTextCursor::KeepAnchor);
+    cursor.insertText(newTableText);
+
+    // Format the table
+    textEdit->setTextCursor(cursor);
+    autoFormatTableAtCursor(textEdit);
+
+    return true;
+}
+
+/**
+ * Inserts a column to the right of the cursor position in a Markdown table
+ *
+ * @param textEdit
+ * @return true if a column was inserted
+ */
+bool Utils::Gui::insertTableColumnRight(QPlainTextEdit* textEdit) {
+    int cursorColumn = 0;
+    if (!isTableAtCursor(textEdit, &cursorColumn)) {
+        return false;
+    }
+
+    QTextCursor initialCursor = textEdit->textCursor();
+    QTextCursor cursor = initialCursor;
+    cursor.movePosition(QTextCursor::EndOfBlock);
+    QTextBlock initialBlock = cursor.block();
+    QTextBlock block = initialBlock;
+
+    // Collect all table rows
+    QList<QTextBlock> tableBlocks;
+    tableBlocks << block;
+    int startPosition = block.position();
+    int endPosition = cursor.position();
+
+    // Check previous blocks
+    block = initialBlock;
+    while (true) {
+        block = block.previous();
+        if (!block.isValid() || !block.text().trimmed().startsWith(QLatin1String("|"))) {
+            break;
+        }
+        tableBlocks.prepend(block);
+        startPosition = block.position();
+    }
+
+    // Check next blocks
+    block = initialBlock;
+    while (true) {
+        block = block.next();
+        if (!block.isValid() || !block.text().trimmed().startsWith(QLatin1String("|"))) {
+            break;
+        }
+        tableBlocks.append(block);
+        QString nextBlockText = block.text().trimmed();
+        endPosition = block.position() + block.text().size();
+    }
+
+    // Build new table with added column
+    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
+    QString newTableText;
+
+    for (int lineIdx = 0; lineIdx < tableBlocks.size(); lineIdx++) {
+        const QString& lineText = tableBlocks.at(lineIdx).text().trimmed();
+        QStringList parts = lineText.split(QStringLiteral("|"));
+
+        // Insert empty column at cursorColumn + 2 (accounting for empty first element, +1 for
+        // right)
+        const int insertIdx = cursorColumn + 2;
+
+        if (lineIdx == 1 && insertIdx <= parts.size()) {
+            // This is the header separator line
+            const QString& prevColText = parts.at(cursorColumn + 1).trimmed();
+            if (headlineSeparatorRegExp.match(prevColText).hasMatch()) {
+                // Insert separator matching the current column's alignment
+                parts.insert(insertIdx, QStringLiteral(" --- "));
+            } else {
+                parts.insert(insertIdx, QStringLiteral("     "));
+            }
+        } else {
+            parts.insert(insertIdx, QStringLiteral("     "));
+        }
+
+        newTableText += parts.join(QStringLiteral("|"));
+        if (lineIdx < tableBlocks.size() - 1) {
+            newTableText += QStringLiteral("\n");
+        }
+    }
+
+    // Replace the table
+    cursor.setPosition(startPosition);
+    cursor.setPosition(endPosition, QTextCursor::KeepAnchor);
+    cursor.insertText(newTableText);
+
+    // Format the table
+    textEdit->setTextCursor(cursor);
+    autoFormatTableAtCursor(textEdit);
+
+    return true;
+}
+
+/**
+ * Inserts a row above the cursor position in a Markdown table
+ *
+ * @param textEdit
+ * @return true if a row was inserted
+ */
+bool Utils::Gui::insertTableRowAbove(QPlainTextEdit* textEdit) {
+    if (!isTableAtCursor(textEdit)) {
+        return false;
+    }
+
+    QTextCursor cursor = textEdit->textCursor();
+    QTextBlock currentBlock = cursor.block();
+    const QString currentLineText = currentBlock.text().trimmed();
+
+    // Count the number of columns in the current row
+    QStringList parts = currentLineText.split(QStringLiteral("|"));
+    int columnCount = parts.size();
+
+    // Check if we're at the header separator row (line 1, 0-indexed)
+    static const QRegularExpression headlineSeparatorRegExp(QStringLiteral(R"(^(:)?-+(:)?$)"));
+    bool isAtSeparatorRow = false;
+
+    // Check if this is a separator row
+    for (int i = 1; i < parts.size() - 1; i++) {
+        if (headlineSeparatorRegExp.match(parts.at(i).trimmed()).hasMatch()) {
+            isAtSeparatorRow = true;
+            break;
+        }
+    }
+
+    // Don't allow inserting above the separator row (would break table structure)
+    if (isAtSeparatorRow) {
+        // Check if previous row exists and is the header
+        QTextBlock prevBlock = currentBlock.previous();
+        if (prevBlock.isValid() && prevBlock.text().trimmed().startsWith(QLatin1String("|"))) {
+            // Insert before the header instead
+            cursor.setPosition(prevBlock.position());
+            cursor.movePosition(QTextCursor::StartOfBlock);
+        } else {
+            // Can't insert above separator if there's no header
+            return false;
+        }
+    } else {
+        // Position cursor at the start of current line
+        cursor.movePosition(QTextCursor::StartOfBlock);
+    }
+
+    // Build empty row with same number of columns
+    QString newRow;
+    for (int i = 0; i < columnCount - 1; i++) {
+        newRow += QStringLiteral("|");
+        if (i > 0) {
+            newRow += QStringLiteral("     ");
+        }
+    }
+    newRow += QStringLiteral("\n");
+
+    // Insert the new row
+    cursor.insertText(newRow);
+
+    // Format the table
+    textEdit->setTextCursor(cursor);
+    autoFormatTableAtCursor(textEdit);
+
+    return true;
+}
+
+/**
+ * Inserts a row below the cursor position in a Markdown table
+ *
+ * @param textEdit
+ * @return true if a row was inserted
+ */
+bool Utils::Gui::insertTableRowBelow(QPlainTextEdit* textEdit) {
+    if (!isTableAtCursor(textEdit)) {
+        return false;
+    }
+
+    QTextCursor cursor = textEdit->textCursor();
+    QTextBlock currentBlock = cursor.block();
+    const QString currentLineText = currentBlock.text().trimmed();
+
+    // Count the number of columns in the current row
+    QStringList parts = currentLineText.split(QStringLiteral("|"));
+    int columnCount = parts.size();
+
+    // Position cursor at the end of current line
+    cursor.movePosition(QTextCursor::EndOfBlock);
+
+    // Build empty row with same number of columns
+    QString newRow = QStringLiteral("\n");
+    for (int i = 0; i < columnCount - 1; i++) {
+        newRow += QStringLiteral("|");
+        if (i > 0) {
+            newRow += QStringLiteral("     ");
+        }
+    }
+
+    // Insert the new row
+    cursor.insertText(newRow);
+
+    // Format the table
+    textEdit->setTextCursor(cursor);
+    autoFormatTableAtCursor(textEdit);
+
+    return true;
+}
+
+/**
+ * Fixes the icons of the dark mode
+ * @param widget
+ */
+void Utils::Gui::fixDarkModeIcons(QWidget* widget) {
+    const bool darkMode = SettingsService().value(QStringLiteral("darkMode")).toBool();
+    const QIcon clearButtonIcon =
+        darkMode ? QIcon(QStringLiteral(":/images/cleartext-dark.svg"))
+                 : QIcon::fromTheme(QStringLiteral("edit-clear"),
+                                    QIcon(QStringLiteral(":/icons/breeze-arcnotes/16x16/edit-clear.svg")));
+
+    foreach (QLineEdit* lineEdit, widget->findChildren<QLineEdit*>()) {
+        auto action = lineEdit->findChild<QAction*>("_q_qlineeditclearaction");
+        if (action) {
+            action->setIcon(clearButtonIcon);
+        }
+    }
+}
+
+void Utils::Gui::applyDarkModeSettings() {
+#ifndef INTEGRATION_TESTS
+    const QWidgetList topLevelWidgets = QApplication::topLevelWidgets();
+    for (QWidget* widget : topLevelWidgets) {
+        QMetaObject::invokeMethod(widget, "applyDarkModeSettings", Qt::DirectConnection);
+    }
+#endif
+}
+
+QAction* Utils::Gui::findActionByData(QMenu* menu, const QVariant& data) {
+    // Iterate through all actions in the menu
+    for (QAction* action : menu->actions()) {
+        // Check if the action's data matches the desired data
+        if (action->data() == data) {
+            return action;
+        }
+
+        // Check if the action is a submenu
+        if (QMenu* subMenu = action->menu()) {
+            // Recursively search in the submenu
+            QAction* foundAction = findActionByData(subMenu, data);
+            if (foundAction) {
+                return foundAction;
+            }
+        }
+    }
+    // Return nullptr if no matching action is found
+    return nullptr;
+}
+
+void Utils::Gui::applyInterfaceStyle(QString interfaceStyle) {
+    if (interfaceStyle.isEmpty()) {
+        interfaceStyle = SettingsService().value(QStringLiteral("interfaceStyle")).toString();
+    }
+
+    const bool hideMenuIcons = Utils::Misc::areMenuIconsHidden();
+    const bool fixDarkModeDisabledIcons = SettingsService().value(QStringLiteral("darkMode")).toBool();
+    const QString currentStyleName = QApplication::style()->objectName();
+    QStyle* baseStyle = nullptr;
+
+    if (!interfaceStyle.isEmpty()) {
+        baseStyle = QStyleFactory::create(interfaceStyle);
+    } else if (!currentStyleName.isEmpty()) {
+        baseStyle = QStyleFactory::create(currentStyleName);
+    }
+
+    if (hideMenuIcons || fixDarkModeDisabledIcons) {
+        QApplication::setStyle(new NoMenuIconStyle(baseStyle, hideMenuIcons, fixDarkModeDisabledIcons));
+        return;
+    }
+
+    if (baseStyle != nullptr) {
+        QApplication::setStyle(baseStyle);
+    } else if (!interfaceStyle.isEmpty()) {
+        QApplication::setStyle(interfaceStyle);
+    }
+}

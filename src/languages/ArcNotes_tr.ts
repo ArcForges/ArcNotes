@@ -1,0 +1,10856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="tr_TR" sourcelanguage="en">
+<context>
+<name>AboutDialog</name>
+<message>
+<source>About ArcNotes</source>
+<translation>ArcNotes Hakkında</translation>
+</message>
+</context>
+<context>
+<name>ActionDialog</name>
+<message>
+<source>Find action</source>
+<translation>Eylem bul</translation>
+</message>
+</context>
+<context>
+<name>AiSettingsWidget</name>
+<message>
+<source>To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</source>
+<translation type="unfinished">To make use of the AI backends, you can either use the scripting command &lt;a href="%1"&gt;aiComplete&lt;/a&gt;, or look in the script repository for already-written scripts.</translation>
+</message>
+<message>
+<source>You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</source>
+<translation type="unfinished">You can use the scripting hook &lt;a href="%1"&gt;openAiBackendsHook&lt;/a&gt; to add more OpenAI API compatible backends.</translation>
+</message>
+<message>
+<source>Alternatively, you can also look in the script repository for already created AI integration scripts.</source>
+<translation type="unfinished">Alternatively, you can also look in the script repository for already created AI integration scripts.</translation>
+</message>
+<message>
+<source>Search script repository for AI integration scripts</source>
+<translation type="unfinished">Search script repository for AI integration scripts</translation>
+</message>
+<message>
+<source>Search script repository</source>
+<translation type="unfinished">Search script repository</translation>
+</message>
+<message>
+<source>AI backends added via the scripting engine</source>
+<translation type="unfinished">AI backends added via the scripting engine</translation>
+</message>
+<message>
+<source>API keys</source>
+<translation type="unfinished">API keys</translation>
+</message>
+<message>
+<source>OpenAI API key:</source>
+<translation type="unfinished">OpenAI API key:</translation>
+</message>
+<message>
+<source>Create Groq API key</source>
+<translation type="unfinished">Create Groq API key</translation>
+</message>
+<message>
+<source>Create OpenAI API key</source>
+<translation type="unfinished">Create OpenAI API key</translation>
+</message>
+<message>
+<source>API key</source>
+<translation type="unfinished">API key</translation>
+</message>
+<message>
+<source>Groq API key:</source>
+<translation type="unfinished">Groq API key:</translation>
+</message>
+<message>
+<source>Test connection</source>
+<comment>"Test" as verb</comment>
+<translation type="unfinished">Test connection</translation>
+</message>
+<message>
+<source>API settings</source>
+<translation type="unfinished">API settings</translation>
+</message>
+<message>
+<source>Time the application will wait for a response from the server before timing out and returning an error message.</source>
+<translation type="unfinished">Time the application will wait for a response from the server before timing out and returning an error message.</translation>
+</message>
+<message>
+<source>Response timeout:</source>
+<translation type="unfinished">Response timeout:</translation>
+</message>
+<message>
+<source>sec</source>
+<comment>seconds</comment>
+<translation type="unfinished">sec</translation>
+</message>
+<message>
+<source>API test result for %1 (%2)</source>
+<translation type="unfinished">API test result for %1 (%2)</translation>
+</message>
+<message>
+<source>AI backend: %1</source>
+<translation type="unfinished">AI backend: %1</translation>
+</message>
+<message>
+<source>API base URL</source>
+<translation type="unfinished">API base URL</translation>
+</message>
+<message>
+<source>AI model: %1</source>
+<translation type="unfinished">AI model: %1</translation>
+</message>
+<message>
+<source>Test</source>
+<comment>verb</comment>
+<translation type="unfinished">Test</translation>
+</message>
+<message>
+<source>Test connection to %1 (%2)</source>
+<translation type="unfinished">Test connection to %1 (%2)</translation>
+</message>
+</context>
+<context>
+<name>AiToolbarManager</name>
+<message>
+<source>Waiting for answer from AI</source>
+<translation type="unfinished">Waiting for answer from AI</translation>
+</message>
+<message>
+<source>AI backends</source>
+<translation type="unfinished">AI backends</translation>
+</message>
+<message>
+<source>AI models</source>
+<translation type="unfinished">AI models</translation>
+</message>
+<message>
+<source>AI backend selector</source>
+<translation type="unfinished">AI backend selector</translation>
+</message>
+<message>
+<source>AI model selector</source>
+<translation type="unfinished">AI model selector</translation>
+</message>
+</context>
+<context>
+<name>AttachmentDialog</name>
+<message>
+<source>Insert attachment</source>
+<translation>Dosya ekle</translation>
+</message>
+<message>
+<source>Image filename or URL</source>
+<translation>Resmin dosya adı veya URL'si</translation>
+</message>
+<message>
+<source>Path to file or URL</source>
+<translation>Dosya veya URL yolu</translation>
+</message>
+<message>
+<source>Select file</source>
+<translation>Dosya seç</translation>
+</message>
+<message>
+<source>Title of the image link</source>
+<translation>Resim bağlantısının başlığı</translation>
+</message>
+<message>
+<source>Title</source>
+<translation>Başlık</translation>
+</message>
+<message>
+<source>Cancel download</source>
+<translation>İndirmeyi iptal et</translation>
+</message>
+<message>
+<source>Download URL</source>
+<comment>The URL will be downloaded</comment>
+<translation>İndirme URL'si</translation>
+</message>
+<message>
+<source>Select file to insert</source>
+<translation>Eklenecek dosyayı seçin</translation>
+</message>
+<message>
+<source>Download error</source>
+<translation>İndirme hatası</translation>
+</message>
+<message>
+<source>Error while downloading:
+%1</source>
+<translation>İndirme sırasında hata:
+%1</translation>
+</message>
+<message>
+<source>File error</source>
+<translation>Dosya hatası</translation>
+</message>
+<message>
+<source>Could not open temporary file:
+%1</source>
+<translation>Geçici dosya açılamadı:
+%1</translation>
+</message>
+<message>
+<source>Could not store downloaded file:
+%1</source>
+<translation>İndirilen dosya depolanamadı:
+%1</translation>
+</message>
+</context>
+<context>
+<name>BacklinkWidget</name>
+<message>
+<source>Open note and find &lt;code&gt;%1&lt;/code&gt;</source>
+<translation>Notu açın ve &lt;code&gt;%1&lt;/code&gt;'i bulun</translation>
+</message>
+</context>
+<context>
+<name>CloudService</name>
+<message>
+<source>incorrect</source>
+<translation type="unfinished">incorrect</translation>
+</message>
+<message>
+<source>not connected</source>
+<translation type="unfinished">not connected</translation>
+</message>
+<message>
+<source>Username / password error</source>
+<translation type="unfinished">Username / password error</translation>
+</message>
+<message>
+<source>Your calendar username or password is incorrect!</source>
+<translation type="unfinished">Your calendar username or password is incorrect!</translation>
+</message>
+<message>
+<source>ok</source>
+<translation type="unfinished">ok</translation>
+</message>
+<message>
+<source>not correct</source>
+<translation type="unfinished">not correct</translation>
+</message>
+<message>
+<source>not detected</source>
+<translation type="unfinished">not detected</translation>
+</message>
+<message>
+<source>not found</source>
+<translation type="unfinished">not found</translation>
+</message>
+<message>
+<source>unknown</source>
+<translation type="unfinished">unknown</translation>
+</message>
+<message>
+<source>version %1 too low</source>
+<translation type="unfinished">version %1 too low</translation>
+</message>
+<message>
+<source>not enabled</source>
+<translation type="unfinished">not enabled</translation>
+</message>
+<message>
+<source>API app version too low</source>
+<translation type="unfinished">API app version too low</translation>
+</message>
+<message>
+<source>Please consider updating your ArcNotesAPI app on your server, your app version %1 is too low and may cause troubles in ArcNotes.</source>
+<translation type="unfinished">Please consider updating your ArcNotesAPI app on your server, your app version %1 is too low and may cause troubles in ArcNotes.</translation>
+</message>
+<message>
+<source>Nextcloud / ownCloud server connection error</source>
+<translation type="unfinished">Nextcloud / ownCloud server connection error</translation>
+</message>
+<message>
+<source>Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your Nextcloud / ownCloud configuration.</source>
+<translation type="unfinished">Nextcloud / ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your Nextcloud / ownCloud configuration.</translation>
+</message>
+<message>
+<source>You need to setup your Nextcloud / ownCloud server!</source>
+<translation type="unfinished">You need to setup your Nextcloud / ownCloud server!</translation>
+</message>
+<message>
+<source>Done with loading note versions</source>
+<translation type="unfinished">Done with loading note versions</translation>
+</message>
+<message>
+<source>No versions found</source>
+<translation type="unfinished">No versions found</translation>
+</message>
+<message>
+<source>There are no versions for this note or the note wasn't found on the server.</source>
+<translation type="unfinished">There are no versions for this note or the note wasn't found on the server.</translation>
+</message>
+<message>
+<source>Done with loading trashed notes</source>
+<translation type="unfinished">Done with loading trashed notes</translation>
+</message>
+<message>
+<source>No trashed notes</source>
+<translation type="unfinished">No trashed notes</translation>
+</message>
+<message>
+<source>No trashed notes were found on the server.</source>
+<translation type="unfinished">No trashed notes were found on the server.</translation>
+</message>
+<message>
+<source>Error while loading todo lists!</source>
+<translation type="unfinished">Error while loading todo lists!</translation>
+</message>
+<message>
+<source>Your CalDAV server didn't reply anything!</source>
+<translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
+</message>
+<message>
+<source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+</message>
+<message>
+<source>No bookmarks</source>
+<translation type="unfinished">No bookmarks</translation>
+</message>
+<message>
+<source>No bookmarks were found on the server.</source>
+<translation type="unfinished">No bookmarks were found on the server.</translation>
+</message>
+</context>
+<context>
+<name>CloudSettingsWidget</name>
+<message>
+<source>cloud support</source>
+<translation type="unfinished">cloud support</translation>
+</message>
+<message>
+<source>Enable cloud support</source>
+<translation type="unfinished">Enable cloud support</translation>
+</message>
+<message>
+<source>You can access your Nextcloud / ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the Nextcloud / ownCloud sync client for syncing the files.</source>
+<translation type="unfinished">You can access your Nextcloud / ownCloud server from inside the application for example to manage trashed notes and note versions or to share notes. This integration doesn't do note file syncing. You still need to install the Nextcloud / ownCloud sync client for syncing the files.</translation>
+</message>
+<message>
+<source>Your Nextcloud / ownCloud server</source>
+<translation type="unfinished">Your Nextcloud / ownCloud server</translation>
+</message>
+<message>
+<source>Please install the latest version of &lt;a href="https://github.com/pbek/arcnotesapi"&gt;&lt;b&gt;ArcNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version ARCNOTESAPI_MIN_VERSION) on your Nextcloud / ownCloud server if you want ArcNotes to be able to access note versions and trashed notes.</source>
+<translation type="unfinished">Please install the latest version of &lt;a href="https://github.com/pbek/arcnotesapi"&gt;&lt;b&gt;ArcNotesAPI&lt;/b&gt;&lt;/a&gt; (at least version ARCNOTESAPI_MIN_VERSION) on your Nextcloud / ownCloud server if you want ArcNotes to be able to access note versions and trashed notes.</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two Nextcloud / ownCloud core apps &lt;b&gt;Versions&lt;/b&gt; and &lt;b&gt;Deleted files&lt;/b&gt; enabled on your Nextcloud / ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;b&gt;Nextcloud / ownCloud sync client&lt;/b&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;b&gt;Nextcloud / ownCloud sync client&lt;/b&gt; (or another desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update ArcNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your Nextcloud / ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update ArcNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>Open your NC / oC server &amp;Apps page</source>
+<translation type="unfinished">Open your NC / oC server &amp;Apps page</translation>
+</message>
+<message>
+<source>Opens your Nextcloud / ownCloud server App Password page in your webbrowser to create a new app password for the application</source>
+<translation type="unfinished">Opens your Nextcloud / ownCloud server App Password page in your webbrowser to create a new app password for the application</translation>
+</message>
+<message>
+<source>Open your NC / oC server App Password page</source>
+<translation type="unfinished">Open your NC / oC server App Password page</translation>
+</message>
+<message>
+<source>Error Message</source>
+<translation type="unfinished">Error Message</translation>
+</message>
+<message>
+<source>Select a connection to edit</source>
+<translation type="unfinished">Select a connection to edit</translation>
+</message>
+<message>
+<source>Add connection</source>
+<translation type="unfinished">Add connection</translation>
+</message>
+<message>
+<source>Remove connection</source>
+<translation type="unfinished">Remove connection</translation>
+</message>
+<message>
+<source>Connection name:</source>
+<translation type="unfinished">Connection name:</translation>
+</message>
+<message>
+<source>NC / oC server url:</source>
+<translation type="unfinished">NC / oC server url:</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your Nextcloud / ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your Nextcloud / ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</source>
+<translation type="unfinished">The login flow v2 only works with Nextcloud, not with ownCloud. If you have troubles you need to create an app password by hand.</translation>
+</message>
+<message>
+<source>Login to Nextcloud to grant access</source>
+<translation type="unfinished">Login to Nextcloud to grant access</translation>
+</message>
+<message>
+<source>Cancel Nextcloud login</source>
+<translation type="unfinished">Cancel Nextcloud login</translation>
+</message>
+<message>
+<source>Username:</source>
+<translation type="unfinished">Username:</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>Your Nextcloud / ownCloud username</source>
+<translation type="unfinished">Your Nextcloud / ownCloud username</translation>
+</message>
+<message>
+<source>Password:</source>
+<translation type="unfinished">Password:</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>Your Nextcloud / ownCloud password</source>
+<translation type="unfinished">Your Nextcloud / ownCloud password</translation>
+</message>
+<message>
+<source>If your password doesn't work, create an app password (button on the right)</source>
+<translation type="unfinished">If your password doesn't work, create an app password (button on the right)</translation>
+</message>
+<message>
+<source>Enable ArcNotesAPI app support</source>
+<translation type="unfinished">Enable ArcNotesAPI app support</translation>
+</message>
+<message>
+<source>Enable Nextcloud Deck support</source>
+<translation type="unfinished">Enable Nextcloud Deck support</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your Nextcloud / ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&amp;Connect to NC / oC server</source>
+<translation type="unfinished">&amp;Connect to NC / oC server</translation>
+</message>
+<message>
+<source>Connection status</source>
+<translation type="unfinished">Connection status</translation>
+</message>
+<message>
+<source>unknown</source>
+<translation type="unfinished">unknown</translation>
+</message>
+<message>
+<source>connection to web server</source>
+<translation type="unfinished">connection to web server</translation>
+</message>
+<message>
+<source>Nextcloud / ownCloud server detected</source>
+<translation type="unfinished">Nextcloud / ownCloud server detected</translation>
+</message>
+<message>
+<source>username and password correct</source>
+<translation type="unfinished">username and password correct</translation>
+</message>
+<message>
+<source>connection to ArcNotesAPI</source>
+<translation type="unfinished">connection to ArcNotesAPI</translation>
+</message>
+<message>
+<source>versions app enabled on server</source>
+<translation type="unfinished">versions app enabled on server</translation>
+</message>
+<message>
+<source>trash app enabled on server</source>
+<translation type="unfinished">trash app enabled on server</translation>
+</message>
+<message>
+<source>You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</source>
+<translation type="unfinished">You will find this path in the &lt;i&gt;Nextcloud / ownCloud&lt;/i&gt; settings</translation>
+</message>
+<message>
+<source>notes path found on server</source>
+<translation type="unfinished">notes path found on server</translation>
+</message>
+<message>
+<source>notes path &lt;b&gt;%1&lt;/b&gt; found on server</source>
+<translation type="unfinished">notes path &lt;b&gt;%1&lt;/b&gt; found on server</translation>
+</message>
+<message>
+<source>Remove cloud connection</source>
+<translation type="unfinished">Remove cloud connection</translation>
+</message>
+<message>
+<source>Do you really want to remove the cloud connection &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation type="unfinished">Do you really want to remove the cloud connection &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+</message>
+<message>
+<source>The connection was made successfully!
+Server version: %1
+ArcNotesAPI version: %2</source>
+<translation type="unfinished">The connection was made successfully!
+Server version: %1
+ArcNotesAPI version: %2</translation>
+</message>
+<message>
+<source>There was an error connecting to the Nextcloud / ownCloud Server!
+You also need to have the ArcNotesAPI app installed and enabled!
+
+Connection error message: </source>
+<translation type="unfinished">There was an error connecting to the Nextcloud / ownCloud Server!
+You also need to have the ArcNotesAPI app installed and enabled!
+
+Connection error message: </translation>
+</message>
+</context>
+<context>
+<name>ColorModeSettingsWidget</name>
+<message>
+<source>Color modes</source>
+<translation type="unfinished">Color modes</translation>
+</message>
+<message>
+<source>&amp;Add color mode</source>
+<translation type="unfinished">&amp;Add color mode</translation>
+</message>
+<message>
+<source>&amp;Remove color mode</source>
+<translation type="unfinished">&amp;Remove color mode</translation>
+</message>
+<message>
+<source>Name:</source>
+<translation type="unfinished">Name:</translation>
+</message>
+<message>
+<source>Name of the color mode</source>
+<translation type="unfinished">Name of the color mode</translation>
+</message>
+<message>
+<source>Color mode name</source>
+<translation type="unfinished">Color mode name</translation>
+</message>
+<message>
+<source>Use as active color mode</source>
+<translation type="unfinished">Use as active color mode</translation>
+</message>
+<message>
+<source>Dark mode</source>
+<translation type="unfinished">Dark mode</translation>
+</message>
+<message>
+<source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
+<translation type="unfinished">This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</translation>
+</message>
+<message>
+<source>Enable dark mode</source>
+<translation type="unfinished">Enable dark mode</translation>
+</message>
+<message>
+<source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
+<translation type="unfinished">Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</translation>
+</message>
+<message>
+<source>Optimize preview colors for dark mode desktop themes</source>
+<translation type="unfinished">Optimize preview colors for dark mode desktop themes</translation>
+</message>
+<message>
+<source>You may need to restart the application to let these changes take effect</source>
+<translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
+</message>
+<message>
+<source>Enable dark mode application icon and tray icon</source>
+<translation type="unfinished">Enable dark mode application icon and tray icon</translation>
+</message>
+<message>
+<source>Icons</source>
+<translation type="unfinished">Icons</translation>
+</message>
+<message>
+<source>You need to restart the application to let this setting take effect</source>
+<translation type="unfinished">You need to restart the application to let this setting take effect</translation>
+</message>
+<message>
+<source>Use internal icon theme instead of system icon theme</source>
+<translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
+</message>
+<message>
+<source>Enforce system icon theme</source>
+<translation type="unfinished">Enforce system icon theme</translation>
+</message>
+<message>
+<source>Enable dark mode icon theme</source>
+<translation type="unfinished">Enable dark mode icon theme</translation>
+</message>
+<message>
+<source>Editor color schema</source>
+<translation type="unfinished">Editor color schema</translation>
+</message>
+<message>
+<source>Select the editor color schema for this color mode</source>
+<translation type="unfinished">Select the editor color schema for this color mode</translation>
+</message>
+<message>
+<source>New color mode</source>
+<translation type="unfinished">New color mode</translation>
+</message>
+<message>
+<source>Remove color mode</source>
+<translation type="unfinished">Remove color mode</translation>
+</message>
+<message>
+<source>Remove the color mode &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation type="unfinished">Remove the color mode &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+</message>
+<message>
+<source>Color mode</source>
+<translation type="unfinished">Color mode</translation>
+</message>
+</context>
+<context>
+<name>DebugOptionSettingsWidget</name>
+<message>
+<source>Enable logging to file</source>
+<translation type="unfinished">Enable logging to file</translation>
+</message>
+<message>
+<source>Clear log file</source>
+<translation type="unfinished">Clear log file</translation>
+</message>
+<message>
+<source>Fake old version number to trigger update</source>
+<translation type="unfinished">Fake old version number to trigger update</translation>
+</message>
+<message>
+<source>Log file path:</source>
+<translation type="unfinished">Log file path:</translation>
+</message>
+<message>
+<source>Log file cleared</source>
+<translation type="unfinished">Log file cleared</translation>
+</message>
+<message>
+<source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
+<translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
+</message>
+</context>
+<context>
+<name>DebugSettingsWidget</name>
+<message>
+<source>Debug information</source>
+<translation type="unfinished">Debug information</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/ArcNotes/issues"&gt;ArcNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with ArcNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/ArcNotes/issues"&gt;ArcNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with ArcNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The best way to post issues is to use the issue assistant by pressing the &lt;span style=" font-weight:600;"&gt;Open issue assistant&lt;/span&gt; button on the bottom.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>GitHub doesn't need two spaces at the end of the line to do a line break</source>
+<translation type="unfinished">GitHub doesn't need two spaces at the end of the line to do a line break</translation>
+</message>
+<message>
+<source>Use GitHub line breaks</source>
+<translation type="unfinished">Use GitHub line breaks</translation>
+</message>
+<message>
+<source>Hide usernames in paths and anonymize other personal identifiers in the generated debug information</source>
+<translation type="unfinished">Hide usernames in paths and anonymize other personal identifiers in the generated debug information</translation>
+</message>
+<message>
+<source>Anonymize personal information</source>
+<translation type="unfinished">Anonymize personal information</translation>
+</message>
+<message>
+<source>This is the best way to open an issue</source>
+<translation type="unfinished">This is the best way to open an issue</translation>
+</message>
+<message>
+<source>Open issue assistant</source>
+<translation type="unfinished">Open issue assistant</translation>
+</message>
+<message>
+<source>Please use this in the issue tracker</source>
+<translation type="unfinished">Please use this in the issue tracker</translation>
+</message>
+<message>
+<source>&amp;Copy debug information to clipboard</source>
+<translation type="unfinished">&amp;Copy debug information to clipboard</translation>
+</message>
+<message>
+<source>Please don't use this in the issue tracker</source>
+<translation type="unfinished">Please don't use this in the issue tracker</translation>
+</message>
+<message>
+<source>&amp;Save debug information</source>
+<translation type="unfinished">&amp;Save debug information</translation>
+</message>
+<message>
+<source>Please don't use this in the issue tracker, copy the debug information text directly into the issue.</source>
+<translation type="unfinished">Please don't use this in the issue tracker, copy the debug information text directly into the issue.</translation>
+</message>
+<message>
+<source>Markdown files</source>
+<translation type="unfinished">Markdown files</translation>
+</message>
+<message>
+<source>Save debug information</source>
+<translation type="unfinished">Save debug information</translation>
+</message>
+<message>
+<source>The debug information was copied to the clipboard.</source>
+<translation type="unfinished">The debug information was copied to the clipboard.</translation>
+</message>
+</context>
+<context>
+<name>DictionaryManagerDialog</name>
+<message>
+<source>Dictionary manager</source>
+<translation>Sözlük yöneticisi</translation>
+</message>
+<message>
+<source>Cancel</source>
+<translation>İptal</translation>
+</message>
+<message>
+<source>Download dictionary</source>
+<translation>Sözlük indir</translation>
+</message>
+<message>
+<source>Name</source>
+<translation>Ad</translation>
+</message>
+<message>
+<source>Enter your query text</source>
+<translation>Sorgu metninizi girin</translation>
+</message>
+<message>
+<source>Find dictionary</source>
+<translation>Sözlük bul</translation>
+</message>
+<message>
+<source>Downloaded dictionaries</source>
+<translation>İndirilen sözlükler</translation>
+</message>
+<message>
+<source>If checked only the downloaded dictionaries will be used</source>
+<translation>İşaretlenirse yalnızca indirilen sözlükler kullanılır</translation>
+</message>
+<message>
+<source>Disable external dictionaries</source>
+<translation>Harici sözlükleri devre dışı bırak</translation>
+</message>
+<message>
+<source>Delete selected dictionaries</source>
+<translation>Seçili sözlükleri sil</translation>
+</message>
+<message>
+<source>English (British)</source>
+<translation>İngilizce (İngiliz)</translation>
+</message>
+<message>
+<source>English (American)</source>
+<translation>İngilizce (Amerikan)</translation>
+</message>
+<message>
+<source>German (Austrian)</source>
+<translation>Almanca (Avusturya)</translation>
+</message>
+<message>
+<source>German (German)</source>
+<translation>Almanca (Alman)</translation>
+</message>
+<message>
+<source>German (Swiss)</source>
+<translation>Almanca (İsviçre)</translation>
+</message>
+<message>
+<source>French</source>
+<translation>Fransızca</translation>
+</message>
+<message>
+<source>Spanish</source>
+<translation>İspanyolca</translation>
+</message>
+<message>
+<source>Russian</source>
+<translation>Rusça</translation>
+</message>
+<message>
+<source>Polish</source>
+<translation>Lehçe</translation>
+</message>
+<message>
+<source>Italian</source>
+<translation>İtalyanca</translation>
+</message>
+<message>
+<source>Aragonese</source>
+<translation>Aragon</translation>
+</message>
+<message>
+<source>Gujarati</source>
+<translation>Gujarati</translation>
+</message>
+<message>
+<source>Danish</source>
+<translation>Danimarkalı</translation>
+</message>
+<message>
+<source>Swedish</source>
+<translation>İsveçce</translation>
+</message>
+<message>
+<source>Czech</source>
+<translation>Çekçe</translation>
+</message>
+<message>
+<source>Afrikaans</source>
+<translation>Afrikaans</translation>
+</message>
+<message>
+<source>Amharic</source>
+<translation>Amharca</translation>
+</message>
+<message>
+<source>Ancient Greek</source>
+<translation>Antik Yunanca</translation>
+</message>
+<message>
+<source>Arabic</source>
+<translation>Arapça</translation>
+</message>
+<message>
+<source>Armenian</source>
+<translation>Ermenice</translation>
+</message>
+<message>
+<source>Albanian</source>
+<translation>Arnavutça</translation>
+</message>
+<message>
+<source>Basque</source>
+<translation>Bask</translation>
+</message>
+<message>
+<source>Belarusian</source>
+<translation>Beyaz Rusça</translation>
+</message>
+<message>
+<source>Bulgarian</source>
+<translation>Bulgar</translation>
+</message>
+<message>
+<source>Bengali</source>
+<translation>Bengal dili</translation>
+</message>
+<message>
+<source>Breton</source>
+<translation>Breton</translation>
+</message>
+<message>
+<source>Catalan</source>
+<translation>Katalanca</translation>
+</message>
+<message>
+<source>Catalan (Valencian)</source>
+<translation>Katalanca (Valensiya)</translation>
+</message>
+<message>
+<source>Chuvash (Russia)</source>
+<translation>Çuvaşça (Rusya)</translation>
+</message>
+<message>
+<source>Croatian</source>
+<translation>Hırvatça</translation>
+</message>
+<message>
+<source>Dutch</source>
+<translation>Flemenkçe</translation>
+</message>
+<message>
+<source>English (Australian)</source>
+<translation>İngilizce (Avustralya)</translation>
+</message>
+<message>
+<source>English (Canadian)</source>
+<translation>İngilizce (Kanada)</translation>
+</message>
+<message>
+<source>English (Medical Dictionary)</source>
+<translation>İngilizce (Tıbbi Sözlük)</translation>
+</message>
+<message>
+<source>English (South African)</source>
+<translation>İngilizce (Güney Afrika)</translation>
+</message>
+<message>
+<source>Esperanto</source>
+<translation>Esperanto</translation>
+</message>
+<message>
+<source>Estonian</source>
+<translation>Estonyalı</translation>
+</message>
+<message>
+<source>Faroese</source>
+<translation>Faroe</translation>
+</message>
+<message>
+<source>Friulian</source>
+<translation>Friulian</translation>
+</message>
+<message>
+<source>Gaelic</source>
+<translation>Kelt</translation>
+</message>
+<message>
+<source>Galician</source>
+<translation>Galicia'ya ait</translation>
+</message>
+<message>
+<source>Georgian</source>
+<translation>Gürcü</translation>
+</message>
+<message>
+<source>German (Classical Spelling)</source>
+<translation>Almanca (Klasik Yazım)</translation>
+</message>
+<message>
+<source>German (Medical Dictionary)</source>
+<translation>Almanca (Tıbbi Sözlük)</translation>
+</message>
+<message>
+<source>Greek</source>
+<translation>Yunan</translation>
+</message>
+<message>
+<source>Modern Greek (Polytonic Greek)</source>
+<translation>Modern Yunanca (Polytonic Yunanca)</translation>
+</message>
+<message>
+<source>Gurani</source>
+<translation>Gürani</translation>
+</message>
+<message>
+<source>Hebrew</source>
+<translation>İbranice</translation>
+</message>
+<message>
+<source>Hindi</source>
+<translation>Hintçe</translation>
+</message>
+<message>
+<source>Hungarian</source>
+<translation>Macarca</translation>
+</message>
+<message>
+<source>Icelandic</source>
+<translation>İzlandaca</translation>
+</message>
+<message>
+<source>Indonesian</source>
+<translation>Endonezya dili</translation>
+</message>
+<message>
+<source>Kaszebsczi</source>
+<translation>Kaszebsczi</translation>
+</message>
+<message>
+<source>Kazakh</source>
+<translation>Kazakça</translation>
+</message>
+<message>
+<source>Khmer</source>
+<translation>Kmer</translation>
+</message>
+<message>
+<source>Komi (Russia)</source>
+<translation>Komi (Rusya)</translation>
+</message>
+<message>
+<source>Korean</source>
+<translation>Korece</translation>
+</message>
+<message>
+<source>Kurdish (Turkey)</source>
+<translation>Kürtçe (Türkiye)</translation>
+</message>
+<message>
+<source>Lao</source>
+<translation>Lao</translation>
+</message>
+<message>
+<source>Latgalian</source>
+<translation>Latgalian</translation>
+</message>
+<message>
+<source>Latin</source>
+<translation>Latince</translation>
+</message>
+<message>
+<source>Lithuanian</source>
+<translation>Litvanyalı</translation>
+</message>
+<message>
+<source>Latvian</source>
+<translation>Letonyalı</translation>
+</message>
+<message>
+<source>Low German / Low Saxon</source>
+<translation>Düşük Almanca / Düşük Sakson</translation>
+</message>
+<message>
+<source>Luxembourgish (Letzeburgesch)</source>
+<translation>Lüksemburgca (Letzeburgesch)</translation>
+</message>
+<message>
+<source>Macedonian</source>
+<translation>Makedonya</translation>
+</message>
+<message>
+<source>Malayalam</source>
+<translation>Malayalam</translation>
+</message>
+<message>
+<source>Mongolian</source>
+<translation>Moğolca</translation>
+</message>
+<message>
+<source>Nepali</source>
+<translation>Nepali</translation>
+</message>
+<message>
+<source>Norwegian (Bokmål)</source>
+<translation>Norveççe (Bokmål)</translation>
+</message>
+<message>
+<source>Norwegian (Nynorsk)</source>
+<translation>Norveççe (Nynorsk)</translation>
+</message>
+<message>
+<source>Occitan</source>
+<translation>Occitan</translation>
+</message>
+<message>
+<source>Papiamentu</source>
+<translation>Papiamentu</translation>
+</message>
+<message>
+<source>Persian</source>
+<translation>Farsça</translation>
+</message>
+<message>
+<source>Portuguese (Brazilian)</source>
+<translation>Portekizce (Brezilya)</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation>Portekizce</translation>
+</message>
+<message>
+<source>Romanian</source>
+<translation>Romen</translation>
+</message>
+<message>
+<source>Romansh</source>
+<translation>Retororomanca</translation>
+</message>
+<message>
+<source>Russian Medical Dictionary</source>
+<translation>Rusça Medikal Sözlük</translation>
+</message>
+<message>
+<source>Rusyn / Ruthene (Slovakia)</source>
+<translation>Rusyn / Ruthene (Slovakya)</translation>
+</message>
+<message>
+<source>Serbian (Cyrillic)</source>
+<translation>Sırpça (Kiril)</translation>
+</message>
+<message>
+<source>Serbian (Latin)</source>
+<translation>Sırpça (Latin)</translation>
+</message>
+<message>
+<source>Shona</source>
+<translation>Shona</translation>
+</message>
+<message>
+<source>Sindhi</source>
+<translation>Sintçe</translation>
+</message>
+<message>
+<source>Sinhala</source>
+<translation>Sinhala</translation>
+</message>
+<message>
+<source>Slovak</source>
+<translation>Slovak</translation>
+</message>
+<message>
+<source>Slovenian</source>
+<translation>Sloven</translation>
+</message>
+<message>
+<source>Swahili</source>
+<translation>Svahili</translation>
+</message>
+<message>
+<source>Tagalog</source>
+<translation>Tagalog</translation>
+</message>
+<message>
+<source>Tajik</source>
+<translation>Tacikçe</translation>
+</message>
+<message>
+<source>Tatar (Russia)</source>
+<translation>Tatarca (Rusya)</translation>
+</message>
+<message>
+<source>Telugu</source>
+<translation>Telugu</translation>
+</message>
+<message>
+<source>Thai</source>
+<translation>Tayland</translation>
+</message>
+<message>
+<source>Turkish</source>
+<translation>Türkçe</translation>
+</message>
+<message>
+<source>Turkmen</source>
+<translation>Türkmence</translation>
+</message>
+<message>
+<source>Udmurt (Russia)</source>
+<translation>Udmurt (Rusya)</translation>
+</message>
+<message>
+<source>Ukrainian</source>
+<translation>Ukraynaca</translation>
+</message>
+<message>
+<source>Urdu</source>
+<translation>Urduca</translation>
+</message>
+<message>
+<source>Uzbek</source>
+<translation>Özbekçe</translation>
+</message>
+<message>
+<source>Venda</source>
+<translation>Venda</translation>
+</message>
+<message>
+<source>Venetian</source>
+<translation>Venedik</translation>
+</message>
+<message>
+<source>Vietnamese</source>
+<translation>Vietnam</translation>
+</message>
+<message>
+<source>Welsh</source>
+<translation>Galce</translation>
+</message>
+<message>
+<source>Xhosa</source>
+<translation>Xhosa</translation>
+</message>
+<message>
+<source>Zulu</source>
+<translation>Zulu</translation>
+</message>
+<message>
+<source>Download error</source>
+<translation>İndirme hatası</translation>
+</message>
+<message>
+<source>Error while downloading:
+%1</source>
+<translation>İndirme sırasında hata:
+%1</translation>
+</message>
+<message>
+<source>File error</source>
+<translation>Dosya hatası</translation>
+</message>
+<message>
+<source>Could not store downloaded file:
+%1</source>
+<translation>İndirilen dosya depolanamadı:
+%1</translation>
+</message>
+<message>
+<source>Could not remove dictionary file:
+%1</source>
+<translation>Sözlük dosyası kaldırılamadı:
+%1</translation>
+</message>
+</context>
+<context>
+<name>DistractionFreeManager</name>
+<message>
+<source>Leave</source>
+<translation type="unfinished">Leave</translation>
+</message>
+<message>
+<source>Custom editor width</source>
+<translation type="unfinished">Custom editor width</translation>
+</message>
+<message>
+<source>Characters:</source>
+<translation type="unfinished">Characters:</translation>
+</message>
+</context>
+<context>
+<name>EditorFontColorSettingsWidget</name>
+<message>
+<source>Fonts</source>
+<translation type="unfinished">Fonts</translation>
+</message>
+<message>
+<source>Default font:</source>
+<translation type="unfinished">Default font:</translation>
+</message>
+<message>
+<source>Set a new font</source>
+<translation type="unfinished">Set a new font</translation>
+</message>
+<message>
+<source>Reset font</source>
+<translation type="unfinished">Reset font</translation>
+</message>
+<message>
+<source>Code font:</source>
+<translation type="unfinished">Code font:</translation>
+</message>
+<message>
+<source>Set a new code font</source>
+<translation type="unfinished">Set a new code font</translation>
+</message>
+<message>
+<source>Reset code font</source>
+<translation type="unfinished">Reset code font</translation>
+</message>
+</context>
+<context>
+<name>EditorSettingsWidget</name>
+<message>
+<source>Markdown highlighting</source>
+<translation type="unfinished">Markdown highlighting</translation>
+</message>
+<message>
+<source>Note that disabling this will also disable the navigation panel!</source>
+<translation type="unfinished">Note that disabling this will also disable the navigation panel!</translation>
+</message>
+<message>
+<source>Enable markdown highlighting</source>
+<translation type="unfinished">Enable markdown highlighting</translation>
+</message>
+<message>
+<source>Fully highlight blockquotes</source>
+<translation type="unfinished">Fully highlight blockquotes</translation>
+</message>
+<message>
+<source>Editor options</source>
+<translation type="unfinished">Editor options</translation>
+</message>
+<message>
+<source>Enable automatic closing of brackets and markdown formatting characters</source>
+<translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
+</message>
+<message>
+<source>You have to use the backspace key to remove the opening character</source>
+<translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
+</message>
+<message>
+<source>Enable automatic removal of matching closing characters</source>
+<translation type="unfinished">Enable automatic removal of matching closing characters</translation>
+</message>
+<message>
+<source>Highlight the current line</source>
+<translation type="unfinished">Highlight the current line</translation>
+</message>
+<message>
+<source>Only use editor width setting in distraction free mode</source>
+<translation type="unfinished">Only use editor width setting in distraction free mode</translation>
+</message>
+<message>
+<source>Enable Vim mode (some ArcNotes shortcuts will not work)</source>
+<translation type="unfinished">Enable Vim mode (some ArcNotes shortcuts will not work)</translation>
+</message>
+<message>
+<source>Disable cursor blinking</source>
+<translation type="unfinished">Disable cursor blinking</translation>
+</message>
+<message>
+<source>Note-edit cursor width:</source>
+<translation type="unfinished">Note-edit cursor width:</translation>
+</message>
+<message>
+<source>Reset the cursor width</source>
+<translation type="unfinished">Reset the cursor width</translation>
+</message>
+<message>
+<source>Automatically remove trailing spaces in the note text</source>
+<translation type="unfinished">Automatically remove trailing spaces in the note text</translation>
+</message>
+<message>
+<source>Show line numbers and bookmark markers (1-9)</source>
+<translation type="unfinished">Show line numbers and bookmark markers (1-9)</translation>
+</message>
+<message>
+<source>Show small Markdown preview images in the editor, if there is no text after the image</source>
+<translation type="unfinished">Show small Markdown preview images in the editor, if there is no text after the image</translation>
+</message>
+<message>
+<source>Shows fold buttons for Markdown headings and allows collapsing their contents</source>
+<translation type="unfinished">Shows fold buttons for Markdown headings and allows collapsing their contents</translation>
+</message>
+<message>
+<source>Enable heading folding in the editor</source>
+<translation type="unfinished">Enable heading folding in the editor</translation>
+</message>
+<message>
+<source>Hides markdown formatting syntax (like **, *, #) on lines that are not being edited</source>
+<translation type="unfinished">Hides markdown formatting syntax (like **, *, #) on lines that are not being edited</translation>
+</message>
+<message>
+<source>Hide markdown formatting syntax on inactive lines</source>
+<translation type="unfinished">Hide markdown formatting syntax on inactive lines</translation>
+</message>
+<message>
+<source>Enable wiki-style link support [[note name]]</source>
+<translation type="unfinished">Enable wiki-style link support [[note name]]</translation>
+</message>
+<message>
+<source>Show the note filename selection when [[ is typed</source>
+<translation type="unfinished">Show the note filename selection when [[ is typed</translation>
+</message>
+<message>
+<source>Show note filename selection when [[ is typed</source>
+<translation type="unfinished">Show note filename selection when [[ is typed</translation>
+</message>
+<message>
+<source>Tabs and Indents</source>
+<translation type="unfinished">Tabs and Indents</translation>
+</message>
+<message>
+<source>Use tab character instead of spaces</source>
+<translation type="unfinished">Use tab character instead of spaces</translation>
+</message>
+<message>
+<source>Indent:</source>
+<translation type="unfinished">Indent:</translation>
+</message>
+<message>
+<source>Enable hanging indentation for Markdown lists</source>
+<translation type="unfinished">Enable hanging indentation for Markdown lists</translation>
+</message>
+<message>
+<source>Here you can set your own time format for inserting the current time into a note.</source>
+<translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
+</message>
+<message>
+<source>Insert current time</source>
+<translation type="unfinished">Insert current time</translation>
+</message>
+<message>
+<source>Time format:</source>
+<translation type="unfinished">Time format:</translation>
+</message>
+<message>
+<source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
+<translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.arcnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.arcnotes.org/en/latest/editor/time-formats/"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+</context>
+<context>
+<name>EvernoteImportDialog</name>
+<message>
+<source>Evernote Import</source>
+<translation>Evernote İçe Aktar</translation>
+</message>
+<message>
+<source>To get an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes…" in the File menu.</source>
+<translation>Bir enex dosyasını almak için, Evernotes masaüstü istemcinizde bir veya daha fazla not seçmeniz ve Dosya menüsünde "Notları dışa aktar..." seçeneğini tıklamanız gerekir.</translation>
+</message>
+<message>
+<source>Please select the Evernote enex file you want to import:</source>
+<translation>Lütfen içe aktarmak istediğiniz Evernote enex dosyasını seçin:</translation>
+</message>
+<message>
+<source>Import metadata as YAML front matter</source>
+<translation type="unfinished">Import metadata as YAML front matter</translation>
+</message>
+<message>
+<source>Number of imported notes</source>
+<translation>İçe aktarılan not sayısı</translation>
+</message>
+<message>
+<source>Select file</source>
+<translation>Dosya seç</translation>
+</message>
+<message>
+<source>Import images</source>
+<translation>Görüntüleri içe aktar</translation>
+</message>
+<message>
+<source>Metadata to import</source>
+<translation>İçeri aktarılacak meta veri</translation>
+</message>
+<message>
+<source>Import notes</source>
+<translation>Notları içe aktar</translation>
+</message>
+<message>
+<source>Evernote enex file</source>
+<translation>Evernote enex dosyası</translation>
+</message>
+<message>
+<source>Import attachments</source>
+<translation>Ekleri içe aktar</translation>
+</message>
+<message>
+<source>Enex files</source>
+<translation>Eneks dosyaları</translation>
+</message>
+<message>
+<source>Select Evernote enex file to import</source>
+<translation>İçe aktarılacak Evernote eneks dosyası seçin</translation>
+</message>
+<message>
+<source>Invalid XML!</source>
+<translation>Geçersiz XML!</translation>
+</message>
+<message>
+<source>Invalid XML found in note &lt;b&gt;%1&lt;/b&gt;! The import might be stopped at this point.</source>
+<translation>&lt;b&gt;%1&lt;/b&gt; notunda geçersiz XML bulundu! İçe aktarma bu aşamada durdurulabilir.</translation>
+</message>
+<message>
+<source>Basic attributes</source>
+<translation>Temel özellikler</translation>
+</message>
+<message>
+<source>Created date</source>
+<translation>Oluşturulma zamanı</translation>
+</message>
+<message>
+<source>Updated date</source>
+<translation>Güncellenme zamanı</translation>
+</message>
+<message>
+<source>Note attributes</source>
+<translation>Not özellikleri</translation>
+</message>
+<message>
+<source>Subject date</source>
+<translation>Konu tarihi</translation>
+</message>
+<message>
+<source>Latitude</source>
+<translation>Enlem</translation>
+</message>
+<message>
+<source>Longitude</source>
+<translation>Boylam</translation>
+</message>
+<message>
+<source>Altitude</source>
+<translation>Rakım</translation>
+</message>
+<message>
+<source>Author</source>
+<translation>Yazar</translation>
+</message>
+<message>
+<source>Source</source>
+<translation>Kaynak</translation>
+</message>
+<message>
+<source>Source URL</source>
+<translation>Kaynak URL</translation>
+</message>
+<message>
+<source>Source application</source>
+<translation>Kaynak uygulama</translation>
+</message>
+<message>
+<source>Reminder order</source>
+<translation>Hatırlatma sırası</translation>
+</message>
+<message>
+<source>Reminder time</source>
+<translation>Hatırlatma zamanı</translation>
+</message>
+<message>
+<source>Reminder done time</source>
+<translation>Hatırlatma tamamlanma zamanı</translation>
+</message>
+<message>
+<source>Place name</source>
+<translation>Yer adı</translation>
+</message>
+<message>
+<source>Content class</source>
+<translation>İçerik sınıfı</translation>
+</message>
+<message>
+<source>Application data</source>
+<translation>Uygulama verisi</translation>
+</message>
+<message>
+<source>Attribute</source>
+<translation>Özellik</translation>
+</message>
+<message>
+<source>Value</source>
+<translation>Değer</translation>
+</message>
+</context>
+<context>
+<name>ExportPrintManager</name>
+<message>
+<source>Print note</source>
+<translation type="unfinished">Print note</translation>
+</message>
+<message>
+<source>Letter</source>
+<translation type="unfinished">Letter</translation>
+</message>
+<message>
+<source>Page size</source>
+<translation type="unfinished">Page size</translation>
+</message>
+<message>
+<source>Page size:</source>
+<translation type="unfinished">Page size:</translation>
+</message>
+<message>
+<source>Portrait</source>
+<translation type="unfinished">Portrait</translation>
+</message>
+<message>
+<source>Landscape</source>
+<translation type="unfinished">Landscape</translation>
+</message>
+<message>
+<source>Orientation</source>
+<translation type="unfinished">Orientation</translation>
+</message>
+<message>
+<source>Orientation:</source>
+<translation type="unfinished">Orientation:</translation>
+</message>
+<message>
+<source>PDF files</source>
+<translation type="unfinished">PDF files</translation>
+</message>
+<message>
+<source>Export current note as PDF</source>
+<translation type="unfinished">Export current note as PDF</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation type="unfinished">HTML files</translation>
+</message>
+<message>
+<source>Export current note as HTML file</source>
+<translation type="unfinished">Export current note as HTML file</translation>
+</message>
+</context>
+<context>
+<name>FakeVim</name>
+<message>
+<source>Use FakeVim</source>
+<translation>FakeVim'i kullanın</translation>
+</message>
+<message>
+<source>Read .vimrc from location:</source>
+<translation>.vimrc ayarını konumdan oku:</translation>
+</message>
+<message>
+<source>Show position of text marks</source>
+<translation>Metin işaretlerinin konumlarını göster</translation>
+</message>
+<message>
+<source>Pass control keys</source>
+<translation type="unfinished">Pass control keys</translation>
+</message>
+<message>
+<source>Pass keys in insert mode</source>
+<translation type="unfinished">Pass keys in insert mode</translation>
+</message>
+<message>
+<source>Start of line</source>
+<translation>Satır başlangıcı</translation>
+</message>
+<message>
+<source>Tabulator size:</source>
+<translation>Sekme genişliği:</translation>
+</message>
+<message>
+<source>Smart tabulators</source>
+<translation>Akıllı sekmeler</translation>
+</message>
+<message>
+<source>Highlight search results</source>
+<translation>Arama sonuçlarını vurgula</translation>
+</message>
+<message>
+<source>Shift width:</source>
+<translation type="unfinished">Shift width:</translation>
+</message>
+<message>
+<source>Expand tabulators</source>
+<translation type="unfinished">Expand tabulators</translation>
+</message>
+<message>
+<source>Automatic indentation</source>
+<translation type="unfinished">Automatic indentation</translation>
+</message>
+<message>
+<source>Incremental search</source>
+<translation type="unfinished">Incremental search</translation>
+</message>
+<message>
+<source>Use search dialog</source>
+<translation>Arama iletişim kutusunu kullan</translation>
+</message>
+<message>
+<source>Use smartcase</source>
+<translation type="unfinished">Use smartcase</translation>
+</message>
+<message>
+<source>Use ignorecase</source>
+<translation type="unfinished">Use ignorecase</translation>
+</message>
+<message>
+<source>Use wrapscan</source>
+<translation type="unfinished">Use wrapscan</translation>
+</message>
+<message>
+<source>Use tildeop</source>
+<translation type="unfinished">Use tildeop</translation>
+</message>
+<message>
+<source>Show partial command</source>
+<translation type="unfinished">Show partial command</translation>
+</message>
+<message>
+<source>Show line numbers relative to cursor</source>
+<translation type="unfinished">Show line numbers relative to cursor</translation>
+</message>
+<message>
+<source>Blinking cursor</source>
+<translation>Yanıp sönen imleç</translation>
+</message>
+<message>
+<source>Scroll offset:</source>
+<translation type="unfinished">Scroll offset:</translation>
+</message>
+<message>
+<source>Backspace:</source>
+<translation type="unfinished">Backspace:</translation>
+</message>
+<message>
+<source>Keyword characters:</source>
+<translation type="unfinished">Keyword characters:</translation>
+</message>
+<message>
+<source/>
+<translation type="unfinished"/>
+</message>
+<message>
+<source>Use Vim-style Editing</source>
+<translation>Vim stili düzenlemeyi kullan</translation>
+</message>
+<message>
+<source>Displays line numbers relative to the line containing text cursor.</source>
+<translation>Metin imlecini içeren satıra göre satır numaralarını görüntüler.</translation>
+</message>
+<message>
+<source>Does not interpret key sequences like Ctrl-S in FakeVim but handles them as regular shortcuts. This gives easier access to core functionality at the price of losing some features of FakeVim.</source>
+<translation>FakeVim'deki Ctrl-S gibi tuş dizilerini yorumlamaz ancak bunları normal kısayollar olarak işler. Bu, FakeVim'in bazı özelliklerini kaybetme pahasına temel işlevlere daha kolay erişim sağlar.</translation>
+</message>
+<message>
+<source>Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</source>
+<translation type="unfinished">Does not interpret some key presses in insert mode so that code can be properly completed and expanded.</translation>
+</message>
+<message>
+<source>Vim tabstop option.</source>
+<translation type="unfinished">Vim tabstop option.</translation>
+</message>
+<message>
+<source>Keep empty to use the default path, i.e. %USERPROFILE%\_vimrc on Windows, ~/.vimrc otherwise.</source>
+<translation>Varsayılan yolu kullanmak için boş bırakın, yani Windows'ta %USERPROFILE%\_vimrc, aksi halde ~/.vimrc.</translation>
+</message>
+<message>
+<source>Default: %1</source>
+<translation>Varsayılan: %1</translation>
+</message>
+<message>
+<source>Unknown option: %1</source>
+<translation>Bilinmeyen seçenek: %1</translation>
+</message>
+<message>
+<source>Argument must be positive: %1=%2</source>
+<translation>Argüman pozitif olmalı: %1=%2</translation>
+</message>
+<message>
+<source>Mark "%1" not set.</source>
+<translation>İşaret "%1" tanımlanmamış.</translation>
+</message>
+<message>
+<source>Recursive mapping</source>
+<translation>Özyineleyen (recursive) eşleme</translation>
+</message>
+<message>
+<source>%1%2%</source>
+<translation>%1%2%</translation>
+</message>
+<message>
+<source>%1All</source>
+<translation>%1 Tümü</translation>
+</message>
+<message>
+<source>Not implemented in FakeVim.</source>
+<translation>FakeVim içinde implemente edilmemiş.</translation>
+</message>
+<message>
+<source>Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</source>
+<translation type="unfinished">Type Meta-Shift-Y, Meta-Shift-Y to quit FakeVim mode.</translation>
+</message>
+<message>
+<source>Type Alt-Y, Alt-Y to quit FakeVim mode.</source>
+<translation type="unfinished">Type Alt-Y, Alt-Y to quit FakeVim mode.</translation>
+</message>
+<message>
+<source>Unknown option:</source>
+<translation>Bilinmeyen seçenek:</translation>
+</message>
+<message>
+<source>Invalid argument:</source>
+<translation>Geçersiz argüman:</translation>
+</message>
+<message>
+<source>Trailing characters:</source>
+<translation>Izleyen karakterler:</translation>
+</message>
+<message>
+<source>Move lines into themselves.</source>
+<translation>Satırları kendilerini taşıyın.</translation>
+</message>
+<message numerus="yes">
+<source>%n lines moved.</source>
+<translation>
+<numerusform>%n satır taşındı.</numerusform>
+<numerusform>%n satır taşındı.</numerusform>
+</translation>
+</message>
+<message>
+<source>File "%1" exists (add ! to override)</source>
+<translation>"%1" zaten var (üstüne yazmak için ! ekleyin)</translation>
+</message>
+<message>
+<source>Cannot open file "%1" for writing</source>
+<translation>Dosya "%1" yazmak için açılamıyor</translation>
+</message>
+<message>
+<source>"%1" %2 %3L, %4C written.</source>
+<translation>"%1" %2 %3L, %4C yazıldı.</translation>
+</message>
+<message>
+<source> [New] </source>
+<translation> [Yeni] </translation>
+</message>
+<message>
+<source>Cannot open file "%1" for reading</source>
+<translation>Dosya "%1" okumak için açılamıyor</translation>
+</message>
+<message>
+<source>"%1" %2L, %3C</source>
+<translation>"%1" %2L, %3C</translation>
+</message>
+<message numerus="yes">
+<source>%n lines filtered.</source>
+<translation>
+<numerusform>%n satır filtrelendi.</numerusform>
+<numerusform>%n satır filtrelendi.</numerusform>
+</translation>
+</message>
+<message>
+<source>Cannot open file %1</source>
+<translation>Dosya %1 açılamıyor</translation>
+</message>
+<message>
+<source>Not an editor command: %1</source>
+<translation>Bir editör komutu değil: %1</translation>
+</message>
+<message>
+<source>Invalid regular expression: %1</source>
+<translation>Geçersiz regex: %1</translation>
+</message>
+<message>
+<source>Pattern not found: %1</source>
+<translation>Desen bulunamadı: %1</translation>
+</message>
+<message>
+<source>Search hit BOTTOM, continuing at TOP.</source>
+<translation>Arama sonuçları en aşağıya geldi, en tepeden aramaya devam ediyor.</translation>
+</message>
+<message>
+<source>Search hit TOP, continuing at BOTTOM.</source>
+<translation>Arama sonuçları en yukarıya geldi, aşağıdan aramaya devam ediyor.</translation>
+</message>
+<message>
+<source>Search hit BOTTOM without match for: %1</source>
+<translation>%1 için eşleşme olmadan arama isabet BOTTOM</translation>
+</message>
+<message>
+<source>Search hit TOP without match for: %1</source>
+<translation>Şu sonuç için eşleşmeden arama isabet TOP: %1</translation>
+</message>
+<message numerus="yes">
+<source>%n lines indented.</source>
+<translation>
+<numerusform>%n satır girintili.</numerusform>
+<numerusform>%n satır girintili.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n lines %1ed %2 time.</source>
+<translation>
+<numerusform>%n satır %1ed %2 kez.</numerusform>
+<numerusform>%n satır %1ed %2 kez.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n lines yanked.</source>
+<translation>
+<numerusform>%n uzatılmış satır.</numerusform>
+<numerusform>%n uzatılmış satır.</numerusform>
+</translation>
+</message>
+<message>
+<source>Already at oldest change.</source>
+<translation>Zaten en eski değişiklik.</translation>
+</message>
+<message>
+<source>Already at newest change.</source>
+<translation>Zaten en yeni değişiklik.</translation>
+</message>
+</context>
+<context>
+<name>FakeVimProxy</name>
+<message>
+<source>Information</source>
+<translation>Bilgi</translation>
+</message>
+</context>
+<context>
+<name>FileNavigationWidget</name>
+<message>
+<source>Media files</source>
+<translation type="unfinished">Media files</translation>
+</message>
+<message>
+<source>Attachments</source>
+<translation type="unfinished">Attachments</translation>
+</message>
+<message>
+<source>Invalid file name</source>
+<translation type="unfinished">Invalid file name</translation>
+</message>
+<message>
+<source>The file name &lt;strong&gt;%1&lt;/strong&gt; is invalid.</source>
+<translation type="unfinished">The file name &lt;strong&gt;%1&lt;/strong&gt; is invalid.</translation>
+</message>
+<message>
+<source>Delete linked files</source>
+<translation type="unfinished">Delete linked files</translation>
+</message>
+<message numerus="yes">
+<source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</source>
+<translation type="unfinished">
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</numerusform>
+<numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected linked file(s)? You can also remove their links from &lt;strong&gt;%1&lt;/strong&gt; note file(s) afterwards.</numerusform>
+</translation>
+</message>
+<message>
+<source>Deleting the file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation type="unfinished">Deleting the file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+</message>
+<message numerus="yes">
+<source>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</source>
+<translation type="unfinished">
+<numerusform>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</numerusform>
+<numerusform>Deleting &lt;strong&gt;%n&lt;/strong&gt; linked file(s) failed!</numerusform>
+</translation>
+</message>
+<message>
+<source>File deleting failed</source>
+<translation type="unfinished">File deleting failed</translation>
+</message>
+<message>
+<source>Remove linked file references</source>
+<translation type="unfinished">Remove linked file references</translation>
+</message>
+<message numerus="yes">
+<source>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
+<translation type="unfinished">
+<numerusform>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+<numerusform>The deleted file(s) are used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to remove those media and attachment links everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+</translation>
+</message>
+<message>
+<source>File doesn't exist</source>
+<translation type="unfinished">File doesn't exist</translation>
+</message>
+<message>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation type="unfinished">The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</translation>
+</message>
+<message>
+<source>File exists</source>
+<translation type="unfinished">File exists</translation>
+</message>
+<message>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
+<translation type="unfinished">File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</translation>
+</message>
+<message>
+<source>File renaming failed</source>
+<translation type="unfinished">File renaming failed</translation>
+</message>
+<message>
+<source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation type="unfinished">Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</translation>
+</message>
+<message>
+<source>File name changed</source>
+<translation type="unfinished">File name changed</translation>
+</message>
+<message numerus="yes">
+<source>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</source>
+<translation type="unfinished">
+<numerusform>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+<numerusform>The %1 &lt;strong&gt;%2&lt;/strong&gt; is used in &lt;strong&gt;%n&lt;/strong&gt; note file(s). Would you like to refactor that filename everywhere? This will update &lt;strong&gt;%n&lt;/strong&gt; note file(s).</numerusform>
+</translation>
+</message>
+<message>
+<source>&amp;Open file externally</source>
+<translation type="unfinished">&amp;Open file externally</translation>
+</message>
+<message>
+<source>&amp;Delete file</source>
+<translation type="unfinished">&amp;Delete file</translation>
+</message>
+</context>
+<context>
+<name>FontColorWidget</name>
+<message>
+<source>Text font</source>
+<translation>Metin yazı tipi</translation>
+</message>
+<message>
+<source>Size:</source>
+<translation>Boyut:</translation>
+</message>
+<message>
+<source>Family:</source>
+<translation>Aile:</translation>
+</message>
+<message>
+<source>Color schema</source>
+<translation>Renk şeması</translation>
+</message>
+<message>
+<source>Delete schema</source>
+<translation>Şemayı sil</translation>
+</message>
+<message>
+<source>Delete</source>
+<translation>Sil</translation>
+</message>
+<message>
+<source>Export schema</source>
+<translation>Şemayı dışa aktar</translation>
+</message>
+<message>
+<source>Export</source>
+<translation>Dışa aktar</translation>
+</message>
+<message>
+<source>If you have created a nice color schema please export it and share it with everyone!</source>
+<translation>Güzel bir renk şeması oluşturduysanız, lütfen dışa aktarın ve herkesle paylaşın!</translation>
+</message>
+<message>
+<source>Copy schema</source>
+<translation>Şemayı kopyala</translation>
+</message>
+<message>
+<source>Copy</source>
+<translation>Kopyala</translation>
+</message>
+<message>
+<source>Import schema</source>
+<translation>Şemayı içe aktar</translation>
+</message>
+<message>
+<source>Import</source>
+<translation>İçe aktar</translation>
+</message>
+<message>
+<source>Font:</source>
+<translation>Yazı tipi:</translation>
+</message>
+<message>
+<source>Share schema</source>
+<translation>Şemayı paylaş</translation>
+</message>
+<message>
+<source>Background:</source>
+<translation>Arkaplan:</translation>
+</message>
+<message>
+<source>Foreground:</source>
+<translation>Önplan:</translation>
+</message>
+<message>
+<source>Bold</source>
+<translation>Kalın</translation>
+</message>
+<message>
+<source>Italic</source>
+<translation>İtalik</translation>
+</message>
+<message>
+<source>Adapt font size:</source>
+<translation>Yazı tipi boyutunu uyarla:</translation>
+</message>
+<message>
+<source>Underline</source>
+<translation>Altıçizili</translation>
+</message>
+<message>
+<source>Text preset</source>
+<translation>Önceden ayarlanmış metin</translation>
+</message>
+<message>
+<source>Emphasized text</source>
+<translation>Vurgulanmış metin</translation>
+</message>
+<message>
+<source>Strong text</source>
+<translation>Güçlü metin</translation>
+</message>
+<message>
+<source>(HTML) Comment</source>
+<translation>(HTML) Yorum</translation>
+</message>
+<message>
+<source>Header, level 1</source>
+<translation>Başlık, Seviye 1</translation>
+</message>
+<message>
+<source>Underlined text</source>
+<translation>Altı çizgili metin</translation>
+</message>
+<message>
+<source>Link</source>
+<translation>Link</translation>
+</message>
+<message>
+<source>Link (internal)</source>
+<translation type="unfinished">Link (internal)</translation>
+</message>
+<message>
+<source>Wiki link</source>
+<translation type="unfinished">Wiki link</translation>
+</message>
+<message>
+<source>Wiki link (broken)</source>
+<translation type="unfinished">Wiki link (broken)</translation>
+</message>
+<message>
+<source>Image</source>
+<translation>Görüntü</translation>
+</message>
+<message>
+<source>Code (block)</source>
+<translation>Kod (blok)</translation>
+</message>
+<message>
+<source>Code (inline)</source>
+<translation>Kod (satır içi)</translation>
+</message>
+<message>
+<source>Code (keyword)</source>
+<translation>Kod (anahtar sözcük)</translation>
+</message>
+<message>
+<source>Code (type)</source>
+<translation>Kod (tür)</translation>
+</message>
+<message>
+<source>Code (comment)</source>
+<translation>Kod (yorum)</translation>
+</message>
+<message>
+<source>Code (string)</source>
+<translation>Kod (dize)</translation>
+</message>
+<message>
+<source>Code (built in)</source>
+<translation>Kod (yerleşik)</translation>
+</message>
+<message>
+<source>Code (num literal)</source>
+<translation>Kod (sayı değişmezi)</translation>
+</message>
+<message>
+<source>Code (other)</source>
+<translation>Kod (diğer)</translation>
+</message>
+<message>
+<source>List item</source>
+<translation>Liste öğesi</translation>
+</message>
+<message>
+<source>Checkbox unchecked</source>
+<translation>Onay kutusunun işareti kaldırıldı</translation>
+</message>
+<message>
+<source>Checkbox checked</source>
+<translation>Onay kutusu işaretlendi</translation>
+</message>
+<message>
+<source>Header, level 2</source>
+<translation>Başlık, seviye 2</translation>
+</message>
+<message>
+<source>Header, level 3</source>
+<translation>Başlık, seviye 3</translation>
+</message>
+<message>
+<source>Header, level 4</source>
+<translation>Başlık, seviye 4</translation>
+</message>
+<message>
+<source>Header, level 5</source>
+<translation>Başlık, seviye 5</translation>
+</message>
+<message>
+<source>Header, level 6</source>
+<translation>Başlık, seviye 6</translation>
+</message>
+<message>
+<source>Block quote</source>
+<translation>Blok alıntı</translation>
+</message>
+<message>
+<source>Table</source>
+<translation>Tablo</translation>
+</message>
+<message>
+<source>Masked syntax</source>
+<comment>text that will highlighted in a way that it's barely visible</comment>
+<translation>Maskelenmiş sözdizimi</translation>
+</message>
+<message>
+<source>Broken link</source>
+<translation>Kırık link</translation>
+</message>
+<message>
+<source>Horizontal rule</source>
+<translation>Yatay kural</translation>
+</message>
+<message>
+<source>Current line background color</source>
+<translation>Geçerli satır arka plan rengi</translation>
+</message>
+<message>
+<source>Trailing space</source>
+<translation>Sondaki boşluk</translation>
+</message>
+<message>
+<source>This item will be used to preset colors for the other items</source>
+<translation>Bu öğe, diğer öğeler için önceden ayarlanmış renkler kullanacak</translation>
+</message>
+<message>
+<source>Copy color schema</source>
+<translation>Renk şemasını kopyala</translation>
+</message>
+<message>
+<source>Color schema name</source>
+<translation>Renk şeması adı</translation>
+</message>
+<message>
+<source>Copy</source>
+<comment>as noun</comment>
+<translation>Kopyala</translation>
+</message>
+<message>
+<source>Remove schema</source>
+<translation>Şemayı kaldır</translation>
+</message>
+<message>
+<source>Remove current schema? This cannot be undone!</source>
+<translation>Geçerli şema kaldırılsın mı? Bu geri alınamaz!</translation>
+</message>
+<message>
+<source>INI files</source>
+<translation>INI dosyaları</translation>
+</message>
+</context>
+<context>
+<name>GeneralSettingsWidget</name>
+<message>
+<source>Notes</source>
+<translation type="unfinished">Notes</translation>
+</message>
+<message>
+<source>Check this if you want to accept all external modifications while you are editing the current note.</source>
+<translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
+</message>
+<message>
+<source>Accept all external modifications of the current note</source>
+<translation type="unfinished">Accept all external modifications of the current note</translation>
+</message>
+<message>
+<source>note save interval time [sec]</source>
+<translation type="unfinished">note save interval time [sec]</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>Notify about all external modifications of the current note</source>
+<translation type="unfinished">Notify about all external modifications of the current note</translation>
+</message>
+<message>
+<source>By default the headline will generated automatically</source>
+<translation type="unfinished">By default the headline will generated automatically</translation>
+</message>
+<message>
+<source>The shortcut to create a new note asks for a headline</source>
+<translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+</message>
+<message>
+<source>Do this at your own risk!</source>
+<translation type="unfinished">Do this at your own risk!</translation>
+</message>
+<message>
+<source>Ignore all external note folder changes</source>
+<translation type="unfinished">Ignore all external note folder changes</translation>
+</message>
+<message>
+<source>Maximum width:</source>
+<translation type="unfinished">Maximum width:</translation>
+</message>
+<message>
+<source>Maximum height:</source>
+<translation type="unfinished">Maximum height:</translation>
+</message>
+<message>
+<source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</source>
+<translation type="unfinished">You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+</message>
+<message>
+<source>You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</source>
+<translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the Nextcloud / ownCloud notes app</translation>
+</message>
+<message>
+<source>Use UNIX newline instead of native newline characters</source>
+<translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
+</message>
+<message>
+<source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
+<translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
+</message>
+<message>
+<source>Ignore all external modifications of the current note</source>
+<translation type="unfinished">Ignore all external modifications of the current note</translation>
+</message>
+<message>
+<source>Use legacy way to link to notes, images and attachments</source>
+<translation type="unfinished">Use legacy way to link to notes, images and attachments</translation>
+</message>
+<message>
+<source>When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</source>
+<translation type="unfinished">When opening notes the cursor position inside the note will now be restored to the position when the note was last visited in the current session</translation>
+</message>
+<message>
+<source>Restore cursor position when opening a note</source>
+<translation type="unfinished">Restore cursor position when opening a note</translation>
+</message>
+<message>
+<source>Automatically close the note folder database to prevent problems with sync tools</source>
+<translation type="unfinished">Automatically close the note folder database to prevent problems with sync tools</translation>
+</message>
+<message>
+<source>Automatically close the note folder database</source>
+<translation type="unfinished">Automatically close the note folder database</translation>
+</message>
+<message>
+<source>Scale images down when inserted into notes</source>
+<translation type="unfinished">Scale images down when inserted into notes</translation>
+</message>
+<message>
+<source>Disable this if you want to launch the application without opening a note</source>
+<translation type="unfinished">Disable this if you want to launch the application without opening a note</translation>
+</message>
+<message>
+<source>Open last accessed note at application startup</source>
+<translation type="unfinished">Open last accessed note at application startup</translation>
+</message>
+<message>
+<source>Use checksums to detect external modifications to unsaved notes</source>
+<translation type="unfinished">Use checksums to detect external modifications to unsaved notes</translation>
+</message>
+<message>
+<source>Read-only mode</source>
+<translation type="unfinished">Read-only mode</translation>
+</message>
+<message>
+<source>Enable or disable the read-only mode feature</source>
+<translation type="unfinished">Enable or disable the read-only mode feature</translation>
+</message>
+<message>
+<source>Enable read-only mode</source>
+<translation type="unfinished">Enable read-only mode</translation>
+</message>
+<message>
+<source>Start application in read-only mode</source>
+<translation type="unfinished">Start application in read-only mode</translation>
+</message>
+<message>
+<source>When inactive, enter read-only mode automatically after:</source>
+<translation type="unfinished">When inactive, enter read-only mode automatically after:</translation>
+</message>
+<message>
+<source> sec</source>
+<extracomment>short for seconds</extracomment>
+<translation type="unfinished"> sec</translation>
+</message>
+<message>
+<source>App instance</source>
+<translation type="unfinished">App instance</translation>
+</message>
+<message>
+<source>Only allow one app instance at the same time</source>
+<translation type="unfinished">Only allow one app instance at the same time</translation>
+</message>
+<message>
+<source>Update dialog</source>
+<translation type="unfinished">Update dialog</translation>
+</message>
+<message>
+<source>Don't show the update dialog automatically</source>
+<translation type="unfinished">Don't show the update dialog automatically</translation>
+</message>
+<message>
+<source>Search engine</source>
+<translation type="unfinished">Search engine</translation>
+</message>
+<message>
+<source>Message boxes</source>
+<translation type="unfinished">Message boxes</translation>
+</message>
+<message>
+<source>Forget all "Don't ask again" choices in message boxes</source>
+<translation type="unfinished">Forget all "Don't ask again" choices in message boxes</translation>
+</message>
+<message>
+<source>Reset message boxes</source>
+<translation type="unfinished">Reset message boxes</translation>
+</message>
+<message>
+<source>Note file extensions</source>
+<translation type="unfinished">Note file extensions</translation>
+</message>
+<message>
+<source>Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</source>
+<translation type="unfinished">Files with the listed file extensions will be recognized as notes, the selected file extension will be used for new notes.</translation>
+</message>
+<message>
+<source>Add a new note file extension</source>
+<translation type="unfinished">Add a new note file extension</translation>
+</message>
+<message>
+<source>Remove selected note file extension</source>
+<translation type="unfinished">Remove selected note file extension</translation>
+</message>
+<message>
+<source>External editor</source>
+<translation type="unfinished">External editor</translation>
+</message>
+<message>
+<source>Path to external editor:</source>
+<translation type="unfinished">Path to external editor:</translation>
+</message>
+<message>
+<source>path to external editor, leave empty for default</source>
+<translation type="unfinished">path to external editor, leave empty for default</translation>
+</message>
+<message>
+<source>set external editor</source>
+<translation type="unfinished">set external editor</translation>
+</message>
+<message>
+<source>Clear application data and exit</source>
+<translation type="unfinished">Clear application data and exit</translation>
+</message>
+<message>
+<source>This button allows you to clear all settings, remove the local todo database and exit ArcNotes.</source>
+<translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit ArcNotes.</translation>
+</message>
+<message>
+<source>Clear app data and exit</source>
+<translation type="unfinished">Clear app data and exit</translation>
+</message>
+<message>
+<source>Settings</source>
+<translation type="unfinished">Settings</translation>
+</message>
+<message>
+<source>Import settings</source>
+<translation type="unfinished">Import settings</translation>
+</message>
+<message>
+<source>Export settings</source>
+<translation type="unfinished">Export settings</translation>
+</message>
+<message>
+<source>Database</source>
+<translation type="unfinished">Database</translation>
+</message>
+<message>
+<source>Reinitialize Database</source>
+<translation type="unfinished">Reinitialize Database</translation>
+</message>
+<message>
+<source>Checks the disk database integrity and fixes problems</source>
+<translation type="unfinished">Checks the disk database integrity and fixes problems</translation>
+</message>
+<message>
+<source>Check integrity</source>
+<translation type="unfinished">Check integrity</translation>
+</message>
+<message>
+<source>Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</source>
+<translation type="unfinished">Be warned that reinitializing the database will also remove your cached todo items and configured note folders and scripts!</translation>
+</message>
+<message>
+<source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
+<translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
+</message>
+<message>
+<source>The Database was reinitialized. Please restart the application now!</source>
+<translation type="unfinished">The Database was reinitialized. Please restart the application now!</translation>
+</message>
+<message>
+<source>The integrity of the disk database is valid.</source>
+<translation type="unfinished">The integrity of the disk database is valid.</translation>
+</message>
+<message>
+<source>The integrity of the disk database is not valid!</source>
+<translation type="unfinished">The integrity of the disk database is not valid!</translation>
+</message>
+<message>
+<source>Do you really want to clear all settings, remove the database and exit ArcNotes?
+
+Your notes will stay intact!</source>
+<translation type="unfinished">Do you really want to clear all settings, remove the database and exit ArcNotes?
+
+Your notes will stay intact!</translation>
+</message>
+<message>
+<source>Select editor application</source>
+<translation type="unfinished">Select editor application</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Please enter a new note file extension:</source>
+<translation type="unfinished">Please enter a new note file extension:</translation>
+</message>
+<message>
+<source>Markdown file</source>
+<translation type="unfinished">Markdown file</translation>
+</message>
+<message>
+<source>Plain text file</source>
+<translation type="unfinished">Plain text file</translation>
+</message>
+<message>
+<source>Remove note file extension</source>
+<translation type="unfinished">Remove note file extension</translation>
+</message>
+<message>
+<source>Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</source>
+<translation type="unfinished">Do you really want to remove the note file extension &lt;strong&gt;%1&lt;/strong&gt;? You will not see files with this extension in the note list any more!</translation>
+</message>
+<message>
+<source>Do you really want to reset the overrides of all message boxes?</source>
+<translation type="unfinished">Do you really want to reset the overrides of all message boxes?</translation>
+</message>
+<message>
+<source>INI files</source>
+<translation type="unfinished">INI files</translation>
+</message>
+<message>
+<source>Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</source>
+<translation type="unfinished">Do you really want to import settings? Your current settings will get removed and not every setting may get restored, like the note folder settings and which scripts you were using. You also will need to adjust some settings, especially across platforms, but your notes will stay intact!</translation>
+</message>
+<message>
+<source>The application will be restarted after the import.</source>
+<translation type="unfinished">The application will be restarted after the import.</translation>
+</message>
+</context>
+<context>
+<name>GitSettingsWidget</name>
+<message>
+<source>Commit interval</source>
+<translation type="unfinished">Commit interval</translation>
+</message>
+<message>
+<source>sec</source>
+<extracomment>seconds</extracomment>
+<translation type="unfinished">sec</translation>
+</message>
+<message>
+<source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</source>
+<translation type="unfinished">You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+</message>
+<message>
+<source>git commit interval time [sec]</source>
+<translation type="unfinished">git commit interval time [sec]</translation>
+</message>
+<message>
+<source>External git log command to show the git versions of a note</source>
+<translation type="unfinished">External git log command to show the git versions of a note</translation>
+</message>
+<message>
+<source>Enter a command to be used to show a git log (like for example "gitk")</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation type="unfinished">Enter a command to be used to show a git log (like for example "gitk")</translation>
+</message>
+<message>
+<source>You optionally can use "%notePath%" for the path of the note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+</message>
+<message>
+<source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
+<extracomment>Please don't translate "%notePath%"</extracomment>
+<translation type="unfinished">If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</translation>
+</message>
+<message>
+<source>Git client</source>
+<translation type="unfinished">Git client</translation>
+</message>
+<message>
+<source>Path to git client, leave empty for default</source>
+<translation type="unfinished">Path to git client, leave empty for default</translation>
+</message>
+<message>
+<source>Path to git executable:</source>
+<translation type="unfinished">Path to git executable:</translation>
+</message>
+<message>
+<source>Select the path of the git binary</source>
+<translation type="unfinished">Select the path of the git binary</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
+<translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</translation>
+</message>
+<message>
+<source>Git library</source>
+<translation type="unfinished">Git library</translation>
+</message>
+<message>
+<source>Support for the git library libgit2 is activated.</source>
+<translation type="unfinished">Support for the git library libgit2 is activated.</translation>
+</message>
+<message>
+<source>Don't forget to enable git support for your note folders.</source>
+<translation type="unfinished">Don't forget to enable git support for your note folders.</translation>
+</message>
+<message>
+<source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
+<translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+</message>
+<message>
+<source>Executable files</source>
+<translation type="unfinished">Executable files</translation>
+</message>
+<message>
+<source>All files</source>
+<translation type="unfinished">All files</translation>
+</message>
+<message>
+<source>Please select the path of your git executable</source>
+<translation type="unfinished">Please select the path of your git executable</translation>
+</message>
+</context>
+<context>
+<name>HarperChecker</name>
+<message>
+<source>Harper is unavailable: %1</source>
+<translation type="unfinished">Harper is unavailable: %1</translation>
+</message>
+</context>
+<context>
+<name>HarperClient</name>
+<message>
+<source>Harper request timed out</source>
+<translation type="unfinished">Harper request timed out</translation>
+</message>
+<message>
+<source>Harper service stopped unexpectedly</source>
+<translation type="unfinished">Harper service stopped unexpectedly</translation>
+</message>
+<message>
+<source>Harper transport is not configured</source>
+<translation type="unfinished">Harper transport is not configured</translation>
+</message>
+<message>
+<source>Waiting before retrying the Harper TCP connection</source>
+<translation type="unfinished">Waiting before retrying the Harper TCP connection</translation>
+</message>
+<message>
+<source>Unsupported Harper request: %1</source>
+<translation type="unfinished">Unsupported Harper request: %1</translation>
+</message>
+<message>
+<source>Harper initialization failed</source>
+<translation type="unfinished">Harper initialization failed</translation>
+</message>
+</context>
+<context>
+<name>HarperSettingsWidget</name>
+<message>
+<source>Harper</source>
+<translation type="unfinished">Harper</translation>
+</message>
+<message>
+<source>Enable offline grammar and style checking with Harper</source>
+<translation type="unfinished">Enable offline grammar and style checking with Harper</translation>
+</message>
+<message>
+<source>Transport:</source>
+<translation type="unfinished">Transport:</translation>
+</message>
+<message>
+<source>Connection:</source>
+<translation type="unfinished">Connection:</translation>
+</message>
+<message>
+<source>Command / binary path:</source>
+<translation type="unfinished">Command / binary path:</translation>
+</message>
+<message>
+<source>Browse</source>
+<translation type="unfinished">Browse</translation>
+</message>
+<message>
+<source>Auto-detect</source>
+<translation type="unfinished">Auto-detect</translation>
+</message>
+<message>
+<source>Server address:</source>
+<translation type="unfinished">Server address:</translation>
+</message>
+<message>
+<source>Port:</source>
+<translation type="unfinished">Port:</translation>
+</message>
+<message>
+<source>Dialect:</source>
+<translation type="unfinished">Dialect:</translation>
+</message>
+<message>
+<source>Check delay:</source>
+<translation type="unfinished">Check delay:</translation>
+</message>
+<message>
+<source> ms</source>
+<translation type="unfinished"> ms</translation>
+</message>
+<message>
+<source>Linters:</source>
+<translation type="unfinished">Linters:</translation>
+</message>
+<message>
+<source>Spell Check</source>
+<translation type="unfinished">Spell Check</translation>
+</message>
+<message>
+<source>Sentence Capitalization</source>
+<translation type="unfinished">Sentence Capitalization</translation>
+</message>
+<message>
+<source>Repeated Words</source>
+<translation type="unfinished">Repeated Words</translation>
+</message>
+<message>
+<source>Long Sentences</source>
+<translation type="unfinished">Long Sentences</translation>
+</message>
+<message>
+<source>An vs A</source>
+<translation type="unfinished">An vs A</translation>
+</message>
+<message>
+<source>Unclosed Quotes</source>
+<translation type="unfinished">Unclosed Quotes</translation>
+</message>
+<message>
+<source>Correct Number Suffix</source>
+<translation type="unfinished">Correct Number Suffix</translation>
+</message>
+<message>
+<source>Spaces</source>
+<translation type="unfinished">Spaces</translation>
+</message>
+<message>
+<source>Quote Spacing</source>
+<translation type="unfinished">Quote Spacing</translation>
+</message>
+<message>
+<source>No French Spaces</source>
+<translation type="unfinished">No French Spaces</translation>
+</message>
+<message>
+<source>Wrong Apostrophe</source>
+<translation type="unfinished">Wrong Apostrophe</translation>
+</message>
+<message>
+<source>Not tested yet.</source>
+<translation type="unfinished">Not tested yet.</translation>
+</message>
+<message>
+<source>Spelled Numbers</source>
+<translation type="unfinished">Spelled Numbers</translation>
+</message>
+<message>
+<source>Ignored:</source>
+<translation type="unfinished">Ignored:</translation>
+</message>
+<message>
+<source>Reset ignored rules</source>
+<translation type="unfinished">Reset ignored rules</translation>
+</message>
+<message>
+<source>Reset ignored words</source>
+<translation type="unfinished">Reset ignored words</translation>
+</message>
+<message>
+<source>Status:</source>
+<translation type="unfinished">Status:</translation>
+</message>
+<message>
+<source>Test Connection</source>
+<translation type="unfinished">Test Connection</translation>
+</message>
+<message>
+<source>Stdio (recommended)</source>
+<translation type="unfinished">Stdio (recommended)</translation>
+</message>
+<message>
+<source>TCP</source>
+<translation type="unfinished">TCP</translation>
+</message>
+<message>
+<source>American</source>
+<translation type="unfinished">American</translation>
+</message>
+<message>
+<source>British</source>
+<translation type="unfinished">British</translation>
+</message>
+<message>
+<source>Australian</source>
+<translation type="unfinished">Australian</translation>
+</message>
+<message>
+<source>Canadian</source>
+<translation type="unfinished">Canadian</translation>
+</message>
+<message>
+<source>Indian</source>
+<translation type="unfinished">Indian</translation>
+</message>
+<message>
+<source>Harper support is not available in this build.</source>
+<translation type="unfinished">Harper support is not available in this build.</translation>
+</message>
+<message>
+<source>harper-ls was not found.</source>
+<translation type="unfinished">harper-ls was not found.</translation>
+</message>
+<message>
+<source>Found Harper at %1</source>
+<translation type="unfinished">Found Harper at %1</translation>
+</message>
+<message>
+<source>Found Harper %1 at %2</source>
+<translation type="unfinished">Found Harper %1 at %2</translation>
+</message>
+<message>
+<source>TCP target %1:%2</source>
+<translation type="unfinished">TCP target %1:%2</translation>
+</message>
+<message>
+<source>Select Harper binary</source>
+<translation type="unfinished">Select Harper binary</translation>
+</message>
+<message>
+<source>Could not find harper-ls in PATH.</source>
+<translation type="unfinished">Could not find harper-ls in PATH.</translation>
+</message>
+<message>
+<source>Harper connection successful.</source>
+<translation type="unfinished">Harper connection successful.</translation>
+</message>
+<message>
+<source>Harper connection failed: %1</source>
+<translation type="unfinished">Harper connection failed: %1</translation>
+</message>
+<message>
+<source>There are no ignored rules to reset.</source>
+<translation type="unfinished">There are no ignored rules to reset.</translation>
+</message>
+<message numerus="yes">
+<source>Reset %n ignored rule(s)?</source>
+<translation type="unfinished">
+<numerusform>Reset %n ignored rule(s)?</numerusform>
+<numerusform>Reset %n ignored rule(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>All ignored rules have been reset.</source>
+<translation type="unfinished">All ignored rules have been reset.</translation>
+</message>
+<message>
+<source>There are no ignored words to reset.</source>
+<translation type="unfinished">There are no ignored words to reset.</translation>
+</message>
+<message numerus="yes">
+<source>Reset %n ignored word(s)?</source>
+<translation type="unfinished">
+<numerusform>Reset %n ignored word(s)?</numerusform>
+<numerusform>Reset %n ignored word(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>All ignored words have been reset.</source>
+<translation type="unfinished">All ignored words have been reset.</translation>
+</message>
+</context>
+<context>
+<name>HtmlPreviewWidgetInternal</name>
+<message>
+<source>Copy</source>
+<translation type="unfinished">Copy</translation>
+</message>
+<message>
+<source>Copy image file path</source>
+<translation type="unfinished">Copy image file path</translation>
+</message>
+<message>
+<source>Copy image to clipboard</source>
+<translation type="unfinished">Copy image to clipboard</translation>
+</message>
+<message>
+<source>Copy link location</source>
+<translation type="unfinished">Copy link location</translation>
+</message>
+<message>
+<source>Export generated raw HTML</source>
+<translation type="unfinished">Export generated raw HTML</translation>
+</message>
+<message>
+<source>Reset zoom</source>
+<translation type="unfinished">Reset zoom</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation type="unfinished">HTML files</translation>
+</message>
+<message>
+<source>Export preview as raw HTML file</source>
+<comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
+<translation type="unfinished">Export preview as raw HTML file</translation>
+</message>
+</context>
+<context>
+<name>ImageDialog</name>
+<message>
+<source>Insert image</source>
+<translation>Resim ekle</translation>
+</message>
+<message>
+<source>Image filename or URL</source>
+<translation>Resmin dosya adı veya URL'si</translation>
+</message>
+<message>
+<source>Path to file or URL</source>
+<translation>Dosya veya URL yolu</translation>
+</message>
+<message>
+<source>Scaling width:</source>
+<translation>Ölçekleme genişliği:</translation>
+</message>
+<message>
+<source>Crop image</source>
+<translation>Görüntüyü kırp</translation>
+</message>
+<message>
+<source>&amp;Crop</source>
+<translation>&amp;Kırp</translation>
+</message>
+<message>
+<source>The path or url will be inserted directly, paths to files will be made relative to the current note</source>
+<translation>Yol veya url doğrudan eklenir, dosyalara giden yol geçerli nota göre yapılır</translation>
+</message>
+<message>
+<source>Don't copy image to media folder</source>
+<translation>Resmi medya klasörüne kopyalama</translation>
+</message>
+<message>
+<source>Title of the image link</source>
+<translation>Resim bağlantısının başlığı</translation>
+</message>
+<message>
+<source>Title</source>
+<translation>Başlık</translation>
+</message>
+<message>
+<source>Select image file</source>
+<translation>Resim dosyasını seç</translation>
+</message>
+<message>
+<source>Image files</source>
+<translation>Görüntü dosyaları</translation>
+</message>
+<message>
+<source>Any files</source>
+<translation>Herhangi bir dosya</translation>
+</message>
+<message>
+<source>Select image to insert</source>
+<translation>Eklemek için görüntü seçin</translation>
+</message>
+</context>
+<context>
+<name>InterfaceSettingsWidget</name>
+<message>
+<source>Interface language</source>
+<translation type="unfinished">Interface language</translation>
+</message>
+<message>
+<source>If you want to help to translate ArcNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate ArcNotes?&lt;/a&gt;</source>
+<translation type="unfinished">If you want to help to translate ArcNotes or update an existing translation please read: &lt;a href="%1"&gt;How can I help to translate ArcNotes?&lt;/a&gt;</translation>
+</message>
+<message>
+<source>If you change the language you have to restart the application for the changes to take action.</source>
+<translation type="unfinished">If you change the language you have to restart the application for the changes to take action.</translation>
+</message>
+<message>
+<source>Automatic</source>
+<translation type="unfinished">Automatic</translation>
+</message>
+<message>
+<source>Indonesian</source>
+<translation type="unfinished">Indonesian</translation>
+</message>
+<message>
+<source>Malay</source>
+<translation type="unfinished">Malay</translation>
+</message>
+<message>
+<source>Bengali</source>
+<translation type="unfinished">Bengali</translation>
+</message>
+<message>
+<source>Bosnian</source>
+<translation type="unfinished">Bosnian</translation>
+</message>
+<message>
+<source>Bulgarian</source>
+<translation type="unfinished">Bulgarian</translation>
+</message>
+<message>
+<source>Catalan</source>
+<translation type="unfinished">Catalan</translation>
+</message>
+<message>
+<source>Cebuano</source>
+<translation type="unfinished">Cebuano</translation>
+</message>
+<message>
+<source>Czech</source>
+<translation type="unfinished">Czech</translation>
+</message>
+<message>
+<source>Danish</source>
+<translation type="unfinished">Danish</translation>
+</message>
+<message>
+<source>German</source>
+<translation type="unfinished">German</translation>
+</message>
+<message>
+<source>Basque</source>
+<translation type="unfinished">Basque</translation>
+</message>
+<message>
+<source>English</source>
+<translation type="unfinished">English</translation>
+</message>
+<message>
+<source>English (British)</source>
+<translation type="unfinished">English (British)</translation>
+</message>
+<message>
+<source>Spanish</source>
+<translation type="unfinished">Spanish</translation>
+</message>
+<message>
+<source>Estonian</source>
+<translation type="unfinished">Estonian</translation>
+</message>
+<message>
+<source>Filipino</source>
+<translation type="unfinished">Filipino</translation>
+</message>
+<message>
+<source>Finnish</source>
+<translation type="unfinished">Finnish</translation>
+</message>
+<message>
+<source>French</source>
+<translation type="unfinished">French</translation>
+</message>
+<message>
+<source>Irish</source>
+<translation type="unfinished">Irish</translation>
+</message>
+<message>
+<source>Galician</source>
+<translation type="unfinished">Galician</translation>
+</message>
+<message>
+<source>Greek</source>
+<translation type="unfinished">Greek</translation>
+</message>
+<message>
+<source>Hausa</source>
+<translation type="unfinished">Hausa</translation>
+</message>
+<message>
+<source>Hebrew</source>
+<translation type="unfinished">Hebrew</translation>
+</message>
+<message>
+<source>Hindi</source>
+<translation type="unfinished">Hindi</translation>
+</message>
+<message>
+<source>Croatian</source>
+<translation type="unfinished">Croatian</translation>
+</message>
+<message>
+<source>Hiligaynon</source>
+<translation type="unfinished">Hiligaynon</translation>
+</message>
+<message>
+<source>Icelandic</source>
+<translation type="unfinished">Icelandic</translation>
+</message>
+<message>
+<source>Italian</source>
+<translation type="unfinished">Italian</translation>
+</message>
+<message>
+<source>Korean</source>
+<translation type="unfinished">Korean</translation>
+</message>
+<message>
+<source>Kurdish</source>
+<translation type="unfinished">Kurdish</translation>
+</message>
+<message>
+<source>Khmer</source>
+<translation type="unfinished">Khmer</translation>
+</message>
+<message>
+<source>Latvian</source>
+<translation type="unfinished">Latvian</translation>
+</message>
+<message>
+<source>Lithuanian</source>
+<translation type="unfinished">Lithuanian</translation>
+</message>
+<message>
+<source>Macedonian</source>
+<translation type="unfinished">Macedonian</translation>
+</message>
+<message>
+<source>Māori</source>
+<translation type="unfinished">Māori</translation>
+</message>
+<message>
+<source>Hungarian</source>
+<translation type="unfinished">Hungarian</translation>
+</message>
+<message>
+<source>Norwegian</source>
+<translation type="unfinished">Norwegian</translation>
+</message>
+<message>
+<source>Japanese</source>
+<translation type="unfinished">Japanese</translation>
+</message>
+<message>
+<source>Dutch</source>
+<translation type="unfinished">Dutch</translation>
+</message>
+<message>
+<source>Persian</source>
+<translation type="unfinished">Persian</translation>
+</message>
+<message>
+<source>Uzbek</source>
+<translation type="unfinished">Uzbek</translation>
+</message>
+<message>
+<source>Polish</source>
+<translation type="unfinished">Polish</translation>
+</message>
+<message>
+<source>Brazilian Portuguese</source>
+<translation type="unfinished">Brazilian Portuguese</translation>
+</message>
+<message>
+<source>Portuguese</source>
+<translation type="unfinished">Portuguese</translation>
+</message>
+<message>
+<source>Punjabi</source>
+<translation type="unfinished">Punjabi</translation>
+</message>
+<message>
+<source>Romanian</source>
+<translation type="unfinished">Romanian</translation>
+</message>
+<message>
+<source>Russian</source>
+<translation type="unfinished">Russian</translation>
+</message>
+<message>
+<source>Serbian</source>
+<translation type="unfinished">Serbian</translation>
+</message>
+<message>
+<source>Albanian</source>
+<translation type="unfinished">Albanian</translation>
+</message>
+<message>
+<source>Shona</source>
+<translation type="unfinished">Shona</translation>
+</message>
+<message>
+<source>Sinhala</source>
+<translation type="unfinished">Sinhala</translation>
+</message>
+<message>
+<source>Slovak</source>
+<translation type="unfinished">Slovak</translation>
+</message>
+<message>
+<source>Slovenian</source>
+<translation type="unfinished">Slovenian</translation>
+</message>
+<message>
+<source>Swedish</source>
+<translation type="unfinished">Swedish</translation>
+</message>
+<message>
+<source>Tagalog</source>
+<translation type="unfinished">Tagalog</translation>
+</message>
+<message>
+<source>Thai</source>
+<translation type="unfinished">Thai</translation>
+</message>
+<message>
+<source>Vietnamese</source>
+<translation type="unfinished">Vietnamese</translation>
+</message>
+<message>
+<source>Turkish</source>
+<translation type="unfinished">Turkish</translation>
+</message>
+<message>
+<source>Xhosa</source>
+<translation type="unfinished">Xhosa</translation>
+</message>
+<message>
+<source>Ukrainian</source>
+<translation type="unfinished">Ukrainian</translation>
+</message>
+<message>
+<source>Urdu</source>
+<translation type="unfinished">Urdu</translation>
+</message>
+<message>
+<source>Yiddish</source>
+<translation type="unfinished">Yiddish</translation>
+</message>
+<message>
+<source>Zulu</source>
+<translation type="unfinished">Zulu</translation>
+</message>
+<message>
+<source>Chinese Simplified</source>
+<translation type="unfinished">Chinese Simplified</translation>
+</message>
+<message>
+<source>Chinese Traditional</source>
+<translation type="unfinished">Chinese Traditional</translation>
+</message>
+<message>
+<source>Arabic</source>
+<translation type="unfinished">Arabic</translation>
+</message>
+<message>
+<source>Search for language</source>
+<translation type="unfinished">Search for language</translation>
+</message>
+<message>
+<source>System tray</source>
+<translation type="unfinished">System tray</translation>
+</message>
+<message>
+<source>You need to restart the application to let this setting take effect</source>
+<translation type="unfinished">You need to restart the application to let this setting take effect</translation>
+</message>
+<message>
+<source>Show system tray icon</source>
+<translation type="unfinished">Show system tray icon</translation>
+</message>
+<message>
+<source>Start application hidden</source>
+<translation type="unfinished">Start application hidden</translation>
+</message>
+<message>
+<source>Interface style</source>
+<translation type="unfinished">Interface style</translation>
+</message>
+<message>
+<source>Icons</source>
+<translation type="unfinished">Icons</translation>
+</message>
+<message>
+<source>Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</source>
+<translation type="unfinished">Hide icons in menus as well as the "Find action" dialog. Requires restart to take effect</translation>
+</message>
+<message>
+<source>Hide menu icons</source>
+<translation type="unfinished">Hide menu icons</translation>
+</message>
+<message>
+<source>Item sizes in the main window</source>
+<translation type="unfinished">Item sizes in the main window</translation>
+</message>
+<message>
+<source>List and tree item height:</source>
+<translation type="unfinished">List and tree item height:</translation>
+</message>
+<message>
+<source>Toolbar icon size:</source>
+<translation type="unfinished">Toolbar icon size:</translation>
+</message>
+<message>
+<source>Reset the icon size</source>
+<translation type="unfinished">Reset the icon size</translation>
+</message>
+<message>
+<source>Reset the item height</source>
+<translation type="unfinished">Reset the item height</translation>
+</message>
+<message>
+<source>Override interface font size</source>
+<translation type="unfinished">Override interface font size</translation>
+</message>
+<message>
+<source>Interface font size:</source>
+<translation type="unfinished">Interface font size:</translation>
+</message>
+<message>
+<source>Override interface scaling factor</source>
+<translation type="unfinished">Override interface scaling factor</translation>
+</message>
+<message>
+<source>Interface scaling factor:</source>
+<translation type="unfinished">Interface scaling factor:</translation>
+</message>
+<message>
+<source>Status bar</source>
+<translation type="unfinished">Status bar</translation>
+</message>
+<message>
+<source>Show note path</source>
+<translation type="unfinished">Show note path</translation>
+</message>
+<message>
+<source>Only show relative note path</source>
+<translation type="unfinished">Only show relative note path</translation>
+</message>
+<message>
+<source>Distraction free mode</source>
+<translation type="unfinished">Distraction free mode</translation>
+</message>
+<message>
+<source>Open distraction free mode in full-screen</source>
+<translation type="unfinished">Open distraction free mode in full-screen</translation>
+</message>
+<message>
+<source>Hide status bar in distraction free mode</source>
+<translation type="unfinished">Hide status bar in distraction free mode</translation>
+</message>
+<message>
+<source>Menu bar</source>
+<translation type="unfinished">Menu bar</translation>
+</message>
+<message>
+<source>Show menu bar item</source>
+<translation type="unfinished">Show menu bar item</translation>
+</message>
+<message>
+<source>Automatic (needs restart)</source>
+<translation type="unfinished">Automatic (needs restart)</translation>
+</message>
+<message>
+<source>If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</source>
+<translation type="unfinished">If you had this setting enabled, you now need to restart the application manually so the previous environment variable that overrides the scale factor is not in your environment again.</translation>
+</message>
+</context>
+<context>
+<name>IssueAssistantDialog</name>
+<message>
+<source>Minimum 8 characters</source>
+<translation>En az 8 karakter</translation>
+</message>
+<message>
+<source>Minimum 10 characters</source>
+<translation>En az 10 karakter</translation>
+</message>
+</context>
+<context>
+<name>JoplinImportDialog</name>
+<message>
+<source>Joplin Import</source>
+<translation>Joplin İçe Aktar</translation>
+</message>
+<message>
+<source>Import folders</source>
+<translation>Klasörleri içe aktar</translation>
+</message>
+<message>
+<source>Please select the "RAW - Joplin Export Directory" from which you want to import notes:</source>
+<translation>İçe aktarmak istediğiniz "RAW - Joplin Export Directory" seçiniz:</translation>
+</message>
+<message>
+<source>Select directory</source>
+<translation>Klasör seçiniz</translation>
+</message>
+<message>
+<source>Import images</source>
+<translation>Resimleri içe aktar</translation>
+</message>
+<message>
+<source>%v of %m file(s) imported</source>
+<translation>%m dosyanın %v kadarı içe aktarıldı</translation>
+</message>
+<message>
+<source>Import notes</source>
+<translation>Notları içe aktar</translation>
+</message>
+<message>
+<source>Import tags</source>
+<translation>Etiketleri içe aktar</translation>
+</message>
+<message>
+<source>If you just have a "JEX - Joplin Export File" please extract the content of that file to a directory and select that directory.</source>
+<translation>Elinizde sadece "JEX - Joplin Export File" varsa, dosyanın içeriğini bir klasöre çıkartın ve o klasörü seçin.</translation>
+</message>
+<message>
+<source>Import metadata</source>
+<translation>Üstveriyi içe aktar</translation>
+</message>
+<message>
+<source>RAW - Joplin Export Directory</source>
+<translation>RAW - Joplin Dışa Aktarma Klasörü</translation>
+</message>
+<message>
+<source>Import attachments</source>
+<translation>Ekleri içe aktar</translation>
+</message>
+<message>
+<source>Select 'RAW - Joplin Export Directory' to import</source>
+<translation>İçe aktarmak için 'RAW - Joplin Dışa Aktarma Klasörü' seçin</translation>
+</message>
+</context>
+<context>
+<name>LanguageToolChecker</name>
+<message>
+<source>LanguageTool is unavailable: %1</source>
+<translation type="unfinished">LanguageTool is unavailable: %1</translation>
+</message>
+</context>
+<context>
+<name>LanguageToolClient</name>
+<message>
+<source>Invalid LanguageTool server URL</source>
+<translation type="unfinished">Invalid LanguageTool server URL</translation>
+</message>
+</context>
+<context>
+<name>LanguageToolSettingsWidget</name>
+<message>
+<source>LanguageTool</source>
+<translation type="unfinished">LanguageTool</translation>
+</message>
+<message>
+<source>Enable grammar and style checking with LanguageTool</source>
+<translation type="unfinished">Enable grammar and style checking with LanguageTool</translation>
+</message>
+<message>
+<source>Server URL:</source>
+<translation type="unfinished">Server URL:</translation>
+</message>
+<message>
+<source>Test Connection</source>
+<translation type="unfinished">Test Connection</translation>
+</message>
+<message>
+<source>Language:</source>
+<translation type="unfinished">Language:</translation>
+</message>
+<message>
+<source>API key:</source>
+<translation type="unfinished">API key:</translation>
+</message>
+<message>
+<source>Optional premium or cloud API key</source>
+<translation type="unfinished">Optional premium or cloud API key</translation>
+</message>
+<message>
+<source>Check delay:</source>
+<translation type="unfinished">Check delay:</translation>
+</message>
+<message>
+<source> ms</source>
+<translation type="unfinished"> ms</translation>
+</message>
+<message>
+<source>Categories:</source>
+<translation type="unfinished">Categories:</translation>
+</message>
+<message>
+<source>Spelling</source>
+<translation type="unfinished">Spelling</translation>
+</message>
+<message>
+<source>Grammar</source>
+<translation type="unfinished">Grammar</translation>
+</message>
+<message>
+<source>Style</source>
+<translation type="unfinished">Style</translation>
+</message>
+<message>
+<source>Punctuation</source>
+<translation type="unfinished">Punctuation</translation>
+</message>
+<message>
+<source>Typography</source>
+<translation type="unfinished">Typography</translation>
+</message>
+<message>
+<source>Ignored:</source>
+<translation type="unfinished">Ignored:</translation>
+</message>
+<message>
+<source>Reset all ignored LanguageTool rules so they are checked again</source>
+<translation type="unfinished">Reset all ignored LanguageTool rules so they are checked again</translation>
+</message>
+<message>
+<source>Reset ignored rules</source>
+<translation type="unfinished">Reset ignored rules</translation>
+</message>
+<message>
+<source>Reset all ignored words so they are checked by LanguageTool again</source>
+<translation type="unfinished">Reset all ignored words so they are checked by LanguageTool again</translation>
+</message>
+<message>
+<source>Reset ignored words</source>
+<translation type="unfinished">Reset ignored words</translation>
+</message>
+<message>
+<source>Auto-detect</source>
+<translation type="unfinished">Auto-detect</translation>
+</message>
+<message>
+<source>LanguageTool connection successful.</source>
+<translation type="unfinished">LanguageTool connection successful.</translation>
+</message>
+<message>
+<source>LanguageTool connection failed: %1</source>
+<translation type="unfinished">LanguageTool connection failed: %1</translation>
+</message>
+<message>
+<source>There are no ignored rules to reset.</source>
+<translation type="unfinished">There are no ignored rules to reset.</translation>
+</message>
+<message numerus="yes">
+<source>Reset %n ignored rule(s)?</source>
+<translation type="unfinished">
+<numerusform>Reset %n ignored rule(s)?</numerusform>
+<numerusform>Reset %n ignored rule(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>All ignored rules have been reset.</source>
+<translation type="unfinished">All ignored rules have been reset.</translation>
+</message>
+<message>
+<source>There are no ignored words to reset.</source>
+<translation type="unfinished">There are no ignored words to reset.</translation>
+</message>
+<message numerus="yes">
+<source>Reset %n ignored word(s)?</source>
+<translation type="unfinished">
+<numerusform>Reset %n ignored word(s)?</numerusform>
+<numerusform>Reset %n ignored word(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>All ignored words have been reset.</source>
+<translation type="unfinished">All ignored words have been reset.</translation>
+</message>
+</context>
+<context>
+<name>LayoutDialog</name>
+<message>
+<source>Manage layouts</source>
+<translation type="unfinished">Manage layouts</translation>
+</message>
+<message>
+<source>Add layout</source>
+<translation type="unfinished">Add layout</translation>
+</message>
+<message>
+<source>Add</source>
+<translation type="unfinished">Add</translation>
+</message>
+<message>
+<source>Remove layout</source>
+<translation type="unfinished">Remove layout</translation>
+</message>
+<message>
+<source>Remove</source>
+<translation type="unfinished">Remove</translation>
+</message>
+<message>
+<source>Rename layout</source>
+<translation type="unfinished">Rename layout</translation>
+</message>
+<message>
+<source>Rename</source>
+<translation type="unfinished">Rename</translation>
+</message>
+<message>
+<source>Move layout up</source>
+<translation type="unfinished">Move layout up</translation>
+</message>
+<message>
+<source>Move up</source>
+<translation type="unfinished">Move up</translation>
+</message>
+<message>
+<source>Move layout down</source>
+<translation type="unfinished">Move layout down</translation>
+</message>
+<message>
+<source>Move down</source>
+<translation type="unfinished">Move down</translation>
+</message>
+<message>
+<source>Layout name:</source>
+<translation type="unfinished">Layout name:</translation>
+</message>
+<message>
+<source>Remove the selected layout?</source>
+<translation type="unfinished">Remove the selected layout?</translation>
+</message>
+</context>
+<context>
+<name>LayoutManager</name>
+<message>
+<source>Layouts</source>
+<translation type="unfinished">Layouts</translation>
+</message>
+<message>
+<source>full</source>
+<comment>full layout</comment>
+<translation type="unfinished">full</translation>
+</message>
+<message>
+<source>minimal</source>
+<comment>minimal layout</comment>
+<translation type="unfinished">minimal</translation>
+</message>
+<message>
+<source>Create new layout</source>
+<translation type="unfinished">Create new layout</translation>
+</message>
+<message>
+<source>Layout name:</source>
+<translation type="unfinished">Layout name:</translation>
+</message>
+<message>
+<source>Remove current layout</source>
+<translation type="unfinished">Remove current layout</translation>
+</message>
+<message>
+<source>Remove the current layout?</source>
+<translation type="unfinished">Remove the current layout?</translation>
+</message>
+<message>
+<source>Rename layout</source>
+<translation type="unfinished">Rename layout</translation>
+</message>
+</context>
+<context>
+<name>LayoutPresetWidget</name>
+<message>
+<source>Use preset</source>
+<translation type="unfinished">Use preset</translation>
+</message>
+<message>
+<source>Keep in mind that layouts that demand that there is no central widget will not work properly if the central widget is enabled.</source>
+<translation type="unfinished">Keep in mind that layouts that demand that there is no central widget will not work properly if the central widget is enabled.</translation>
+</message>
+<message>
+<source>Use new layout preset</source>
+<translation type="unfinished">Use new layout preset</translation>
+</message>
+<message>
+<source>Do you want to use the selected layout preset?</source>
+<translation type="unfinished">Do you want to use the selected layout preset?</translation>
+</message>
+<message>
+<source>Minimal</source>
+<comment>Layout preset name</comment>
+<translation type="unfinished">Minimal</translation>
+</message>
+<message>
+<source>Full</source>
+<comment>Layout preset name</comment>
+<translation type="unfinished">Full</translation>
+</message>
+<message>
+<source>Preview only</source>
+<comment>Layout preset name</comment>
+<translation type="unfinished">Preview only</translation>
+</message>
+<message>
+<source>Full vertical</source>
+<comment>Layout preset name</comment>
+<translation type="unfinished">Full vertical</translation>
+</message>
+<message>
+<source>Single column</source>
+<comment>Layout preset name</comment>
+<translation type="unfinished">Single column</translation>
+</message>
+<message>
+<source>The note edit panel is the central widget that will be resized automatically.</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">The note edit panel is the central widget that will be resized automatically.</translation>
+</message>
+<message>
+<source>Because of this there is no central widget that will be resized automatically.</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">Because of this there is no central widget that will be resized automatically.</translation>
+</message>
+<message>
+<source>Just the note list on the left and the note edit panel on the right are enabled by default.</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">Just the note list on the left and the note edit panel on the right are enabled by default.</translation>
+</message>
+<message>
+<source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel in the center and the preview panel on the right are enabled by default.</translation>
+</message>
+<message>
+<source>Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another layout to actually edit notes!</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, and only the preview panel on the right are enabled by default. You will need another layout to actually edit notes!</translation>
+</message>
+<message>
+<source>Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">Most of the panels, like the note list on the left, the tagging panels, the note edit panel on the right and the preview panel on top of the note edit panel are enabled by default.</translation>
+</message>
+<message>
+<source>Tiny one column layout with note search, note list and note edit on top of each other.</source>
+<comment>Layout preset description</comment>
+<translation type="unfinished">Tiny one column layout with note search, note list and note edit on top of each other.</translation>
+</message>
+</context>
+<context>
+<name>LinkDialog</name>
+<message>
+<source>Link to a URL or note</source>
+<translation type="unfinished">Link to a URL or note</translation>
+</message>
+<message>
+<source>Enter URL</source>
+<translation>URL giriniz</translation>
+</message>
+<message>
+<source>Enter an URL to link to</source>
+<translation>Bağlantı için bir URL giriniz</translation>
+</message>
+<message>
+<source>Select local file or directory to link to</source>
+<translation>Bağlanmak için yerel dosya veya dizini seçin</translation>
+</message>
+<message>
+<source>Clear link name and fetch title of webpage again</source>
+<translation type="unfinished">Clear link name and fetch title of webpage again</translation>
+</message>
+<message>
+<source>Note</source>
+<translation>Not</translation>
+</message>
+<message>
+<source>Folder</source>
+<translation type="unfinished">Folder</translation>
+</message>
+<message>
+<source>Tags</source>
+<translation type="unfinished">Tags</translation>
+</message>
+<message>
+<source>Modified</source>
+<translation type="unfinished">Modified</translation>
+</message>
+<message>
+<source>Search for a heading to link to</source>
+<translation>Bağlantı yapmak için bir başlık ara</translation>
+</message>
+<message>
+<source>Insert the link as a wiki-style link ([[Note Name]]) instead of a Markdown link</source>
+<translation type="unfinished">Insert the link as a wiki-style link ([[Note Name]]) instead of a Markdown link</translation>
+</message>
+<message>
+<source>Create wiki-style link ([[...]])</source>
+<translation type="unfinished">Create wiki-style link ([[...]])</translation>
+</message>
+<message>
+<source>Enter the name of the link (optional)</source>
+<translation>Bağlantının adını girin (isteğe bağlı)</translation>
+</message>
+<message>
+<source>Name of link (optional)</source>
+<translation>Bağlantının adı (isteğe bağlı)</translation>
+</message>
+<message>
+<source>Enter a description for the link (optional)</source>
+<translation>Bağlantı için bir açıklama girin (isteğe bağlı)</translation>
+</message>
+<message>
+<source>Description of link (optional)</source>
+<translation>Bağlantının açıklaması (isteğe bağlı)</translation>
+</message>
+<message>
+<source>Search for a note to link to</source>
+<translation>Bağlantı kurmak için bir not arayın</translation>
+</message>
+<message>
+<source>Select file to link to</source>
+<translation>Bağlantı kurmak için dosya seçin</translation>
+</message>
+<message>
+<source>Select directory to link to</source>
+<translation>Bağlanılacak dizini seçin</translation>
+</message>
+<message>
+<source>Select file to link to (relative)</source>
+<translation type="unfinished">Select file to link to (relative)</translation>
+</message>
+<message>
+<source>Select file to link to (absolute)</source>
+<translation type="unfinished">Select file to link to (absolute)</translation>
+</message>
+<message>
+<source>Select directory to link to (relative)</source>
+<translation type="unfinished">Select directory to link to (relative)</translation>
+</message>
+<message>
+<source>Select directory to link to (absolute)</source>
+<translation type="unfinished">Select directory to link to (absolute)</translation>
+</message>
+</context>
+<context>
+<name>LocalTrashDialog</name>
+<message>
+<source>Locally trashed notes</source>
+<translation>Yerel olarak silinmiş notlar</translation>
+</message>
+<message>
+<source>Find note name</source>
+<translation>Not adını bul</translation>
+</message>
+<message>
+<source>Name</source>
+<translation>Ad</translation>
+</message>
+<message>
+<source>Trashed</source>
+<translation>Çöpe atılmış</translation>
+</message>
+<message>
+<source>Restore</source>
+<translation>Geri yükle</translation>
+</message>
+<message>
+<source>Restore selected notes</source>
+<translation>Seçilen notları geri yükle</translation>
+</message>
+<message>
+<source>Remove</source>
+<translation>Kaldır</translation>
+</message>
+<message>
+<source>Remove selected notes</source>
+<translation>Seçili notları kaldır</translation>
+</message>
+<message>
+<source>File will be restored to: %1</source>
+<translation>Dosya geri yüklenecek: %1</translation>
+</message>
+<message>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; isn't readable and can't be restored!</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası okunamıyor ve geri yüklenemiyor!</translation>
+</message>
+<message numerus="yes">
+<source>Restore &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; seçili notu geri yükle?</numerusform>
+<numerusform>&lt;strong&gt;%n &lt;/strong&gt; seçilen notu geri yükle?</numerusform>
+</translation>
+</message>
+<message>
+<source>Notes restored</source>
+<translation>Notlar geri yüklendi</translation>
+</message>
+<message numerus="yes">
+<source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were restored</source>
+<translation>
+<numerusform>&lt;strong&gt;%n &lt;/strong&gt; not geri yüklendi</numerusform>
+<numerusform>&lt;strong&gt;%n &lt;/strong&gt; not geri yüklendi</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?</source>
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; seçili not kaldırılsın mı?</numerusform>
+<numerusform>&lt;strong&gt;%n &lt;/strong&gt; seçili notları kaldırılsın mı?</numerusform>
+</translation>
+</message>
+<message>
+<source>Notes removed</source>
+<translation>Notlar kaldırıldı</translation>
+</message>
+<message numerus="yes">
+<source>&lt;strong&gt;%n&lt;/strong&gt; note(s) were removed</source>
+<translation>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; not kaldırıldı</numerusform>
+<numerusform>&lt;strong&gt;%n&lt;/strong&gt; not kaldırıldı</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>LocalTrashSettingsWidget</name>
+<message>
+<source>Trash</source>
+<translation type="unfinished">Trash</translation>
+</message>
+<message>
+<source>Local trash settings</source>
+<translation type="unfinished">Local trash settings</translation>
+</message>
+<message>
+<source>You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</source>
+<translation type="unfinished">You might run into sync troubles with older versions of Nextcloud / ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+</message>
+<message>
+<source>Remove trashed notes after:</source>
+<translation type="unfinished">Remove trashed notes after:</translation>
+</message>
+<message>
+<source> days</source>
+<extracomment>seconds</extracomment>
+<translation type="unfinished"> days</translation>
+</message>
+<message>
+<source>Automatically remove trashed notes after a certain time</source>
+<translation type="unfinished">Automatically remove trashed notes after a certain time</translation>
+</message>
+<message>
+<source>No trashing</source>
+<translation type="unfinished">No trashing</translation>
+</message>
+<message>
+<source>System trash</source>
+<translation type="unfinished">System trash</translation>
+</message>
+<message>
+<source>Local trash</source>
+<translation type="unfinished">Local trash</translation>
+</message>
+<message>
+<source>Enable local trash to keep a copy of trashed notes</source>
+<translation type="unfinished">Enable local trash to keep a copy of trashed notes</translation>
+</message>
+</context>
+<context>
+<name>LogWidget</name>
+<message>
+<source>Logs</source>
+<translation>Günlükler</translation>
+</message>
+<message>
+<source>Fatal</source>
+<translation>Vahim</translation>
+</message>
+<message>
+<source>Warning</source>
+<translation>Uyarı</translation>
+</message>
+<message>
+<source>Critical</source>
+<translation>Kritik</translation>
+</message>
+<message>
+<source>Debug</source>
+<translation>Hata ayıklama</translation>
+</message>
+<message>
+<source>Info</source>
+<translation>Bilgi</translation>
+</message>
+<message>
+<source>Status</source>
+<translation>Durum</translation>
+</message>
+<message>
+<source>Scripting</source>
+<translation>Scripting</translation>
+</message>
+<message>
+<source>Clear log</source>
+<translation>Günlüğü temizle</translation>
+</message>
+<message>
+<source>Show options</source>
+<translation>Ayarları göster</translation>
+</message>
+<message>
+<source>Hide options</source>
+<translation>Ayarları gizle</translation>
+</message>
+</context>
+<context>
+<name>MainWindow</name>
+<message>
+<source>Add tag</source>
+<translation>Etiket ekle</translation>
+</message>
+<message>
+<source>Navigation</source>
+<translation>Navigasyon</translation>
+</message>
+<message>
+<source>Find navigation item</source>
+<translation>Gezinme öğesini bulun</translation>
+</message>
+<message>
+<source>Headings</source>
+<translation>Başlıklar</translation>
+</message>
+<message>
+<source>Files</source>
+<translation type="unfinished">Files</translation>
+</message>
+<message>
+<source>Backlinks</source>
+<translation>Geri bağlantılar</translation>
+</message>
+<message>
+<source>Add a tag to the current note</source>
+<translation>Geçerli nota bir etiket ekle</translation>
+</message>
+<message>
+<source>&amp;Note</source>
+<translation>&amp;Not</translation>
+</message>
+<message>
+<source>Note &amp;folders</source>
+<translation>Not &amp;klasörleri</translation>
+</message>
+<message>
+<source>Sort by</source>
+<translation>Olarak sırala</translation>
+</message>
+<message>
+<source>&amp;Help</source>
+<translation>&amp;Yardım</translation>
+</message>
+<message>
+<source>Editor width in distraction free mode</source>
+<translation>Odaklanma kipi düzenleyici genişliği</translation>
+</message>
+<message>
+<source>Editor width</source>
+<translation>Düzenleyici genişliği</translation>
+</message>
+<message>
+<source>Layouts</source>
+<translation type="unfinished">Layouts</translation>
+</message>
+<message>
+<source>Layout</source>
+<translation type="unfinished">Layout</translation>
+</message>
+<message>
+<source>Custom actions</source>
+<translation>Özel eylemler</translation>
+</message>
+<message>
+<source>main toolbar</source>
+<translation>ana araç çubuğu</translation>
+</message>
+<message>
+<source>&amp;Quit</source>
+<translation>&amp;Çıkış</translation>
+</message>
+<message>
+<source>&amp;Remove current note</source>
+<translation>&amp;Geçerli notu kaldır</translation>
+</message>
+<message>
+<source>&amp;New note</source>
+<translation>&amp;Yeni not</translation>
+</message>
+<message>
+<source>Check for &amp;updates</source>
+<translation>&amp;Güncellemeleri kontrol et</translation>
+</message>
+<message>
+<source>Post questions, feature requests or issues</source>
+<translation>Soru gönderme, özellik istekleri veya sorunlar</translation>
+</message>
+<message>
+<source>Alphabetical</source>
+<translation>Alfabetik</translation>
+</message>
+<message>
+<source>Sort alphabetical</source>
+<translation>Alfabetik sıralama</translation>
+</message>
+<message>
+<source>By date</source>
+<translation>Tarihe göre</translation>
+</message>
+<message>
+<source>Sort by date</source>
+<translation>Tarihe göre sıralama</translation>
+</message>
+<message>
+<source>Show note &amp;versions</source>
+<translation>Not &amp;sürümlerini göster</translation>
+</message>
+<message>
+<source>Show note versions on server</source>
+<translation>Not sürümlerini sunucuda göster</translation>
+</message>
+<message>
+<source>Show trashed notes on server</source>
+<translation>Çöpe gönderilen notları sunucuda göster</translation>
+</message>
+<message>
+<source>Select &amp;all notes</source>
+<translation>Seç &amp;tüm notlar</translation>
+</message>
+<message>
+<source>&amp;Find in current note</source>
+<translation>&amp;Geçerli notta bul</translation>
+</message>
+<message>
+<source>Find text in current note</source>
+<translation>Geçerli notta metin bul</translation>
+</message>
+<message>
+<source>&amp;Duplicate text</source>
+<translation>&amp;Metin çoğalt</translation>
+</message>
+<message>
+<source>&amp;Back in note history</source>
+<translation>&amp;Not geçmişine dön</translation>
+</message>
+<message>
+<source>&amp;Settings</source>
+<translation>&amp;Ayarlar</translation>
+</message>
+<message>
+<source>Find or create note sub folder</source>
+<translation>Not alt klasörünü bulun veya oluşturun</translation>
+</message>
+<message>
+<source>Find or create tag</source>
+<translation>Etiket bul veya oluştur</translation>
+</message>
+<message>
+<source>Search for notes or create new notes by entering text and pressing return</source>
+<translation>Metin girip dönüş düğmesine basarak not arayın veya yeni notlar oluşturun</translation>
+</message>
+<message>
+<source>Search or create note</source>
+<translation>Not ara veya oluştur</translation>
+</message>
+<message>
+<source>New tag</source>
+<translation>Yeni etiket</translation>
+</message>
+<message>
+<source>Export</source>
+<translation>Dışa aktar</translation>
+</message>
+<message>
+<source>Import</source>
+<translation>İçe aktar</translation>
+</message>
+<message>
+<source>Store note bookmark</source>
+<translation type="unfinished">Store note bookmark</translation>
+</message>
+<message>
+<source>Go to note bookmark</source>
+<translation type="unfinished">Go to note bookmark</translation>
+</message>
+<message>
+<source>Print</source>
+<translation>Yazdır</translation>
+</message>
+<message>
+<source>View note</source>
+<translation>Not görüntüle</translation>
+</message>
+<message>
+<source>Trash</source>
+<translation>Çöp</translation>
+</message>
+<message>
+<source>&amp;Edit</source>
+<translation>&amp;Düzenle</translation>
+</message>
+<message>
+<source>Insert</source>
+<translation>Ekle</translation>
+</message>
+<message>
+<source>Format</source>
+<translation>Biçim</translation>
+</message>
+<message>
+<source>Select</source>
+<translation type="unfinished">Select</translation>
+</message>
+<message>
+<source>Extra</source>
+<translation>Ekstra</translation>
+</message>
+<message>
+<source>Edit</source>
+<translation>Düzenle</translation>
+</message>
+<message>
+<source>Versioning</source>
+<translation>Sürüm oluşturma</translation>
+</message>
+<message>
+<source>Encryption</source>
+<translation>Şifreleme</translation>
+</message>
+<message>
+<source>Languages</source>
+<translation>Diller</translation>
+</message>
+<message>
+<source>Spelling backend</source>
+<translation>Yazım arka ucu</translation>
+</message>
+<message>
+<source>AI model</source>
+<translation>YZ modeli</translation>
+</message>
+<message>
+<source>Note text edit</source>
+<translation type="unfinished">Note text edit</translation>
+</message>
+<message>
+<source>List operations</source>
+<translation type="unfinished">List operations</translation>
+</message>
+<message>
+<source>Markdown operations</source>
+<translation type="unfinished">Markdown operations</translation>
+</message>
+<message>
+<source>To&amp;do</source>
+<translation>Yapılacaklar</translation>
+</message>
+<message>
+<source>&amp;Window</source>
+<translation>&amp;Pencere</translation>
+</message>
+<message>
+<source>Panels</source>
+<translation>Paneller</translation>
+</message>
+<message>
+<source>Toolbars</source>
+<translation>Araç çubukları</translation>
+</message>
+<message>
+<source>Show</source>
+<extracomment>To show or hide stuff</extracomment>
+<translation>Göster</translation>
+</message>
+<message>
+<source>Jump to</source>
+<translation>Atlamak</translation>
+</message>
+<message>
+<source>&amp;Scripting</source>
+<translation>&amp;Scripting</translation>
+</message>
+<message>
+<source>&amp;Setup note folders / subfolders</source>
+<translation>Not klasörleri/alt klasörleri &amp;Ayarı</translation>
+</message>
+<message>
+<source>Setup note folders / subfolders</source>
+<translation>Not klasörleri/alt klasörleri Ayarı</translation>
+</message>
+<message>
+<source>&amp;Find text in notes</source>
+<translation>Notlardaki &amp;metni bul</translation>
+</message>
+<message>
+<source>About &amp;ArcNotes…</source>
+<translation>Hakkında &amp;ArcNotes…</translation>
+</message>
+<message>
+<source>Post questions, feature requests or problems with the help of the issue assistant</source>
+<translation>Soru asistanının yardımı ile soru, özellik istekleri veya sorunları gönderin</translation>
+</message>
+<message>
+<source>Show remote trash</source>
+<translation>Uzak çöp kutusunu göster</translation>
+</message>
+<message>
+<source>Select enclosed &amp;text</source>
+<translation type="unfinished">Select enclosed &amp;text</translation>
+</message>
+<message>
+<source>Select the innermost text around the current cursor position</source>
+<translation type="unfinished">Select the innermost text around the current cursor position</translation>
+</message>
+<message>
+<source>Insert text &amp;link</source>
+<translation>Metin bağlantısı &amp;ekle</translation>
+</message>
+<message>
+<source>Ctrl+L</source>
+<translation>Ctrl+L</translation>
+</message>
+<message>
+<source>Auto format table</source>
+<translation>Otomatik biçim tablosu</translation>
+</message>
+<message>
+<source>Forward in note history</source>
+<translation>Not geçmişine ilerle</translation>
+</message>
+<message>
+<source>Previous &amp;heading</source>
+<translation type="unfinished">Previous &amp;heading</translation>
+</message>
+<message>
+<source>Next heading</source>
+<translation type="unfinished">Next heading</translation>
+</message>
+<message>
+<source>Fold all headings</source>
+<translation type="unfinished">Fold all headings</translation>
+</message>
+<message>
+<source>Fold all headings in the current note</source>
+<translation type="unfinished">Fold all headings in the current note</translation>
+</message>
+<message>
+<source>Unfold all headings</source>
+<translation type="unfinished">Unfold all headings</translation>
+</message>
+<message>
+<source>Unfold all headings in the current note</source>
+<translation type="unfinished">Unfold all headings in the current note</translation>
+</message>
+<message>
+<source>Show shortcuts</source>
+<translation>Kısayolları göster</translation>
+</message>
+<message>
+<source>&amp;Knowledge base</source>
+<translation>&amp;Bilgi bankası</translation>
+</message>
+<message>
+<source>Insert current &amp;time</source>
+<translation>Geçerli &amp;zaman ekle</translation>
+</message>
+<message>
+<source>Show &amp;Todo List</source>
+<translation>&amp;Yapılacaklar listesini göster</translation>
+</message>
+<message>
+<source>&amp;Export note as PDF (preview)</source>
+<translation>&amp;Notu PDF olarak dışa aktar (önizleme)</translation>
+</message>
+<message>
+<source>Export note as PDF (preview)</source>
+<translation>Notu PDF olarak dışa aktar (önizleme)</translation>
+</message>
+<message>
+<source>&amp;Export note as PDF (text)</source>
+<translation>Notu PDF (metin) olarak &amp;Dışa aktar</translation>
+</message>
+<message>
+<source>&amp;Print note (text)</source>
+<translation>Notu (metin) &amp;yazdır</translation>
+</message>
+<message>
+<source>Insert &amp;image</source>
+<translation>&amp;Görüntü ekle</translation>
+</message>
+<message>
+<source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
+<translation>Görüntü ekle (görüntü geçerli notlar klasöründeki `media` klasörüne kopyalanacaktır)</translation>
+</message>
+<message>
+<source>Show &amp;changelog</source>
+<translation>&amp;Değişiklikleri göster</translation>
+</message>
+<message>
+<source>&amp;Encrypt note</source>
+<translation>&amp;Şifreleme notu</translation>
+</message>
+<message>
+<source>Edit encrypted note</source>
+<translation>Şifrelenmiş notu düzenle</translation>
+</message>
+<message>
+<source>Decrypt note</source>
+<translation>Not şifresini çöz</translation>
+</message>
+<message>
+<source>&amp;Open note in external editor</source>
+<translation>Harici editörde notu &amp;aç</translation>
+</message>
+<message>
+<source>&amp;Get involved</source>
+<translation>&amp;Yer al</translation>
+</message>
+<message>
+<source>Insert &amp;code block</source>
+<translation>&amp;Kod bloğu ekle</translation>
+</message>
+<message>
+<source>&amp;Distraction free mode</source>
+<translation>&amp;Odaklanma kipi</translation>
+</message>
+<message>
+<source>Distraction free mode, you can leave it with a button on the bottom right</source>
+<translation>Odaklanma kipi sağ altta bulunan tuşla çıkabilirsiniz</translation>
+</message>
+<message>
+<source>Show &amp;toolbar</source>
+<translation>&amp;Araç kutusunu göster</translation>
+</message>
+<message>
+<source>Narrow</source>
+<translation>Dar</translation>
+</message>
+<message>
+<source>Medium</source>
+<translation>Orta</translation>
+</message>
+<message>
+<source>Wide</source>
+<translation>Geniş</translation>
+</message>
+<message>
+<source>Full</source>
+<translation>Tam ekran</translation>
+</message>
+<message>
+<source>Paste html or media</source>
+<translation>HTML veya medyayı yapıştırın</translation>
+</message>
+<message>
+<source>Paste images, notes and html from the clipboard</source>
+<translation>Panodan görüntüler, notlar ve html yapıştır</translation>
+</message>
+<message>
+<source>Show note in &amp;file manager</source>
+<translation>&amp;Dosya yöneticisinde notu göster</translation>
+</message>
+<message>
+<source>Format text &amp;bold</source>
+<translation>Metni &amp;kalın biçimlendir</translation>
+</message>
+<message>
+<source>Format text &amp;italic</source>
+<translation>Metni &amp;italik biçimlendir</translation>
+</message>
+<message>
+<source>&amp;Increase note text size</source>
+<translation>&amp;Not metin boyutunu arttır</translation>
+</message>
+<message>
+<source>&amp;Decrease note text size</source>
+<translation>&amp;Not metin boyutunu azalt</translation>
+</message>
+<message>
+<source>&amp;Reset note text size</source>
+<translation>&amp;Not metin boyutunu sıfırla</translation>
+</message>
+<message>
+<source>&amp;Add tag to note</source>
+<translation>&amp;Nota etiket ekle</translation>
+</message>
+<message>
+<source>&amp;Reload note folder</source>
+<translation>&amp;Not klasörünü yeniden yükle</translation>
+</message>
+<message>
+<source>Show log</source>
+<translation>Günlüğü göster</translation>
+</message>
+<message>
+<source>Export note as HTML</source>
+<translation>Notu HTML olarak dışa aktar</translation>
+</message>
+<message>
+<source>Open the #arcnotes IRC (Kiwi) channel, you have to stay online to get a response</source>
+<translation>#arcnotes IRC (Kiwi) kanalını açın, yanıt almak için çevrim içi kalmalısınız</translation>
+</message>
+<message>
+<source>Use softwrap in note editor</source>
+<translation type="unfinished">Use softwrap in note editor</translation>
+</message>
+<message>
+<source>Cycle text case</source>
+<translation>Döngü metin durumu</translation>
+</message>
+<message>
+<source>Show note list under tag panel</source>
+<translation>Etiket panelinin altında not listesini göster</translation>
+</message>
+<message>
+<source>Import notes from text files</source>
+<translation>Metin dosyalarından not alma</translation>
+</message>
+<message>
+<source>Open the Telegram group</source>
+<translation>Telegram grubunu aç</translation>
+</message>
+<message>
+<source>Open the ArcNotes Matrix (Element) room</source>
+<extracomment>"Element" as in the chat service</extracomment>
+<translation>ArcNotes Matrix (Element) odasını açın</translation>
+</message>
+<message>
+<source>Unlock panels</source>
+<translation>Panellerin kilidini aç</translation>
+</message>
+<message>
+<source>Reattach floating panels</source>
+<translation type="unfinished">Reattach floating panels</translation>
+</message>
+<message>
+<source>Reattaches all floating panels</source>
+<translation type="unfinished">Reattaches all floating panels</translation>
+</message>
+<message>
+<source>Remove current layout</source>
+<translation type="unfinished">Remove current layout</translation>
+</message>
+<message>
+<source>Add new layout</source>
+<translation type="unfinished">Add new layout</translation>
+</message>
+<message>
+<source>Rename current layout</source>
+<translation type="unfinished">Rename current layout</translation>
+</message>
+<message>
+<source>Switch to previous layout</source>
+<translation type="unfinished">Switch to previous layout</translation>
+</message>
+<message>
+<source>Manage layouts</source>
+<translation type="unfinished">Manage layouts</translation>
+</message>
+<message>
+<source>Show all panels</source>
+<translation>Tüm panelleri göster</translation>
+</message>
+<message>
+<source>Find action</source>
+<translation>Eylem bul</translation>
+</message>
+<message>
+<source>Find an action from the menu</source>
+<translation>Menüden bir eylem bul</translation>
+</message>
+<message>
+<source>Redo last action</source>
+<translation type="unfinished">Redo last action</translation>
+</message>
+<message>
+<source>Redo the last action</source>
+<translation type="unfinished">Redo the last action</translation>
+</message>
+<message>
+<source>Insert table</source>
+<translation>Tablo ekle</translation>
+</message>
+<message>
+<source>Insert block &amp;quote</source>
+<translation>Blok &amp;alıntı ekle</translation>
+</message>
+<message>
+<source>Search selected text on the web</source>
+<translation>Seçilen metni web'de ara</translation>
+</message>
+<message>
+<source>Delete line</source>
+<translation>Satırı sil</translation>
+</message>
+<message>
+<source>Delete word</source>
+<translation>Sözcüğü sil</translation>
+</message>
+<message>
+<source>Copy note headline</source>
+<translation>Not başlığını kopyala</translation>
+</message>
+<message>
+<source>Open note in different window</source>
+<translation>Notu farklı pencerede aç</translation>
+</message>
+<message>
+<source>Save modified notes</source>
+<translation>Değiştirilmiş notları kaydet</translation>
+</message>
+<message>
+<source>Ascending</source>
+<translation>Artan</translation>
+</message>
+<message>
+<source>Descending</source>
+<translation>Azalan</translation>
+</message>
+<message>
+<source>Show note git versions</source>
+<translation>Not git sürümlerini göster</translation>
+</message>
+<message>
+<source>Show note git versions externally</source>
+<translation type="unfinished">Show note git versions externally</translation>
+</message>
+<message>
+<source>Find scripts in script repository</source>
+<translation>Script deposunda script bul</translation>
+</message>
+<message>
+<source>Script settings</source>
+<translation>Script ayarları</translation>
+</message>
+<message>
+<source>Insert attachment</source>
+<translation>Ek ekle</translation>
+</message>
+<message>
+<source>Check for script updates</source>
+<translation>Script güncellemelerini kontrol et</translation>
+</message>
+<message>
+<source>Show local trash</source>
+<translation>Yerel çöp kutusunu göster</translation>
+</message>
+<message>
+<source>Jump to note edit panel</source>
+<translation>Not düzenleme paneline atla</translation>
+</message>
+<message>
+<source>Manage stored attachments</source>
+<translation>Saklanan ekleri yönet</translation>
+</message>
+<message>
+<source>Jump to note subfolder panel</source>
+<translation>Not alt klasör paneline atla</translation>
+</message>
+<message>
+<source>Jump to tags panel</source>
+<translation>Etiketler paneline atla</translation>
+</message>
+<message>
+<source>Jump to note list panel</source>
+<translation>Not listesi paneline atla</translation>
+</message>
+<message>
+<source>Activate context menu</source>
+<translation>İçerik menüsünü etkinleştir</translation>
+</message>
+<message>
+<source>Import bookmarks from server</source>
+<translation>Yer işaretlerini sunucudan içe aktar</translation>
+</message>
+<message>
+<source>Toggle full-screen mode</source>
+<translation>Tam ekran kipini değiştir</translation>
+</message>
+<message>
+<source>Typewriter mode</source>
+<translation>Daktilo kipi</translation>
+</message>
+<message>
+<source>Check spelling</source>
+<translation>Yazım denetimi</translation>
+</message>
+<message>
+<source>Automatically detect</source>
+<translation>Otomatik olarak algıla</translation>
+</message>
+<message>
+<source>Manage dictionaries</source>
+<translation>Sözlükleri yönet</translation>
+</message>
+<message>
+<source>Check grammar with LanguageTool</source>
+<translation type="unfinished">Check grammar with LanguageTool</translation>
+</message>
+<message>
+<source>Check grammar with Harper</source>
+<translation type="unfinished">Check grammar with Harper</translation>
+</message>
+<message>
+<source>Custom</source>
+<translation>Özel</translation>
+</message>
+<message>
+<source>5</source>
+<translation>5</translation>
+</message>
+<message>
+<source>Show/Hide application</source>
+<translation>Uygulamayı Göster / Gizle</translation>
+</message>
+<message>
+<source>Previous note tab</source>
+<translation>Önceki not sekmesi
+</translation>
+</message>
+<message>
+<source>Next note tab</source>
+<translation>Sonraki not sekmesi
+</translation>
+</message>
+<message>
+<source>Close current note tab</source>
+<translation>Geçerli not sekmesini kapat
+</translation>
+</message>
+<message>
+<source>New note in new tab</source>
+<translation>Yeni sekmede yeni not
+</translation>
+</message>
+<message>
+<source>Toggle note pinning of current tab</source>
+<translation type="unfinished">Toggle note pinning of current tab</translation>
+</message>
+<message>
+<source>Store bookmark at slot 1</source>
+<translation type="unfinished">Store bookmark at slot 1</translation>
+</message>
+<message>
+<source>Store bookmark at slot 2</source>
+<translation type="unfinished">Store bookmark at slot 2</translation>
+</message>
+<message>
+<source>Store bookmark at slot 3</source>
+<translation type="unfinished">Store bookmark at slot 3</translation>
+</message>
+<message>
+<source>Store bookmark at slot 4</source>
+<translation type="unfinished">Store bookmark at slot 4</translation>
+</message>
+<message>
+<source>Store bookmark at slot 5</source>
+<translation type="unfinished">Store bookmark at slot 5</translation>
+</message>
+<message>
+<source>Store bookmark at slot 6</source>
+<translation type="unfinished">Store bookmark at slot 6</translation>
+</message>
+<message>
+<source>Store bookmark at slot 7</source>
+<translation type="unfinished">Store bookmark at slot 7</translation>
+</message>
+<message>
+<source>Store bookmark at slot 8</source>
+<translation type="unfinished">Store bookmark at slot 8</translation>
+</message>
+<message>
+<source>Store bookmark at slot 9</source>
+<translation type="unfinished">Store bookmark at slot 9</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 1</source>
+<translation type="unfinished">Go to bookmark at slot 1</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 2</source>
+<translation type="unfinished">Go to bookmark at slot 2</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 3</source>
+<translation type="unfinished">Go to bookmark at slot 3</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 4</source>
+<translation type="unfinished">Go to bookmark at slot 4</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 5</source>
+<translation type="unfinished">Go to bookmark at slot 5</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 6</source>
+<translation type="unfinished">Go to bookmark at slot 6</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 7</source>
+<translation type="unfinished">Go to bookmark at slot 7</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 8</source>
+<translation type="unfinished">Go to bookmark at slot 8</translation>
+</message>
+<message>
+<source>Go to bookmark at slot 9</source>
+<translation type="unfinished">Go to bookmark at slot 9</translation>
+</message>
+<message>
+<source>Note bookmarks</source>
+<translation type="unfinished">Note bookmarks</translation>
+</message>
+<message>
+<source>Format text underline</source>
+<translation>Metnin altını çiz
+</translation>
+</message>
+<message>
+<source>Jump to navigation panel</source>
+<translation>Gezinme paneline atla</translation>
+</message>
+<message>
+<source>Insert &amp;note link</source>
+<translation>Not bağlantısı &amp;ekle</translation>
+</message>
+<message>
+<source>Ctrl+Shift+L</source>
+<translation>Ctrl+Shift+L</translation>
+</message>
+<message>
+<source>Import notes from Joplin</source>
+<translation>Joplin'den notları içe aktar</translation>
+</message>
+<message>
+<source>Toggle always-on-top mode</source>
+<translation>Her zaman üstte kipine geçiş yap</translation>
+</message>
+<message>
+<source>&amp;Load Todo List items</source>
+<translation>&amp;Yapılacaklar listesi öğelerini yükle</translation>
+</message>
+<message>
+<source>Insert Nextcloud Deck card link</source>
+<translation>Nextcloud Deck kartı bağlantısı ekleyin</translation>
+</message>
+<message>
+<source>Copy absolute path of note</source>
+<translation>Notun mutlak yolunu kopyala</translation>
+</message>
+<message>
+<source>Move up in subfolder list</source>
+<translation>Alt klasör listesinde yukarı git</translation>
+</message>
+<message>
+<source>Move down in subfolder list</source>
+<translation>Alt klasör listesinde aşağı git</translation>
+</message>
+<message>
+<source>Move up in tag list</source>
+<translation>Etiket listesinde yukarı git</translation>
+</message>
+<message>
+<source>Move down in tag list</source>
+<translation>Etiket listesinde aşağı git</translation>
+</message>
+<message>
+<source>Enable AI support</source>
+<translation>YZ desteğini etkinleştir</translation>
+</message>
+<message>
+<source>Manage Nextcloud Deck cards</source>
+<translation type="unfinished">Manage Nextcloud Deck cards</translation>
+</message>
+<message>
+<source>Ctrl+Alt+D</source>
+<translation type="unfinished">Ctrl+Alt+D</translation>
+</message>
+<message>
+<source>Send clipboard</source>
+<translation type="unfinished">Send clipboard</translation>
+</message>
+<message>
+<source>Send clipboard as text</source>
+<translation type="unfinished">Send clipboard as text</translation>
+</message>
+<message>
+<source>Toggle checkbox(es)</source>
+<translation type="unfinished">Toggle checkbox(es)</translation>
+</message>
+<message>
+<source>1. 2. 3. list</source>
+<translation type="unfinished">1. 2. 3. list</translation>
+</message>
+<message>
+<source>a. b. c. list</source>
+<translation type="unfinished">a. b. c. list</translation>
+</message>
+<message>
+<source>- list</source>
+<translation type="unfinished">- list</translation>
+</message>
+<message>
+<source>Create checkbox list</source>
+<translation type="unfinished">Create checkbox list</translation>
+</message>
+<message>
+<source>Clear list formatting</source>
+<translation type="unfinished">Clear list formatting</translation>
+</message>
+<message>
+<source>Order checkboxes</source>
+<translation type="unfinished">Order checkboxes</translation>
+</message>
+<message>
+<source>Increase heading depth</source>
+<translation type="unfinished">Increase heading depth</translation>
+</message>
+<message>
+<source>Decrease heading depth</source>
+<translation type="unfinished">Decrease heading depth</translation>
+</message>
+<message>
+<source>Copy code block</source>
+<translation type="unfinished">Copy code block</translation>
+</message>
+<message>
+<source>Use &amp;vertical preview layout</source>
+<translation>&amp;Yatay önizleme düzenini kullan</translation>
+</message>
+<message>
+<source>The note edit panel will be above the preview panel</source>
+<translation>Not düzenleme paneli önizleme panelinin üstünde olacak</translation>
+</message>
+<message>
+<source>Replace in current note</source>
+<translation>Geçerli notta değiştir</translation>
+</message>
+<message>
+<source>Autocomplete, solve equation or open URL</source>
+<translation>Otomatik tamamlama, denklemi çöz veya URL'yi aç</translation>
+</message>
+<message>
+<source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+<translation>Geçerli satırda '(2+3)*6' gibi basit bir denklemi çöz</translation>
+</message>
+<message>
+<source>Select note folder</source>
+<translation>Not klasörü seç</translation>
+</message>
+<message>
+<source>Reload scripting engine</source>
+<translation>Komut dosyası motorunu yeniden yükle</translation>
+</message>
+<message>
+<source>Manage stored image files</source>
+<translation>Hafızadaki görüntü dosyalarını yönetin</translation>
+</message>
+<message>
+<source>Open the arcnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
+<translation>Qownnotes Gitter odasını açın, giriş yapmak için bir GitHub veya Twitter hesabına ihtiyacınız vardır, ancak çevrimdışı mesajlar alabilirsiniz</translation>
+</message>
+<message>
+<source>Open chat</source>
+<translation>Sohbeti aç</translation>
+</message>
+<message>
+<source>Note operations…</source>
+<translation>Not işlemleri…</translation>
+</message>
+<message>
+<source>&amp;Print note (preview)</source>
+<translation>&amp;Notu yazdır (ön izleme)</translation>
+</message>
+<message>
+<source>&amp;Export note as Markdown file</source>
+<translation>&amp;Notu Markdown dosyası olarak dışa aktar</translation>
+</message>
+<message>
+<source>Move down in note list</source>
+<translation>Not listesinde aşağı git</translation>
+</message>
+<message>
+<source>Move up in note list</source>
+<translation>Not listesinde yukarı git</translation>
+</message>
+<message>
+<source>Insert headline from note filename</source>
+<translation>Not dosya adından başlık ekle</translation>
+</message>
+<message>
+<source>Show status bar</source>
+<translation>Durum çubuğunu göster</translation>
+</message>
+<message>
+<source>Share note</source>
+<translation>Not paylaş</translation>
+</message>
+<message>
+<source>Markdown cheatsheet</source>
+<translation>Markdown kopya kağıdı</translation>
+</message>
+<message>
+<source>Strike out text</source>
+<translation>Metin vurgusu</translation>
+</message>
+<message>
+<source>Use one column mode</source>
+<translation>Tek sütun kipini kullan</translation>
+</message>
+<message>
+<source>Use a one column minimal mode (like NVAlt)</source>
+<translation>Tek sütunlu minimal kipi kullanın (NVAlt gibi)</translation>
+</message>
+<message>
+<source>Show menu bar</source>
+<translation>Menü çubuğunu göster</translation>
+</message>
+<message>
+<source>Split note at cursor position</source>
+<translation>İmleç konumunda notu böl</translation>
+</message>
+<message>
+<source>Donate</source>
+<translation>Bağış</translation>
+</message>
+<message>
+<source>Find text in notes in all tags / subfolders</source>
+<translation>Tüm etiketlerdeki/alt klasörlerdeki metni bulun</translation>
+</message>
+<message>
+<source>Import notes from Evernote</source>
+<translation>Evernote'dan notları içe aktar</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>&amp;İptal</translation>
+</message>
+<message numerus="yes">
+<source>stored %n note(s) to disk</source>
+<translation type="unfinished">
+<numerusform>stored %n note(s) to disk</numerusform>
+<numerusform>stored %n note(s) to disk</numerusform>
+</translation>
+</message>
+<message>
+<source>new version %1 available</source>
+<translation>yeni sürüm %1 mevcut</translation>
+</message>
+<message>
+<source>Please select the folder where your notes will get stored</source>
+<translation>Lütfen notlarınızın saklandığı klasörü seçin</translation>
+</message>
+<message>
+<source>No folder was selected</source>
+<translation>Hiçbir klasör seçilmedi</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
+<translation>
+<numerusform>Seçili notlar &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı?
+
+Çöp kutusu ownCloud sunucunuzda etkinse, buradan onları geri yükleyebilmeniz gerekir.</numerusform>
+<numerusform>Seçili not(lar) &lt;strong&gt;%n&lt;/strong&gt; kaldırılsın mı?
+
+Çöp kutusu ownCloud sunucunuzda etkinse, buradan onları geri yükleyebilmeniz gerekir.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation>
+<numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a taşınsın mı?</numerusform>
+<numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a taşınsın mı?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation>
+<numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalansın mı?</numerusform>
+<numerusform>Seçilen %n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalansın mı?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
+<translation>
+<numerusform>%n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalandı.</numerusform>
+<numerusform>%n not(lar) &lt;strong&gt;%2&lt;/strong&gt;a kopyalandı.</numerusform>
+</translation>
+</message>
+<message>
+<source>Restart application</source>
+<translation>Uygulamayı yeniden başlat</translation>
+</message>
+<message>
+<source>You may need to restart the application to let the changes take effect.</source>
+<translation>Değişikliklerin etkili olabilmesi için uygulamayı yeniden başlatmanız gerekebilir.</translation>
+</message>
+<message>
+<source>Todo lists disabled!</source>
+<translation>Yapılacaklar listeleri devre dışı bırakıldı!</translation>
+</message>
+<message>
+<source>You have disabled the todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
+<translation>Yapılacaklar listelerini devre dışı bıraktınız. &lt;br /&gt; Lütfen ayarlarda &lt;strong&gt; Yapılacaklar &lt;/strong&gt; yapılandırmanızı kontrol edin!</translation>
+</message>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
+</message>
+<message>
+<source>Inserted text as text attachment file</source>
+<translation>Metin, metin eki dosyası olarak eklendi</translation>
+</message>
+<message>
+<source>Bookmarked note position at slot %1</source>
+<translation>%1 slotundaki yer işaretli not konumu</translation>
+</message>
+<message>
+<source>Jumped to bookmark position at slot %1</source>
+<translation>%1 slotundaki yer işaretine atlandı</translation>
+</message>
+<message>
+<source>Redo action: %1</source>
+<translation type="unfinished">Redo action: %1</translation>
+</message>
+<message>
+<source>Inserting image</source>
+<translation>Görüntü ekleniyor</translation>
+</message>
+<message>
+<source>Done inserting image</source>
+<translation>Görüntü eklemeyi tamamla</translation>
+</message>
+<message>
+<source>Inserting attachment</source>
+<translation>Ek ekleniyor</translation>
+</message>
+<message>
+<source>Done inserting attachment</source>
+<translation>Ek eklemeyi tamamla</translation>
+</message>
+<message numerus="yes">
+<source>Copied %n note(s) to %1</source>
+<translation>
+<numerusform>%n not(lar) %1'a kopyalandı</numerusform>
+<numerusform>%n not(lar) %1'a kopyalandı</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Failed to copy %n note(s) (most likely already existing)</source>
+<translation>
+<numerusform>Not(lar) %n kopyalanamadı. (büyük olasılıkla zaten mevcut)</numerusform>
+<numerusform>Not(lar) %n kopyalanamadı. (büyük olasılıkla zaten mevcut)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Skipped inserting %n file(s) because the current note is read-only</source>
+<translation type="unfinished">
+<numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
+<numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
+</translation>
+</message>
+<message>
+<source>Saving temporary image</source>
+<translation>Geçici görüntü kaydediliyor</translation>
+</message>
+<message>
+<source>Note folder does not exist!</source>
+<translation type="unfinished">Note folder does not exist!</translation>
+</message>
+<message>
+<source>Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</source>
+<translation type="unfinished">Note folder &lt;b&gt;%1&lt;/b&gt; with path &lt;b&gt;%2&lt;/b&gt; does not exist anymore!</translation>
+</message>
+<message>
+<source>Git support is not enabled for the current note folder, do you want to enable it in the settings?</source>
+<translation type="unfinished">Git support is not enabled for the current note folder, do you want to enable it in the settings?</translation>
+</message>
+<message>
+<source>No versions available</source>
+<translation type="unfinished">No versions available</translation>
+</message>
+<message>
+<source>No versions are available for this note.</source>
+<translation type="unfinished">No versions are available for this note.</translation>
+</message>
+<message>
+<source>Note path '%1' was copied to the clipboard</source>
+<translation>Not yolu '%1' panoya kopyalandı</translation>
+</message>
+<message>
+<source>Note filename '%1' was copied to the clipboard</source>
+<translation type="unfinished">Note filename '%1' was copied to the clipboard</translation>
+</message>
+<message>
+<source>Clipboard sent successfully</source>
+<translation type="unfinished">Clipboard sent successfully</translation>
+</message>
+<message>
+<source>Failed to send clipboard</source>
+<translation type="unfinished">Failed to send clipboard</translation>
+</message>
+<message>
+<source>Clipboard text sent successfully</source>
+<translation type="unfinished">Clipboard text sent successfully</translation>
+</message>
+<message>
+<source>Failed to send clipboard text</source>
+<translation type="unfinished">Failed to send clipboard text</translation>
+</message>
+<message>
+<source>Temporary file can't be opened</source>
+<translation>Geçici dosya açılamıyor</translation>
+</message>
+<message>
+<source>Downloading %1</source>
+<translation>İndiriliyor %1</translation>
+</message>
+<message>
+<source>Reset font size to %1 pt</source>
+<comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
+<translation>Yazı tipi boyutunu %1 puntoya ayarla</translation>
+</message>
+<message>
+<source>The scripting engine was reloaded</source>
+<translation>Komut dosyası motoru yeniden yüklendi</translation>
+</message>
+<message>
+<source>A script update was found!</source>
+<translation>Bir komut dosyası güncellemesi bulundu!
+</translation>
+</message>
+<message>
+<source>Script updates</source>
+<translation>Komut dosyası güncellemeleri
+</translation>
+</message>
+<message>
+<source>Updates to your scripts were found in the script repository! Do you want to update them?</source>
+<translation>Komut dosyalarınızdaki güncellemeler, komut dosyası deposunda bulundu! Güncellemek ister misiniz?
+</translation>
+</message>
+<message>
+<source>No script updates were found</source>
+<translation>Komut dosyası güncellemesi bulunamadı
+</translation>
+</message>
+<message>
+<source>Layout selector</source>
+<translation type="unfinished">Layout selector</translation>
+</message>
+<message>
+<source>AI toolbar disabled</source>
+<translation type="unfinished">AI toolbar disabled</translation>
+</message>
+<message>
+<source>An AI backend is configured, but the AI toolbar is currently disabled. Do you want to turn it on?</source>
+<translation type="unfinished">An AI backend is configured, but the AI toolbar is currently disabled. Do you want to turn it on?</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation>
+<numerusform>%n notun kopyalanması atlandı (Markdown veya metin dosyası yok veya okunamıyor)</numerusform>
+<numerusform>%n notun kopyalanması atlandı (Markdown veya metin dosyası yok veya okunamıyor)</numerusform>
+</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation>&amp;HTML'yi Markdown olarak yapıştır</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n note versions are currently gathered from your local git repository</source>
+<translation type="unfinished">
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+<numerusform>Latest %n note versions are currently gathered from your local git repository</numerusform>
+</translation>
+</message>
+<message>
+<source>Done with gathering note versions from git</source>
+<translation type="unfinished">Done with gathering note versions from git</translation>
+</message>
+<message numerus="yes">
+<source>Latest %n git versions of note: %1</source>
+<translation type="unfinished">
+<numerusform>Latest %n git versions of note: %1</numerusform>
+<numerusform>Latest %n git versions of note: %1</numerusform>
+</translation>
+</message>
+<message>
+<source>Disallow all note editing</source>
+<translation>Tüm not düzenlemelerine izin verme</translation>
+</message>
+<message>
+<source>Note editing disabled</source>
+<translation>Not düzenleme devre dışı bırakıldı</translation>
+</message>
+<message>
+<source>Note editing is currently disabled, do you want to allow it again?</source>
+<translation>Not düzenleme şu anda devre dışı, düzenlemeye tekrar izin vermek istiyor musunuz?</translation>
+</message>
+<message>
+<source>Select text files to import</source>
+<translation>Alınacak metin dosyalarını seçin</translation>
+</message>
+<message>
+<source>Importing: %1</source>
+<translation>İçe aktarma: %1</translation>
+</message>
+<message>
+<source>Note headline '%1' was copied to the clipboard</source>
+<translation>'%1' başlığının panoya kopyalandığını unutmayın</translation>
+</message>
+<message>
+<source>Allow all note editing</source>
+<translation>Tüm not düzenlemelerine izin ver</translation>
+</message>
+<message>
+<source>&amp;Tag</source>
+<translation>&amp;Etiket</translation>
+</message>
+<message>
+<source>Current notes folder: </source>
+<translation>Geçerli notlar dosyası: </translation>
+</message>
+<message>
+<source>Set the notes folder. Current notes folder: </source>
+<translation>Notlar dosyasını ayarlayın. Varsayılan notların dosyası: </translation>
+</message>
+<message>
+<source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
+<translation>Herhangi bir yapılacak işler listesi seçmediniz. Lütfen &lt;br /&gt; &lt;strong&gt; yapılacak işler &lt;/strong&gt; yapılandırma ayarlarını gözden geçirin!</translation>
+</message>
+<message>
+<source>Note folder</source>
+<translation>Not dosyası</translation>
+</message>
+<message>
+<source>Cancel</source>
+<translation>İptal et</translation>
+</message>
+<message>
+<source>Create a new folder</source>
+<translation>Yeni bir dosya oluştur</translation>
+</message>
+<message>
+<source>Folder name:</source>
+<translation>Dosya adı:</translation>
+</message>
+<message>
+<source>quit toolbar</source>
+<translation>araç çubuğundan çık</translation>
+</message>
+<message>
+<source>ArcNotes will track anonymous usage data, that helps to decide what parts of ArcNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
+<translation>ArcNotes anonim kullanım verilerini izleyecek, bu ArcNotes'un daha sonra hangi bölümlerinin geliştirileceğine karar vermeye ve bulmaya yardımcı oluyor ve bugları düzeltiyor. Bu hareketi ayarlardan devre dışı bırakabilirsiniz.</translation>
+</message>
+<message>
+<source>&amp;Ok</source>
+<translation>&amp;Tamam</translation>
+</message>
+<message>
+<source>Your tasks are being loaded from your server</source>
+<translation>Görevleriniz sunucunuzdan yükleniyor</translation>
+</message>
+<message>
+<source>No selected todo lists!</source>
+<translation>Seçilen yapılacaklar listesi yok!</translation>
+</message>
+<message>
+<source>Action not found!</source>
+<translation>Eylem bulunamadı!</translation>
+</message>
+<message>
+<source>Could not find menu action &lt;code&gt;%1&lt;/code&gt;! Did you spell it correctly?</source>
+<translation>&lt;code&gt;%1&lt;/code&gt; menü eylemi bulunamadı! Doğru yazdınız mı?</translation>
+</message>
+<message>
+<source>Subfolders</source>
+<translation>Alt klasörler</translation>
+</message>
+<message>
+<source>Tags</source>
+<translation>Etiketler</translation>
+</message>
+<message>
+<source>Note search</source>
+<translation>Not arama</translation>
+</message>
+<message>
+<source>Note list</source>
+<translation>Not listesi</translation>
+</message>
+<message>
+<source>Note edit</source>
+<translation>Not düzenleme</translation>
+</message>
+<message>
+<source>Note tags</source>
+<translation>Not etiketleri</translation>
+</message>
+<message>
+<source>Note preview</source>
+<translation>Not ön izleme</translation>
+</message>
+<message>
+<source>Note relations</source>
+<translation type="unfinished">Note relations</translation>
+</message>
+<message>
+<source>Log</source>
+<translation>Günlük</translation>
+</message>
+<message>
+<source>Scripting</source>
+<translation>Scripting</translation>
+</message>
+<message>
+<source>formatting toolbar</source>
+<translation>biçimlendirme araç çubuğu</translation>
+</message>
+<message>
+<source>inserting toolbar</source>
+<translation>ekle araç çubuğu</translation>
+</message>
+<message>
+<source>encryption toolbar</source>
+<translation>şifreleme araç çubuğu</translation>
+</message>
+<message>
+<source>AI toolbar</source>
+<translation>YZ araç çubuğu</translation>
+</message>
+<message>
+<source>window toolbar</source>
+<translation>pencere araç çubuğu</translation>
+</message>
+<message>
+<source>custom action toolbar</source>
+<translation>özel eylem araç çubuğu</translation>
+</message>
+<message>
+<source>Show %1 panel</source>
+<translation>%1 panel göster</translation>
+</message>
+<message>
+<source>Show %1</source>
+<translation>%1 göster</translation>
+</message>
+<message>
+<source>Switch to note folder</source>
+<translation>Not klasörüne geç
+</translation>
+</message>
+<message>
+<source>Could not switch note folder</source>
+<translation type="unfinished">Could not switch note folder</translation>
+</message>
+<message>
+<source>Modified notes could not be written to disk. Please resolve the problem and try switching note folders again.</source>
+<translation type="unfinished">Modified notes could not be written to disk. Please resolve the problem and try switching note folders again.</translation>
+</message>
+<message>
+<source>Toolbar could not be loaded without name</source>
+<translation>Araç çubuğu ad olmadan yüklenemedi</translation>
+</message>
+<message>
+<source>Read-only</source>
+<translation>Sadece oku</translation>
+</message>
+<message>
+<source>Note editing is disabled, click to enable</source>
+<translation>Not düzenleme devre dışı, etkinleştirmek için tıklayın</translation>
+</message>
+<message>
+<source>Line numbers</source>
+<translation>Satır numaraları</translation>
+</message>
+<message>
+<source>Click here to see what has changed and to be able to update to the latest version</source>
+<translation>Nelerin değiştiğini görmek ve en yeni sürümü güncelleyebilmek için buraya tıkla</translation>
+</message>
+<message>
+<source>You have to select your Nextcloud / ownCloud notes folder to make this software work!</source>
+<translation type="unfinished">You have to select your Nextcloud / ownCloud notes folder to make this software work!</translation>
+</message>
+<message>
+<source>Note versions are currently loaded from your Nextcloud / ownCloud server</source>
+<translation type="unfinished">Note versions are currently loaded from your Nextcloud / ownCloud server</translation>
+</message>
+<message>
+<source>Trashed notes are currently loaded from your Nextcloud / ownCloud server</source>
+<translation type="unfinished">Trashed notes are currently loaded from your Nextcloud / ownCloud server</translation>
+</message>
+<message>
+<source>Paste as &amp;text file attachment</source>
+<translation>&amp;Metin dosyası eki olarak yapıştır</translation>
+</message>
+<message>
+<source>Downloading images finished</source>
+<translation>Görüntü indirme bitti</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation>&amp;Ayarları aç</translation>
+</message>
+</context>
+<context>
+<name>MarkdownLspClient</name>
+<message>
+<source>Markdown LSP server command is empty</source>
+<translation type="unfinished">Markdown LSP server command is empty</translation>
+</message>
+<message>
+<source>Failed to start Markdown LSP server: %1</source>
+<translation type="unfinished">Failed to start Markdown LSP server: %1</translation>
+</message>
+</context>
+<context>
+<name>MarkdownLspSettingsWidget</name>
+<message>
+<source>Markdown language server</source>
+<translation type="unfinished">Markdown language server</translation>
+</message>
+<message>
+<source>Enable Markdown language server (LSP)</source>
+<translation type="unfinished">Enable Markdown language server (LSP)</translation>
+</message>
+<message>
+<source>Command:</source>
+<translation type="unfinished">Command:</translation>
+</message>
+<message>
+<source>Auto-detect</source>
+<translation type="unfinished">Auto-detect</translation>
+</message>
+<message>
+<source>Arguments:</source>
+<translation type="unfinished">Arguments:</translation>
+</message>
+<message>
+<source>Optional arguments separated by spaces.</source>
+<translation type="unfinished">Optional arguments separated by spaces.</translation>
+</message>
+<message>
+<source>Optional arguments</source>
+<translation type="unfinished">Optional arguments</translation>
+</message>
+<message>
+<source>Log all LSP server output (stderr) to the debug log. Useful for troubleshooting LSP server issues.</source>
+<translation type="unfinished">Log all LSP server output (stderr) to the debug log. Useful for troubleshooting LSP server issues.</translation>
+</message>
+<message>
+<source>Show all LSP server log output in debug log</source>
+<translation type="unfinished">Show all LSP server log output in debug log</translation>
+</message>
+<message>
+<source>Ignored:</source>
+<translation type="unfinished">Ignored:</translation>
+</message>
+<message>
+<source>Reset ignored rules</source>
+<translation type="unfinished">Reset ignored rules</translation>
+</message>
+<message>
+<source>Status:</source>
+<translation type="unfinished">Status:</translation>
+</message>
+<message>
+<source>Not tested yet.</source>
+<translation type="unfinished">Not tested yet.</translation>
+</message>
+<message>
+<source>Test Connection</source>
+<translation type="unfinished">Test Connection</translation>
+</message>
+<message>
+<source>No Markdown LSP server configured.</source>
+<translation type="unfinished">No Markdown LSP server configured.</translation>
+</message>
+<message>
+<source>Command: %1</source>
+<translation type="unfinished">Command: %1</translation>
+</message>
+<message>
+<source> | Arguments: %1</source>
+<translation type="unfinished"> | Arguments: %1</translation>
+</message>
+<message>
+<source> | Currently disabled</source>
+<translation type="unfinished"> | Currently disabled</translation>
+</message>
+<message>
+<source>Configured %1 at %2</source>
+<translation type="unfinished">Configured %1 at %2</translation>
+</message>
+<message>
+<source> with arguments: %1</source>
+<translation type="unfinished"> with arguments: %1</translation>
+</message>
+<message>
+<source>Markdown LSP</source>
+<translation type="unfinished">Markdown LSP</translation>
+</message>
+<message>
+<source>Could not find a supported Markdown LSP server in PATH. Checked: marksman, rumdl.</source>
+<translation type="unfinished">Could not find a supported Markdown LSP server in PATH. Checked: marksman, rumdl.</translation>
+</message>
+<message>
+<source>There are no ignored rules to reset.</source>
+<translation type="unfinished">There are no ignored rules to reset.</translation>
+</message>
+<message numerus="yes">
+<source>Reset %n ignored Markdown LSP rule(s)?</source>
+<translation type="unfinished">
+<numerusform>Reset %n ignored Markdown LSP rule(s)?</numerusform>
+<numerusform>Reset %n ignored Markdown LSP rule(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>All ignored Markdown LSP rules have been reset.</source>
+<translation type="unfinished">All ignored Markdown LSP rules have been reset.</translation>
+</message>
+<message>
+<source>Please enter a Markdown LSP server command first.</source>
+<translation type="unfinished">Please enter a Markdown LSP server command first.</translation>
+</message>
+<message>
+<source>Timed out waiting for the Markdown LSP server to initialize.</source>
+<translation type="unfinished">Timed out waiting for the Markdown LSP server to initialize.</translation>
+</message>
+<message>
+<source>Failed to start Markdown LSP server: %1</source>
+<translation type="unfinished">Failed to start Markdown LSP server: %1</translation>
+</message>
+<message>
+<source>Markdown LSP connection successful: %1</source>
+<translation type="unfinished">Markdown LSP connection successful: %1</translation>
+</message>
+<message>
+<source>Markdown LSP connection failed.</source>
+<translation type="unfinished">Markdown LSP connection failed.</translation>
+</message>
+</context>
+<context>
+<name>MarkdownTableDialog</name>
+<message>
+<source>Edit Markdown table</source>
+<translation type="unfinished">Edit Markdown table</translation>
+</message>
+<message>
+<source>Row</source>
+<translation type="unfinished">Row</translation>
+</message>
+<message>
+<source>Add row</source>
+<translation type="unfinished">Add row</translation>
+</message>
+<message>
+<source>Remove row</source>
+<translation type="unfinished">Remove row</translation>
+</message>
+<message>
+<source>Column</source>
+<translation type="unfinished">Column</translation>
+</message>
+<message>
+<source>Add column</source>
+<translation type="unfinished">Add column</translation>
+</message>
+<message>
+<source>Remove column</source>
+<translation type="unfinished">Remove column</translation>
+</message>
+<message>
+<source>Alignment:</source>
+<translation type="unfinished">Alignment:</translation>
+</message>
+<message>
+<source>Alignment of the selected column. Click a column header to select it.</source>
+<translation type="unfinished">Alignment of the selected column. Click a column header to select it.</translation>
+</message>
+<message>
+<source>Default (left)</source>
+<translation type="unfinished">Default (left)</translation>
+</message>
+<message>
+<source>Left</source>
+<translation type="unfinished">Left</translation>
+</message>
+<message>
+<source>Center</source>
+<translation type="unfinished">Center</translation>
+</message>
+<message>
+<source>Right</source>
+<translation type="unfinished">Right</translation>
+</message>
+<message>
+<source>Apply alignment</source>
+<translation type="unfinished">Apply alignment</translation>
+</message>
+<message>
+<source>Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</source>
+<translation type="unfinished">Apply the selected alignment to the currently selected column(s). Click a column header first to select it.</translation>
+</message>
+<message>
+<source>Cannot remove header</source>
+<translation type="unfinished">Cannot remove header</translation>
+</message>
+<message>
+<source>The header row cannot be removed.</source>
+<translation type="unfinished">The header row cannot be removed.</translation>
+</message>
+<message>
+<source>Cannot remove row</source>
+<translation type="unfinished">Cannot remove row</translation>
+</message>
+<message>
+<source>The table must have at least one data row.</source>
+<translation type="unfinished">The table must have at least one data row.</translation>
+</message>
+<message>
+<source>Cannot remove column</source>
+<translation type="unfinished">Cannot remove column</translation>
+</message>
+<message>
+<source>The table must have at least one column.</source>
+<translation type="unfinished">The table must have at least one column.</translation>
+</message>
+</context>
+<context>
+<name>McpServerSettingsWidget</name>
+<message>
+<source>MCP server</source>
+<translation type="unfinished">MCP server</translation>
+</message>
+<message>
+<source>Enable MCP server for AI agent access to notes</source>
+<translation type="unfinished">Enable MCP server for AI agent access to notes</translation>
+</message>
+<message>
+<source>Server port:</source>
+<translation type="unfinished">Server port:</translation>
+</message>
+<message>
+<source>Reset the MCP server port</source>
+<translation type="unfinished">Reset the MCP server port</translation>
+</message>
+<message>
+<source>Security token:</source>
+<translation type="unfinished">Security token:</translation>
+</message>
+<message>
+<source>If this is empty when saved, a new security token will be generated automatically.</source>
+<translation type="unfinished">If this is empty when saved, a new security token will be generated automatically.</translation>
+</message>
+<message>
+<source>Show security token</source>
+<translation type="unfinished">Show security token</translation>
+</message>
+<message>
+<source>Copy security token to clipboard</source>
+<translation type="unfinished">Copy security token to clipboard</translation>
+</message>
+<message>
+<source>Generate new security token</source>
+<translation type="unfinished">Generate new security token</translation>
+</message>
+</context>
+<context>
+<name>McpService</name>
+<message>
+<source>MCP server listening on port %1</source>
+<translation type="unfinished">MCP server listening on port %1</translation>
+</message>
+</context>
+<context>
+<name>MediaInsertionManager</name>
+<message>
+<source>File extension</source>
+<translation type="unfinished">File extension</translation>
+</message>
+<message>
+<source>Extension of file attachment:</source>
+<translation type="unfinished">Extension of file attachment:</translation>
+</message>
+<message>
+<source>File base name</source>
+<translation type="unfinished">File base name</translation>
+</message>
+<message>
+<source>Base name of file attachment:</source>
+<translation type="unfinished">Base name of file attachment:</translation>
+</message>
+<message>
+<source>Leave empty for automatic name</source>
+<comment>Leave the base name empty for automatic name</comment>
+<translation type="unfinished">Leave empty for automatic name</translation>
+</message>
+<message>
+<source>Temporary file can't be opened</source>
+<translation type="unfinished">Temporary file can't be opened</translation>
+</message>
+<message>
+<source>Inserted text as text attachment file</source>
+<translation type="unfinished">Inserted text as text attachment file</translation>
+</message>
+<message>
+<source>Inserting image</source>
+<translation type="unfinished">Inserting image</translation>
+</message>
+<message>
+<source>Done inserting image</source>
+<translation type="unfinished">Done inserting image</translation>
+</message>
+<message>
+<source>Inserting attachment</source>
+<translation type="unfinished">Inserting attachment</translation>
+</message>
+<message>
+<source>Done inserting attachment</source>
+<translation type="unfinished">Done inserting attachment</translation>
+</message>
+<message numerus="yes">
+<source>Copied %n note(s) to %1</source>
+<translation type="unfinished">
+<numerusform>Copied %n note(s) to %1</numerusform>
+<numerusform>Copied %n note(s) to %1</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Failed to copy %n note(s) (most likely already existing)</source>
+<translation type="unfinished">
+<numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+<numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Skipped copying of %n note(s) (no Markdown or text file or not readable)</source>
+<translation type="unfinished">
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+<numerusform>Skipped copying of %n note(s) (no Markdown or text file or not readable)</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Skipped inserting %n file(s) because the current note is read-only</source>
+<translation type="unfinished">
+<numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
+<numerusform>Skipped inserting %n file(s) because the current note is read-only</numerusform>
+</translation>
+</message>
+<message>
+<source>Saving temporary image</source>
+<translation type="unfinished">Saving temporary image</translation>
+</message>
+<message>
+<source>Paste &amp;HTML as Markdown</source>
+<translation type="unfinished">Paste &amp;HTML as Markdown</translation>
+</message>
+<message>
+<source>Paste as &amp;text file attachment</source>
+<translation type="unfinished">Paste as &amp;text file attachment</translation>
+</message>
+<message>
+<source>Downloading %1</source>
+<translation type="unfinished">Downloading %1</translation>
+</message>
+<message>
+<source>Downloading images finished</source>
+<translation type="unfinished">Downloading images finished</translation>
+</message>
+</context>
+<context>
+<name>NavigationManager</name>
+<message>
+<source>Update backlinks</source>
+<translation type="unfinished">Update backlinks</translation>
+</message>
+<message numerus="yes">
+<source>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</source>
+<translation type="unfinished">
+<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+<numerusform>The heading "%1" is referenced in %n note(s). Do you want to update the link to use the new heading "%2"?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Updated heading links in %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Updated heading links in %n note(s)</numerusform>
+<numerusform>Updated heading links in %n note(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>Ln %1, Col %2</source>
+<comment>Line / Column</comment>
+<translation type="unfinished">Ln %1, Col %2</translation>
+</message>
+<message>
+<source>Line %1, Column %2</source>
+<translation type="unfinished">Line %1, Column %2</translation>
+</message>
+<message numerus="yes">
+<source>%n selected</source>
+<comment>Characters selected</comment>
+<translation type="unfinished">
+<numerusform>%n selected</numerusform>
+<numerusform>%n selected</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>NavigationWidget</name>
+<message>
+<source>headline %1</source>
+<translation>başlık %1</translation>
+</message>
+<message>
+<source>&amp;Rename heading</source>
+<translation type="unfinished">&amp;Rename heading</translation>
+</message>
+</context>
+<context>
+<name>NetworkSettingsWidget</name>
+<message>
+<source>Proxy Settings</source>
+<translation type="unfinished">Proxy Settings</translation>
+</message>
+<message>
+<source>No Proxy</source>
+<translation type="unfinished">No Proxy</translation>
+</message>
+<message>
+<source>Use system proxy</source>
+<translation type="unfinished">Use system proxy</translation>
+</message>
+<message>
+<source>Specify proxy manually as</source>
+<translation type="unfinished">Specify proxy manually as</translation>
+</message>
+<message>
+<source>Host</source>
+<translation type="unfinished">Host</translation>
+</message>
+<message>
+<source>Proxy server requires authentication</source>
+<translation type="unfinished">Proxy server requires authentication</translation>
+</message>
+<message>
+<source>SSL Settings</source>
+<translation type="unfinished">SSL Settings</translation>
+</message>
+<message>
+<source>Ignore SSL errors</source>
+<translation type="unfinished">Ignore SSL errors</translation>
+</message>
+<message>
+<source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+<translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+</message>
+<message>
+<source>App metrics</source>
+<translation type="unfinished">App metrics</translation>
+</message>
+<message>
+<source>Anonymous usage data helps to decide what parts of ArcNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
+<translation type="unfinished">Anonymous usage data helps to decide what parts of ArcNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
+</message>
+<message>
+<source>Disable tracking of usage data</source>
+<translation type="unfinished">Disable tracking of usage data</translation>
+</message>
+<message>
+<source>This data includes anonymous information about what features of the app are used.</source>
+<translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
+</message>
+<message>
+<source>Usage tracking is done on a private Piwik server.</source>
+<translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
+</message>
+<message>
+<source>App heartbeat</source>
+<translation type="unfinished">App heartbeat</translation>
+</message>
+<message>
+<source>A small heartbeat request is sent periodically while ArcNotes is running. Make a developer happy by letting him know that someone is using ArcNotes.</source>
+<translation type="unfinished">A small heartbeat request is sent periodically while ArcNotes is running. Make a developer happy by letting him know that someone is using ArcNotes.</translation>
+</message>
+<message>
+<source>Disable heartbeat</source>
+<translation type="unfinished">Disable heartbeat</translation>
+</message>
+<message>
+<source>hostname of proxy server</source>
+<translation type="unfinished">hostname of proxy server</translation>
+</message>
+<message>
+<source>username for proxy server</source>
+<translation type="unfinished">username for proxy server</translation>
+</message>
+<message>
+<source>password for proxy server</source>
+<translation type="unfinished">password for proxy server</translation>
+</message>
+<message>
+<source>HTTP(S) proxy</source>
+<translation type="unfinished">HTTP(S) proxy</translation>
+</message>
+<message>
+<source>SOCKS5 proxy</source>
+<translation type="unfinished">SOCKS5 proxy</translation>
+</message>
+<message>
+<source>Disable usage tracking</source>
+<translation type="unfinished">Disable usage tracking</translation>
+</message>
+<message>
+<source>Anonymous usage data helps to decide what parts of ArcNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+<translation type="unfinished">Anonymous usage data helps to decide what parts of ArcNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
+</message>
+</context>
+<context>
+<name>NextcloudDeckDialog</name>
+<message>
+<source>-10min</source>
+<translation>-10dak</translation>
+</message>
+<message>
+<source>+10min</source>
+<translation>+10dak</translation>
+</message>
+<message>
+<source>+1d</source>
+<translation>+1gün</translation>
+</message>
+<message>
+<source>-1d</source>
+<translation>-1gün</translation>
+</message>
+<message>
+<source>Archive card</source>
+<translation type="unfinished">Archive card</translation>
+</message>
+<message>
+<source>Archive</source>
+<translation type="unfinished">Archive</translation>
+</message>
+<message>
+<source>Delete card</source>
+<translation type="unfinished">Delete card</translation>
+</message>
+<message>
+<source>Delete</source>
+<translation type="unfinished">Delete</translation>
+</message>
+<message>
+<source>Show archived cards</source>
+<translation type="unfinished">Show archived cards</translation>
+</message>
+<message>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation type="unfinished">This doesn't work for sub-items, because they may be hidden by the parent item!</translation>
+</message>
+<message>
+<source>Show only items due today</source>
+<translation type="unfinished">Show only items due today</translation>
+</message>
+<message>
+<source>Summary</source>
+<translation type="unfinished">Summary</translation>
+</message>
+<message>
+<source>Reload the card item list from server</source>
+<translation type="unfinished">Reload the card item list from server</translation>
+</message>
+<message>
+<source>Reload…</source>
+<translation type="unfinished">Reload…</translation>
+</message>
+<message>
+<source>Search or create card</source>
+<translation type="unfinished">Search or create card</translation>
+</message>
+<message>
+<source>Select the board and stack to work with</source>
+<translation type="unfinished">Select the board and stack to work with</translation>
+</message>
+<message>
+<source>Create card and insert link into current note</source>
+<translation>Kart yarat ve etkin nota bağlantı ekle</translation>
+</message>
+<message>
+<source>&amp;Save</source>
+<translation>Kaydet</translation>
+</message>
+<message>
+<source>+1h</source>
+<translation>+1saat</translation>
+</message>
+<message>
+<source>Title</source>
+<translation>Başlık</translation>
+</message>
+<message>
+<source>-1h</source>
+<translation>-1saat</translation>
+</message>
+<message>
+<source>Description:</source>
+<translation>Açıklama:</translation>
+</message>
+<message>
+<source>Due date</source>
+<translation>Son tarih</translation>
+</message>
+<message>
+<source>Manage Nextcloud Deck Cards</source>
+<translation type="unfinished">Manage Nextcloud Deck Cards</translation>
+</message>
+<message>
+<source>Save and insert into note</source>
+<translation type="unfinished">Save and insert into note</translation>
+</message>
+<message>
+<source>Save the current card item and insert a link to it into the current note</source>
+<translation type="unfinished">Save the current card item and insert a link to it into the current note</translation>
+</message>
+<message>
+<source>Reload from server</source>
+<translation type="unfinished">Reload from server</translation>
+</message>
+<message>
+<source>Reload boards, stacks and cards from server</source>
+<translation type="unfinished">Reload boards, stacks and cards from server</translation>
+</message>
+<message>
+<source>Do you want to delete the selected Nextcloud Deck card?</source>
+<translation type="unfinished">Do you want to delete the selected Nextcloud Deck card?</translation>
+</message>
+<message numerus="yes">
+<source>Do you want to delete %n Nextcloud Deck card(s)?</source>
+<translation type="unfinished">
+<numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
+<numerusform>Do you want to delete %n Nextcloud Deck card(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>Delete card(s)</source>
+<translation type="unfinished">Delete card(s)</translation>
+</message>
+<message>
+<source>%1 / %2</source>
+<translation type="unfinished">%1 / %2</translation>
+</message>
+<message>
+<source>No due date</source>
+<translation type="unfinished">No due date</translation>
+</message>
+<message>
+<source>Do you want to delete the current Nextcloud Deck card?</source>
+<translation type="unfinished">Do you want to delete the current Nextcloud Deck card?</translation>
+</message>
+<message>
+<source>Do you want to archive the current Nextcloud Deck card?</source>
+<translation type="unfinished">Do you want to archive the current Nextcloud Deck card?</translation>
+</message>
+<message>
+<source>&amp;Open card in browser</source>
+<translation type="unfinished">&amp;Open card in browser</translation>
+</message>
+<message>
+<source>&amp;Add card link to note</source>
+<translation type="unfinished">&amp;Add card link to note</translation>
+</message>
+<message>
+<source>&amp;Search for card link in notes</source>
+<translation type="unfinished">&amp;Search for card link in notes</translation>
+</message>
+<message numerus="yes">
+<source>&amp;Delete %n card(s)</source>
+<translation type="unfinished">
+<numerusform/>
+<numerusform/>
+</translation>
+</message>
+</context>
+<context>
+<name>NextcloudDeckService</name>
+<message>
+<source>Error while updating card</source>
+<translation type="unfinished">Error while updating card</translation>
+</message>
+<message>
+<source>Updating card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Updating card failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while creating card</source>
+<translation type="unfinished">Error while creating card</translation>
+</message>
+<message>
+<source>Creating card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Creating card failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while archiving card</source>
+<translation type="unfinished">Error while archiving card</translation>
+</message>
+<message>
+<source>Error while deleting card</source>
+<translation type="unfinished">Error while deleting card</translation>
+</message>
+<message>
+<source>Archiving the card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Archiving the card failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Deleting the card failed with status code %1 and message: %2</source>
+<translation type="unfinished">Deleting the card failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while loading boards</source>
+<translation>Panolar yüklenirken hata oluştu</translation>
+</message>
+<message>
+<source>Loading the boards failed with status code %1 and message: %2</source>
+<translation>Kartların yüklenmesi %1 durum kodu ve şu mesajla başarısız oldu: %2</translation>
+</message>
+<message>
+<source>Error while loading cards</source>
+<translation type="unfinished">Error while loading cards</translation>
+</message>
+<message>
+<source>Loading the cards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the cards failed with status code %1 and message: %2</translation>
+</message>
+<message>
+<source>Error while loading archived cards</source>
+<translation type="unfinished">Error while loading archived cards</translation>
+</message>
+<message>
+<source>Loading the archived cards failed with status code %1 and message: %2</source>
+<translation type="unfinished">Loading the archived cards failed with status code %1 and message: %2</translation>
+</message>
+</context>
+<context>
+<name>NoteBookmarkDialog</name>
+<message>
+<source>Note Bookmarks</source>
+<translation type="unfinished">Note Bookmarks</translation>
+</message>
+<message>
+<source>Slot</source>
+<translation type="unfinished">Slot</translation>
+</message>
+<message>
+<source>Note</source>
+<translation type="unfinished">Note</translation>
+</message>
+<message>
+<source>Position</source>
+<translation type="unfinished">Position</translation>
+</message>
+<message>
+<source>Jump to bookmark</source>
+<translation type="unfinished">Jump to bookmark</translation>
+</message>
+<message>
+<source>Jump to the selected bookmark in the main window</source>
+<translation type="unfinished">Jump to the selected bookmark in the main window</translation>
+</message>
+<message>
+<source>Delete bookmark</source>
+<translation type="unfinished">Delete bookmark</translation>
+</message>
+<message>
+<source>Delete the selected bookmark</source>
+<translation type="unfinished">Delete the selected bookmark</translation>
+</message>
+<message>
+<source>Reload</source>
+<translation type="unfinished">Reload</translation>
+</message>
+<message>
+<source>Reload the bookmark list</source>
+<translation type="unfinished">Reload the bookmark list</translation>
+</message>
+<message>
+<source>Are you sure you want to delete the bookmark at slot %1?</source>
+<translation type="unfinished">Are you sure you want to delete the bookmark at slot %1?</translation>
+</message>
+</context>
+<context>
+<name>NoteDialog</name>
+<message>
+<source>Note</source>
+<translation>Not</translation>
+</message>
+<message>
+<source>Note text</source>
+<translation>Not metni
+</translation>
+</message>
+<message>
+<source>Preview</source>
+<translation>Ön izleme
+</translation>
+</message>
+<message>
+<source>Reload</source>
+<translation type="unfinished">Reload</translation>
+</message>
+<message>
+<source>Reload the note text</source>
+<translation type="unfinished">Reload the note text</translation>
+</message>
+<message>
+<source>Jump to note</source>
+<translation type="unfinished">Jump to note</translation>
+</message>
+<message>
+<source>Jump to the note in the main window</source>
+<translation type="unfinished">Jump to the note in the main window</translation>
+</message>
+</context>
+<context>
+<name>NoteDiffDialog</name>
+<message>
+<source>Note was modified externally!</source>
+<translation>Not harici olarak değiştirildi!</translation>
+</message>
+<message>
+<source>The current note was modified outside of this application!</source>
+<translation>Geçerli not bu uygulamanın dışında değiştirildi!</translation>
+</message>
+<message>
+<source>Differences:</source>
+<translation>Farklar:</translation>
+</message>
+<message>
+<source>Always accept external changes in the future</source>
+<translation>Gelecekteki harici değişiklikleri her zaman kabul et</translation>
+</message>
+<message>
+<source>Accept external changes?</source>
+<translation>Harici değişiklikler kabul edilsin mi?</translation>
+</message>
+<message>
+<source>Ignore all external modifications in the future</source>
+<translation>Gelecekteki tüm harici değişiklikleri yoksay</translation>
+</message>
+<message>
+<source>Yes</source>
+<translation>Evet</translation>
+</message>
+<message>
+<source>No</source>
+<translation>Hayır</translation>
+</message>
+</context>
+<context>
+<name>NoteEncryptionManager</name>
+<message>
+<source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
+<translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
+</message>
+<message>
+<source>Note can't be decrypted!</source>
+<translation type="unfinished">Note can't be decrypted!</translation>
+</message>
+<message>
+<source>It seems that your password is not valid!</source>
+<translation type="unfinished">It seems that your password is not valid!</translation>
+</message>
+<message>
+<source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in ArcNotes&lt;/strong&gt;!</source>
+<translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in ArcNotes&lt;/strong&gt;!</translation>
+</message>
+<message>
+<source>Decrypt note and store it as plain text</source>
+<translation type="unfinished">Decrypt note and store it as plain text</translation>
+</message>
+<message>
+<source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
+<translation type="unfinished">Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
+</message>
+<message>
+<source>&amp;Decrypt</source>
+<translation type="unfinished">&amp;Decrypt</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation type="unfinished">&amp;Cancel</translation>
+</message>
+<message>
+<source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
+<translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
+</message>
+<message>
+<source>Markdown files</source>
+<translation type="unfinished">Markdown files</translation>
+</message>
+<message>
+<source>Export current note as Markdown file</source>
+<translation type="unfinished">Export current note as Markdown file</translation>
+</message>
+<message>
+<source>Export attached files</source>
+<translation type="unfinished">Export attached files</translation>
+</message>
+<message>
+<source>Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</source>
+<translation type="unfinished">Do you also want to export media files and attachments of the note? Files may be overwritten in the destination folder!</translation>
+</message>
+</context>
+<context>
+<name>NoteFilePathLabel</name>
+<message>
+<source>Relative path of note, right-click to open context menu</source>
+<translation>Göreli not yolu, içerik menüsünü açmak için sağ tıklayın</translation>
+</message>
+<message>
+<source>Absolute path of note, right-click to open context menu</source>
+<translation>Mutlak not yolu, içerik menüsünü açmak için sağ tıklayın</translation>
+</message>
+<message>
+<source>Copy absolute path of note</source>
+<translation>Notun mutlak yolunu kopyala</translation>
+</message>
+<message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
+<source>Copy absolute path of note subfolder</source>
+<translation>Not alt klasörünün mutlak yolunu kopyala</translation>
+</message>
+<message>
+<source>Copy absolute path of note folder</source>
+<translation>Not klasörünün mutlak yolunu kopyala</translation>
+</message>
+</context>
+<context>
+<name>NoteFolderSettingsWidget</name>
+<message>
+<source>Your note folders</source>
+<translation type="unfinished">Your note folders</translation>
+</message>
+<message>
+<source>&amp;Add folder</source>
+<translation type="unfinished">&amp;Add folder</translation>
+</message>
+<message>
+<source>&amp;Remove folder</source>
+<translation type="unfinished">&amp;Remove folder</translation>
+</message>
+<message>
+<source>Click here to use the selected folder from your server as note folder</source>
+<translation type="unfinished">Click here to use the selected folder from your server as note folder</translation>
+</message>
+<message>
+<source>path</source>
+<translation type="unfinished">path</translation>
+</message>
+<message>
+<source>Cloud connection:</source>
+<translation type="unfinished">Cloud connection:</translation>
+</message>
+<message>
+<source>&amp;Use as Nextcloud / ownCloud path</source>
+<translation type="unfinished">&amp;Use as Nextcloud / ownCloud path</translation>
+</message>
+<message>
+<source>Please select your note folder on your Nextcloud / ownCloud server:</source>
+<translation type="unfinished">Please select your note folder on your Nextcloud / ownCloud server:</translation>
+</message>
+<message>
+<source>Path on your Nextcloud / ownCloud server:</source>
+<translation type="unfinished">Path on your Nextcloud / ownCloud server:</translation>
+</message>
+<message>
+<source>Note folder path:</source>
+<translation type="unfinished">Note folder path:</translation>
+</message>
+<message>
+<source>Subfolder visibility</source>
+<translation type="unfinished">Subfolder visibility</translation>
+</message>
+<message>
+<source>If checked, all subfolders will be shown. If unchecked, you can select which subfolders to show.</source>
+<translation type="unfinished">If checked, all subfolders will be shown. If unchecked, you can select which subfolders to show.</translation>
+</message>
+<message>
+<source>All subfolders</source>
+<translation type="unfinished">All subfolders</translation>
+</message>
+<message>
+<source>Select which subfolders to show. Unchecked subfolders and their children will be ignored.</source>
+<translation type="unfinished">Select which subfolders to show. Unchecked subfolders and their children will be ignored.</translation>
+</message>
+<message>
+<source>You need to have git installed to make this work!</source>
+<translation type="unfinished">You need to have git installed to make this work!</translation>
+</message>
+<message>
+<source>Use git to keep a local history of your notes</source>
+<translation type="unfinished">Use git to keep a local history of your notes</translation>
+</message>
+<message>
+<source>Use as active note folder</source>
+<translation type="unfinished">Use as active note folder</translation>
+</message>
+<message>
+<source>Be aware that the Nextcloud / ownCloud notes app doesn't support subfolders!</source>
+<translation type="unfinished">Be aware that the Nextcloud / ownCloud notes app doesn't support subfolders!</translation>
+</message>
+<message>
+<source>Click here to select your remote note path on your Nextcloud / ownCloud server</source>
+<translation type="unfinished">Click here to select your remote note path on your Nextcloud / ownCloud server</translation>
+</message>
+<message>
+<source>Set the Nextcloud / ownCloud path where the note folder path will be synced to on your Nextcloud / ownCloud server.</source>
+<translation type="unfinished">Set the Nextcloud / ownCloud path where the note folder path will be synced to on your Nextcloud / ownCloud server.</translation>
+</message>
+<message>
+<source>Use note subfolders</source>
+<translation type="unfinished">Use note subfolders</translation>
+</message>
+<message>
+<source>Path where your notes are stored locally</source>
+<translation type="unfinished">Path where your notes are stored locally</translation>
+</message>
+<message>
+<source>This name will be viewed in all the menus.</source>
+<translation type="unfinished">This name will be viewed in all the menus.</translation>
+</message>
+<message>
+<source>Note folder name</source>
+<translation type="unfinished">Note folder name</translation>
+</message>
+<message>
+<source>Name:</source>
+<translation type="unfinished">Name:</translation>
+</message>
+<message>
+<source>Click here to select your local note path</source>
+<translation type="unfinished">Click here to select your local note path</translation>
+</message>
+<message>
+<source>"Notes" path on your server</source>
+<extracomment>"Notes" should not be translated</extracomment>
+<translation type="unfinished">"Notes" path on your server</translation>
+</message>
+<message>
+<source>This also allows note files to be renamed</source>
+<translation type="unfinished">This also allows note files to be renamed</translation>
+</message>
+<message>
+<source>Allow note file name to be different from headline</source>
+<translation type="unfinished">Allow note file name to be different from headline</translation>
+</message>
+<message>
+<source>new folder</source>
+<translation type="unfinished">new folder</translation>
+</message>
+<message>
+<source>Remove note folder</source>
+<translation type="unfinished">Remove note folder</translation>
+</message>
+<message>
+<source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+</message>
+<message>
+<source>Please select the folder where your notes will get stored to</source>
+<translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+</message>
+<message>
+<source>Loading folders from server</source>
+<translation type="unfinished">Loading folders from server</translation>
+</message>
+<message>
+<source>No more folders were found in the current folder</source>
+<translation type="unfinished">No more folders were found in the current folder</translation>
+</message>
+<message>
+<source>Loading folders in '%1' from server</source>
+<translation type="unfinished">Loading folders in '%1' from server</translation>
+</message>
+</context>
+<context>
+<name>NoteIndexManager</name>
+<message>
+<source>Loading notes…</source>
+<translation type="unfinished">Loading notes…</translation>
+</message>
+<message>
+<source>Abort</source>
+<translation type="unfinished">Abort</translation>
+</message>
+<message>
+<source>Note folder</source>
+<translation type="unfinished">Note folder</translation>
+</message>
+<message>
+<source>Removed duplicate conflicted database: %1</source>
+<translation type="unfinished">Removed duplicate conflicted database: %1</translation>
+</message>
+<message>
+<source>Could not remove duplicate conflicted database: %1</source>
+<translation type="unfinished">Could not remove duplicate conflicted database: %1</translation>
+</message>
+<message>
+<source>Removed merged conflicted database: %1</source>
+<translation type="unfinished">Removed merged conflicted database: %1</translation>
+</message>
+<message>
+<source>Could not remove merged conflicted database: %1</source>
+<translation type="unfinished">Could not remove merged conflicted database: %1</translation>
+</message>
+<message>
+<source>Delete conflicted database copies</source>
+<translation type="unfinished">Delete conflicted database copies</translation>
+</message>
+<message numerus="yes">
+<source>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</source>
+<translation type="unfinished">
+<numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</numerusform>
+<numerusform>Proceed with automatic deletion of &lt;strong&gt;%n&lt;/strong&gt; conflicted database copies that may block your Nextcloud / ownCloud sync process?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Removed %n conflicted database copies</source>
+<translation type="unfinished">
+<numerusform>Removed %n conflicted database copies</numerusform>
+<numerusform>Removed %n conflicted database copies</numerusform>
+</translation>
+</message>
+<message>
+<source>Current note was modified externally</source>
+<translation type="unfinished">Current note was modified externally</translation>
+</message>
+<message>
+<source>Overwriting external changes of: %1</source>
+<translation type="unfinished">Overwriting external changes of: %1</translation>
+</message>
+<message>
+<source>Loading external changes from: %1</source>
+<translation type="unfinished">Loading external changes from: %1</translation>
+</message>
+<message>
+<source>Note was removed externally!</source>
+<translation type="unfinished">Note was removed externally!</translation>
+</message>
+<message>
+<source>Current note was removed outside of this application!
+Restore current note?</source>
+<translation type="unfinished">Current note was removed outside of this application!
+Restore current note?</translation>
+</message>
+<message>
+<source>Stored current note to disk</source>
+<translation type="unfinished">Stored current note to disk</translation>
+</message>
+<message>
+<source>Current note could not be stored to disk</source>
+<translation type="unfinished">Current note could not be stored to disk</translation>
+</message>
+<message>
+<source>Note was modified externally: %1</source>
+<translation type="unfinished">Note was modified externally: %1</translation>
+</message>
+<message>
+<source>Notes directory was modified externally</source>
+<translation type="unfinished">Notes directory was modified externally</translation>
+</message>
+<message numerus="yes">
+<source>Stored %n note(s) to disk</source>
+<translation type="unfinished">
+<numerusform>Stored %n note(s) to disk</numerusform>
+<numerusform>Stored %n note(s) to disk</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>NoteOperationsManager</name>
+<message>
+<source>Note has backlinks</source>
+<translation type="unfinished">Note has backlinks</translation>
+</message>
+<message numerus="yes">
+<source>The note &lt;strong&gt;%1&lt;/strong&gt; is linked from %n other note(s). Deleting it will leave those links broken. Do you still want to remove it?</source>
+<translation type="unfinished">
+<numerusform>The note &lt;strong&gt;%1&lt;/strong&gt; is linked from %n other note(s). Deleting it will leave those links broken. Do you still want to remove it?</numerusform>
+<numerusform>The note &lt;strong&gt;%1&lt;/strong&gt; is linked from %n other note(s). Deleting it will leave those links broken. Do you still want to remove it?</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove current note</source>
+<translation type="unfinished">Remove current note</translation>
+</message>
+<message>
+<source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+</message>
+<message>
+<source>Notes have backlinks</source>
+<translation type="unfinished">Notes have backlinks</translation>
+</message>
+<message numerus="yes">
+<source>%n of the selected note(s) are linked from other notes (%1 link(s) in total). Deleting them will leave those links broken. Do you still want to remove them?</source>
+<translation type="unfinished">
+<numerusform>%n of the selected note(s) are linked from other notes (%1 link(s) in total). Deleting them will leave those links broken. Do you still want to remove them?</numerusform>
+<numerusform>%n of the selected note(s) are linked from other notes (%1 link(s) in total). Deleting them will leave those links broken. Do you still want to remove them?</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected notes and folders</source>
+<translation type="unfinished">Remove selected notes and folders</translation>
+</message>
+<message>
+<source>Remove selected folders</source>
+<translation type="unfinished">Remove selected folders</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected notes</source>
+<translation type="unfinished">Remove selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s) and &lt;strong&gt;%1&lt;/strong&gt; folder(s)?&lt;ul&gt;&lt;li&gt;%2&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore the notes from there.</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your Nextcloud / ownCloud server you should be able to restore them from there.</numerusform>
+</translation>
+</message>
+<message>
+<source>Removed note subfolder: %1</source>
+<translation type="unfinished">Removed note subfolder: %1</translation>
+</message>
+<message>
+<source>Move selected notes</source>
+<translation type="unfinished">Move selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message>
+<source>Copy selected notes</source>
+<translation type="unfinished">Copy selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message>
+<source>Done</source>
+<translation type="unfinished">Done</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+<numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+</translation>
+</message>
+<message>
+<source>Note</source>
+<comment>name for new note</comment>
+<translation type="unfinished">Note</translation>
+</message>
+<message numerus="yes">
+<source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were moved to note subfolder "%2"</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+<numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were copied to note subfolder "%2"</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+<numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+</translation>
+</message>
+<message>
+<source>Copy to note folder</source>
+<translation type="unfinished">Copy to note folder</translation>
+</message>
+<message>
+<source>Move to note folder</source>
+<translation type="unfinished">Move to note folder</translation>
+</message>
+<message>
+<source>Copy to this subfolder</source>
+<translation type="unfinished">Copy to this subfolder</translation>
+</message>
+<message>
+<source>Move to this subfolder</source>
+<translation type="unfinished">Move to this subfolder</translation>
+</message>
+<message>
+<source>Split note</source>
+<translation type="unfinished">Split note</translation>
+</message>
+<message>
+<source>Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</source>
+<translation type="unfinished">Split note at current cursor position? The text after the cursor will be moved to a new note. The new note will be linked to the old note.</translation>
+</message>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Note headline</source>
+<translation type="unfinished">Note headline</translation>
+</message>
+<message>
+<source>The deleted note(s) had &lt;strong&gt;%1 image(s)&lt;/strong&gt; and &lt;strong&gt;%2 attachment(s)&lt;/strong&gt; that are not used in any other note.
+
+Do you want to delete those files as well?</source>
+<translation type="unfinished">The deleted note(s) had &lt;strong&gt;%1 image(s)&lt;/strong&gt; and &lt;strong&gt;%2 attachment(s)&lt;/strong&gt; that are not used in any other note.
+
+Do you want to delete those files as well?</translation>
+</message>
+<message numerus="yes">
+<source>The deleted note(s) had &lt;strong&gt;%n image(s)&lt;/strong&gt; that are not used in any other note.
+
+Do you want to delete those files as well?</source>
+<translation type="unfinished">
+<numerusform>The deleted note(s) had &lt;strong&gt;%n image(s)&lt;/strong&gt; that are not used in any other note.
+
+Do you want to delete those files as well?</numerusform>
+<numerusform>The deleted note(s) had &lt;strong&gt;%n image(s)&lt;/strong&gt; that are not used in any other note.
+
+Do you want to delete those files as well?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>The deleted note(s) had &lt;strong&gt;%n attachment(s)&lt;/strong&gt; that are not used in any other note.
+
+Do you want to delete those files as well?</source>
+<translation type="unfinished">
+<numerusform>The deleted note(s) had &lt;strong&gt;%n attachment(s)&lt;/strong&gt; that are not used in any other note.
+
+Do you want to delete those files as well?</numerusform>
+<numerusform>The deleted note(s) had &lt;strong&gt;%n attachment(s)&lt;/strong&gt; that are not used in any other note.
+
+Do you want to delete those files as well?</numerusform>
+</translation>
+</message>
+<message>
+<source>Delete orphaned images and attachments</source>
+<translation type="unfinished">Delete orphaned images and attachments</translation>
+</message>
+<message numerus="yes">
+<source>Removed %n orphaned file(s)</source>
+<translation type="unfinished">
+<numerusform>Removed %n orphaned file(s)</numerusform>
+<numerusform>Removed %n orphaned file(s)</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>NotePreviewWidget</name>
+<message>
+<source>Copy image file path</source>
+<translation>Görüntü dosyası yolunu kopyala</translation>
+</message>
+<message>
+<source>Copy image to clipboard</source>
+<translation>Resmi panoya kopyala</translation>
+</message>
+<message>
+<source>Copy link location</source>
+<translation>Bağlantı konumunu kopyala</translation>
+</message>
+<message>
+<source>Export generated raw HTML</source>
+<translation>Dışa aktarılan ham HTML'yi dışa aktar</translation>
+</message>
+<message>
+<source>HTML files</source>
+<translation>HTML dosyaları</translation>
+</message>
+<message>
+<source>Export preview as raw HTML file</source>
+<comment>"Raw" means that actually the html that was fed to the preview will be stored (the QTextBrowser modifies the html that it is showing)</comment>
+<translation>Önizlemeyi ham HTML dosyası olarak dışa aktar</translation>
+</message>
+</context>
+<context>
+<name>NoteSubFolderTree</name>
+<message>
+<source>All notes</source>
+<translation>Tüm notlar</translation>
+</message>
+<message>
+<source>Show notes from all note subfolders (%1)</source>
+<translation>Tüm not alt klasörlerindeki notları göster (%1)</translation>
+</message>
+<message>
+<source>Show notes in folder '%1' (%2)</source>
+<translation type="unfinished">Show notes in folder '%1' (%2)</translation>
+</message>
+<message>
+<source>Show notes in note root folder (%1)</source>
+<translation>Notları not kök klasöründe göster (%1)</translation>
+</message>
+<message>
+<source>Note folder</source>
+<translation>Not klasörü</translation>
+</message>
+<message>
+<source>New subfolder</source>
+<translation>Yeni alt klasör</translation>
+</message>
+<message>
+<source>Rename subfolder</source>
+<translation>Alt klasörü yeniden adlandır</translation>
+</message>
+<message>
+<source>Remove selected folders</source>
+<translation>Seçilen klasörleri kaldır</translation>
+</message>
+<message>
+<source>Move selected folders to...</source>
+<translation type="unfinished">Move selected folders to...</translation>
+</message>
+<message>
+<source>Move to note folder</source>
+<translation type="unfinished">Move to note folder</translation>
+</message>
+<message>
+<source>Show folder in file manager</source>
+<translation>Klasörü dosya yöneticisinde göster</translation>
+</message>
+<message>
+<source>Move to this subfolder</source>
+<translation type="unfinished">Move to this subfolder</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
+<translation>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; klasör kaldırılsın mı?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Bu klasörlerdeki tüm dosya ve klasörler de kaldırılacak!</numerusform>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; klasör kaldırılsın mı?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Bu klasörlerdeki tüm dosya ve klasörler de kaldırılacak!</numerusform>
+</translation>
+</message>
+<message>
+<source>Removed note subfolder: %1</source>
+<translation>Not alt klasörü kaldırıldı: %1</translation>
+</message>
+<message>
+<source>note folder</source>
+<translation type="unfinished">note folder</translation>
+</message>
+<message>
+<source>Move selected folders</source>
+<translation type="unfinished">Move selected folders</translation>
+</message>
+<message numerus="yes">
+<source>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
+<numerusform>Move &lt;strong&gt;%n&lt;/strong&gt; selected folder(s) to &lt;strong&gt;%1&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message>
+<source>Migrate relative links</source>
+<translation type="unfinished">Migrate relative links</translation>
+</message>
+<message>
+<source>Do you want to migrate relative note links, media file links and attachment links for moved notes?&lt;br /&gt;&lt;br /&gt;If you choose &lt;strong&gt;No&lt;/strong&gt;, those relative links may break after moving the folders.</source>
+<translation type="unfinished">Do you want to migrate relative note links, media file links and attachment links for moved notes?&lt;br /&gt;&lt;br /&gt;If you choose &lt;strong&gt;No&lt;/strong&gt;, those relative links may break after moving the folders.</translation>
+</message>
+<message numerus="yes">
+<source>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation type="unfinished">
+<numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Moved &lt;strong&gt;%n&lt;/strong&gt; note subfolder(s) to &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>NoteTabManager</name>
+<message>
+<source>Toggle note pinning</source>
+<translation type="unfinished">Toggle note pinning</translation>
+</message>
+<message>
+<source>Close other note tabs</source>
+<translation type="unfinished">Close other note tabs</translation>
+</message>
+<message>
+<source>Close note tab</source>
+<translation type="unfinished">Close note tab</translation>
+</message>
+</context>
+<context>
+<name>NoteTreeManager</name>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Rename note</source>
+<translation type="unfinished">Rename note</translation>
+</message>
+<message>
+<source>Allows you to rename the filename of the note</source>
+<translation type="unfinished">Allows you to rename the filename of the note</translation>
+</message>
+<message>
+<source>&amp;Remove notes and folders</source>
+<translation type="unfinished">&amp;Remove notes and folders</translation>
+</message>
+<message>
+<source>&amp;Remove folders</source>
+<translation type="unfinished">&amp;Remove folders</translation>
+</message>
+<message>
+<source>&amp;Remove notes</source>
+<translation type="unfinished">&amp;Remove notes</translation>
+</message>
+<message>
+<source>&amp;Move notes to…</source>
+<translation type="unfinished">&amp;Move notes to…</translation>
+</message>
+<message>
+<source>&amp;Copy notes to…</source>
+<translation type="unfinished">&amp;Copy notes to…</translation>
+</message>
+<message>
+<source>Jump to the note's subfolder</source>
+<translation type="unfinished">Jump to the note's subfolder</translation>
+</message>
+<message>
+<source>Move notes to subfolder…</source>
+<translation type="unfinished">Move notes to subfolder…</translation>
+</message>
+<message>
+<source>Copy notes to subfolder…</source>
+<translation type="unfinished">Copy notes to subfolder…</translation>
+</message>
+<message>
+<source>&amp;Tag selected notes with…</source>
+<translation type="unfinished">&amp;Tag selected notes with…</translation>
+</message>
+<message>
+<source>&amp;Remove tag from selected notes…</source>
+<translation type="unfinished">&amp;Remove tag from selected notes…</translation>
+</message>
+<message>
+<source>Open selected notes in tabs</source>
+<translation type="unfinished">Open selected notes in tabs</translation>
+</message>
+<message>
+<source>Open note in external editor</source>
+<translation type="unfinished">Open note in external editor</translation>
+</message>
+<message>
+<source>Open note in different window</source>
+<translation type="unfinished">Open note in different window</translation>
+</message>
+<message>
+<source>Open note in Nextcloud Files</source>
+<translation type="unfinished">Open note in Nextcloud Files</translation>
+</message>
+<message>
+<source>Open note in Nextcloud Notes</source>
+<translation type="unfinished">Open note in Nextcloud Notes</translation>
+</message>
+<message>
+<source>Show note in file manager</source>
+<translation type="unfinished">Show note in file manager</translation>
+</message>
+<message>
+<source>Copy absolute path of note</source>
+<translation type="unfinished">Copy absolute path of note</translation>
+</message>
+<message>
+<source>Copy note filename</source>
+<translation type="unfinished">Copy note filename</translation>
+</message>
+<message>
+<source>Show note git versions</source>
+<translation type="unfinished">Show note git versions</translation>
+</message>
+<message>
+<source>Unmark as favorite</source>
+<translation type="unfinished">Unmark as favorite</translation>
+</message>
+<message>
+<source>Mark as favorite</source>
+<translation type="unfinished">Mark as favorite</translation>
+</message>
+<message>
+<source>Select &amp;all notes</source>
+<translation type="unfinished">Select &amp;all notes</translation>
+</message>
+<message>
+<source>Name:</source>
+<translation type="unfinished">Name:</translation>
+</message>
+<message>
+<source>Note renaming not enabled!</source>
+<translation type="unfinished">Note renaming not enabled!</translation>
+</message>
+<message>
+<source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
+<translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+</message>
+<message>
+<source>Open &amp;settings</source>
+<translation type="unfinished">Open &amp;settings</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation type="unfinished">&amp;Cancel</translation>
+</message>
+</context>
+<context>
+<name>OpenAiCompleter</name>
+<message>
+<source>Timeout, while waiting for the AI response</source>
+<translation>YZ yanıtını beklerken zaman aşımı</translation>
+</message>
+</context>
+<context>
+<name>OpenAiService</name>
+<message>
+<source>AI system is disabled. Please enable it in the main menu or the AI toolbar.</source>
+<translation>YZ sistemi devre dışı bırakıldı. Lütfen ana menüden veya YZ araç çubuğundan etkinleştirin.</translation>
+</message>
+</context>
+<context>
+<name>PanelsSettingsWidget</name>
+<message>
+<source>Note search panel</source>
+<translation type="unfinished">Note search panel</translation>
+</message>
+<message>
+<source>Disable auto-completion of previous searches</source>
+<translation type="unfinished">Disable auto-completion of previous searches</translation>
+</message>
+<message>
+<source>Show the number of matches in each note</source>
+<translation type="unfinished">Show the number of matches in each note</translation>
+</message>
+<message>
+<source>Open newly created notes in a new tab</source>
+<translation type="unfinished">Open newly created notes in a new tab</translation>
+</message>
+<message>
+<source>Note folder panel</source>
+<translation type="unfinished">Note folder panel</translation>
+</message>
+<message>
+<source>Show note folders as buttons instead of in a select box</source>
+<translation type="unfinished">Show note folders as buttons instead of in a select box</translation>
+</message>
+<message>
+<source>Note list panel</source>
+<translation type="unfinished">Note list panel</translation>
+</message>
+<message>
+<source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
+<translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+</message>
+<message>
+<source>Show all notes of a tag including the notes of their children-tags</source>
+<translation type="unfinished">Show all notes of a tag including the notes of their children-tags</translation>
+</message>
+<message>
+<source>Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</source>
+<translation type="unfinished">Instead of a note list use a note tree with all the subfolders (if they are turned on for the note folder)</translation>
+</message>
+<message>
+<source>Show notes in the note list with preview</source>
+<translation type="unfinished">Show notes in the note list with preview</translation>
+</message>
+<message>
+<source>Allow empty note files</source>
+<translation type="unfinished">Allow empty note files</translation>
+</message>
+<message>
+<source>Notes larger than this will not be shown in the note list</source>
+<translation type="unfinished">Notes larger than this will not be shown in the note list</translation>
+</message>
+<message>
+<source>Maximum note file size:</source>
+<translation type="unfinished">Maximum note file size:</translation>
+</message>
+<message>
+<source>Regular expressions of note files to ignore, separated by ";"</source>
+<translation type="unfinished">Regular expressions of note files to ignore, separated by ";"</translation>
+</message>
+<message>
+<source>Ignored note files</source>
+<translation type="unfinished">Ignored note files</translation>
+</message>
+<message>
+<source>Sort</source>
+<translation type="unfinished">Sort</translation>
+</message>
+<message>
+<source>Alphabetical</source>
+<translation type="unfinished">Alphabetical</translation>
+</message>
+<message>
+<source>By last change</source>
+<translation type="unfinished">By last change</translation>
+</message>
+<message>
+<source>Order</source>
+<translation type="unfinished">Order</translation>
+</message>
+<message>
+<source>Ascending</source>
+<translation type="unfinished">Ascending</translation>
+</message>
+<message>
+<source>Descending</source>
+<translation type="unfinished">Descending</translation>
+</message>
+<message>
+<source>Note edit panel</source>
+<translation type="unfinished">Note edit panel</translation>
+</message>
+<message>
+<source>If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</source>
+<translation type="unfinished">If this is disabled you are able to create more complex panel layouts, but all panels will be resized if the window is resized</translation>
+</message>
+<message>
+<source>Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</source>
+<translation type="unfinished">Use the note edit panel as fixed central widget to be resized if the window or other panels are resized</translation>
+</message>
+<message>
+<source>Restore open note tabs at application startup and when note folders are switched</source>
+<translation type="unfinished">Restore open note tabs at application startup and when note folders are switched</translation>
+</message>
+<message>
+<source>Hide tab close button</source>
+<translation type="unfinished">Hide tab close button</translation>
+</message>
+<message>
+<source>Note subfolders panel</source>
+<translation type="unfinished">Note subfolders panel</translation>
+</message>
+<message>
+<source>Hide 'Find or create note subfolder' search</source>
+<translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+</message>
+<message>
+<source>Display note subfolders as full tree</source>
+<translation type="unfinished">Display note subfolders as full tree</translation>
+</message>
+<message>
+<source>Show root folder name</source>
+<translation type="unfinished">Show root folder name</translation>
+</message>
+<message>
+<source>Show with full path</source>
+<translation type="unfinished">Show with full path</translation>
+</message>
+<message>
+<source>Clicking a note tab unsets 'All notes' selection</source>
+<translation type="unfinished">Clicking a note tab unsets 'All notes' selection</translation>
+</message>
+<message>
+<source>Regular expressions of note subfolders to ignore, separated by ";"</source>
+<translation type="unfinished">Regular expressions of note subfolders to ignore, separated by ";"</translation>
+</message>
+<message>
+<source>Ignored subfolders</source>
+<translation type="unfinished">Ignored subfolders</translation>
+</message>
+<message>
+<source>Reset ignored subfolders</source>
+<translation type="unfinished">Reset ignored subfolders</translation>
+</message>
+<message>
+<source>Tags panel</source>
+<translation type="unfinished">Tags panel</translation>
+</message>
+<message>
+<source>Hide 'Find or create tag' search</source>
+<translation type="unfinished">Hide 'Find or create tag' search</translation>
+</message>
+<message>
+<source>Hide 'Note count' with tags (increases performance)</source>
+<translation type="unfinished">Hide 'Note count' with tags (increases performance)</translation>
+</message>
+<message>
+<source>By last change / use</source>
+<translation type="unfinished">By last change / use</translation>
+</message>
+<message>
+<source>Navigation panel</source>
+<translation type="unfinished">Navigation panel</translation>
+</message>
+<message>
+<source>Hide navigation item search bar</source>
+<translation type="unfinished">Hide navigation item search bar</translation>
+</message>
+<message>
+<source>Auto-select items in navigation panel when changing cursor position</source>
+<translation type="unfinished">Auto-select items in navigation panel when changing cursor position</translation>
+</message>
+</context>
+<context>
+<name>PasswordDialog</name>
+<message>
+<source>Please enter your password</source>
+<translation>Lütfen şifrenizi girin</translation>
+</message>
+<message>
+<source>Enter your password:</source>
+<translation>Şifrenizi girin:</translation>
+</message>
+<message>
+<source>Password</source>
+<translation>Şifre</translation>
+</message>
+<message>
+<source>Re-enter password</source>
+<translation>Şifrenizi tekrar girin</translation>
+</message>
+<message>
+<source>Passwords don't match!</source>
+<translation>Girdiğiniz şifreler uyuşmuyor!</translation>
+</message>
+</context>
+<context>
+<name>PasswordLineEdit</name>
+<message>
+<source>Show password</source>
+<translation>Şifreyi göster</translation>
+</message>
+<message>
+<source>Hide password</source>
+<translation>Şifreyi gizle</translation>
+</message>
+</context>
+<context>
+<name>PreviewFontSettingsWidget</name>
+<message>
+<source>Rendering</source>
+<translation type="unfinished">Rendering</translation>
+</message>
+<message>
+<source>Time to wait before refreshing the preview after typing:</source>
+<translation type="unfinished">Time to wait before refreshing the preview after typing:</translation>
+</message>
+<message>
+<source>Reset the debounce time</source>
+<translation type="unfinished">Reset the debounce time</translation>
+</message>
+<message>
+<source>0ms means don't wait for the typing to stop</source>
+<translation type="unfinished">0ms means don't wait for the typing to stop</translation>
+</message>
+<message>
+<source>Use editor highlighting styles also for the preview</source>
+<translation type="unfinished">Use editor highlighting styles also for the preview</translation>
+</message>
+<message>
+<source>Enable underline rendering</source>
+<translation type="unfinished">Enable underline rendering</translation>
+</message>
+<message>
+<source>View text right to left (RTL)</source>
+<translation type="unfinished">View text right to left (RTL)</translation>
+</message>
+<message>
+<source>Ignore code font size to allow zooming</source>
+<translation type="unfinished">Ignore code font size to allow zooming</translation>
+</message>
+<message>
+<source>Exporting</source>
+<translation type="unfinished">Exporting</translation>
+</message>
+<message>
+<source>Use internal export styling for the PDF export and printing of the preview</source>
+<translation type="unfinished">Use internal export styling for the PDF export and printing of the preview</translation>
+</message>
+<message>
+<source>Fonts</source>
+<translation type="unfinished">Fonts</translation>
+</message>
+<message>
+<source>Code font:</source>
+<translation type="unfinished">Code font:</translation>
+</message>
+<message>
+<source>Set a new font</source>
+<translation type="unfinished">Set a new font</translation>
+</message>
+<message>
+<source>Reset font</source>
+<translation type="unfinished">Reset font</translation>
+</message>
+<message>
+<source>Default font:</source>
+<translation type="unfinished">Default font:</translation>
+</message>
+</context>
+<context>
+<name>QHotkey</name>
+<message>
+<source>Failed to register %1. Error: %2</source>
+<translation>%1 kaydedilemedi. Hata: %2</translation>
+</message>
+<message>
+<source>Failed to unregister %1. Error: %2</source>
+<translation>%1'in kaydı silinemedi. Hata: %2</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::DeletePasswordJobPrivate</name>
+<message>
+<source>Could not open keystore</source>
+<translation type="unfinished">Could not open keystore</translation>
+</message>
+<message>
+<source>Could not remove private key from keystore</source>
+<translation type="unfinished">Could not remove private key from keystore</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation type="unfinished">Unknown error</translation>
+</message>
+<message>
+<source>Could not open wallet: %1; %2</source>
+<translation type="unfinished">Could not open wallet: %1; %2</translation>
+</message>
+<message>
+<source>Password entry not found</source>
+<translation type="unfinished">Password entry not found</translation>
+</message>
+<message>
+<source>Could not decrypt data</source>
+<translation type="unfinished">Could not decrypt data</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::Job</name>
+<message>
+<source>Both service name and key are empty</source>
+<translation type="unfinished">Both service name and key are empty</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::JobPrivate</name>
+<message>
+<source>Unknown error</source>
+<translation type="unfinished">Unknown error</translation>
+</message>
+<message>
+<source>Access to keychain denied</source>
+<translation type="unfinished">Access to keychain denied</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::PlainTextStore</name>
+<message>
+<source>Could not store data in settings: access error</source>
+<translation type="unfinished">Could not store data in settings: access error</translation>
+</message>
+<message>
+<source>Could not store data in settings: format error</source>
+<translation type="unfinished">Could not store data in settings: format error</translation>
+</message>
+<message>
+<source>Could not delete data from settings: access error</source>
+<translation type="unfinished">Could not delete data from settings: access error</translation>
+</message>
+<message>
+<source>Could not delete data from settings: format error</source>
+<translation type="unfinished">Could not delete data from settings: format error</translation>
+</message>
+<message>
+<source>Entry not found</source>
+<translation type="unfinished">Entry not found</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::ReadPasswordJobPrivate</name>
+<message>
+<source>Entry not found</source>
+<translation type="unfinished">Entry not found</translation>
+</message>
+<message>
+<source>Could not open keystore</source>
+<translation type="unfinished">Could not open keystore</translation>
+</message>
+<message>
+<source>Could not retrieve private key from keystore</source>
+<translation type="unfinished">Could not retrieve private key from keystore</translation>
+</message>
+<message>
+<source>Could not create decryption cipher</source>
+<translation type="unfinished">Could not create decryption cipher</translation>
+</message>
+<message>
+<source>D-Bus is not running</source>
+<translation type="unfinished">D-Bus is not running</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation type="unfinished">Unknown error</translation>
+</message>
+<message>
+<source>No keychain service available</source>
+<translation type="unfinished">No keychain service available</translation>
+</message>
+<message>
+<source>Could not open wallet: %1; %2</source>
+<translation type="unfinished">Could not open wallet: %1; %2</translation>
+</message>
+<message>
+<source>Access to keychain denied</source>
+<translation type="unfinished">Access to keychain denied</translation>
+</message>
+<message>
+<source>Could not determine data type: %1; %2</source>
+<translation type="unfinished">Could not determine data type: %1; %2</translation>
+</message>
+<message>
+<source>Unknown kwallet entry type '%1'</source>
+<translation type="unfinished">Unknown kwallet entry type '%1'</translation>
+</message>
+<message>
+<source>Password entry not found</source>
+<translation type="unfinished">Password entry not found</translation>
+</message>
+<message>
+<source>Could not decrypt data</source>
+<translation type="unfinished">Could not decrypt data</translation>
+</message>
+<message>
+<source>Could not decrypt data: %1</source>
+<translation type="unfinished">Could not decrypt data: %1</translation>
+</message>
+</context>
+<context>
+<name>QKeychain::WritePasswordJobPrivate</name>
+<message>
+<source>Could not open keystore</source>
+<translation type="unfinished">Could not open keystore</translation>
+</message>
+<message>
+<source>Could not create private key generator</source>
+<translation type="unfinished">Could not create private key generator</translation>
+</message>
+<message>
+<source>Could not generate new private key</source>
+<translation type="unfinished">Could not generate new private key</translation>
+</message>
+<message>
+<source>Could not retrieve private key from keystore</source>
+<translation type="unfinished">Could not retrieve private key from keystore</translation>
+</message>
+<message>
+<source>Could not create encryption cipher</source>
+<translation type="unfinished">Could not create encryption cipher</translation>
+</message>
+<message>
+<source>Could not encrypt data</source>
+<translation type="unfinished">Could not encrypt data</translation>
+</message>
+<message>
+<source>D-Bus is not running</source>
+<translation type="unfinished">D-Bus is not running</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation type="unfinished">Unknown error</translation>
+</message>
+<message>
+<source>Could not open wallet: %1; %2</source>
+<translation type="unfinished">Could not open wallet: %1; %2</translation>
+</message>
+<message>
+<source>Encryption failed: %1</source>
+<translation type="unfinished">Encryption failed: %1</translation>
+</message>
+<message>
+<source>Credential size exceeds maximum size of %1: %2</source>
+<translation type="unfinished">Credential size exceeds maximum size of %1: %2</translation>
+</message>
+<message>
+<source>Credential key exceeds maximum size of %1</source>
+<translation type="unfinished">Credential key exceeds maximum size of %1</translation>
+</message>
+<message>
+<source>Writing credentials failed: %1</source>
+<translation type="unfinished">Writing credentials failed: %1</translation>
+</message>
+</context>
+<context>
+<name>QLiteHtmlSearchWidget</name>
+<message>
+<source>Close search</source>
+<translation type="unfinished">Close search</translation>
+</message>
+<message>
+<source>Find:</source>
+<translation type="unfinished">Find:</translation>
+</message>
+<message>
+<source>Find in text</source>
+<translation type="unfinished">Find in text</translation>
+</message>
+<message>
+<source>Search forward</source>
+<translation type="unfinished">Search forward</translation>
+</message>
+<message>
+<source>Search backward</source>
+<translation type="unfinished">Search backward</translation>
+</message>
+<message>
+<source>Plain text</source>
+<translation type="unfinished">Plain text</translation>
+</message>
+<message>
+<source>Whole words</source>
+<translation type="unfinished">Whole words</translation>
+</message>
+<message>
+<source>Regular expression</source>
+<translation type="unfinished">Regular expression</translation>
+</message>
+<message>
+<source>Match case sensitive</source>
+<translation type="unfinished">Match case sensitive</translation>
+</message>
+</context>
+<context>
+<name>QObject</name>
+<message>
+<source>default</source>
+<translation>varsayılan</translation>
+</message>
+<message>
+<source>Note file was modified externally</source>
+<translation type="unfinished">Note file was modified externally</translation>
+</message>
+<message>
+<source>The note file '%1' was modified externally while you had unsaved changes.
+
+The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+
+Click 'OK' to save YOUR version and overwrite the external changes.
+Click 'Cancel' to discard your changes and keep the external version.</source>
+<translation type="unfinished">The note file '%1' was modified externally while you had unsaved changes.
+
+The editor below shows YOUR version. The differences view shows changes between the external file (in red) and your version (in green).
+
+Click 'OK' to save YOUR version and overwrite the external changes.
+Click 'Cancel' to discard your changes and keep the external version.</translation>
+</message>
+<message>
+<source>Could not store note file: %1 - Error message: %2</source>
+<translation>Not dosyası kaydedilmedi: %1 - Hata mesajı: %2</translation>
+</message>
+<message>
+<source>Renamed note-file was removed: %1</source>
+<translation>Yeniden adlandırılan not dosyası kaldırıldı: %1</translation>
+</message>
+<message>
+<source>Could not remove renamed note-file: %1 - Error message: %2</source>
+<translation>Yeniden adlandırılan not dosyası kaldırılamadı: %1 - Hata mesajı: %2</translation>
+</message>
+<message>
+<source>Note</source>
+<translation>Not</translation>
+</message>
+<message>
+<source>Could not read image file: %1</source>
+<translation>Resim dosyası okunamadı: %1</translation>
+</message>
+<message>
+<source>Note file path changed</source>
+<translation>Not dosya yolu değişti</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; and links with filename &lt;strong&gt;%3&lt;/strong&gt; with &lt;strong&gt;%4&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation>
+<numerusform>Not yolunda bir değişiklik algılandı. &lt;strong&gt;%1 &lt;/strong&gt; bağlantılarının tüm tekrarlarını &lt;strong&gt;%2&lt;/strong&gt; ile ve &lt;strong&gt;%3&lt;/strong&gt; dosya adına sahip bağlantıları &lt;strong&gt;%4&lt;/strong&gt; ile değiştirmek ister misiniz?&lt;strong&gt;%n&lt;/strong&gt; not dosyasında?</numerusform>
+<numerusform>Not yolunda bir değişiklik algılandı. &lt;strong&gt;%1 &lt;/strong&gt; bağlantılarının tüm tekrarlarını &lt;strong&gt;%2&lt;/strong&gt; ile ve &lt;strong&gt;%3&lt;/strong&gt; dosya adına sahip bağlantıları &lt;strong&gt;%4&lt;/strong&gt; ile değiştirmek ister misiniz?&lt;strong&gt;%n&lt;/strong&gt; not dosyalarında?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>A change of the note path was detected. Would you like to replace all outgoing links to &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>Subfolder path changed</source>
+<translation type="unfinished">Subfolder path changed</translation>
+</message>
+<message numerus="yes">
+<source>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+<translation type="unfinished">
+<numerusform>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+<numerusform>The subfolder was renamed from &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;. Would you like to update all relative Markdown links that point into this subfolder in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>Image file exists</source>
+<translation>Görsel dosyası mevcut</translation>
+</message>
+<message>
+<source>Image file already exists in the media folder, do you want to use the existing one instead of creating a new file?</source>
+<translation>Görsel dosyası zaten ortam klasöründe mevcut, yeni bir dosya oluşturmak yerine mevcut olanı kullanmak ister misiniz?</translation>
+</message>
+<message numerus="yes">
+<source>…and %n more note(s)</source>
+<translation>
+<numerusform>…ve %n not daha</numerusform>
+<numerusform>…ve %n not daha</numerusform>
+</translation>
+</message>
+<message>
+<source>Unknown action %1</source>
+<translation>Bilinmeyen eylem %1</translation>
+</message>
+<message>
+<source>Layout selector</source>
+<translation type="unfinished">Layout selector</translation>
+</message>
+<message>
+<source>Don't ask again!</source>
+<translation>Tekrar sorma!</translation>
+</message>
+<message>
+<source>Don't show again!</source>
+<translation>Tekrar gösterme!</translation>
+</message>
+<message>
+<source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</source>
+<translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %3&lt;br /&gt;created: %2&lt;br /&gt;file size: %4</translation>
+</message>
+<message>
+<source>&lt;br /&gt;path: %1</source>
+<translation>&lt;br /&gt;yol: %1</translation>
+</message>
+<message>
+<source>Dark mode detected</source>
+<translation>Kalanlık kip algılandı</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in dark mode. Do you also want to turn on dark mode in ArcNotes?</source>
+<translation>Windows sisteminiz karanlık kipte görünüyor. ArcNotes'ta karanlık kipi açmak istiyor musunuz?</translation>
+</message>
+<message>
+<source>Your Windows system seems to be in light mode. Do you also want to turn off dark mode in ArcNotes?</source>
+<translation>Windows sisteminiz aydınlık kipte görünüyor. ArcNotes'ta karanlık kipi kapatmak istiyor musunuz?</translation>
+</message>
+<message>
+<source>Light mode detected</source>
+<translation>Aydınlık kip algılandı</translation>
+</message>
+<message>
+<source>Your system switched to dark mode. Do you also want to turn on dark mode in ArcNotes?
+
+Updating the interface takes a short while.</source>
+<translation type="unfinished">Your system switched to dark mode. Do you also want to turn on dark mode in ArcNotes?
+
+Updating the interface takes a short while.</translation>
+</message>
+<message>
+<source>Your system seems to be in dark mode. Do you also want to turn on dark mode in ArcNotes?</source>
+<translation type="unfinished">Your system seems to be in dark mode. Do you also want to turn on dark mode in ArcNotes?</translation>
+</message>
+<message>
+<source>Your system switched to light mode. Do you also want to turn off dark mode in ArcNotes?
+
+Updating the interface takes a short while.</source>
+<translation type="unfinished">Your system switched to light mode. Do you also want to turn off dark mode in ArcNotes?
+
+Updating the interface takes a short while.</translation>
+</message>
+<message>
+<source>Your system seems to be in light mode. Do you also want to turn off dark mode in ArcNotes?</source>
+<translation type="unfinished">Your system seems to be in light mode. Do you also want to turn off dark mode in ArcNotes?</translation>
+</message>
+<message>
+<source>Double-click to unpin note from tab</source>
+<translation type="unfinished">Double-click to unpin note from tab</translation>
+</message>
+<message>
+<source>Double-click to pin note to tab</source>
+<translation type="unfinished">Double-click to pin note to tab</translation>
+</message>
+<message>
+<source>Your Linux system seems to use the dark mode. Do you also want to turn on dark mode in ArcNotes?</source>
+<translation>Linux sisteminiz karanlık kipi kullanıyor gibi görünüyor. ArcNotes'ta karanlık kipi açmak istiyor musunuz?</translation>
+</message>
+<message>
+<source>Your Linux system seems to use the light mode. Do you also want to turn off dark mode in ArcNotes?</source>
+<translation>Linux sisteminiz aydınlık kipi kullanıyor gibi görünüyor. ArcNotes'ta karanlık kipi kapatmak istiyor musunuz?</translation>
+</message>
+<message>
+<source>Panel disabled</source>
+<translation>Panel devre dışı</translation>
+</message>
+<message>
+<source>Panel &lt;strong&gt;%1&lt;/strong&gt; is currently disabled, do you want to turn it on again for this action to work?</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; paneli şu anda devre dışı, bu işlemin çalışması için paneli tekrar açmak istiyor musunuz?</translation>
+</message>
+<message>
+<source>Command failed!</source>
+<translation>Komut başarısız oldu!</translation>
+</message>
+<message>
+<source>The command &lt;code&gt;%1&lt;/code&gt; with arguments &lt;code&gt;%2&lt;/code&gt; failed!</source>
+<translation>&lt;code&gt;%2&lt;/code&gt; bağımsız değişkenlerine sahip &lt;code&gt;%1&lt;/code&gt; komutu başarısız oldu!</translation>
+</message>
+<message>
+<source>New connection</source>
+<translation>Yeni bağlantı</translation>
+</message>
+<message>
+<source>Login flow succeeded</source>
+<translation>Giriş akışı başarılı oldu</translation>
+</message>
+<message>
+<source>Username and password were set successfully!</source>
+<translation>Kullanıcı adı ve şifre başarıyla belirlendi!</translation>
+</message>
+<message>
+<source>Default</source>
+<translation>Varsayılan</translation>
+</message>
+<message>
+<source>Note folder not found!</source>
+<translation>Not klasörü bulunamadı!</translation>
+</message>
+<message>
+<source>Your note folder &lt;b&gt;%1&lt;/b&gt; was not found any more! Do you want to select a new one?</source>
+<translation>&lt;b&gt;%1&lt;/b&gt; not klasörünüz bulunamadı! Yeni bir tane seçmek ister misiniz?</translation>
+</message>
+<message>
+<source>Please select the folder where your notes will get stored to</source>
+<translation>Lütfen notlarınızın saklanacağı klasörü seçin</translation>
+</message>
+<message>
+<source>Folder will be hidden!</source>
+<translation>Klasör gizlenecek!
+</translation>
+</message>
+<message>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's internally used by the application!</source>
+<translation>&lt;b&gt;%1 &lt;/b&gt; adlı klasör oluşturulamaz, çünkü uygulama tarafından dahili olarak kullanılır!</translation>
+</message>
+<message>
+<source>Folder with name &lt;b&gt;%1&lt;/b&gt; can't be created, because it's on the list of ignored subfolders! You can change that in the &lt;i&gt;Panels settings&lt;/i&gt;.</source>
+<translation>Yok sayılan alt klasörler listesinde olduğu için &lt;b&gt;%1 &lt;/b&gt; adında klasör oluşturulamıyor! Bunu &lt;i&gt; Paneller ayarlarında &lt;/i&gt; değiştirebilirsiniz.
+</translation>
+</message>
+<message>
+<source>File name changed</source>
+<translation>Dosya adı değiştirildi</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) are using this attachment. Would you also like to rename those attachments in the note(s)?</source>
+<translation>
+<numerusform>%n not bu eki kullanıyor. Nottaki bu ekleri de yeniden adlandırmak ister misiniz?</numerusform>
+<numerusform>%n not bu eki kullanıyor. Notlardaki bu ekleri de yeniden adlandırmak ister misiniz?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) are using this image. Would you also like to rename those images in the note(s)?</source>
+<translation>
+<numerusform>%n not bu resmi kullanıyor. Nottaki bu görselleri de yeniden adlandırmak ister misiniz?</numerusform>
+<numerusform>%n not bu resmi kullanıyor. Notlardaki bu görselleri de yeniden adlandırmak ister misiniz?</numerusform>
+</translation>
+</message>
+<message>
+<source>Turned on note subfolders for the current note folder to be able to import folders.</source>
+<translation>Klasörleri içe aktarabilmek için mevcut not klasörüne ilişkin not alt klasörleri açıldı.</translation>
+</message>
+<message>
+<source>Login flow failed</source>
+<translation>Giriş akışı başarısız oldu</translation>
+</message>
+<message>
+<source>Nextcloud login flow v2 could not be initiated. Make sure the server url is correct and you are using a Nextcloud server!&lt;br /&gt;&lt;br /&gt;If your are still having issues please create an app password by hand on your server's admin page.</source>
+<translation>Nextcloud oturum açma akışı v2 başlatılamadı. Sunucu URL'sinin doğru olduğundan ve Nextcloud sunucusu kullandığınızdan emin olun!&lt;br /&gt;&lt;br /&gt;Hala sorun yaşıyorsanız lütfen sunucunuzun yönetici sayfasında elle bir uygulama şifresi oluşturun.</translation>
+</message>
+<message>
+<source>Could not parse login url!</source>
+<translation>Giriş URL'si ayrıştırılamadı!</translation>
+</message>
+<message>
+<source>You are using the single app instance mode, that prevents the application be be started a second time. For the next launch of the application the single app instance mode will be disabled, so that the application can be restarted before quitting this instance.</source>
+<translation>Uygulamanın ikinci kez başlatılmasını engelleyen tek uygulama örneği kipini kullanıyorsunuz. Uygulamanın bir sonraki başlatılmasında tek uygulama örneği kipi devre dışı bırakılacak, böylece uygulama bu örnekten çıkmadan önce yeniden başlatılabilecek.</translation>
+</message>
+<message>
+<source>Note '%1' does not exist. Create it?</source>
+<translation type="unfinished">Note '%1' does not exist. Create it?</translation>
+</message>
+<message>
+<source>Note '%1' does not exist in '%2'. Create it?</source>
+<translation type="unfinished">Note '%1' does not exist in '%2'. Create it?</translation>
+</message>
+<message>
+<source>Note was not found</source>
+<translation>Not bulunamadı</translation>
+</message>
+<message>
+<source>Could not find note.&lt;br /&gt;Unable to automatically create note at location, because subfolders are disabled for the current note folder.</source>
+<translation>Not bulunamadı.&lt;br /&gt;Geçerli not klasörü için alt klasörler devre dışı bırakıldığından, konumda otomatik olarak not oluşturulamıyor.</translation>
+</message>
+<message>
+<source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation>Not bulunamadı, yeni not &lt;strong&gt;%1&lt;/strong&gt; oluşturulsun mu?</translation>
+</message>
+<message>
+<source>Note was not found, create new note &lt;strong&gt;%1&lt;/strong&gt; at path &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation>Not bulunamadı, &lt;strong&gt;%2&lt;/strong&gt; yolunda yeni &lt;strong&gt;%1&lt;/strong&gt; notu oluşturulsun mu?</translation>
+</message>
+<message>
+<source>Failed to create note</source>
+<translation>Not oluşturulamadı</translation>
+</message>
+<message>
+<source>Note creation failed</source>
+<translation>Not oluşturulamadı</translation>
+</message>
+<message>
+<source>Double-click to open note</source>
+<translation type="unfinished">Double-click to open note</translation>
+</message>
+<message>
+<source>Nextcloud Deck support disabled!</source>
+<translation type="unfinished">Nextcloud Deck support disabled!</translation>
+</message>
+<message>
+<source>Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</source>
+<translation type="unfinished">Nextcloud Deck support is not enabled or the settings are invalid.&lt;br /&gt;Please check your &lt;strong&gt;Nextcloud&lt;/strong&gt; configuration in the settings!</translation>
+</message>
+<message>
+<source>media file</source>
+<translation type="unfinished">media file</translation>
+</message>
+<message>
+<source>attachment</source>
+<translation type="unfinished">attachment</translation>
+</message>
+<message>
+<source>Light</source>
+<translation type="unfinished">Light</translation>
+</message>
+<message>
+<source>Dark</source>
+<translation type="unfinished">Dark</translation>
+</message>
+<message>
+<source>Harper command is empty</source>
+<translation type="unfinished">Harper command is empty</translation>
+</message>
+<message>
+<source>Failed to start Harper command: %1</source>
+<translation type="unfinished">Failed to start Harper command: %1</translation>
+</message>
+<message>
+<source>Failed to connect to Harper at %1:%2</source>
+<translation type="unfinished">Failed to connect to Harper at %1:%2</translation>
+</message>
+<message>
+<source>Access to keychain denied</source>
+<translation type="unfinished">Access to keychain denied</translation>
+</message>
+<message>
+<source>No keyring daemon</source>
+<translation type="unfinished">No keyring daemon</translation>
+</message>
+<message>
+<source>Already unlocked</source>
+<translation type="unfinished">Already unlocked</translation>
+</message>
+<message>
+<source>No such keyring</source>
+<translation type="unfinished">No such keyring</translation>
+</message>
+<message>
+<source>Bad arguments</source>
+<translation type="unfinished">Bad arguments</translation>
+</message>
+<message>
+<source>I/O error</source>
+<translation type="unfinished">I/O error</translation>
+</message>
+<message>
+<source>Cancelled</source>
+<translation type="unfinished">Cancelled</translation>
+</message>
+<message>
+<source>Keyring already exists</source>
+<translation type="unfinished">Keyring already exists</translation>
+</message>
+<message>
+<source>No match</source>
+<translation type="unfinished">No match</translation>
+</message>
+<message>
+<source>Unknown error</source>
+<translation type="unfinished">Unknown error</translation>
+</message>
+<message>
+<source>Entry not found</source>
+<translation type="unfinished">Entry not found</translation>
+</message>
+</context>
+<context>
+<name>ArcNotesMarkdownTextEdit</name>
+<message>
+<source>Increased font size to %1 pt</source>
+<translation>Yazı tipi boyutu %1 puntoya yükseltildi</translation>
+</message>
+<message>
+<source>Decreased font size to %1 pt</source>
+<translation>Yazı tipi boyutu %1 puntoya düşürüldü</translation>
+</message>
+<message>
+<source>An url was opened at the current cursor position</source>
+<translation>Geçerli imleç konumunda bir Url açıldı</translation>
+</message>
+<message>
+<source>No equation was found in front of the cursor</source>
+<translation type="unfinished">No equation was found in front of the cursor</translation>
+</message>
+<message>
+<source>Result for equation: %1 = %2</source>
+<translation type="unfinished">Result for equation: %1 = %2</translation>
+</message>
+<message>
+<source>&amp;Link selected text</source>
+<translation>&amp;Seçilen metni bağla</translation>
+</message>
+<message>
+<source>Insert &amp;link</source>
+<translation>&amp;Bağlantı ekle</translation>
+</message>
+<message>
+<source>Block &amp;quote selected text</source>
+<comment>Action to apply a block quote formatting to the selected text</comment>
+<translation type="unfinished">Block &amp;quote selected text</translation>
+</message>
+<message>
+<source>Insert block &amp;quote</source>
+<translation type="unfinished">Insert block &amp;quote</translation>
+</message>
+<message>
+<source>List operations</source>
+<translation type="unfinished">List operations</translation>
+</message>
+<message>
+<source>Markdown operations</source>
+<translation type="unfinished">Markdown operations</translation>
+</message>
+<message>
+<source>Copy code block</source>
+<translation>Kod bloğunu kopyala</translation>
+</message>
+<message>
+<source>Markdown LSP</source>
+<translation type="unfinished">Markdown LSP</translation>
+</message>
+<message>
+<source>Format document</source>
+<translation type="unfinished">Format document</translation>
+</message>
+<message>
+<source>Format selection</source>
+<translation type="unfinished">Format selection</translation>
+</message>
+<message>
+<source>Add table column left</source>
+<translation type="unfinished">Add table column left</translation>
+</message>
+<message>
+<source>Add table column right</source>
+<translation type="unfinished">Add table column right</translation>
+</message>
+<message>
+<source>Add table row above</source>
+<translation type="unfinished">Add table row above</translation>
+</message>
+<message>
+<source>Add table row below</source>
+<translation type="unfinished">Add table row below</translation>
+</message>
+<message>
+<source>Edit table</source>
+<translation type="unfinished">Edit table</translation>
+</message>
+<message>
+<source>Print</source>
+<translation>Yazdır</translation>
+</message>
+<message>
+<source>Print selected text</source>
+<translation>Seçilen metni yazdır</translation>
+</message>
+<message>
+<source>Print selected text (preview)</source>
+<translation>Seçilen metni yazdır (ön izleme)</translation>
+</message>
+<message>
+<source>Export</source>
+<translation>Dışa aktar</translation>
+</message>
+<message>
+<source>Export selected text as PDF</source>
+<translation>Seçilen metni PDF olarak dışa aktar</translation>
+</message>
+<message>
+<source>Export selected text as PDF (preview)</source>
+<translation>Seçilen metni PDF olarak dışa aktar (ön izleme)</translation>
+</message>
+<message>
+<source>Select</source>
+<translation type="unfinished">Select</translation>
+</message>
+<message>
+<source>Custom actions</source>
+<translation>Özel eylemler</translation>
+</message>
+<message>
+<source>No suggestions for %1</source>
+<translation>%1 için öneri yok</translation>
+</message>
+<message>
+<source>Ignore</source>
+<translation>Aldırmamak</translation>
+</message>
+<message>
+<source>Add to Dictionary</source>
+<translation>Sözlüğe Ekle</translation>
+</message>
+<message>
+<source>Spelling</source>
+<translation type="unfinished">Spelling</translation>
+</message>
+<message>
+<source>Ignore this rule globally</source>
+<translation type="unfinished">Ignore this rule globally</translation>
+</message>
+<message>
+<source>Ignore rule %1 globally</source>
+<translation type="unfinished">Ignore rule %1 globally</translation>
+</message>
+<message>
+<source>LanguageTool</source>
+<translation type="unfinished">LanguageTool</translation>
+</message>
+<message>
+<source>No suggestions</source>
+<translation type="unfinished">No suggestions</translation>
+</message>
+<message>
+<source>More info...</source>
+<translation type="unfinished">More info...</translation>
+</message>
+<message>
+<source>Ignore this rule</source>
+<translation type="unfinished">Ignore this rule</translation>
+</message>
+<message>
+<source>Ignore word "%1"</source>
+<translation type="unfinished">Ignore word "%1"</translation>
+</message>
+<message>
+<source>Harper</source>
+<translation type="unfinished">Harper</translation>
+</message>
+<message>
+<source>Markdown LSP server connected</source>
+<translation type="unfinished">Markdown LSP server connected</translation>
+</message>
+<message>
+<source>Filter completions</source>
+<translation type="unfinished">Filter completions</translation>
+</message>
+</context>
+<context>
+<name>QPlainTextEditSearchWidget</name>
+<message>
+<source>Find:</source>
+<translation>Bul:</translation>
+</message>
+<message>
+<source>Advanced search / replace text</source>
+<translation>Gelişmiş arama / metin değiştirme</translation>
+</message>
+<message>
+<source>Close search</source>
+<translation>Aramayı kapat</translation>
+</message>
+<message>
+<source>Find in text</source>
+<translation>Metinde bul</translation>
+</message>
+<message>
+<source>Search forward</source>
+<translation>İleri arama</translation>
+</message>
+<message>
+<source>Search backward</source>
+<translation>Geriye doğru ara</translation>
+</message>
+<message>
+<source>Replace with</source>
+<translation>İle değiştirin</translation>
+</message>
+<message>
+<source>Replace:</source>
+<translation>Değiştir:</translation>
+</message>
+<message>
+<source>Plain text</source>
+<translation>Düz metin</translation>
+</message>
+<message>
+<source>Whole words</source>
+<translation>Tüm sözcükler</translation>
+</message>
+<message>
+<source>Regular expression</source>
+<translation>Düzenli anlatım</translation>
+</message>
+<message>
+<source>Replace one text occurrence</source>
+<translation>Bir metin oluşumunu değiştir</translation>
+</message>
+<message>
+<source>Replace</source>
+<translation>Değiştir</translation>
+</message>
+<message>
+<source>Replace all text occurrences</source>
+<translation>Tüm metin oluşumlarını değiştir</translation>
+</message>
+<message>
+<source>Replace all</source>
+<translation>Hepsini değiştir</translation>
+</message>
+<message>
+<source>Mode:</source>
+<translation>Kip:</translation>
+</message>
+<message>
+<source>Match case sensitive</source>
+<translation>Büyük/küçük harfe hassas</translation>
+</message>
+</context>
+<context>
+<name>QTextEditSearchWidget</name>
+<message>
+<source>Find:</source>
+<translation>Ara:</translation>
+</message>
+<message>
+<source>Replace text</source>
+<translation type="unfinished">Replace text</translation>
+</message>
+<message>
+<source>Close search</source>
+<translation type="unfinished">Close search</translation>
+</message>
+<message>
+<source>Find in text</source>
+<translation type="unfinished">Find in text</translation>
+</message>
+<message>
+<source>Search forward</source>
+<translation type="unfinished">Search forward</translation>
+</message>
+<message>
+<source>Search backward</source>
+<translation type="unfinished">Search backward</translation>
+</message>
+<message>
+<source>Replace with</source>
+<translation type="unfinished">Replace with</translation>
+</message>
+<message>
+<source>Replace:</source>
+<translation>Değiştir:</translation>
+</message>
+<message>
+<source>Plain text</source>
+<translation>Düz metin</translation>
+</message>
+<message>
+<source>Whole words</source>
+<translation>Tüm sözcükler</translation>
+</message>
+<message>
+<source>Regular expression</source>
+<translation>Düzenli anlatım</translation>
+</message>
+<message>
+<source>Replace</source>
+<translation>Değiştir</translation>
+</message>
+<message>
+<source>Replace All</source>
+<translation>Tümünü değiştir</translation>
+</message>
+<message>
+<source>Mode:</source>
+<translation>Kip:</translation>
+</message>
+<message>
+<source>Match case sensitive</source>
+<translation>Büyük/küçük harfe hassas</translation>
+</message>
+</context>
+<context>
+<name>QWidget</name>
+<message>
+<source>Cannot open memory database</source>
+<translation>Bellek veritabanı açılmıyor</translation>
+</message>
+<message>
+<source>Unable to establish a memory database connection.</source>
+<translation>Bellek veritabanı bağlantısı kurulamadı.</translation>
+</message>
+<message>
+<source>Cannot open disk database</source>
+<translation>Disk veritabanı açılamıyor</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</source>
+<translation type="unfinished">Unable to establish a database connection with note folder database to merge '%1'.
+Are the folder and the file writable?</translation>
+</message>
+<message>
+<source>Cannot open note folder database</source>
+<translation>Not klasör veritabanı açılamıyor</translation>
+</message>
+<message>
+<source>Cannot open database</source>
+<translation>Veritabanı açılamıyor</translation>
+</message>
+</context>
+<context>
+<name>ScriptRepositoryDialog</name>
+<message>
+<source>Script repository</source>
+<translation>Script deposu</translation>
+</message>
+<message>
+<source>Currently installed version:</source>
+<translation>Geçerli yüklü sürüm:</translation>
+</message>
+<message>
+<source>Installs the script</source>
+<translation>Scripti yükle</translation>
+</message>
+<message>
+<source>Install</source>
+<translation>Yükle</translation>
+</message>
+<message>
+<source>Version:</source>
+<translation>Sürüm:</translation>
+</message>
+<message>
+<source>Repository:</source>
+<translation>Depo:</translation>
+</message>
+<message>
+<source>To search for a script please enter your query text.</source>
+<translation>Bir betik aramak için, lütfen sorgu ifadenizi giriniz.</translation>
+</message>
+<message>
+<source>Minimum app version:</source>
+<translation>Minimum app sürümü:</translation>
+</message>
+<message>
+<source>Name</source>
+<translation>Ad</translation>
+</message>
+<message>
+<source>Enter your query text</source>
+<translation>Sorgu metninizi girin</translation>
+</message>
+<message>
+<source>Find script</source>
+<translation>Script bul</translation>
+</message>
+<message>
+<source>Script updates</source>
+<translation>Script güncellemeleri</translation>
+</message>
+<message>
+<source>All scripts are up-to-date.</source>
+<translation>Tüm scriptler güncel.</translation>
+</message>
+<message>
+<source>Authors</source>
+<translation>Yazarlar</translation>
+</message>
+<message>
+<source>Author</source>
+<translation>Yazar</translation>
+</message>
+<message>
+<source>Supported platforms</source>
+<translation>Desteklenen platformlar</translation>
+</message>
+<message>
+<source>Supported platform</source>
+<translation>Desteklenen platform</translation>
+</message>
+<message>
+<source>Open repository</source>
+<translation>Açık depo</translation>
+</message>
+<message>
+<source>Update</source>
+<translation>Güncelle</translation>
+</message>
+<message>
+<source>Updates the script</source>
+<translation>Scripti günceller</translation>
+</message>
+<message>
+<source>Reinstall</source>
+<translation>Tekrar yükle</translation>
+</message>
+<message>
+<source>Reinstalls the script</source>
+<translation>Scripti tekrar yükler</translation>
+</message>
+<message>
+<source>Platform not supported!</source>
+<translation>Platform desteklenmiyor!</translation>
+</message>
+<message>
+<source>Your platform is not supported by this script!
+Do you want to install it anyway?</source>
+<translation>Platformunuz bu script tarafından desteklenmiyor!
+Yine de yüklemek istiyor musunuz?</translation>
+</message>
+<message>
+<source>Update app</source>
+<translation>Uygulama güncelle</translation>
+</message>
+<message>
+<source>Please don't forget to update your installation of ArcNotes to make this script work!</source>
+<translation>Bu scriptin çalışması için lütfen ArcNotes yüklemenizi güncellemeyi unutmayın!</translation>
+</message>
+<message>
+<source>Install successful</source>
+<translation>Başarılı yükle</translation>
+</message>
+<message>
+<source>The script was successfully installed!</source>
+<translation>Script başarıyla yüklendi!</translation>
+</message>
+<message>
+<source>Download failed</source>
+<translation>İndirme başarısız oldu</translation>
+</message>
+<message>
+<source>The script could not be downloaded!</source>
+<translation>Komut dosyası karşıdan yüklenemedi!</translation>
+</message>
+</context>
+<context>
+<name>ScriptSettingWidget</name>
+<message>
+<source>The setting name</source>
+<translation>Ayar adı</translation>
+</message>
+<message>
+<source>Please select a directory</source>
+<translation>Lütfen bir dizin seçin</translation>
+</message>
+<message>
+<source>Please select a file</source>
+<translation>Lütfen bir dosya seçin</translation>
+</message>
+</context>
+<context>
+<name>ScriptingService</name>
+<message>
+<source>file doesn't exist</source>
+<translation>dosya yok</translation>
+</message>
+</context>
+<context>
+<name>ScriptingSettingsWidget</name>
+<message>
+<source>Your scripts</source>
+<translation type="unfinished">Your scripts</translation>
+</message>
+<message>
+<source>&amp;Add script…</source>
+<translation type="unfinished">&amp;Add script…</translation>
+</message>
+<message>
+<source>&amp;Remove script</source>
+<translation type="unfinished">&amp;Remove script</translation>
+</message>
+<message>
+<source>Search scripts</source>
+<translation type="unfinished">Search scripts</translation>
+</message>
+<message>
+<source>Description:</source>
+<translation type="unfinished">Description:</translation>
+</message>
+<message>
+<source>Author(s):</source>
+<translation type="unfinished">Author(s):</translation>
+</message>
+<message>
+<source>Repository:</source>
+<translation type="unfinished">Repository:</translation>
+</message>
+<message>
+<source>Version:</source>
+<translation type="unfinished">Version:</translation>
+</message>
+<message>
+<source>Name:</source>
+<translation type="unfinished">Name:</translation>
+</message>
+<message>
+<source>Script name</source>
+<translation type="unfinished">Script name</translation>
+</message>
+<message>
+<source>Script path:</source>
+<translation type="unfinished">Script path:</translation>
+</message>
+<message>
+<source>Validate script</source>
+<translation type="unfinished">Validate script</translation>
+</message>
+<message>
+<source>You need to reload the scripting engine if you modify a script file</source>
+<translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
+</message>
+<message>
+<source>Reload scripting engine</source>
+<translation type="unfinished">Reload scripting engine</translation>
+</message>
+<message>
+<source>Click here to select your QML script</source>
+<translation type="unfinished">Click here to select your QML script</translation>
+</message>
+<message>
+<source>Path to your QML file</source>
+<translation type="unfinished">Path to your QML file</translation>
+</message>
+<message>
+<source>The name</source>
+<translation type="unfinished">The name</translation>
+</message>
+<message>
+<source>New script</source>
+<translation type="unfinished">New script</translation>
+</message>
+<message>
+<source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+<translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+</message>
+<message>
+<source>If you need access to a certain functionality in ArcNotes please open an issue on the &lt;a href="%1"&gt; ArcNotes issue page&lt;/a&gt;.</source>
+<translation type="unfinished">If you need access to a certain functionality in ArcNotes please open an issue on the &lt;a href="%1"&gt; ArcNotes issue page&lt;/a&gt;.</translation>
+</message>
+<message>
+<source>Search script repository</source>
+<translation type="unfinished">Search script repository</translation>
+</message>
+<message>
+<source>Find a script in the script repository</source>
+<translation type="unfinished">Find a script in the script repository</translation>
+</message>
+<message>
+<source>Check for script updates</source>
+<translation type="unfinished">Check for script updates</translation>
+</message>
+<message>
+<source>Add local script</source>
+<translation type="unfinished">Add local script</translation>
+</message>
+<message>
+<source>Add an existing, local script</source>
+<translation type="unfinished">Add an existing, local script</translation>
+</message>
+<message>
+<source>Remove script</source>
+<translation type="unfinished">Remove script</translation>
+</message>
+<message>
+<source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
+<translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+</message>
+<message>
+<source>QML files</source>
+<translation type="unfinished">QML files</translation>
+</message>
+<message>
+<source>Please select your QML file</source>
+<translation type="unfinished">Please select your QML file</translation>
+</message>
+<message>
+<source>Open repository</source>
+<translation type="unfinished">Open repository</translation>
+</message>
+<message>
+<source>Your script seems to be valid</source>
+<translation type="unfinished">Your script seems to be valid</translation>
+</message>
+<message>
+<source>There were script errors:
+%1</source>
+<translation type="unfinished">There were script errors:
+%1</translation>
+</message>
+</context>
+<context>
+<name>SearchFilterManager</name>
+<message numerus="yes">
+<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation type="unfinished">
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</source>
+<translation type="unfinished">
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+<numerusform>Found &lt;strong&gt;%n&lt;/strong&gt; occurrence(s) of any term of &lt;strong&gt;%1&lt;/strong&gt;</numerusform>
+</translation>
+</message>
+<message>
+<source>Stored current note to disk</source>
+<translation type="unfinished">Stored current note to disk</translation>
+</message>
+<message>
+<source>Current note could not be stored to disk</source>
+<translation type="unfinished">Current note could not be stored to disk</translation>
+</message>
+</context>
+<context>
+<name>ServerBookmarksImportDialog</name>
+<message>
+<source>Import bookmarks</source>
+<translation>Yer işaretlerini içe aktar</translation>
+</message>
+<message>
+<source>%v of %m bookmark(s) imported</source>
+<translation>%v /%m yer işaretinin içe aktarılması</translation>
+</message>
+<message numerus="yes">
+<source>&lt;strong&gt;%n bookmarks&lt;/strong&gt; found on server</source>
+<translation>
+<numerusform>Sunucuda &lt;strong&gt;%n yer işareti &lt;/strong&gt; bulundu</numerusform>
+<numerusform>Sunucuda &lt;strong&gt;%n yer işareti &lt;/strong&gt; bulundu</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>SettingsDialog</name>
+<message>
+<source>Settings</source>
+<translation>Ayarlar</translation>
+</message>
+<message>
+<source>Note folders</source>
+<translation>Not dosyaları</translation>
+</message>
+<message>
+<source>Network</source>
+<translation>Ağ</translation>
+</message>
+<message>
+<source>Todo</source>
+<translation>Yapılacak işler</translation>
+</message>
+<message>
+<source>Interface</source>
+<translation>Arayüz</translation>
+</message>
+<message>
+<source>Harper</source>
+<translation type="unfinished">Harper</translation>
+</message>
+<message>
+<source>Markdown LSP</source>
+<translation type="unfinished">Markdown LSP</translation>
+</message>
+<message>
+<source>Shortcuts</source>
+<translation>Kısayollar</translation>
+</message>
+<message>
+<source>Trash</source>
+<translation type="unfinished">Trash</translation>
+</message>
+<message>
+<source>Main window shortcuts</source>
+<translation>Ana ekran kısayolları</translation>
+</message>
+<message>
+<source>General</source>
+<translation>Genel</translation>
+</message>
+<message>
+<source>Scripting</source>
+<translation>Scripting</translation>
+</message>
+<message>
+<source>Find setting</source>
+<translation>Ayar bul</translation>
+</message>
+<message>
+<source>Editor</source>
+<translation>Düzenleyici</translation>
+</message>
+<message>
+<source>Editor fonts &amp; colors</source>
+<translation>Düzenleyici yazı tipleri &amp;renkleri</translation>
+</message>
+<message>
+<source>Panels</source>
+<translation>Paneller</translation>
+</message>
+<message>
+<source>Toolbars</source>
+<translation>Araç çubukları</translation>
+</message>
+<message>
+<source>Portable mode</source>
+<translation>Taşınabilir mod</translation>
+</message>
+<message>
+<source>Git versioning</source>
+<translation>Git sürümü oluşturma</translation>
+</message>
+<message>
+<source>Debug options</source>
+<translation>Hata ayıklama seçenekleri</translation>
+</message>
+<message>
+<source>Layout presets</source>
+<translation type="unfinished">Layout presets</translation>
+</message>
+<message>
+<source>Color modes</source>
+<translation type="unfinished">Color modes</translation>
+</message>
+<message>
+<source>MCP server</source>
+<translation type="unfinished">MCP server</translation>
+</message>
+<message>
+<source>Layout preset selector</source>
+<translation type="unfinished">Layout preset selector</translation>
+</message>
+<message>
+<source>You can create a new layout from a preset here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</source>
+<translation type="unfinished">You can create a new layout from a preset here. Keep in mind that you always can modify the position of the panels with the &lt;i&gt;Unlock panels&lt;/i&gt; button.</translation>
+</message>
+<message>
+<source>Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Layouts&lt;/i&gt; for different panel configurations.</source>
+<translation type="unfinished">Panels can be turned on and off in the &lt;i&gt;Window / Panels&lt;/i&gt; main menu and you can also configure different &lt;i&gt;Layouts&lt;/i&gt; for different panel configurations.</translation>
+</message>
+<message>
+<source>Browser extension / command snippets</source>
+<translation>Tarayıcı uzantısı / komut parçaları</translation>
+</message>
+<message>
+<source>Web application</source>
+<translation>Web uygulaması</translation>
+</message>
+<message>
+<source>AI</source>
+<translation>YZ</translation>
+</message>
+<message>
+<source>Experimental</source>
+<translation>Deneysel</translation>
+</message>
+<message>
+<source>Action name</source>
+<translation>Eylem adı</translation>
+</message>
+<message>
+<source>Local shortcut</source>
+<translation>Yerel kısayol</translation>
+</message>
+<message>
+<source>Global shortcut</source>
+<translation>Genel kısayol</translation>
+</message>
+<message>
+<source>LanguageTool</source>
+<translation type="unfinished">LanguageTool</translation>
+</message>
+<message>
+<source>AI autocomplete</source>
+<translation type="unfinished">AI autocomplete</translation>
+</message>
+<message>
+<source>Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</source>
+<translation type="unfinished">Enable AI-powered text autocomplete suggestions in the note editor. Suggestions can be accepted with Tab or dismissed with Escape.</translation>
+</message>
+<message>
+<source>Enable AI autocomplete in note editor</source>
+<translation type="unfinished">Enable AI autocomplete in note editor</translation>
+</message>
+<message>
+<source>Preview</source>
+<translation>Ön izleme</translation>
+</message>
+<message>
+<source>Apply toolbar configuration</source>
+<translation>Araç çubuğu yapılandırmasını uygula</translation>
+</message>
+<message>
+<source>Reset toolbars</source>
+<translation>Araç çubuğunu sıfırla</translation>
+</message>
+<message>
+<source>Search for shortcut</source>
+<translation>Kısayol için arama</translation>
+</message>
+<message>
+<source>Debug</source>
+<translation>Hata ayıklama</translation>
+</message>
+<message>
+<source>Shortcut already assigned</source>
+<translation>Kısayol zaten atanmış</translation>
+</message>
+<message>
+<source>Undefined shortcut</source>
+<translation>Tanımsız kısayol
+</translation>
+</message>
+<message>
+<source>Assign a new shortcut</source>
+<translation>Yeni bir kısayol atayın
+</translation>
+</message>
+<message>
+<source>Reset to default shortcut</source>
+<translation>Varsayılan kısayola sıfırla
+</translation>
+</message>
+<message>
+<source>Clear shortcut</source>
+<translation>Kısayolu temizle</translation>
+</message>
+<message>
+<source>The shortcut &lt;strong&gt;%1&lt;/strong&gt; is already assigned to &lt;strong&gt;%2&lt;/strong&gt;! Do you want to jump to the shortcut?</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; kısayolu zaten &lt;strong&gt;%2&lt;/strong&gt; 'ye atanmış! Kısayola atlamak ister misiniz?</translation>
+</message>
+<message>
+<source>Reset toolbars and exit</source>
+<translation>Araç çubuğunu sıfırla ve çık</translation>
+</message>
+<message>
+<source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
+<translation>Tüm araç menülerini sıfırlamak istiyor musunuz? İşlem esnasında uygulama kaptılacak, varsayılan araç menüleri uygulama tekrar başladığında geri yüklenecektir.</translation>
+</message>
+<message>
+<source>enabled</source>
+<translation>etkin</translation>
+</message>
+<message>
+<source>disabled</source>
+<translation>devre dışı</translation>
+</message>
+<message>
+<source>Portable mode is currently:</source>
+<translation>Taşınabilir mod şu anda:</translation>
+</message>
+<message>
+<source>In portable mode</source>
+<translation>Taşınabilir modunda</translation>
+</message>
+<message>
+<source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
+<translation>dahili sqlite veritabanı ve ayarları &lt;code&gt; Veri &lt;/code&gt; çiftli konumundaki dosyada depolanır</translation>
+</message>
+<message>
+<source>the settings will be stored in an ini file</source>
+<translation>ayarlar ini dosyasında depolanır</translation>
+</message>
+<message>
+<source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your ArcNotes installation is currently located</source>
+<translation>not dosyaları, komut dosyası yolları ve harıcı düzenleyiciye giden yol göreceli şekilde otomatik olara &lt;code&gt; Veri &lt;/code&gt; dosyasında depolanır, ArcNotes yüklemenizin mevcut konumu nerede olursa olsun konum dosyası ve harici düzenleyici yüklenecektir</translation>
+</message>
+<message>
+<source>It will be activated if you run ArcNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
+<translation>ArcNotes'u &lt;code&gt; taşınabilir &lt;/code&gt; parametreleri ile çalıştırırsanız aktive olacaktır.</translation>
+</message>
+<message>
+<source>You will find a &lt;code&gt;ArcNotesPortable.bat&lt;/code&gt; in your release path to start ArcNotes in portable mode.</source>
+<translation>Mevcut yayın yolunuzda ArcNotes'ı taşınabilir modda çalıştırırsanız &lt;code&gt;ArcNotesPortable.bat&lt;/code&gt; ile karşılaşacaksınız.</translation>
+</message>
+</context>
+<context>
+<name>ShareDialog</name>
+<message>
+<source>Share note</source>
+<translation>Not paylaş</translation>
+</message>
+<message>
+<source>Share note on Nextcloud / ownCloud</source>
+<translation type="unfinished">Share note on Nextcloud / ownCloud</translation>
+</message>
+<message>
+<source>Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</source>
+<translation type="unfinished">Publicly share the current note file on your Nextcloud / ownCloud server. You can send the generated link to others so they can view or download the file.</translation>
+</message>
+<message>
+<source>Allow note editing</source>
+<translation>Not düzenlemeye izin ver</translation>
+</message>
+<message>
+<source>The public url of your note</source>
+<translation>Notunuzun açık URL'si</translation>
+</message>
+<message>
+<source>Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</source>
+<translation type="unfinished">Keep in mind that you still have to sync your notes with your server by using the Nextcloud / ownCloud desktop sync tool to be able to share notes with others!</translation>
+</message>
+</context>
+<context>
+<name>Sonnet::Loader</name>
+<message>
+<source>40</source>
+<comment>dictionary variant</comment>
+<translation>40</translation>
+</message>
+<message>
+<source>60</source>
+<comment>dictionary variant</comment>
+<translation>60</translation>
+</message>
+<message>
+<source>80</source>
+<comment>dictionary variant</comment>
+<translation>80</translation>
+</message>
+<message>
+<source>-ise suffixes</source>
+<comment>dictionary variant</comment>
+<translation>-ise suffixes</translation>
+</message>
+<message>
+<source>-ize suffixes</source>
+<comment>dictionary variant</comment>
+<translation>-ize suffixes</translation>
+</message>
+<message>
+<source>-ise suffixes and with accents</source>
+<comment>dictionary variant</comment>
+<translation>-ise suffixes and with accents</translation>
+</message>
+<message>
+<source>-ise suffixes and without accents</source>
+<comment>dictionary variant</comment>
+<translation>-ise suffixes and without accents</translation>
+</message>
+<message>
+<source>-ize suffixes and with accents</source>
+<comment>dictionary variant</comment>
+<translation>-ize suffixes and with accents</translation>
+</message>
+<message>
+<source>-ize suffixes and without accents</source>
+<comment>dictionary variant</comment>
+<translation>-ize suffixes and without accents</translation>
+</message>
+<message>
+<source>large</source>
+<comment>dictionary variant</comment>
+<translation>büyük</translation>
+</message>
+<message>
+<source>medium</source>
+<comment>dictionary variant</comment>
+<translation>orta</translation>
+</message>
+<message>
+<source>small</source>
+<comment>dictionary variant</comment>
+<translation>küçük</translation>
+</message>
+<message>
+<source>variant 0</source>
+<comment>dictionary variant</comment>
+<translation>değişken 0</translation>
+</message>
+<message>
+<source>variant 1</source>
+<comment>dictionary variant</comment>
+<translation>değişken 1</translation>
+</message>
+<message>
+<source>variant 2</source>
+<comment>dictionary variant</comment>
+<translation>değişken 2</translation>
+</message>
+<message>
+<source>without accents</source>
+<comment>dictionary variant</comment>
+<translation>without accents</translation>
+</message>
+<message>
+<source>with accents</source>
+<comment>dictionary variant</comment>
+<translation>with accents</translation>
+</message>
+<message>
+<source>with ye, modern russian</source>
+<comment>dictionary variant</comment>
+<translation>modern rus</translation>
+</message>
+<message>
+<source>with yeyo, modern and old russian</source>
+<comment>dictionary variant</comment>
+<translation>modern ve eski rus</translation>
+</message>
+<message>
+<source>with yo, old russian</source>
+<comment>dictionary variant</comment>
+<translation>eski rus</translation>
+</message>
+<message>
+<source>extended</source>
+<comment>dictionary variant</comment>
+<translation>genişletilmiş</translation>
+</message>
+<message>
+<source>%1 (%2) [%3]</source>
+<comment>dictionary name; %1 = language name, %2 = country name and %3 = language variant name</comment>
+<translation>%1 (%2) [%3]</translation>
+</message>
+<message>
+<source>%1 (%2)</source>
+<comment>dictionary name; %1 = language name, %2 = country name</comment>
+<translation>%1 (%2)</translation>
+</message>
+<message>
+<source>%1 (%2)</source>
+<comment>dictionary name; %1 = language name, %2 = language variant name</comment>
+<translation>%1 (%2)</translation>
+</message>
+</context>
+<context>
+<name>SpellCheckManager</name>
+<message>
+<source>Automatically detect</source>
+<translation type="unfinished">Automatically detect</translation>
+</message>
+</context>
+<context>
+<name>StoredAttachmentsDialog</name>
+<message>
+<source>Delete selected attachments</source>
+<translation>Seçilen ekleri sil</translation>
+</message>
+<message>
+<source>Delete</source>
+<translation>Sil</translation>
+</message>
+<message>
+<source>Stored attachments</source>
+<translation>Depolanan ekler</translation>
+</message>
+<message>
+<source>Used in notes:</source>
+<translation type="unfinished">Used in notes:</translation>
+</message>
+<message>
+<source>Find attachment</source>
+<translation>Eki bul</translation>
+</message>
+<message>
+<source>Only show attachments that are not used in notes</source>
+<translation>Yalnızca notlarda kullanılmayan ekleri göster</translation>
+</message>
+<message>
+<source>Only show orphaned attachments</source>
+<translation type="unfinished">Only show orphaned attachments</translation>
+</message>
+<message>
+<source>Only show attachments that are used in the current note</source>
+<translation>Yalnızca geçerli notta kullanılan ekleri göster</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation type="unfinished">Only show from current note</translation>
+</message>
+<message>
+<source>Add selected attachments to the current note</source>
+<translation>Seçili ekleri geçerli nota ekle</translation>
+</message>
+<message>
+<source>Add to current note</source>
+<translation>Mevcut nota ekle</translation>
+</message>
+<message>
+<source>Open &amp;attachment</source>
+<translation>&amp;Ek'i aç</translation>
+</message>
+<message>
+<source>Open the attachments folder</source>
+<translation>Ekler klasörünü aç</translation>
+</message>
+<message>
+<source>Open &amp;folder</source>
+<translation>&amp;Klasörü aç</translation>
+</message>
+<message>
+<source>Refresh</source>
+<translation>Yenile</translation>
+</message>
+<message>
+<source>File size:</source>
+<translation>Dosya boyutu:</translation>
+</message>
+<message>
+<source>File type:</source>
+<translation>Dosya türü:</translation>
+</message>
+<message>
+<source>File path:</source>
+<translation>Dosya yolu:</translation>
+</message>
+<message>
+<source>Last modified at %1</source>
+<translation>Son değiştirilme tarihi: %1</translation>
+</message>
+<message>
+<source>Path: %1</source>
+<translation>Yol: %1</translation>
+</message>
+<message>
+<source>Delete selected files</source>
+<translation>Seçilen dosyaları sil</translation>
+</message>
+<message numerus="yes">
+<source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+<translation>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; dosya silinsin mi?</numerusform>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; dosya silinsin mi?</numerusform>
+</translation>
+</message>
+<message>
+<source>&amp;Open attachment</source>
+<translation>&amp;Eki aç</translation>
+</message>
+<message>
+<source>&amp;Rename attachment</source>
+<translation>Eki &amp;yeniden adlandır</translation>
+</message>
+<message>
+<source>&amp;Delete attachments</source>
+<translation>&amp;Ekleri sil</translation>
+</message>
+<message>
+<source>&amp;Add attachments to current note</source>
+<translation>&amp;Geçerli nota ekler ekle</translation>
+</message>
+<message>
+<source>File doesn't exist</source>
+<translation>Dosya mevcut değil</translation>
+</message>
+<message>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası mevcut değil, onu yeniden adlandıramazsınız!</translation>
+</message>
+<message>
+<source>File exists</source>
+<translation>Dosya mevcut</translation>
+</message>
+<message>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası zaten mevcut, yeni dosya adı olarak &lt;strong&gt;%2&lt;/strong&gt;'yi seçmeden önce onu kaldırmanız gerekiyor!</translation>
+</message>
+<message>
+<source>File renaming failed</source>
+<translation>Dosya yeniden adlandırma başarısız oldu</translation>
+</message>
+<message>
+<source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyasının yeniden adlandırılması başarısız oldu!</translation>
+</message>
+<message>
+<source>&amp;Open note</source>
+<translation>&amp;Notu aç</translation>
+</message>
+</context>
+<context>
+<name>StoredImagesDialog</name>
+<message>
+<source>Stored images</source>
+<translation type="unfinished">Stored images</translation>
+</message>
+<message>
+<source>Find image</source>
+<translation>Görsel bul</translation>
+</message>
+<message>
+<source>Add selected images to the current note</source>
+<translation>Seçili görselleri geçerli nota ekle</translation>
+</message>
+<message>
+<source>Open the media folder</source>
+<translation>Ortam klasörünü açın</translation>
+</message>
+<message>
+<source>Open &amp;folder</source>
+<translation>&amp;Klasörü aç</translation>
+</message>
+<message>
+<source>Open image externally</source>
+<translation>Görseli harici olarak aç</translation>
+</message>
+<message>
+<source>Open image</source>
+<translation>Görseli aç</translation>
+</message>
+<message>
+<source>Add to current note</source>
+<translation>Mevcut nota ekle</translation>
+</message>
+<message>
+<source>Delete selected images</source>
+<translation>Seçilen görselleri sil</translation>
+</message>
+<message>
+<source>Delete</source>
+<translation>Sil</translation>
+</message>
+<message>
+<source>Refresh</source>
+<translation>Yenile</translation>
+</message>
+<message>
+<source>Only show images that are used in the current note</source>
+<translation>Yalnızca geçerli notta kullanılan görselleri göster</translation>
+</message>
+<message>
+<source>Only show from current note</source>
+<translation>Yalnızca geçerli nottan göster</translation>
+</message>
+<message>
+<source>Used in notes:</source>
+<translation type="unfinished">Used in notes:</translation>
+</message>
+<message>
+<source>Only show images that are not used in notes</source>
+<translation>Yalnızca notlarda kullanılmayan görselleri göster</translation>
+</message>
+<message>
+<source>Only show orphaned images</source>
+<translation type="unfinished">Only show orphaned images</translation>
+</message>
+<message>
+<source>Last modified at %1</source>
+<translation>Son değiştirilme tarihi: %1</translation>
+</message>
+<message>
+<source>Path: %1</source>
+<translation>Yol: %1</translation>
+</message>
+<message>
+<source>Delete selected files</source>
+<translation>Seçilen dosyaları sil</translation>
+</message>
+<message numerus="yes">
+<source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected file(s)?</source>
+<translation>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; dosya silinsin mi?</numerusform>
+<numerusform>Seçilen &lt;strong&gt;%n&lt;/strong&gt; dosya silinsin mi?</numerusform>
+</translation>
+</message>
+<message>
+<source>File doesn't exist</source>
+<translation>Dosya mevcut değil</translation>
+</message>
+<message>
+<source>The file &lt;strong&gt;%1&lt;/strong&gt; doesn't exist, you cannot rename it!</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası mevcut değil, yeniden adlandıramazsınız!</translation>
+</message>
+<message>
+<source>File exists</source>
+<translation>Dosya mevcut</translation>
+</message>
+<message>
+<source>File &lt;strong&gt;%1&lt;/strong&gt; already exists, you need to remove it before choosing &lt;strong&gt;%2&lt;/strong&gt; as new filename!</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyası zaten mevcut, yeni dosya adı olarak &lt;strong&gt;%2&lt;/strong&gt;'yi seçmeden önce onu kaldırmanız gerekiyor!</translation>
+</message>
+<message>
+<source>File renaming failed</source>
+<translation>Dosya yeniden adlandırma başarısız oldu</translation>
+</message>
+<message>
+<source>Renaming of file &lt;strong&gt;%1&lt;/strong&gt; failed!</source>
+<translation>&lt;strong&gt;%1&lt;/strong&gt; dosyasının yeniden adlandırılması başarısız oldu!</translation>
+</message>
+<message>
+<source>&amp;Open image externally</source>
+<translation type="unfinished">&amp;Open image externally</translation>
+</message>
+<message>
+<source>&amp;Rename image</source>
+<translation>&amp;Görseli yeniden adlandır</translation>
+</message>
+<message>
+<source>&amp;Delete images</source>
+<translation>Görselleri &amp;sil</translation>
+</message>
+<message>
+<source>&amp;Add images to current note</source>
+<translation>Geçerli &amp;nota görsel ekle</translation>
+</message>
+<message>
+<source>&amp;Open note</source>
+<translation>Notu &amp;aç</translation>
+</message>
+</context>
+<context>
+<name>SystemTrayManager</name>
+<message>
+<source>Open ArcNotes</source>
+<translation type="unfinished">Open ArcNotes</translation>
+</message>
+<message>
+<source>Note folders</source>
+<translation type="unfinished">Note folders</translation>
+</message>
+<message>
+<source>New note</source>
+<translation type="unfinished">New note</translation>
+</message>
+<message>
+<source>Recent notes</source>
+<translation type="unfinished">Recent notes</translation>
+</message>
+<message>
+<source>Show todo lists</source>
+<translation type="unfinished">Show todo lists</translation>
+</message>
+<message>
+<source>Recent tasks</source>
+<translation type="unfinished">Recent tasks</translation>
+</message>
+<message>
+<source>Quit</source>
+<translation type="unfinished">Quit</translation>
+</message>
+</context>
+<context>
+<name>TableDialog</name>
+<message>
+<source>Insert table</source>
+<translation>Tablo ekle</translation>
+</message>
+<message>
+<source>Create table</source>
+<translation>Tablo oluştur</translation>
+</message>
+<message>
+<source>Column width:</source>
+<translation>Sütun genişliği:</translation>
+</message>
+<message>
+<source>Insert a table heading separator</source>
+<translation>Bir tablo başlık ayırıcı ekle</translation>
+</message>
+<message>
+<source>Columns:</source>
+<translation>Sütunlar:</translation>
+</message>
+<message>
+<source>Rows:</source>
+<translation>Satırlar:</translation>
+</message>
+<message>
+<source>The amount of spaces in a column</source>
+<translation>Bir sütundaki boşluk miktarı</translation>
+</message>
+<message>
+<source>Select table layout or enter text:</source>
+<translation>Tablo düzenini seçin veya metin girin:</translation>
+</message>
+<message>
+<source>Separator column width:</source>
+<translation>Ayırıcı sütun genişliği:</translation>
+</message>
+<message>
+<source>The amount of dash characters in the separator</source>
+<translation>Ayırıcıdaki tire karakteri miktarı</translation>
+</message>
+<message>
+<source>Separator:</source>
+<translation>Ayırıcı:</translation>
+</message>
+<message>
+<source>Select file</source>
+<translation>Dosya seç</translation>
+</message>
+<message>
+<source>Import CSV file / clipboard</source>
+<translation>CSV dosyasını / panosunu içe aktar</translation>
+</message>
+<message>
+<source>Please select the CSV file you want to import:</source>
+<translation>İçe aktarmak istediğiniz CSV dosyasını seçin:</translation>
+</message>
+<message>
+<source>Import clipboard</source>
+<translation>Panoyu içe aktar</translation>
+</message>
+<message>
+<source>CSV file</source>
+<translation>CSV dosyası</translation>
+</message>
+<message>
+<source>First line is the table heading</source>
+<translation>İlk satır tablo başlığıdır</translation>
+</message>
+<message>
+<source>Text-delimiter:</source>
+<translation>Metin-sınırlayıcı:</translation>
+</message>
+<message>
+<source>CSV files</source>
+<translation>CSV dosyaları</translation>
+</message>
+<message>
+<source>All files</source>
+<translation>Tüm dosyalar</translation>
+</message>
+<message>
+<source>Select CSV file to import</source>
+<translation>İçe aktarmak için CSV dosyası seç</translation>
+</message>
+</context>
+<context>
+<name>TagAddDialog</name>
+<message>
+<source>Add a new tag</source>
+<translation>Yeni bir etiket ekle</translation>
+</message>
+<message>
+<source>Add new tag</source>
+<translation>Yeni etiket ekle</translation>
+</message>
+<message>
+<source>New tag</source>
+<translation>Yeni etiket</translation>
+</message>
+</context>
+<context>
+<name>TagManager</name>
+<message>
+<source>Show all notes (%1)</source>
+<translation type="unfinished">Show all notes (%1)</translation>
+</message>
+<message>
+<source>All notes</source>
+<translation type="unfinished">All notes</translation>
+</message>
+<message>
+<source>show all untagged notes (%1)</source>
+<translation type="unfinished">show all untagged notes (%1)</translation>
+</message>
+<message>
+<source>Untagged notes</source>
+<translation type="unfinished">Untagged notes</translation>
+</message>
+<message>
+<source>Show all notes tagged with '%1' (%2)</source>
+<translation type="unfinished">Show all notes tagged with '%1' (%2)</translation>
+</message>
+<message>
+<source>Add a tag to the current note</source>
+<translation type="unfinished">Add a tag to the current note</translation>
+</message>
+<message>
+<source>Add a tag to the selected notes</source>
+<translation type="unfinished">Add a tag to the selected notes</translation>
+</message>
+<message>
+<source>%1 and %2</source>
+<translation type="unfinished">%1 and %2</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n note(s) selected</numerusform>
+<numerusform>%n note(s) selected</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n folder(s) selected</source>
+<translation type="unfinished">
+<numerusform>%n folder(s) selected</numerusform>
+<numerusform>%n folder(s) selected</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n notes selected</source>
+<translation type="unfinished">
+<numerusform>%n notes selected</numerusform>
+<numerusform>%n notes selected</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove tag '%1' from the current note</source>
+<translation type="unfinished">Remove tag '%1' from the current note</translation>
+</message>
+<message>
+<source>Remove tag '%1' from the selected notes</source>
+<translation type="unfinished">Remove tag '%1' from the selected notes</translation>
+</message>
+<message>
+<source>&amp;Add tag</source>
+<translation type="unfinished">&amp;Add tag</translation>
+</message>
+<message>
+<source>Rename tag</source>
+<translation type="unfinished">Rename tag</translation>
+</message>
+<message>
+<source>Assign color</source>
+<translation type="unfinished">Assign color</translation>
+</message>
+<message>
+<source>Disable color</source>
+<translation type="unfinished">Disable color</translation>
+</message>
+<message>
+<source>&amp;Remove tags</source>
+<translation type="unfinished">&amp;Remove tags</translation>
+</message>
+<message>
+<source>&amp;Move tags to…</source>
+<translation type="unfinished">&amp;Move tags to…</translation>
+</message>
+<message>
+<source>Tag could not be created!</source>
+<translation type="unfinished">Tag could not be created!</translation>
+</message>
+<message>
+<source>Move to the root</source>
+<comment>to move a tag to the current tag in the tag context menu</comment>
+<translation type="unfinished">Move to the root</translation>
+</message>
+<message>
+<source>Move to this tag</source>
+<translation type="unfinished">Move to this tag</translation>
+</message>
+<message>
+<source>Tag this</source>
+<translation type="unfinished">Tag this</translation>
+</message>
+<message>
+<source>Cannot move tag '%1' to this tag</source>
+<translation type="unfinished">Cannot move tag '%1' to this tag</translation>
+</message>
+<message>
+<source>Moved tag '%1' to new tag</source>
+<translation type="unfinished">Moved tag '%1' to new tag</translation>
+</message>
+<message>
+<source>Tag selected notes</source>
+<translation type="unfinished">Tag selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
+<translation type="unfinished">
+<numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+<numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>%n note(s) were tagged with "%2"</source>
+<translation type="unfinished">
+<numerusform>%n note(s) were tagged with "%2"</numerusform>
+<numerusform>%n note(s) were tagged with "%2"</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove tag from selected notes</source>
+<translation type="unfinished">Remove tag from selected notes</translation>
+</message>
+<message numerus="yes">
+<source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
+<translation type="unfinished">
+<numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+<numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+</translation>
+</message>
+<message>
+<source>Done</source>
+<translation type="unfinished">Done</translation>
+</message>
+<message numerus="yes">
+<source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
+<translation type="unfinished">
+<numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+<numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+</translation>
+</message>
+<message>
+<source>Remove selected tags</source>
+<translation type="unfinished">Remove selected tags</translation>
+</message>
+<message numerus="yes">
+<source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
+<translation type="unfinished">
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+<numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+</translation>
+</message>
+</context>
+<context>
+<name>TextDiffDialog</name>
+<message>
+<source>Text difference</source>
+<translation type="unfinished">Text difference</translation>
+</message>
+<message>
+<source>Differences:</source>
+<translation type="unfinished">Differences:</translation>
+</message>
+<message>
+<source>Don't show dialog again</source>
+<translation type="unfinished">Don't show dialog again</translation>
+</message>
+<message>
+<source>Accept change?</source>
+<translation>Değişikliği onaylıyor musun?</translation>
+</message>
+</context>
+<context>
+<name>TodoDialog</name>
+<message>
+<source>Todo</source>
+<translation>Yapılacak</translation>
+</message>
+<message>
+<source>Priority</source>
+<translation>Öncelik</translation>
+</message>
+<message>
+<source>Reminder</source>
+<translation>Hatırlatıcı</translation>
+</message>
+<message>
+<source>Summary</source>
+<translation>Özet</translation>
+</message>
+<message>
+<source>Save</source>
+<translation>Kaydet</translation>
+</message>
+<message>
+<source>Note…</source>
+<translation>Not…</translation>
+</message>
+<message>
+<source>This doesn't work for sub-items, because they may be hidden by the parent item!</source>
+<translation>Bu alt öğeler için işe yaramaz çünkü alt öğeler ana öğe tarafından gizlenmiş olabilir!</translation>
+</message>
+<message>
+<source>Show only items due today</source>
+<translation type="unfinished">Show only items due today</translation>
+</message>
+<message>
+<source>Save and insert into note</source>
+<translation>Kaydet ve notun içine ekle</translation>
+</message>
+<message>
+<source>Remove</source>
+<translation>Kaldır</translation>
+</message>
+<message>
+<source>Show completed items</source>
+<translation>Tamamlanan öğeleri göster</translation>
+</message>
+<message>
+<source>Reload the todo list from server</source>
+<translation>Sunucudan yapılacak listesini yeniden yükle</translation>
+</message>
+<message>
+<source>Reload…</source>
+<translation>Tekrar yükle…</translation>
+</message>
+<message>
+<source>Search or create todo item</source>
+<translation>Yapılacak öğesi ara veya oluştur</translation>
+</message>
+<message>
+<source>Tags</source>
+<translation>Etiketler</translation>
+</message>
+<message>
+<source>Add new tag</source>
+<translation>Yeni etiket ekle</translation>
+</message>
+<message>
+<source>Due date</source>
+<translation type="unfinished">Due date</translation>
+</message>
+<message>
+<source>select your todo list</source>
+<translation>yapılacaklar listenizi seçin</translation>
+</message>
+<message>
+<source>Save the current todo item</source>
+<translation>Geçerli yapılacaklar öğesini kaydet</translation>
+</message>
+<message>
+<source>Save the current todo item and insert a link to it into the current note</source>
+<translation>Geçerli yapılacaklar öğesini kaydet ve geçerli not içesine bir link ekle</translation>
+</message>
+<message>
+<source>Import the current todo item as new note</source>
+<translation>Geçerli yapılacaklar öğesini yeni not olarak içe aktar</translation>
+</message>
+<message>
+<source>Import as note</source>
+<translation>Not olarak içe aktar</translation>
+</message>
+<message>
+<source>Remove the current todo item</source>
+<translation>Geçerli yapılacak öğesini kaldır</translation>
+</message>
+<message>
+<source>Todo list items are being loaded from the server</source>
+<translation>Yapılacak listesi öğeleri sunucudan yükleniyor</translation>
+</message>
+<message>
+<source>Reload from server</source>
+<translation>Sunucudan yeniden yükle</translation>
+</message>
+<message>
+<source>Reload tasks from server</source>
+<translation>Görevleri sunucudan yeniden yükle</translation>
+</message>
+<message>
+<source>Clear cache and reload</source>
+<translation>Önbelleği temizle ve yeniden yükle</translation>
+</message>
+<message>
+<source>Clear calendar cache and reload tasks from server</source>
+<translation>Takvim önbelleğini temizle ve görevleri sunucudan yeniden yükle</translation>
+</message>
+<message>
+<source>Remove todo item</source>
+<translation>Yapılacak öğesini kaldır</translation>
+</message>
+<message>
+<source>Remove the selected todo item?
+This cannot be undone!</source>
+<translation>Seçilen yapılacak öğesi kaldırılsın mı?
+Bu geri alınamaz!</translation>
+</message>
+<message>
+<source>Create sub-task</source>
+<translation>Alt görev oluştur</translation>
+</message>
+<message>
+<source>Create new sub-task</source>
+<translation>Yeni alt görev oluştur</translation>
+</message>
+<message>
+<source>Name:</source>
+<translation>Adı:</translation>
+</message>
+<message>
+<source>New sub-task</source>
+<translation>Yeni alt görev</translation>
+</message>
+</context>
+<context>
+<name>TodoSettingsWidget</name>
+<message>
+<source>Todo settings</source>
+<translation type="unfinished">Todo settings</translation>
+</message>
+<message>
+<source>Enable todo calendar support</source>
+<translation type="unfinished">Enable todo calendar support</translation>
+</message>
+<message>
+<source>Which calendar backend do you want to use?</source>
+<translation type="unfinished">Which calendar backend do you want to use?</translation>
+</message>
+<message>
+<source>Other CalDAV server</source>
+<translation type="unfinished">Other CalDAV server</translation>
+</message>
+<message>
+<source>For older versions of ownCloud where the default setting doesn't work</source>
+<translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
+</message>
+<message>
+<source>Legacy ownCloud calendar</source>
+<translation type="unfinished">Legacy ownCloud calendar</translation>
+</message>
+<message>
+<source>You can access your Nextcloud / ownCloud server or a generic CalDAV server to manage your todo lists.</source>
+<translation type="unfinished">You can access your Nextcloud / ownCloud server or a generic CalDAV server to manage your todo lists.</translation>
+</message>
+<message>
+<source>For most current Nextcloud / ownCloud installations</source>
+<translation type="unfinished">For most current Nextcloud / ownCloud installations</translation>
+</message>
+<message>
+<source>Default Nextcloud / ownCloud calendar</source>
+<translation type="unfinished">Default Nextcloud / ownCloud calendar</translation>
+</message>
+<message>
+<source>CalDAV server settings</source>
+<translation type="unfinished">CalDAV server settings</translation>
+</message>
+<message>
+<source>Calendar base url:</source>
+<translation type="unfinished">Calendar base url:</translation>
+</message>
+<message>
+<source>Please enter the CalDAV base url to your calendar.</source>
+<translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
+</message>
+<message>
+<source>Your CalDAV calendar base url</source>
+<translation type="unfinished">Your CalDAV calendar base url</translation>
+</message>
+<message>
+<source>Username:</source>
+<translation type="unfinished">Username:</translation>
+</message>
+<message>
+<source>Please enter the username of your CalDAV server.</source>
+<translation type="unfinished">Please enter the username of your CalDAV server.</translation>
+</message>
+<message>
+<source>Your CalDAV username</source>
+<translation type="unfinished">Your CalDAV username</translation>
+</message>
+<message>
+<source>Password:</source>
+<translation type="unfinished">Password:</translation>
+</message>
+<message>
+<source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
+<translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
+</message>
+<message>
+<source>Your CalDAV password</source>
+<translation type="unfinished">Your CalDAV password</translation>
+</message>
+<message>
+<source>Which cloud connection do you want to use?</source>
+<translation type="unfinished">Which cloud connection do you want to use?</translation>
+</message>
+<message>
+<source>Select the calendars you want to use for the Todo list</source>
+<translation type="unfinished">Select the calendars you want to use for the Todo list</translation>
+</message>
+<message>
+<source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
+<translation type="unfinished">This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</translation>
+</message>
+<message>
+<source>Empty calendar item cache</source>
+<translation type="unfinished">Empty calendar item cache</translation>
+</message>
+<message>
+<source>Click here to reload the list of calendars from your calendar server.</source>
+<translation type="unfinished">Click here to reload the list of calendars from your calendar server.</translation>
+</message>
+<message>
+<source>&amp;Reload calendar list</source>
+<translation type="unfinished">&amp;Reload calendar list</translation>
+</message>
+<message>
+<source>Ignore calendars that don't support todo items</source>
+<translation type="unfinished">Ignore calendars that don't support todo items</translation>
+</message>
+<message>
+<source>Todo list settings</source>
+<translation type="unfinished">Todo list settings</translation>
+</message>
+<message>
+<source>Saving an item also closes the Todo list</source>
+<translation type="unfinished">Saving an item also closes the Todo list</translation>
+</message>
+<message>
+<source>Calendar cache emptied</source>
+<translation type="unfinished">Calendar cache emptied</translation>
+</message>
+<message>
+<source>Your calendar cache was emptied.</source>
+<translation type="unfinished">Your calendar cache was emptied.</translation>
+</message>
+</context>
+<context>
+<name>Toolbar_Editor</name>
+<message>
+<source>Select a menu</source>
+<translation>Bir menü seç</translation>
+</message>
+<message>
+<source>Lists the available menus to get the corresponding actions</source>
+<translation>İlgili eylemleri almak için kullanılabilir menüleri listeler</translation>
+</message>
+<message>
+<source>Select toolbar</source>
+<translation>Araç çubuğu seç</translation>
+</message>
+<message>
+<source>List the available toolbars. The selected one will be edited</source>
+<translation>Kullanılabilir araç çubuklarını listele. Seçilmiş olan düzenlenmiş olacak</translation>
+</message>
+<message>
+<source>Lists the actions in the selected toolbar</source>
+<translation>Seçilen araç çubuğunda görevleri listeler</translation>
+</message>
+<message>
+<source>Add new Toolbar</source>
+<translation>Yeni araç çubuğu ekle</translation>
+</message>
+<message>
+<source>New</source>
+<translation>Yeni</translation>
+</message>
+<message>
+<source>Delete selected toolbar</source>
+<translation>Seçilen araç çubuğunu sil</translation>
+</message>
+<message>
+<source>Remove</source>
+<translation>Kaldır</translation>
+</message>
+<message>
+<source>Lists the available actions for the selected menu</source>
+<translation>Seçilen menü için kullanılabilir görevleri listeler</translation>
+</message>
+<message>
+<source>Move Up</source>
+<translation>Yukarı Taşı</translation>
+</message>
+<message>
+<source>Moves the selected toolbar item up</source>
+<translation>Seçilen araç çubuğu ögesini yukarı taşır</translation>
+</message>
+<message>
+<source>Move &amp;Up</source>
+<translation>Yukarı &amp;Taşı</translation>
+</message>
+<message>
+<source>Move Down</source>
+<translation>Aşağı Taşı</translation>
+</message>
+<message>
+<source>moves the selected toolbar item down</source>
+<translation>seçilen araç çubuğu ögesini aşağı taşır</translation>
+</message>
+<message>
+<source>Move &amp;Down</source>
+<translation>Aşağı &amp;Taşı</translation>
+</message>
+<message>
+<source>Insert</source>
+<translation>Ekle</translation>
+</message>
+<message>
+<source>Adds the selected menu action to the toolbar</source>
+<translation>Seçilen menü eylemini araç çubuğuna ekler</translation>
+</message>
+<message>
+<source>&amp;Insert</source>
+<translation>&amp;Ekle</translation>
+</message>
+<message>
+<source>Removes the selected item from the active toolbar</source>
+<translation>Seçilen ögeyi etkin araç çubuğundan kaldırır</translation>
+</message>
+<message>
+<source>&amp;Remove</source>
+<translation>&amp;Kaldır</translation>
+</message>
+<message>
+<source>Separator</source>
+<translation>Ayırıcı</translation>
+</message>
+<message>
+<source>&amp;Separator</source>
+<translation>&amp;Ayırıcı</translation>
+</message>
+<message>
+<source>--(separator)--</source>
+<translation>--(ayırıcı)--</translation>
+</message>
+<message>
+<source>Remove current toolbar</source>
+<translation>Mevcut araç çubuğunu kaldır</translation>
+</message>
+<message>
+<source>Remove the current toolbar?</source>
+<translation>Mevcut araç çubuğu kaldırılsın mı?</translation>
+</message>
+</context>
+<context>
+<name>TrashDialog</name>
+<message>
+<source>Trashed notes</source>
+<translation>Çöpe atılan notlar</translation>
+</message>
+<message>
+<source>Find note name</source>
+<translation>Not adını bul</translation>
+</message>
+<message>
+<source>&amp;Restore selected note on server</source>
+<translation>&amp;Sunucudaki seçilen notları onar</translation>
+</message>
+<message>
+<source>&amp;Download selected note</source>
+<translation>&amp;Seçilen notu indir</translation>
+</message>
+<message>
+<source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to ArcNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</source>
+<translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your Nextcloud / ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to ArcNotes by Nextcloud / ownCloud sync.&lt;/p&gt;</translation>
+</message>
+<message>
+<source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your Nextcloud / ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
+<translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your Nextcloud / ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
+</message>
+<message>
+<source>&amp;Delete</source>
+<translation>&amp;Sil</translation>
+</message>
+<message>
+<source>Delete selected note on server</source>
+<translation>Sunucudaki seçili notu sil
+</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>&amp;İptal</translation>
+</message>
+<message>
+<source>Delete note on server</source>
+<translation>Sunucudaki notu sil
+</translation>
+</message>
+<message>
+<source>Delete selected trashed note on server?</source>
+<translation>Sunucudaki seçili çöp kutusuna gönderilen not silinsin mi?
+</translation>
+</message>
+<message>
+<source>Error while deleting note</source>
+<translation>Not silinirken hata oluştu
+</translation>
+</message>
+<message>
+<source>Deleting trashed note failed with status code: %1</source>
+<translation>Çöpe atılan notun silinmesi durum kodu ile başarısız oldu: %1</translation>
+</message>
+</context>
+<context>
+<name>UpdateDialog</name>
+<message>
+<source>Update available</source>
+<translation>Güncelleme mevcut</translation>
+</message>
+<message>
+<source>A new update of ArcNotes is available!</source>
+<translation>Yeni bir ArcNotes güncellemesi mevcut!</translation>
+</message>
+<message>
+<source>Do you want to download the new version?</source>
+<translation>Yeni sürümü indirmek istiyor musunuz?</translation>
+</message>
+<message>
+<source>ArcNotes will be downloaded in your default browser.</source>
+<translation>ArcNotes varsayılan tarayıcınıza indirilmiş olacak.</translation>
+</message>
+<message>
+<source>Keep in mind that ArcNotes needs to run from a location where you have write access to for the automatic update to work!</source>
+<translation>Otomatik güncellemenin çalışması için yazma erişiminizin olduğu bir konumdan ArcNotes'un çalışması gerektiğini unutmayın!</translation>
+</message>
+<message>
+<source>&lt;a href="%1"&gt;Get involved with ArcNotes&lt;/a&gt;</source>
+<translation>&lt;a href="%1"&gt; ArcNotes'a katılın &lt;/a&gt;</translation>
+</message>
+<message>
+<source>%p% downloaded</source>
+<translation>%p% indirildi</translation>
+</message>
+<message>
+<source>&amp;Update</source>
+<translation>&amp;Güncelle</translation>
+</message>
+<message>
+<source>Just download</source>
+<translation>&amp;İndir</translation>
+</message>
+<message>
+<source>&amp;Download latest</source>
+<translation type="unfinished">&amp;Download latest</translation>
+</message>
+<message>
+<source>&amp;Skip version</source>
+<translation>&amp;Sürümü geç</translation>
+</message>
+<message>
+<source>&amp;Disable dialog</source>
+<translation>&amp;İletişim kutusunu devre dışı bırak</translation>
+</message>
+<message>
+<source>Don't show this dialog automatically</source>
+<translation>Bu iletişim kutusunu otomatik olarak gösterme</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>&amp;İptal</translation>
+</message>
+<message>
+<source>Download error</source>
+<translation>İndirme hatası</translation>
+</message>
+<message>
+<source>Error while downloading:
+%1</source>
+<translation>İndirme sırasında hata:
+%1</translation>
+</message>
+<message>
+<source>network error: %1</source>
+<translation>ağ hatası:%1</translation>
+</message>
+<message>
+<source>File error</source>
+<translation>Dosya hatası</translation>
+</message>
+<message>
+<source>Could not open temporary file:
+%1</source>
+<translation>Geçici dosya açılamadı:
+%1</translation>
+</message>
+<message>
+<source>Could not store downloaded file:
+%1</source>
+<translation>İndirilen dosya depolanamadı:
+%1</translation>
+</message>
+<message>
+<source>Do you want to update and restart ArcNotes?</source>
+<translation>ArcNotes'u güncellemek ve yeniden başlatmak istiyor musunuz?</translation>
+</message>
+<message>
+<source>Error</source>
+<translation>Hata</translation>
+</message>
+<message>
+<source>Could not find updater file:
+%1</source>
+<translation>Güncelleyici dosya bulunamadı:
+%1</translation>
+</message>
+<message>
+<source>Permission error</source>
+<translation>İzin hatası</translation>
+</message>
+<message>
+<source>The temporary file '%1' could not be made executable! You need to replace '%2' yourself.</source>
+<translation>'%1' geçici dosyası yürütülebilir hale getirilemedi! '%2'yi kendiniz değiştirmeniz gerekiyor.</translation>
+</message>
+<message>
+<source>Your old ArcNotes executable '%1' could not be removed! You need to replace it yourself with '%2'.</source>
+<translation>Eski ArcNotes yürütülebilir dosyanız '%1' kaldırılamadı! '%2' ile kendiniz değiştirmeniz gerekiyor.</translation>
+</message>
+<message>
+<source>Restart application</source>
+<translation>Uygulamayı yeniden başlat</translation>
+</message>
+<message>
+<source>You now can restart the application to complete the update process.</source>
+<translation>Güncelleme işlemini tamamlamak için uygulamayı yeniden başlatmalısınız.</translation>
+</message>
+<message>
+<source>Updater script '%1' doesn't exist!</source>
+<translation>Güncelleyici script '%1' yok!</translation>
+</message>
+<message>
+<source>Updater unzip executable '%1' doesn't exist!</source>
+<translation>Güncelleyici unzip yürütülebilir '%1' yok!</translation>
+</message>
+<message>
+<source>Could not copy updater script '%1' to '%2'!</source>
+<translation>Güncelleyici script '%1' '%2'ye kopyalanamadı!</translation>
+</message>
+<message>
+<source>Couldn't find updater script: %1</source>
+<translation>Güncelleyici script bulunamadı: %1</translation>
+</message>
+<message>
+<source>Couldn't find unzip executable: %1</source>
+<translation>Unzip yürütülebilir bulunamadı: %1</translation>
+</message>
+<message>
+<source>Proceed with update</source>
+<translation>Güncelleme ile devam et</translation>
+</message>
+<message>
+<source>Your ArcNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</source>
+<translation type="unfinished">Your ArcNotes executable '%1' is not writable! It must be writable by the current user in order to be updated.</translation>
+</message>
+<message>
+<source>Your old ArcNotes executable '%1' could not be replaced by the new file '%2'! You need to replace it yourself.</source>
+<translation>Eski ArcNotes yürütülebilir dosyanız '%1' yeni dosya '%2' ile değiştirilemedi! Kendiniz değiştirmeniz gerekir.</translation>
+</message>
+<message>
+<source>The app file '%1' could not be made executable! You need to make it executable yourself.</source>
+<translation>'%1' uygulama dosyası yürütülebilir hale getirilemedi! Bunu kendiniz yürütülebilir hale getirmeniz gerekir.</translation>
+</message>
+<message>
+<source>The download is now finished. Do you want to update and restart ArcNotes?</source>
+<translation>İndirme şimdi bitirildi. ArcNotes'u güncellemek ve yeniden başlatmak istiyor musunuz?</translation>
+</message>
+</context>
+<context>
+<name>UpdateService</name>
+<message>
+<source>Update-checker error</source>
+<translation>Güncelleme-denetleyici hatası</translation>
+</message>
+<message>
+<source>Network reply error: %1</source>
+<translation>Ağ cevap hatası: %1</translation>
+</message>
+<message>
+<source>No data was received by the network request!</source>
+<translation>Ağ isteğinden veri alınmadı!</translation>
+</message>
+<message>
+<source>The data from the network request could not be interpreted!</source>
+<translation>Ağ isteğindeki veriler yorumlanamadı!</translation>
+</message>
+<message>
+<source>No updates</source>
+<translation>Güncelleme yok</translation>
+</message>
+<message>
+<source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
+<translation>Yeni güncelleme bulunmuyor.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; en son sürümdür.</translation>
+</message>
+</context>
+<context>
+<name>Utils::Misc</name>
+<message>
+<source>Open folder in file manager</source>
+<translation type="unfinished">Open folder in file manager</translation>
+</message>
+<message>
+<source>Do you want to show this item in your file manager?</source>
+<translation type="unfinished">Do you want to show this item in your file manager?</translation>
+</message>
+</context>
+<context>
+<name>VersionDialog</name>
+<message>
+<source>Note versions on your Nextcloud / ownCloud server</source>
+<translation type="unfinished">Note versions on your Nextcloud / ownCloud server</translation>
+</message>
+<message>
+<source>Diff</source>
+<translation>Diff</translation>
+</message>
+<message>
+<source>Note text</source>
+<translation>Not metni</translation>
+</message>
+<message>
+<source>&amp;Restore selected version</source>
+<translation>&amp;Seçilen sürümü onar</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>&amp;İptal</translation>
+</message>
+</context>
+<context>
+<name>WebAppClientService</name>
+<message>
+<source>ArcNotes is now connected via websocket to %1</source>
+<translation>ArcNotes websocket aracılığıyla %1'e bağlandı</translation>
+</message>
+<message>
+<source>ArcNotes is now disconnected from websocket to %1</source>
+<translation>ArcNotes'un websocket ile %1 bağlantısı kesildi</translation>
+</message>
+<message>
+<source>Web app warning</source>
+<translation>Web uygulaması uyarısı</translation>
+</message>
+<message>
+<source>Image received</source>
+<translation>Görsel alındı</translation>
+</message>
+<message>
+<source>Insert image received from ArcNotes web application?</source>
+<translation>ArcNotes web uygulamasından alınan görsel eklensin mi?</translation>
+</message>
+<message>
+<source>Text received from web app and copied to clipboard</source>
+<translation type="unfinished">Text received from web app and copied to clipboard</translation>
+</message>
+<message>
+<source>HTML received from web app and copied to clipboard</source>
+<translation type="unfinished">HTML received from web app and copied to clipboard</translation>
+</message>
+<message>
+<source>Image received from web app and copied to clipboard</source>
+<translation type="unfinished">Image received from web app and copied to clipboard</translation>
+</message>
+</context>
+<context>
+<name>WebApplicationSettingsWidget</name>
+<message>
+<source>ArcNotes web application support</source>
+<translation type="unfinished">ArcNotes web application support</translation>
+</message>
+<message>
+<source>Enable web application support</source>
+<translation type="unfinished">Enable web application support</translation>
+</message>
+<message>
+<source>You can use the &lt;a href="%1"&gt;ArcNotes Web App&lt;/a&gt; to be able to insert photos into ArcNotes on your desktop from your mobile phone over the internet.</source>
+<translation type="unfinished">You can use the &lt;a href="%1"&gt;ArcNotes Web App&lt;/a&gt; to be able to insert photos into ArcNotes on your desktop from your mobile phone over the internet.</translation>
+</message>
+<message>
+<source>ArcNotes web application</source>
+<translation type="unfinished">ArcNotes web application</translation>
+</message>
+<message>
+<source>A web socket connection to this server will be opened to act as bridge between the ArcNotes web application and the ArcNotes desktop application.</source>
+<translation type="unfinished">A web socket connection to this server will be opened to act as bridge between the ArcNotes web application and the ArcNotes desktop application.</translation>
+</message>
+<message>
+<source>Security token:</source>
+<translation type="unfinished">Security token:</translation>
+</message>
+<message>
+<source>Show security token</source>
+<translation type="unfinished">Show security token</translation>
+</message>
+<message>
+<source>Generate new security token</source>
+<translation type="unfinished">Generate new security token</translation>
+</message>
+<message>
+<source>Server URL:</source>
+<translation type="unfinished">Server URL:</translation>
+</message>
+<message>
+<source>You need to enter this token in the ArcNotes web application to be able to talk to your ArcNotes desktop application.</source>
+<translation type="unfinished">You need to enter this token in the ArcNotes web application to be able to talk to your ArcNotes desktop application.</translation>
+</message>
+<message>
+<source>Copy security token to clipboard</source>
+<translation type="unfinished">Copy security token to clipboard</translation>
+</message>
+<message>
+<source>Reset the URL to default</source>
+<translation type="unfinished">Reset the URL to default</translation>
+</message>
+<message>
+<source>Show QR code</source>
+<translation type="unfinished">Show QR code</translation>
+</message>
+</context>
+<context>
+<name>WebCompanionSettingsWidget</name>
+<message>
+<source>Command snippets</source>
+<translation type="unfinished">Command snippets</translation>
+</message>
+<message>
+<source>Notes with this tag will be used for fetching bookmarks</source>
+<translation type="unfinished">Notes with this tag will be used for fetching bookmarks</translation>
+</message>
+<message>
+<source>Tag name for commands notes</source>
+<translation type="unfinished">Tag name for commands notes</translation>
+</message>
+<message>
+<source>Commands tag:</source>
+<translation type="unfinished">Commands tag:</translation>
+</message>
+<message>
+<source>You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation type="unfinished">You can use notes with a special tag to store command snippets, which you can execute from the command-line snippet manager. For more information about the command snippet syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+</message>
+<message>
+<source>Commands note name:</source>
+<translation type="unfinished">Commands note name:</translation>
+</message>
+<message>
+<source>This note will be used for adding new bookmarks from the browser extension</source>
+<translation type="unfinished">This note will be used for adding new bookmarks from the browser extension</translation>
+</message>
+<message>
+<source>Note name for adding new commands</source>
+<translation type="unfinished">Note name for adding new commands</translation>
+</message>
+<message>
+<source>Web socket server</source>
+<translation type="unfinished">Web socket server</translation>
+</message>
+<message>
+<source>Socket server port:</source>
+<translation type="unfinished">Socket server port:</translation>
+</message>
+<message>
+<source>Reset the socket server port</source>
+<translation type="unfinished">Reset the socket server port</translation>
+</message>
+<message>
+<source>Show security token</source>
+<translation type="unfinished">Show security token</translation>
+</message>
+<message>
+<source>Bookmarks</source>
+<translation type="unfinished">Bookmarks</translation>
+</message>
+<message>
+<source>Bookmarks tag:</source>
+<translation type="unfinished">Bookmarks tag:</translation>
+</message>
+<message>
+<source>Tag name for bookmarks notes</source>
+<translation type="unfinished">Tag name for bookmarks notes</translation>
+</message>
+<message>
+<source>Bookmarks note name:</source>
+<translation type="unfinished">Bookmarks note name:</translation>
+</message>
+<message>
+<source>Note name for adding new bookmarks</source>
+<translation type="unfinished">Note name for adding new bookmarks</translation>
+</message>
+<message>
+<source>By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</source>
+<translation type="unfinished">By default the browser extension will show all links of the current note. You can also make it show special bookmark links of notes with a certain tag. For more information about the bookmark link syntax click &lt;a href="%1"&gt;here&lt;/a&gt;.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API</source>
+<translation type="unfinished">Bookmark suggestion API</translation>
+</message>
+<message>
+<source>Enable Homepage-compatible bookmark suggestions API</source>
+<translation type="unfinished">Enable Homepage-compatible bookmark suggestions API</translation>
+</message>
+<message>
+<source>Suggestion API port:</source>
+<translation type="unfinished">Suggestion API port:</translation>
+</message>
+<message>
+<source>Reset the suggestion API port</source>
+<translation type="unfinished">Reset the suggestion API port</translation>
+</message>
+<message>
+<source>Security token:</source>
+<translation type="unfinished">Security token:</translation>
+</message>
+<message>
+<source>If this is empty when saved, a new security token will be generated automatically.</source>
+<translation type="unfinished">If this is empty when saved, a new security token will be generated automatically.</translation>
+</message>
+<message>
+<source>Copy security token to clipboard</source>
+<translation type="unfinished">Copy security token to clipboard</translation>
+</message>
+<message>
+<source>Generate new security token</source>
+<translation type="unfinished">Generate new security token</translation>
+</message>
+<message>
+<source>Web socket server support</source>
+<translation type="unfinished">Web socket server support</translation>
+</message>
+<message>
+<source>Enable socket server</source>
+<translation type="unfinished">Enable socket server</translation>
+</message>
+<message>
+<source>Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use ArcNotes as web clipper or for bookmark management.</source>
+<translation type="unfinished">Install the &lt;a href="%1"&gt;Web Companion browser extension&lt;/a&gt; from the &lt;a href="%2"&gt;Chrome Web Store&lt;/a&gt; or &lt;a href="%3"&gt;Firefox Add-ons page&lt;/a&gt; to use ArcNotes as web clipper or for bookmark management.</translation>
+</message>
+<message>
+<source>Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in ArcNotes from the command line.</source>
+<translation type="unfinished">Download the &lt;a href="%1"&gt;Command-line snippet manager&lt;/a&gt; to execute command snippets stored in notes in ArcNotes from the command line.</translation>
+</message>
+</context>
+<context>
+<name>WebSocketServerService</name>
+<message>
+<source>ArcNotes server listening on port %1</source>
+<translation>ArcNotes %1 bağlantı noktasında dinleme sunucusu</translation>
+</message>
+<message>
+<source>Could not start ArcNotes server on port %1!</source>
+<translation>%1 bağlantı noktasında ArcNotes sunucusu başlatılamadı!</translation>
+</message>
+<message>
+<source>Could not start bookmark suggestion API on port %1!</source>
+<translation type="unfinished">Could not start bookmark suggestion API on port %1!</translation>
+</message>
+<message>
+<source>Please check if the port is already in use.</source>
+<translation type="unfinished">Please check if the port is already in use.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API listening on port %1</source>
+<translation type="unfinished">Bookmark suggestion API listening on port %1</translation>
+</message>
+<message>
+<source>Bookmark suggestion API received malformed HTTP request line.</source>
+<translation type="unfinished">Bookmark suggestion API received malformed HTTP request line.</translation>
+</message>
+<message>
+<source>Bookmark suggestion API request from %1:%2</source>
+<translation type="unfinished">Bookmark suggestion API request from %1:%2</translation>
+</message>
+<message>
+<source>Bookmark suggestion API couldn't load suggestions because no main window instance is available.</source>
+<translation type="unfinished">Bookmark suggestion API couldn't load suggestions because no main window instance is available.</translation>
+</message>
+<message>
+<source>%1 connected to ArcNotes server!</source>
+<translation>%1 ArcNotes sunucusuna bağlı!</translation>
+</message>
+<message numerus="yes">
+<source>%n bookmark(s) created</source>
+<translation>
+<numerusform>%n yer işareti oluşturuldu</numerusform>
+<numerusform>%n yer işareti oluşturuldu</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark deleted from %n note(s)</source>
+<translation>
+<numerusform>Yer işareti %n nottan silindi</numerusform>
+<numerusform>Yer işareti %n nottan silindi</numerusform>
+</translation>
+</message>
+<message numerus="yes">
+<source>Bookmark edited in %n note(s)</source>
+<translation>
+<numerusform>Yer işareti %n notta düzenlendi</numerusform>
+<numerusform>Yer işareti %n notta düzenlendi</numerusform>
+</translation>
+</message>
+<message>
+<source>%1 was disconnected from ArcNotes server</source>
+<translation>%1 'in ArcNotes sunucusuyla bağlantısı kesildi</translation>
+</message>
+</context>
+<context>
+<name>WebSocketTokenDialog</name>
+<message>
+<source>Security token</source>
+<translation>Güvenlik belirteci</translation>
+</message>
+<message>
+<source>To let your ArcNotes browser extension access your notes please paste this security token in the settings of your browser extension:</source>
+<translation>ArcNotes tarayıcı uzantınızın notlarınıza erişmesine izin vermek için lütfen bu güvenlik kodunu tarayıcı uzantınızın ayarlarına yapıştırın:</translation>
+</message>
+<message>
+<source>Generate new token</source>
+<translation>Yeni jeton oluştur</translation>
+</message>
+<message>
+<source>Copy token</source>
+<translation>Jetonu kopyala</translation>
+</message>
+</context>
+<context>
+<name>WelcomeDialog</name>
+<message>
+<source>Welcome to ArcNotes</source>
+<translation>ArcNotes'a hoş geldiniz</translation>
+</message>
+<message>
+<source>Plain-text file Markdown note-taking with Nextcloud / ownCloud integration</source>
+<translation type="unfinished">Plain-text file Markdown note-taking with Nextcloud / ownCloud integration</translation>
+</message>
+<message>
+<source>&amp;Back</source>
+<translation>&amp;Geri</translation>
+</message>
+<message>
+<source>&amp;Next</source>
+<translation>&amp;Sonraki</translation>
+</message>
+<message>
+<source>&amp;Finished</source>
+<translation>&amp;Bitirildi</translation>
+</message>
+<message>
+<source>&amp;Cancel</source>
+<translation>&amp;İptal</translation>
+</message>
+<message>
+<source>Note folder</source>
+<translation>&amp;Not klasörü</translation>
+</message>
+<message>
+<source>Create note folder if not existing</source>
+<translation>Mevcut değilse not klasörü oluşturun</translation>
+</message>
+<message>
+<source>Note folder path</source>
+<translation>Not klasörü yolu</translation>
+</message>
+<message>
+<source>Select folder</source>
+<translation>Klasör seç</translation>
+</message>
+<message>
+<source>If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure ArcNotes for it now. You can also do it at a later time.</source>
+<translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your Nextcloud / ownCloud server, you can configure ArcNotes for it now. You can also do it at a later time.</translation>
+</message>
+<message>
+<source>Open cloud settings</source>
+<translation type="unfinished">Open cloud settings</translation>
+</message>
+<message>
+<source>In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</source>
+<translation type="unfinished">In any case, you need the Nextcloud / ownCloud sync client (or any other sync client) to sync your notes with your Nextcloud / ownCloud server.</translation>
+</message>
+<message>
+<source>Open network settings</source>
+<translation>Ağ ayarlarını aç</translation>
+</message>
+<message>
+<source>Please select where you want to store your notes:</source>
+<translation>Lütfen notlarınızı depolamak istediğiniz yeri seçin:</translation>
+</message>
+<message>
+<source>Show subfolders</source>
+<translation>Alt klasörleri göster</translation>
+</message>
+<message>
+<source>Layout preset</source>
+<translation type="unfinished">Layout preset</translation>
+</message>
+<message>
+<source>ArcNotes will track anonymous usage data, that helps to decide what parts of ArcNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
+<translation>ArcNotes anonim kullanım verilerini izleyecek, bu ArcNotes'un hangi bölümlerinin iyileştirileceğine karar vermeye ve bulmaya yardımcı oluyor ve bugları düzeltiyor. Bu hareketi ayarlardan devre dışı bırakabilirsiniz.</translation>
+</message>
+<message>
+<source>Cannot create note path! You have to create the note folder manually!</source>
+<translation>Not yolu oluşturulamıyor! Not klasörünü manuel olarak oluşturmanız gerekir!</translation>
+</message>
+<message>
+<source>Cannot create note path!</source>
+<translation>Not yolu oluşturulamıyor!</translation>
+</message>
+<message>
+<source>This note path doesn't exist!</source>
+<translation>Bu not yolu yok!</translation>
+</message>
+<message>
+<source>Please select the folder where your notes will get stored to</source>
+<translation>Lütfen notlarınızın depolanacağı klasör seçin</translation>
+</message>
+<message>
+<source>Keep in mind that the note folder will be stored relative to the directory where ArcNotes resides in portable mode! So you need to stay on the same drive.</source>
+<translation>Not klasörünün ArcNotes uygulamasının taşınabilir modda bulunduğu dizine göre saklanacağını unutmayın! Bu yüzden aynı sürücüde kalmanız gerekiyor.</translation>
+</message>
+</context>
+<context>
+<name>main</name>
+<message>
+<source>Displays help on commandline options.</source>
+<translation type="unfinished">Displays help on commandline options.</translation>
+</message>
+<message>
+<source>Runs the application in portable mode.</source>
+<translation>Uygumayı taşınabilir modda çalıştırır.</translation>
+</message>
+<message>
+<source>Prints out a dump of the settings and other information about the application and environment in GitHub Markdown and exits the application.</source>
+<translation>GitHub Markdown'da uygulama ve ortamla ilgili ayarların ve diğer bilgilerin bir dökümünü yazdırır ve uygulamadan çıkar.</translation>
+</message>
+<message>
+<source>Prints out the version number.</source>
+<translation>Sürüm numarasını yazdırır.</translation>
+</message>
+<message>
+<source>Allows multiple instances of ArcNotes to be started even if disallowed in the settings.</source>
+<translation>Ayarlarda izin verilmese bile birden fazla ArcNotes örneğinin başlatılmasına izin verir.</translation>
+</message>
+<message>
+<source>Clears the settings and runs the application.</source>
+<translation>Ayarları temizler ve uygulamayı çalıştırır.</translation>
+</message>
+<message>
+<source>Runs the application in a different context for settings and internal files.</source>
+<translation>Ayarlar ve dahili dosyalar için uygulamayı farklı bir durumda çalıştırır.</translation>
+</message>
+<message>
+<source>Triggers a menu action after the application was started.</source>
+<translation>Uygulama başlatıldıktan sonra bir menü eylemini tetikler.</translation>
+</message>
+<message>
+<source>Generate shell completion code. Supports `fish`, `bash`.</source>
+<translation>Shell tamamlama kodunu oluşturun. 'fish' ve 'bash'ı destekler.</translation>
+</message>
+<message>
+<source>Single application mode is not supported on your system!</source>
+<translation>Tek uygulama kipi sisteminizde desteklenmiyor!</translation>
+</message>
+<message>
+<source>Another instance of ArcNotes was already started! You can turn off the single instance mode in the settings or use the parameter --allow-multiple-instances.</source>
+<translation>ArcNotes'un başka bir örneği zaten başlatıldı! Ayarlarda tek örnek kipini kapatabilir veya --allow-multiple-instances parametresini kullanabilirsiniz.</translation>
+</message>
+<message>
+<source>A second instance of ArcNotes was attempted to be started!</source>
+<translation>A second instance of ArcNotes was attempted to be started!</translation>
+</message>
+</context>
+</TS>

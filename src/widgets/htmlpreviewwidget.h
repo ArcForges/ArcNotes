@@ -1,0 +1,72 @@
+#pragma once
+
+#ifdef USE_QLITEHTML
+
+#include <libraries/qlitehtml/src/qlitehtmlwidget.h>
+
+#include <QNetworkAccessManager>
+#include <QWidget>
+
+class QLiteHtmlSearchWidget;
+class QScrollBar;
+
+// Internal widget that handles the actual HTML rendering
+class HtmlPreviewWidgetInternal final : public QLiteHtmlWidget {
+    Q_OBJECT
+
+public:
+    explicit HtmlPreviewWidgetInternal(QWidget* parent);
+
+Q_SIGNALS:
+    void anchorClicked(const QUrl& url);
+
+private:
+    QByteArray resourceLoadCallBack(const QUrl&);
+    void onContextMenuRequested(QPoint pos, const QUrl& linkUrl, const QUrl& imageUrl);
+    void copyImageToClipboard(const QUrl& imageUrl);
+
+    void wheelEvent(QWheelEvent*) override;
+    bool eventFilter(QObject* src, QEvent* e) override;
+
+    QNetworkAccessManager m_nam;
+
+    void exportAsHTMLFile();
+};
+
+// Container widget that holds the HTML preview and search bar
+class HtmlPreviewWidget final : public QWidget {
+    Q_OBJECT
+
+public:
+    HtmlPreviewWidget(QWidget* parent);
+    void setHtml(const QString& text);
+    QLiteHtmlSearchWidget* searchWidget();
+
+    // Expose QLiteHtmlWidget methods
+    void setZoomFactor(qreal scale);
+    [[nodiscard]] qreal zoomFactor() const;
+    [[nodiscard]] QString selectedText() const;
+    void setDefaultFont(const QFont& font);
+    [[nodiscard]] QFont defaultFont() const;
+    bool findText(const QString& text, QTextDocument::FindFlags flags, bool incremental, bool* wrapped = nullptr);
+
+    // Update background color and dark mode after a theme change
+    void updateBackground();
+
+    // Expose QAbstractScrollArea methods
+    [[nodiscard]] QWidget* viewport() const;
+    [[nodiscard]] QScrollBar* verticalScrollBar() const;
+    [[nodiscard]] QScrollBar* horizontalScrollBar() const;
+
+Q_SIGNALS:
+    void anchorClicked(const QUrl& url);
+
+protected:
+    void keyPressEvent(QKeyEvent* event) override;
+
+private:
+    HtmlPreviewWidgetInternal* _htmlWidget;
+    QLiteHtmlSearchWidget* _searchWidget;
+};
+
+#endif

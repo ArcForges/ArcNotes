@@ -1,0 +1,26 @@
+* text=auto eol=lf
+*.slnx text eol=lf
+*.vcxproj text eol=crlf
+*.filters text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.h linguist-language=C++
+*.hpp linguist-language=C++
+*.inc linguist-language=C++
+*.qml linguist-language=QML
+tests/QmlSharp.Qml.Emitter.Tests/Fixtures/Golden/*.qml text eol=lf linguist-language=QML
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.ttf binary
+*.otf binary
+*.a binary
+*.lib binary
+*.dll binary
+*.so binary
+*.dylib binary
+**/Generated/** linguist-generated=true
