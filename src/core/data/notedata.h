@@ -34,7 +34,7 @@ struct NoteData {
     bool operator!=(const NoteData& other) const { return !(*this == other); }
 };
 
-inline uint qHash(const NoteData& note, uint seed = 0) {
+inline size_t qHash(const NoteData& note, size_t seed = 0) {
     return qHash(note.id, seed);
 }
 

@@ -25,7 +25,7 @@ struct ColorModeData {
     bool operator!=(const ColorModeData& other) const { return !(*this == other); }
 };
 
-inline uint qHash(const ColorModeData& colorMode, uint seed = 0) {
+inline size_t qHash(const ColorModeData& colorMode, size_t seed = 0) {
     return qHash(colorMode.id, seed);
 }
 

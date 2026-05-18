@@ -49,17 +49,17 @@ QByteArray HtmlPreviewWidgetInternal::resourceLoadCallBack(const QUrl& url) {
     m_nam.get(QNetworkRequest(url));
 
     QEventLoop loop;
-    QByteArray data;
+    QByteArray resourceData;
 
     QNetworkReply* reply = m_nam.get(QNetworkRequest(url));
-    connect(reply, &QNetworkReply::finished, this, [&data, &loop, reply] {
-        if (reply->error() == QNetworkReply::NoError) data = reply->readAll();
+    connect(reply, &QNetworkReply::finished, this, [&resourceData, &loop, reply] {
+        if (reply->error() == QNetworkReply::NoError) resourceData = reply->readAll();
         reply->deleteLater();
         loop.exit();
     });
     loop.exec(QEventLoop::ExcludeUserInputEvents);
 
-    return data;
+    return resourceData;
 }
 
 void HtmlPreviewWidgetInternal::onContextMenuRequested(QPoint pos, const QUrl& linkUrl, const QUrl& imageUrl) {

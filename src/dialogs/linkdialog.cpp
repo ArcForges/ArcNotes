@@ -418,14 +418,14 @@ void LinkDialog::slotReplyFinished(QNetworkReply* reply) {
     reply->deleteLater();
     _downloadProgressBar->hide();
 
-    const QByteArray data = reply->readAll();
+    const QByteArray replyData = reply->readAll();
     if (reply->error() != QNetworkReply::NoError && reply->error() != QNetworkReply::OperationCanceledError) {
         qWarning() << QStringLiteral("Network error: %1").arg(reply->errorString());
         return;
     }
 
     if (getLinkName().isEmpty()) {
-        const QString title = getTitleFromHtml(QString::fromUtf8(data));
+        const QString title = getTitleFromHtml(QString::fromUtf8(replyData));
 
         if (!title.isEmpty()) {
             setLinkName(title);

@@ -26,7 +26,7 @@ struct NoteFolderData {
     bool operator!=(const NoteFolderData& other) const { return !(*this == other); }
 };
 
-inline uint qHash(const NoteFolderData& folder, uint seed = 0) {
+inline size_t qHash(const NoteFolderData& folder, size_t seed = 0) {
     return qHash(folder.id, seed);
 }
 

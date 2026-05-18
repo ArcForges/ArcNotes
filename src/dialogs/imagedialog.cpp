@@ -291,14 +291,14 @@ void ImageDialog::on_fileEdit_textChanged(const QString& arg1) {
     }
 
     if (url.scheme().startsWith(QLatin1String("http"))) {
-        const QByteArray data = Utils::Misc::downloadUrl(url);
+        const QByteArray imageData = Utils::Misc::downloadUrl(url);
 
-        if (data.isEmpty()) {
+        if (imageData.isEmpty()) {
             return;
         }
 
         QPixmap pixmap;
-        pixmap.loadFromData(data);
+        pixmap.loadFromData(imageData);
 
         if (pixmap.isNull()) {
             return;

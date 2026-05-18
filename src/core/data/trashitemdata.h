@@ -23,7 +23,7 @@ struct TrashItemData {
     bool operator!=(const TrashItemData& other) const { return !(*this == other); }
 };
 
-inline uint qHash(const TrashItemData& trashItem, uint seed = 0) {
+inline size_t qHash(const TrashItemData& trashItem, size_t seed = 0) {
     return qHash(trashItem.id, seed);
 }
 

@@ -196,7 +196,7 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply* reply) {
     _downloadFrame->hide();
     _downloadButton->setDisabled(false);
 
-    const QByteArray data = reply->readAll();
+    const QByteArray replyData = reply->readAll();
     if (reply->error() != QNetworkReply::NoError && reply->error() != QNetworkReply::OperationCanceledError) {
         _accept = false;
         QMessageBox::critical(nullptr, tr("Download error"),
@@ -206,7 +206,7 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply* reply) {
     }
 
     QMimeDatabase db;
-    QMimeType type = db.mimeTypeForData(data);
+    QMimeType type = db.mimeTypeForData(replyData);
     QString suffix;
 
     if (type.isValid()) {
@@ -236,7 +236,7 @@ void AttachmentDialog::slotReplyFinished(QNetworkReply* reply) {
         return;
     }
 
-    file.write(data);
+    file.write(replyData);
     file.close();
     QCoreApplication::processEvents();
     _fileEdit->setText(filePath);

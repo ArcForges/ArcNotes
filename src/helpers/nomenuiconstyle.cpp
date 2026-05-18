@@ -48,7 +48,7 @@ QPixmap NoMenuIconStyle::generatedIconPixmap(QIcon::Mode iconMode, const QPixmap
     painter.setCompositionMode(QPainter::CompositionMode_SourceIn);
 
     QColor tintedDisabledColor = disabledColor;
-    tintedDisabledColor.setAlphaF(0.7);
+    tintedDisabledColor.setAlphaF(0.7F);
     painter.fillRect(disabledPixmap.rect(), tintedDisabledColor);
 
     return disabledPixmap;

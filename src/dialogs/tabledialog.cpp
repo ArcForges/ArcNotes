@@ -211,11 +211,11 @@ void TableDialog::importCSV() {
         QtCSV::Reader::readToList(filePath, separator, _textDelimiterComboBox->currentText());
 
     for (int row = 0; row < readData.size(); ++row) {
-        const QStringList& data = readData.at(row);
-        text += QStringLiteral("| ") + data.join(QStringLiteral(" | ")) + QStringLiteral(" |\n");
+        const QStringList& rowData = readData.at(row);
+        text += QStringLiteral("| ") + rowData.join(QStringLiteral(" | ")) + QStringLiteral(" |\n");
 
         if (row == 0 && _firstLineHeadlineCheckBox->isChecked()) {
-            for (int col = 0; col < data.count(); ++col) {
+            for (int col = 0; col < rowData.count(); ++col) {
                 text += QLatin1String("| --- ");
             }
             text += QLatin1String("|\n");

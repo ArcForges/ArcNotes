@@ -37,7 +37,7 @@ jobs:
           target: desktop
           arch: linux_gcc_64
           modules: >-
-            qtsvg qt5compat qt3d qtcharts qtconnectivity qtgraphs qtgrpc
+            qt5compat qt3d qtcharts qtconnectivity qtgraphs qtgrpc
             qthttpserver qtimageformats qtlottie qtmultimedia
             qtnetworkauth qtpositioning qtquick3d qtquick3dphysics
             qtquicktimeline qtremoteobjects qtscxml qtsensors

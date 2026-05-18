@@ -102,17 +102,18 @@ SettingsDialog::SettingsDialog(int page, QWidget* parent, SettingsViewModel* set
             }
         }
     });
-    for (QWidget* page : std::as_const(_settingsPages)) {
-        if (auto* widget = qobject_cast<PanelsSettingsWidget*>(page)) {
-            connect(widget, &PanelsSettingsWidget::needRestart, this, &SettingsDialog::needRestart);
-        } else if (auto* widget = qobject_cast<InterfaceSettingsWidget*>(page)) {
-            connect(widget, &InterfaceSettingsWidget::needRestart, this, &SettingsDialog::needRestart);
-        } else if (auto* widget = qobject_cast<GeneralSettingsWidget*>(page)) {
-            connect(widget, &GeneralSettingsWidget::needRestart, this, &SettingsDialog::needRestart);
-        } else if (auto* widget = qobject_cast<EditorFontColorSettingsWidget*>(page)) {
-            connect(widget, &EditorFontColorSettingsWidget::needRestart, this, &SettingsDialog::needRestart);
-        } else if (auto* widget = qobject_cast<NoteFolderSettingsWidget*>(page)) {
-            connect(widget, &NoteFolderSettingsWidget::storeSettingsRequested, this, &SettingsDialog::storeSettings);
+    for (QWidget* settingsPage : std::as_const(_settingsPages)) {
+        if (auto* panelsWidget = qobject_cast<PanelsSettingsWidget*>(settingsPage)) {
+            connect(panelsWidget, &PanelsSettingsWidget::needRestart, this, &SettingsDialog::needRestart);
+        } else if (auto* interfaceWidget = qobject_cast<InterfaceSettingsWidget*>(settingsPage)) {
+            connect(interfaceWidget, &InterfaceSettingsWidget::needRestart, this, &SettingsDialog::needRestart);
+        } else if (auto* generalWidget = qobject_cast<GeneralSettingsWidget*>(settingsPage)) {
+            connect(generalWidget, &GeneralSettingsWidget::needRestart, this, &SettingsDialog::needRestart);
+        } else if (auto* editorFontWidget = qobject_cast<EditorFontColorSettingsWidget*>(settingsPage)) {
+            connect(editorFontWidget, &EditorFontColorSettingsWidget::needRestart, this, &SettingsDialog::needRestart);
+        } else if (auto* noteFolderWidget = qobject_cast<NoteFolderSettingsWidget*>(settingsPage)) {
+            connect(noteFolderWidget, &NoteFolderSettingsWidget::storeSettingsRequested, this,
+                    &SettingsDialog::storeSettings);
         }
     }
 
@@ -152,25 +153,25 @@ void SettingsDialog::setCurrentPage(int page) {
 }
 
 void SettingsDialog::readSettings() {
-    for (QWidget* page : std::as_const(_settingsPages)) {
-        if (auto* widget = qobject_cast<GeneralSettingsWidget*>(page)) {
-            widget->readSettings();
-        } else if (auto* widget = qobject_cast<InterfaceSettingsWidget*>(page)) {
-            widget->readSettings();
-        } else if (auto* widget = qobject_cast<NoteFolderSettingsWidget*>(page)) {
-            widget->readSettings();
-        } else if (auto* widget = qobject_cast<PanelsSettingsWidget*>(page)) {
-            widget->readSettings();
-        } else if (auto* widget = qobject_cast<LocalTrashSettingsWidget*>(page)) {
-            widget->readSettings();
-        } else if (auto* widget = qobject_cast<EditorSettingsWidget*>(page)) {
-            widget->readSettings();
-        } else if (auto* widget = qobject_cast<DebugOptionSettingsWidget*>(page)) {
-            widget->readSettings();
-        } else if (auto* widget = qobject_cast<EditorFontColorSettingsWidget*>(page)) {
-            widget->readSettings();
-        } else if (auto* widget = qobject_cast<PreviewFontSettingsWidget*>(page)) {
-            widget->readSettings();
+    for (QWidget* settingsPage : std::as_const(_settingsPages)) {
+        if (auto* generalWidget = qobject_cast<GeneralSettingsWidget*>(settingsPage)) {
+            generalWidget->readSettings();
+        } else if (auto* interfaceWidget = qobject_cast<InterfaceSettingsWidget*>(settingsPage)) {
+            interfaceWidget->readSettings();
+        } else if (auto* noteFolderWidget = qobject_cast<NoteFolderSettingsWidget*>(settingsPage)) {
+            noteFolderWidget->readSettings();
+        } else if (auto* panelsWidget = qobject_cast<PanelsSettingsWidget*>(settingsPage)) {
+            panelsWidget->readSettings();
+        } else if (auto* localTrashWidget = qobject_cast<LocalTrashSettingsWidget*>(settingsPage)) {
+            localTrashWidget->readSettings();
+        } else if (auto* editorWidget = qobject_cast<EditorSettingsWidget*>(settingsPage)) {
+            editorWidget->readSettings();
+        } else if (auto* debugOptionsWidget = qobject_cast<DebugOptionSettingsWidget*>(settingsPage)) {
+            debugOptionsWidget->readSettings();
+        } else if (auto* editorFontWidget = qobject_cast<EditorFontColorSettingsWidget*>(settingsPage)) {
+            editorFontWidget->readSettings();
+        } else if (auto* previewFontWidget = qobject_cast<PreviewFontSettingsWidget*>(settingsPage)) {
+            previewFontWidget->readSettings();
         }
     }
 }
@@ -181,25 +182,25 @@ void SettingsDialog::closeEvent(QCloseEvent* event) {
 }
 
 void SettingsDialog::storeSettings() {
-    for (QWidget* page : std::as_const(_settingsPages)) {
-        if (auto* widget = qobject_cast<GeneralSettingsWidget*>(page)) {
-            widget->storeSettings();
-        } else if (auto* widget = qobject_cast<InterfaceSettingsWidget*>(page)) {
-            widget->storeSettings();
-        } else if (auto* widget = qobject_cast<NoteFolderSettingsWidget*>(page)) {
-            widget->storeSettings();
-        } else if (auto* widget = qobject_cast<PanelsSettingsWidget*>(page)) {
-            widget->storeSettings();
-        } else if (auto* widget = qobject_cast<LocalTrashSettingsWidget*>(page)) {
-            widget->storeSettings();
-        } else if (auto* widget = qobject_cast<EditorSettingsWidget*>(page)) {
-            widget->storeSettings();
-        } else if (auto* widget = qobject_cast<DebugOptionSettingsWidget*>(page)) {
-            widget->storeSettings();
-        } else if (auto* widget = qobject_cast<EditorFontColorSettingsWidget*>(page)) {
-            widget->storeSettings();
-        } else if (auto* widget = qobject_cast<PreviewFontSettingsWidget*>(page)) {
-            widget->storeSettings();
+    for (QWidget* settingsPage : std::as_const(_settingsPages)) {
+        if (auto* generalWidget = qobject_cast<GeneralSettingsWidget*>(settingsPage)) {
+            generalWidget->storeSettings();
+        } else if (auto* interfaceWidget = qobject_cast<InterfaceSettingsWidget*>(settingsPage)) {
+            interfaceWidget->storeSettings();
+        } else if (auto* noteFolderWidget = qobject_cast<NoteFolderSettingsWidget*>(settingsPage)) {
+            noteFolderWidget->storeSettings();
+        } else if (auto* panelsWidget = qobject_cast<PanelsSettingsWidget*>(settingsPage)) {
+            panelsWidget->storeSettings();
+        } else if (auto* localTrashWidget = qobject_cast<LocalTrashSettingsWidget*>(settingsPage)) {
+            localTrashWidget->storeSettings();
+        } else if (auto* editorWidget = qobject_cast<EditorSettingsWidget*>(settingsPage)) {
+            editorWidget->storeSettings();
+        } else if (auto* debugOptionsWidget = qobject_cast<DebugOptionSettingsWidget*>(settingsPage)) {
+            debugOptionsWidget->storeSettings();
+        } else if (auto* editorFontWidget = qobject_cast<EditorFontColorSettingsWidget*>(settingsPage)) {
+            editorFontWidget->storeSettings();
+        } else if (auto* previewFontWidget = qobject_cast<PreviewFontSettingsWidget*>(settingsPage)) {
+            previewFontWidget->storeSettings();
         }
     }
 
@@ -571,21 +572,21 @@ void SettingsDialog::resetToolbarConfiguration() {
 }
 
 void SettingsDialog::initializeSettingsPages() {
-    for (QWidget* page : std::as_const(_settingsPages)) {
-        if (auto* widget = qobject_cast<GeneralSettingsWidget*>(page)) {
-            widget->initialize();
-        } else if (auto* widget = qobject_cast<InterfaceSettingsWidget*>(page)) {
-            widget->initialize();
-        } else if (auto* widget = qobject_cast<NoteFolderSettingsWidget*>(page)) {
-            widget->initialize();
-        } else if (auto* widget = qobject_cast<PanelsSettingsWidget*>(page)) {
-            widget->initialize();
-        } else if (auto* widget = qobject_cast<EditorSettingsWidget*>(page)) {
-            widget->initialize();
-        } else if (auto* widget = qobject_cast<DebugOptionSettingsWidget*>(page)) {
-            widget->initialize();
-        } else if (auto* widget = qobject_cast<ColorModeSettingsWidget*>(page)) {
-            widget->initialize();
+    for (QWidget* settingsPage : std::as_const(_settingsPages)) {
+        if (auto* generalWidget = qobject_cast<GeneralSettingsWidget*>(settingsPage)) {
+            generalWidget->initialize();
+        } else if (auto* interfaceWidget = qobject_cast<InterfaceSettingsWidget*>(settingsPage)) {
+            interfaceWidget->initialize();
+        } else if (auto* noteFolderWidget = qobject_cast<NoteFolderSettingsWidget*>(settingsPage)) {
+            noteFolderWidget->initialize();
+        } else if (auto* panelsWidget = qobject_cast<PanelsSettingsWidget*>(settingsPage)) {
+            panelsWidget->initialize();
+        } else if (auto* editorWidget = qobject_cast<EditorSettingsWidget*>(settingsPage)) {
+            editorWidget->initialize();
+        } else if (auto* debugOptionsWidget = qobject_cast<DebugOptionSettingsWidget*>(settingsPage)) {
+            debugOptionsWidget->initialize();
+        } else if (auto* colorModeWidget = qobject_cast<ColorModeSettingsWidget*>(settingsPage)) {
+            colorModeWidget->initialize();
         }
     }
 
