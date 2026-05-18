@@ -22,7 +22,7 @@ void NoteCommandHandlers::registerHandlers(CommandBus* bus, NoteService* noteSer
                 return CommandResult::fail(QObject::tr("Note could not be created."));
             }
             if (!noteFileService->storeNoteTextFileToDisk(note)) {
-                noteService->deleteNote(note.id, false);
+                (void)noteService->deleteNote(note.id, false);
                 return CommandResult::fail(QObject::tr("Note file could not be stored."));
             }
             if (appState != nullptr) {

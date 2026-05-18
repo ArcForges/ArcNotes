@@ -264,7 +264,7 @@ bool NoteFileService::storeNoteTextFileToDisk(NoteData& note, bool& currentNoteT
             addNoteToLocalTrash(oldNote);
         }
 
-        TagRepository().renameNoteFileNamesOfLinks(oldName, newName, note.relativeNoteSubFolderPath);
+        (void)TagRepository().renameNoteFileNamesOfLinks(oldName, newName, note.relativeNoteSubFolderPath);
     }
 
     const QString text = Utils::Misc::transformLineFeeds(note.noteText);
@@ -404,7 +404,7 @@ bool NoteFileService::renameNoteFile(NoteData& note, const QString& newName) con
 
     const bool renamed = QFile(oldPath).rename(fullNoteFilePath(note));
     if (renamed && note.id > 0) {
-        TagRepository().renameNoteFileNamesOfLinks(oldName, note.name, note.relativeNoteSubFolderPath);
+        (void)TagRepository().renameNoteFileNamesOfLinks(oldName, note.name, note.relativeNoteSubFolderPath);
         note = NoteRepository().findById(note.id);
     }
     return renamed;

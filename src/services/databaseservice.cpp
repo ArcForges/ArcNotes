@@ -1186,24 +1186,24 @@ bool DatabaseService::setupTables() {
 
         // set defaults for now settings if not set already
         if (!settings.contains(QStringLiteral("notesPanelSort"))) {
-            settings.value(QStringLiteral("notesPanelSort"), kSortByLastChange);
+            settings.setValue(QStringLiteral("notesPanelSort"), kSortByLastChange);
         }
         if (!settings.contains(QStringLiteral("notesPanelOrder"))) {
-            settings.value(QStringLiteral("notesPanelOrder"), kOrderDescending);
+            settings.setValue(QStringLiteral("notesPanelOrder"), kOrderDescending);
         }
 
         if (!settings.contains(QStringLiteral("noteSubfoldersPanelSort"))) {
-            settings.value(QStringLiteral("noteSubfoldersPanelSort"), kSortByLastChange);
+            settings.setValue(QStringLiteral("noteSubfoldersPanelSort"), kSortByLastChange);
         }
         if (!settings.contains(QStringLiteral("noteSubfoldersOrder"))) {
-            settings.value(QStringLiteral("noteSubfoldersOrder"), kOrderAscending);
+            settings.setValue(QStringLiteral("noteSubfoldersOrder"), kOrderAscending);
         }
 
         if (!settings.contains(QStringLiteral("tagsPanelSort"))) {
-            settings.value(QStringLiteral("tagsPanelSort"), kSortAlphabetical);
+            settings.setValue(QStringLiteral("tagsPanelSort"), kSortAlphabetical);
         }
         if (!settings.contains(QStringLiteral("tagsPanelOrder"))) {
-            settings.value(QStringLiteral("tagsPanelOrder"), kOrderAscending);
+            settings.setValue(QStringLiteral("tagsPanelOrder"), kOrderAscending);
         }
         version = 25;
     }

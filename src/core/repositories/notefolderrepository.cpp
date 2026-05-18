@@ -226,7 +226,7 @@ bool NoteFolderRepository::migrateToNoteFolders() const {
         folder.name = recentNoteFolderPath;
         folder.localPath = recentNoteFolderPath;
         folder.priority = priority++;
-        save(folder);
+        (void)save(folder);
     }
 
     return priority > 0;

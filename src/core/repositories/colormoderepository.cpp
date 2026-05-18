@@ -133,7 +133,7 @@ void ColorModeRepository::ensureBuiltInModesExist() const {
                 light.editorColorSchemaKey = existingSchemaKey;
             }
         }
-        save(light);
+        (void)save(light);
     }
 
     if (!ids.contains(kDarkModeId)) {
@@ -155,7 +155,7 @@ void ColorModeRepository::ensureBuiltInModesExist() const {
                 dark.editorColorSchemaKey = existingSchemaKey;
             }
         }
-        save(dark);
+        (void)save(dark);
     }
 
     if (settings.value(QStringLiteral("ColorModes/currentId")).toString().isEmpty()) {

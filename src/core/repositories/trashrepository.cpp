@@ -378,7 +378,7 @@ bool TrashRepository::expireItems() const {
 
     const QList<TrashItemData> items = findAllExpired();
     for (const TrashItemData& item : items) {
-        remove(item.id, true);
+        (void)remove(item.id, true);
         qDebug() << __func__ << " - 'trashItem': " << item.id << item.fileName;
     }
 

@@ -189,7 +189,7 @@ NoteData NoteService::duplicateNote(int noteId, const QString& newName, int targ
     const QString copyName = newName.isEmpty() ? QObject::tr("%1 copy").arg(sourceData.name) : newName;
     NoteData copy = createNote(copyName, 0, targetSubFolderId >= 0 ? targetSubFolderId : sourceData.noteSubFolderId);
     if (copy.id > 0) {
-        saveNoteText(copy.id, sourceData.noteText);
+        (void)saveNoteText(copy.id, sourceData.noteText);
         copy = _noteRepository->findById(copy.id);
     }
     return copy;
@@ -220,7 +220,7 @@ bool NoteService::moveNote(NoteData& note, int targetSubFolderId) const {
     const bool ok = _noteRepository->save(note);
     if (ok && note.id > 0) {
         const QString newRelativePath = relativePathForSubFolderId(subFolders, targetSubFolderId);
-        TagRepository().renameNoteSubFolderPathOfLinks(note.name, oldRelativePath, newRelativePath);
+        (void)TagRepository().renameNoteSubFolderPathOfLinks(note.name, oldRelativePath, newRelativePath);
         note = _noteRepository->findById(note.id);
     }
     return ok;
@@ -285,8 +285,8 @@ bool NoteService::buildNotesIndex(bool forceRebuild) const {
     QVector<int> seenSubFolderIds;
 
     if (forceRebuild) {
-        _noteRepository->deleteAll();
-        subFolders.deleteAll();
+        (void)_noteRepository->deleteAll();
+        (void)subFolders.deleteAll();
         beforeNoteIds.clear();
         beforeSubFolderIds.clear();
     }
@@ -311,7 +311,7 @@ bool NoteService::buildNotesIndex(bool forceRebuild) const {
 
     DatabaseService::createNoteFolderConnection();
     DatabaseService::setupNoteFolderTables();
-    TrashRepository().expireItems();
+    (void)TrashRepository().expireItems();
     return wasModified;
 }
 

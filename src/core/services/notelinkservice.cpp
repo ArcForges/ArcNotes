@@ -288,7 +288,7 @@ bool NoteLinkService::updateRelativeMediaFileLinks(NoteData& note) const {
     if (textWasUpdated) {
         note.noteText = newText;
         note.hasDirtyData = true;
-        NoteRepository().save(note);
+        (void)NoteRepository().save(note);
     }
     return textWasUpdated;
 }
@@ -317,7 +317,7 @@ bool NoteLinkService::updateRelativeAttachmentFileLinks(NoteData& note) const {
     if (textWasUpdated) {
         note.noteText = newText;
         note.hasDirtyData = true;
-        NoteRepository().save(note);
+        (void)NoteRepository().save(note);
     }
     return textWasUpdated;
 }

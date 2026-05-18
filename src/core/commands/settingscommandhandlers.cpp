@@ -31,7 +31,7 @@ void SettingsCommandHandlers::registerHandlers(CommandBus* bus) {
 
     bus->registerHandler<ReinitializeDatabaseCommand>([](const ReinitializeDatabaseCommand&) {
         DatabaseRepository().reinitializeDiskDatabase();
-        NoteFolderRepository().migrateToNoteFolders();
+        (void)NoteFolderRepository().migrateToNoteFolders();
         return CommandResult::ok();
     });
 

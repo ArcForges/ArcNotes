@@ -303,7 +303,7 @@ int mainStartupMisc(const QStringList& arguments) {
     }
 
     // try to create note folders if they are missing
-    NoteFolderRepository().migrateToNoteFolders();
+    (void)NoteFolderRepository().migrateToNoteFolders();
 
     if (parser.isSet(dumpSettingsOption)) {
         const auto dump = Utils::Misc::generateDebugInformation();

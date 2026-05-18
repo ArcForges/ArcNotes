@@ -143,7 +143,7 @@ bool NoteSubFolderService::renameSubFolder(int subFolderId, const QString& name)
         return false;
     }
 
-    TagRepository().renameNoteSubFolderPathsOfLinks(oldRelativePath, newRelativePath);
+    (void)TagRepository().renameNoteSubFolderPathsOfLinks(oldRelativePath, newRelativePath);
     return true;
 }
 
@@ -183,7 +183,7 @@ bool NoteSubFolderService::moveSubFolder(int subFolderId, int destinationParentI
         return false;
     }
 
-    TagRepository().renameNoteSubFolderPathsOfLinks(oldRelativePath, newRelativePath);
+    (void)TagRepository().renameNoteSubFolderPathsOfLinks(oldRelativePath, newRelativePath);
     return true;
 }
 

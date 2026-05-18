@@ -118,7 +118,7 @@ void AppCoordinator::initialize() {
     _actionRegistry->registerDefaultActions();
     registerCommandHandlers();
     connectFlows();
-    _noteService->buildNotesIndex(false);
+    (void)_noteService->buildNotesIndex(false);
     refreshModels();
     emit initialized();
 }
