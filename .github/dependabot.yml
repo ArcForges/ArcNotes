@@ -8,6 +8,10 @@ updates:
     labels:
       - "dependencies"
       - "github-actions"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
 
   - package-ecosystem: "pre-commit"
     directory: "/"
@@ -17,4 +21,3 @@ updates:
       - "dependencies"
       - "tooling"
       - "pre-commit"
-

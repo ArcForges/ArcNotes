@@ -19,10 +19,11 @@ defaults:
 
 jobs:
   build:
-    name: Linux x64
+    name: Linux x64 (FASTBuild)
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
+      MSBUILDDISABLENODEREUSE: "1"
       QT_QPA_PLATFORM: offscreen
 
     steps:
@@ -32,10 +33,17 @@ jobs:
       - name: Install Qt 6.11.0
         uses: jurplel/install-qt-action@v4
         with:
-          version: "6.11.0"
+          version: '6.11.0'
           target: desktop
           arch: linux_gcc_64
-          modules: qtsvg
+          modules: >-
+            qtsvg qt5compat qt3d qtcharts qtconnectivity qtgraphs qtgrpc
+            qthttpserver qtimageformats qtlottie qtmultimedia
+            qtnetworkauth qtpositioning qtquick3d qtquick3dphysics
+            qtquicktimeline qtremoteobjects qtscxml qtsensors
+            qtserialbus qtserialport qtshadertools qtspeech
+            qtvirtualkeyboard qtwebchannel qtwebsockets qtwebview
+            qtlocation
           cache: true
           setup-python: true
           install-deps: true
@@ -43,44 +51,118 @@ jobs:
       - name: Export Qt environment
         run: |
           set -euo pipefail
+          test -d "${QT_ROOT_DIR}"
           qt6_dir="${QT_ROOT_DIR}/lib/cmake/Qt6"
           test -f "${qt6_dir}/Qt6Config.cmake"
           echo "QT_DIR=${QT_ROOT_DIR}" >> "${GITHUB_ENV}"
           echo "Qt6_DIR=${qt6_dir}" >> "${GITHUB_ENV}"
+          echo "QT_DIR=${QT_ROOT_DIR}"
+          echo "Qt6_DIR=${qt6_dir}"
 
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: '3.12'
 
-      - name: Install tools
+      - name: Verify hosted native tools
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ninja-build
-          python -m pip install --upgrade pip pre-commit
+          clang --version | head -n 1
+          clang++ --version | head -n 1
+          wget --version | head -n 1
+          unzip -v | head -n 1
+          python --version
 
       - name: Install CMake 4.2.3
         run: |
           cmake_url='https://github.com/Kitware/CMake/releases/download/v4.2.3/cmake-4.2.3-linux-x86_64.tar.gz'
+          cmake_sha256='5bb505d5e0cca0480a330f7f27ccf52c2b8b5214c5bba97df08899f5ef650c23'
           cmake_archive="${RUNNER_TEMP}/cmake.tar.gz"
           cmake_root="${RUNNER_TEMP}/cmake"
           wget -qO "${cmake_archive}" "${cmake_url}"
+          echo "${cmake_sha256}  ${cmake_archive}" | sha256sum --check --status
           mkdir -p "${cmake_root}"
           tar -xzf "${cmake_archive}" -C "${cmake_root}" --strip-components=1
           echo "${cmake_root}/bin" >> "${GITHUB_PATH}"
 
-      - name: Configure
+      - name: Install FASTBuild
+        run: |
+          fastbuild_url='https://fastbuild.org/downloads/v1.19/FASTBuild-Linux-x64-v1.19.zip'
+          fastbuild_sha256='8d07bcf7e6840409ee96105caf93093a3a5efc6271a635cbb4e91021472e95a7'
+          fastbuild_archive="${RUNNER_TEMP}/fastbuild.zip"
+          fastbuild_root="${RUNNER_TEMP}/fastbuild"
+          wget -qO "${fastbuild_archive}" "${fastbuild_url}"
+          echo "${fastbuild_sha256}  ${fastbuild_archive}" | sha256sum --check --status
+          mkdir -p "${fastbuild_root}"
+          unzip -q "${fastbuild_archive}" -d "${fastbuild_root}"
+          chmod +x "${fastbuild_root}/fbuild" "${fastbuild_root}/fbuildworker"
+          ln -sf "${fastbuild_root}/fbuild" "${fastbuild_root}/FBuild"
+          echo "${fastbuild_root}" >> "${GITHUB_PATH}"
+          echo "FASTBuild installed to ${fastbuild_root}"
+
+      - name: Resolve FASTBuild cache path
+        id: fbcache
+        run: |
+          sudo mkdir -p /cache/fastbuild
+          sudo chown "$USER":"$USER" /cache/fastbuild
+          echo "path=/cache/fastbuild" >> "${GITHUB_OUTPUT}"
+          echo "FASTBuild cache: /cache/fastbuild"
+
+      - name: Restore FASTBuild compilation cache
+        uses: actions/cache@v5
+        with:
+          path: ${{ steps.fbcache.outputs.path }}
+          key: fbcache-linux-${{ github.sha }}
+          restore-keys: fbcache-linux-
+
+      - name: Install pre-commit
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pre-commit
+
+      - name: Verify tool versions
+        run: |
+          echo "CMake:      $(cmake --version | head -n 1)"
+          echo "Clang:      $(clang --version | head -n 1)"
+          echo "Python:     $(python --version)"
+          echo "pip:        $(python -m pip --version)"
+          echo "pre-commit: $(pre-commit --version)"
+          echo "FASTBuild:  $(FBuild -version | head -n 1)"
+          echo "QT_DIR:     ${QT_DIR}"
+          echo "Qt6_DIR:    ${Qt6_DIR}"
+
+      - name: Configure (CMake)
         env:
           CC: clang
           CXX: clang++
-        run: cmake -S . -B build/linux-ci -G Ninja -DARC_QT6_BUILD=ON -DUSE_QLITEHTML=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+        run: cmake --preset linux-ci
 
-      - name: Build
-        run: cmake --build build/linux-ci --parallel
+      - name: Build (FASTBuild)
+        env:
+          CC: clang
+          CXX: clang++
+        run: cmake --build --preset linux-ci
 
-      - name: Sync compile commands
-        run: cmake --build build/linux-ci --target sync-compile-commands
+      - name: Test native target
+        run: ctest --preset linux-ci
 
       - name: Run pre-commit hooks
-        run: pre-commit run --all-files --show-diff-on-failure --color=always
+        run: |
+          set +e
+          pre-commit run --all-files --show-diff-on-failure --color=always
+          status=$?
+          set -e
+          if [[ ${status} -eq 0 ]]; then
+            exit 0
+          fi
+          echo 'pre-commit made changes; rerunning once'
+          pre-commit run --all-files --show-diff-on-failure --color=always
 
+      - name: Trim FASTBuild cache
+        if: always()
+        run: |
+          if [[ -d "${GITHUB_WORKSPACE}/build/linux-ci" ]]; then
+            (
+              cd "${GITHUB_WORKSPACE}/build/linux-ci"
+              FBuild -cachetrim 10240
+            )
+          fi

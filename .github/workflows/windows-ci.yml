@@ -19,8 +19,8 @@ defaults:
 
 jobs:
   build:
-    name: Windows x64
-    runs-on: windows-2025
+    name: Windows x64 (MSBuild)
+    runs-on: windows-2025-vs2026
     timeout-minutes: 120
     env:
       MSBUILDDISABLENODEREUSE: "1"
@@ -30,19 +30,64 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Install Qt 6.11.0
-        uses: jurplel/install-qt-action@v4
+      - name: Restore Qt 6.11.0 cache
+        id: qtcache
+        uses: actions/cache@v5
         with:
-          version: "6.11.0"
-          target: desktop
-          arch: win64_msvc2022_64
-          modules: qtsvg
-          cache: true
-          setup-python: true
+          path: ${{ github.workspace }}\..\Qt\6.11.0\msvc2022_64
+          key: qt-windows-6.11.0-msvc2022-64-qtbase-qtdeclarative-qtsvg-v1
+
+      - name: Install Qt 6.11.0
+        if: steps.qtcache.outputs.cache-hit != 'true'
+        run: |
+          # TODO: Switch this back to jurplel/install-qt-action once aqtinstall supports
+          # the Qt 6.11.0 Windows msvc2022_64 repository layout used by download.qt.io.
+          $qtRoot = Join-Path (Split-Path $env:GITHUB_WORKSPACE -Parent) 'Qt\6.11.0\msvc2022_64'
+          New-Item -ItemType Directory -Force -Path $qtRoot | Out-Null
+
+          $sevenZip = (Get-Command 7z -ErrorAction SilentlyContinue).Source
+          if (-not $sevenZip) {
+            $sevenZip = Join-Path $env:ProgramFiles '7-Zip\7z.exe'
+          }
+
+          if (-not (Test-Path $sevenZip)) {
+            throw '7z was not found on the Windows runner.'
+          }
+
+          $packageRoot = 'https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6110/qt6_6110_msvc2022_64/qt.qt6.6110.win64_msvc2022_64'
+          $packages = @(
+            @{
+              Name = '6.11.0-0-202603180535qtbase-Windows-Windows_11_24H2-MSVC2022-Windows-Windows_11_24H2-X86_64.7z'
+              Sha256 = 'ba0e343cb8aa067f04d6f2e54a60d911660df0aac5cf9f096f1a8a98467f8614'
+            },
+            @{
+              Name = '6.11.0-0-202603180535qtdeclarative-Windows-Windows_11_24H2-MSVC2022-Windows-Windows_11_24H2-X86_64.7z'
+              Sha256 = 'b4da442317a2d7a2bc932a3ec5b4742c19b672d1a7db5bff4793b0abd15c0f69'
+            },
+            @{
+              Name = '6.11.0-0-202603180535qtsvg-Windows-Windows_11_24H2-MSVC2022-Windows-Windows_11_24H2-X86_64.7z'
+              Sha256 = '4ae1f65cb2404d92635358ab166e33b5876c537f231c4cacbaa0517f19523a8c'
+            }
+          )
+
+          foreach ($package in $packages) {
+            $archive = Join-Path $env:RUNNER_TEMP $package.Name
+            Invoke-WebRequest -Uri "$packageRoot/$($package.Name)" -OutFile $archive
+
+            $actualSha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $archive).Hash.ToLowerInvariant()
+            if ($actualSha256 -ne $package.Sha256) {
+              throw "Qt package SHA256 mismatch for $($package.Name). Expected $($package.Sha256), got $actualSha256."
+            }
+
+            & $sevenZip x $archive "-o$qtRoot" -y
+            if ($LASTEXITCODE -ne 0) {
+              throw "Failed to extract $($package.Name)."
+            }
+          }
 
       - name: Export Qt environment
         run: |
-          $qtRoot = $env:QT_ROOT_DIR
+          $qtRoot = Join-Path (Split-Path $env:GITHUB_WORKSPACE -Parent) 'Qt\6.11.0\msvc2022_64'
           if (-not (Test-Path $qtRoot)) {
             throw "Qt root directory does not exist: $qtRoot"
           }
@@ -52,9 +97,12 @@ jobs:
             throw "Qt6Config.cmake not found under $qt6Dir"
           }
 
+          "QT_ROOT_DIR=$qtRoot" >> $env:GITHUB_ENV
           "QT_DIR=$qtRoot" >> $env:GITHUB_ENV
           "Qt6_DIR=$qt6Dir" >> $env:GITHUB_ENV
           (Join-Path $qtRoot 'bin') >> $env:GITHUB_PATH
+          Write-Host "QT_DIR=$qtRoot"
+          Write-Host "Qt6_DIR=$qt6Dir"
 
       - name: Setup MSVC developer environment
         uses: ilammy/msvc-dev-cmd@v1
@@ -71,16 +119,20 @@ jobs:
             throw 'rc.exe not found in Windows SDK'
           }
 
+          Write-Host "Found rc.exe -> $($rc.DirectoryName)"
           "WindowsKitRC=$($rc.DirectoryName)" >> $env:GITHUB_ENV
           $rc.DirectoryName >> $env:GITHUB_PATH
 
       - name: Verify tool versions
         run: |
           Write-Host "MSBuild: $(& msbuild -version -nologo | Select-Object -First 1)"
-          Write-Host "MSVC:    $(cl 2>&1 | Select-Object -First 1)"
-          Write-Host "QT_DIR:  $env:QT_DIR"
+          Write-Host "MSVC:   $(cl 2>&1 | Select-Object -First 1)"
+          Write-Host "Windows SDK RC: $env:WindowsKitRC"
+          Write-Host "QT_DIR: $env:QT_DIR"
           Write-Host "Qt6_DIR: $env:Qt6_DIR"
 
-      - name: Build Windows solution
-        run: msbuild ArcNotes.Win.slnx /nr:false /m /p:Configuration=Release /p:Platform=x64
+      - name: Restore Windows solution
+        run: msbuild ArcNotes.Win.slnx /t:Restore /p:Configuration=Debug /p:Platform=x64
 
+      - name: Build Windows solution
+        run: msbuild ArcNotes.Win.slnx /m /p:Configuration=Debug /p:Platform=x64 /p:TreatWarningsAsErrors=true
