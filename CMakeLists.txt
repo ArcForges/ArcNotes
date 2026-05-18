@@ -6,6 +6,13 @@ option(ENABLE_ASAN "Enable address sanitizer for native targets." OFF)
 option(ENABLE_CLANG_TIDY "Enable clang-tidy during native builds." OFF)
 option(USE_WERROR "Error on compile warning" OFF)
 
+# Embed MSVC/UCRT/SDK system include paths into compile_commands.json so that
+# clang-tidy can resolve Windows toolchain headers outside the vcvars shell.
+if(MSVC AND CMAKE_CXX_COMPILER_ID STREQUAL "Clang" AND DEFINED ENV{INCLUDE})
+  set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES $ENV{INCLUDE})
+  set(CMAKE_C_STANDARD_INCLUDE_DIRECTORIES $ENV{INCLUDE})
+endif()
+
 if(CMAKE_EXPORT_COMPILE_COMMANDS)
   add_custom_target(
     sync-compile-commands ALL
