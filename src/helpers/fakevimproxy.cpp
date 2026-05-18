@@ -339,8 +339,7 @@ bool FakeVimProxy::hasChanges() {
 
 QTextDocument* FakeVimProxy::document() const {
     QTextDocument* doc = nullptr;
-    if (auto* plainTextEdit = qobject_cast<QPlainTextEdit*>(m_widget))
-        doc = plainTextEdit->document();
+    if (auto* plainTextEdit = qobject_cast<QPlainTextEdit*>(m_widget)) doc = plainTextEdit->document();
     return doc;
 }
 

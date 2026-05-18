@@ -16,14 +16,14 @@ struct ToolbarContainer {
     QStringList actions;
 
     ToolbarContainer() {}
-    ToolbarContainer(const QString &name, const QString &title, const QStringList &actions)
+    ToolbarContainer(const QString& name, const QString& title, const QStringList& actions)
         : name(name), title(title), actions(actions) {}
-    ToolbarContainer(QToolBar *toolbar);
-    QToolBar *create(QMainWindow *w) const;
+    ToolbarContainer(QToolBar* toolbar);
+    QToolBar* create(QMainWindow* w) const;
 
-    void updateToolbar(QMainWindow *mainWindow) const;
+    void updateToolbar(QMainWindow* mainWindow) const;
 
-    bool toolbarFound(QMainWindow *mainWindow) const;
+    bool toolbarFound(QMainWindow* mainWindow) const;
 
-    static void updateIconSize(QToolBar *toolbar);
+    static void updateIconSize(QToolBar* toolbar);
 };

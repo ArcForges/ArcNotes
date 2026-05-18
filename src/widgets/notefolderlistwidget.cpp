@@ -13,9 +13,9 @@
 
 #include "notefolderlistwidget.h"
 
-NoteFolderListWidget::NoteFolderListWidget(QWidget *parent) : QListWidget(parent) {}
+NoteFolderListWidget::NoteFolderListWidget(QWidget* parent) : QListWidget(parent) {}
 
-void NoteFolderListWidget::dropEvent(QDropEvent *e) {
+void NoteFolderListWidget::dropEvent(QDropEvent* e) {
     // finish the move event
     QListWidget::dropEvent(e);
 
@@ -28,7 +28,7 @@ void NoteFolderListWidget::dropEvent(QDropEvent *e) {
     QVector<int> folderIds;
     folderIds.reserve(itemCount);
     for (int index = 0; index < itemCount; index++) {
-        QListWidgetItem *listItem = item(index);
+        QListWidgetItem* listItem = item(index);
         folderIds.append(listItem->data(Qt::UserRole).toInt());
     }
 

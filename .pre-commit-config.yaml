@@ -48,7 +48,7 @@ repos:
     hooks:
       - id: clang-tidy
         files: \.(cpp|hpp|cc|hh|cxx|hxx|mm)$
-        args: [--quiet, --use-color, -p=build]
+        args: [--quiet, --use-color, --allow-no-checks, -p=build]
         types_or: [c++, c]
         require_serial: false
         additional_dependencies: [clang-tidy==22.1.0.1]
