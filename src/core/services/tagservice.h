@@ -13,18 +13,18 @@ class TagService {
 public:
     explicit TagService(TagRepository* tagRepository = nullptr);
 
-    TagData createTag(const QString& name, int parentId = 0) const;
-    bool deleteTag(int tagId) const;
-    bool renameTag(int tagId, const QString& name) const;
-    bool tagNote(const NoteData& note, int tagId) const;
-    bool untagNote(const NoteData& note, int tagId) const;
-    QVector<TagData> getNoteTags(const NoteData& note) const;
-    QVector<TagData> fetchTagTree(int parentId = 0) const;
-    int countLinkedNotes(int tagId, bool fromAllSubfolders, bool recursive = true) const;
-    QHash<QString, QVector<int>> allIdsByNoteFilePath() const;
-    QHash<QString, QStringList> allNamesByNoteFilePath() const;
-    bool moveTag(int tagId, int parentId) const;
-    bool setTagColor(int tagId, const QColor& color) const;
+    [[nodiscard]] TagData createTag(const QString& name, int parentId = 0) const;
+    [[nodiscard]] bool deleteTag(int tagId) const;
+    [[nodiscard]] bool renameTag(int tagId, const QString& name) const;
+    [[nodiscard]] bool tagNote(const NoteData& note, int tagId) const;
+    [[nodiscard]] bool untagNote(const NoteData& note, int tagId) const;
+    [[nodiscard]] QVector<TagData> getNoteTags(const NoteData& note) const;
+    [[nodiscard]] QVector<TagData> fetchTagTree(int parentId = 0) const;
+    [[nodiscard]] int countLinkedNotes(int tagId, bool fromAllSubfolders, bool recursive = true) const;
+    [[nodiscard]] QHash<QString, QVector<int>> allIdsByNoteFilePath() const;
+    [[nodiscard]] QHash<QString, QStringList> allNamesByNoteFilePath() const;
+    [[nodiscard]] bool moveTag(int tagId, int parentId) const;
+    [[nodiscard]] bool setTagColor(int tagId, const QColor& color) const;
 
 private:
     TagRepository* _tagRepository;

@@ -16,9 +16,9 @@ class NotePreviewView : public QWidget {
 
 public:
     explicit NotePreviewView(QWidget* parent = nullptr);
-    QWidget* viewport() const;
-    QScrollBar* verticalScrollBar() const;
-    QScrollBar* horizontalScrollBar() const;
+    [[nodiscard]] QWidget* viewport() const;
+    [[nodiscard]] QScrollBar* verticalScrollBar() const;
+    [[nodiscard]] QScrollBar* horizontalScrollBar() const;
 
 public slots:
     void setHtmlPreview(const QString& html);

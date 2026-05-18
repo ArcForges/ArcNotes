@@ -2,6 +2,7 @@
 
 #include <QString>
 #include <QStringList>
+#include <utility>
 class QToolBar;
 class QMainWindow;
 
@@ -15,9 +16,9 @@ struct ToolbarContainer {
     QString title;
     QStringList actions;
 
-    ToolbarContainer() {}
-    ToolbarContainer(const QString& name, const QString& title, const QStringList& actions)
-        : name(name), title(title), actions(actions) {}
+    ToolbarContainer() = default;
+    ToolbarContainer(QString name, QString title, QStringList actions)
+        : name(std::move(name)), title(std::move(title)), actions(std::move(actions)) {}
     ToolbarContainer(QToolBar* toolbar);
     QToolBar* create(QMainWindow* w) const;
 

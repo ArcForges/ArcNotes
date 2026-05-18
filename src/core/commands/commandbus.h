@@ -54,7 +54,7 @@ public:
         return result;
     }
 
-    PendingCommandTracker* pendingTracker() const;
+    [[nodiscard]] PendingCommandTracker* pendingTracker() const;
 
 signals:
     void commandDispatched(const QString& commandType, const QString& commandId);
@@ -62,7 +62,7 @@ signals:
     void commandFailed(const QString& commandId, const CommandResult& result);
 
 private:
-    QString nextCommandId() const;
+    [[nodiscard]] QString nextCommandId() const;
 
     QHash<QString, std::function<CommandResult(const void*)>> _handlers;
     PendingCommandTracker* _pendingTracker;

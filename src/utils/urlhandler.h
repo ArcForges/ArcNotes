@@ -12,23 +12,24 @@ class UrlHandlerContext {
 public:
     virtual ~UrlHandlerContext() = default;
 
-    virtual NoteData urlCurrentNote() const = 0;
-    virtual QString urlCurrentNoteFolderPath() const = 0;
-    virtual QString urlCurrentNoteSubFolderRelativePath() const = 0;
-    virtual QString urlFileUrlFromCurrentNoteFileName(const QString& fileName, bool withFragment) const = 0;
-    virtual QTextDocument* urlActiveNoteDocument() const = 0;
-    virtual ArcNotesMarkdownTextEdit* urlNoteTextEdit() const = 0;
-    virtual QString urlFragmentFromFileName(const QString& fileName) const = 0;
-    virtual bool urlFileUrlIsNoteInCurrentFolder(const QUrl& url) const = 0;
-    virtual bool urlFileUrlIsExistingNoteInCurrentFolder(const QUrl& url) const = 0;
-    virtual QString urlRelativePathForFileUrlInCurrentFolder(const QUrl& url) const = 0;
-    virtual NoteData urlNoteById(int noteId) const = 0;
-    virtual NoteData urlNoteByFileUrl(const QUrl& url) const = 0;
-    virtual NoteData urlNoteByUrlString(const QString& urlString) const = 0;
-    virtual bool urlWikiLinkSupportEnabled() const = 0;
-    virtual NoteData urlResolveWikiLink(const QString& target, int currentNoteSubFolderId) const = 0;
-    virtual bool urlCurrentFolderHasSubfolders() const = 0;
-    virtual int urlNoteSubFolderIdByPath(const QString& pathData) const = 0;
+    [[nodiscard]] virtual NoteData urlCurrentNote() const = 0;
+    [[nodiscard]] virtual QString urlCurrentNoteFolderPath() const = 0;
+    [[nodiscard]] virtual QString urlCurrentNoteSubFolderRelativePath() const = 0;
+    [[nodiscard]] virtual QString urlFileUrlFromCurrentNoteFileName(const QString& fileName,
+                                                                    bool withFragment) const = 0;
+    [[nodiscard]] virtual QTextDocument* urlActiveNoteDocument() const = 0;
+    [[nodiscard]] virtual ArcNotesMarkdownTextEdit* urlNoteTextEdit() const = 0;
+    [[nodiscard]] virtual QString urlFragmentFromFileName(const QString& fileName) const = 0;
+    [[nodiscard]] virtual bool urlFileUrlIsNoteInCurrentFolder(const QUrl& url) const = 0;
+    [[nodiscard]] virtual bool urlFileUrlIsExistingNoteInCurrentFolder(const QUrl& url) const = 0;
+    [[nodiscard]] virtual QString urlRelativePathForFileUrlInCurrentFolder(const QUrl& url) const = 0;
+    [[nodiscard]] virtual NoteData urlNoteById(int noteId) const = 0;
+    [[nodiscard]] virtual NoteData urlNoteByFileUrl(const QUrl& url) const = 0;
+    [[nodiscard]] virtual NoteData urlNoteByUrlString(const QString& urlString) const = 0;
+    [[nodiscard]] virtual bool urlWikiLinkSupportEnabled() const = 0;
+    [[nodiscard]] virtual NoteData urlResolveWikiLink(const QString& target, int currentNoteSubFolderId) const = 0;
+    [[nodiscard]] virtual bool urlCurrentFolderHasSubfolders() const = 0;
+    [[nodiscard]] virtual int urlNoteSubFolderIdByPath(const QString& pathData) const = 0;
     virtual int urlEnsureNoteSubFolderPath(const QString& pathData) = 0;
     virtual int urlEnsureChildNoteSubFolder(const QString& name, int parentId) = 0;
     virtual void urlSetActiveNoteSubFolder(int noteSubFolderId) = 0;
@@ -37,7 +38,7 @@ public:
     virtual void urlRefreshNoteFolders() = 0;
     virtual void urlJumpToNoteSubFolder(int noteSubFolderId) = 0;
     virtual void urlJumpToEditorPosition(int position) = 0;
-    virtual bool urlDoNoteEditingCheck() const = 0;
+    [[nodiscard]] virtual bool urlDoNoteEditingCheck() const = 0;
     virtual void urlRefreshNotePreview() = 0;
 };
 

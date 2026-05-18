@@ -59,8 +59,7 @@ void asConst(const T&&) = delete;
 
 Q_DECLARE_METATYPE(Utils::Misc::ExternalImageHash*)
 
-namespace Utils {
-namespace Misc {
+namespace Utils::Misc {
 
 struct SearchEngine {
     QString name;
@@ -168,8 +167,7 @@ int getPreviewRefreshDebounceTime();
 int getMaximumNoteFileSize();
 QString encodeFilePath(const QString& filePath);
 QString detectFileFormat(const QString& text);
-}  // namespace Misc
-}  // namespace Utils
+}  // namespace Utils::Misc
 
 QDataStream& operator<<(QDataStream& os, const QPrinter& printer);
 QDataStream& operator>>(QDataStream& is, QPrinter& printer);

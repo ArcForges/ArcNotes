@@ -10,17 +10,18 @@ class NoteFolderService {
 public:
     explicit NoteFolderService(NoteFolderRepository* folderRepository = nullptr);
 
-    NoteFolderData folder(int folderId) const;
-    QList<NoteFolderData> folders() const;
-    NoteFolderData currentFolder() const;
-    bool saveFolder(const NoteFolderData& folder) const;
-    NoteFolderData saveFolderAndReturn(const NoteFolderData& folder) const;
-    bool deleteFolder(int folderId) const;
-    int currentFolderId() const;
+    [[nodiscard]] NoteFolderData folder(int folderId) const;
+    [[nodiscard]] QList<NoteFolderData> folders() const;
+    [[nodiscard]] NoteFolderData currentFolder() const;
+    [[nodiscard]] bool saveFolder(const NoteFolderData& folder) const;
+    [[nodiscard]] NoteFolderData saveFolderAndReturn(const NoteFolderData& folder) const;
+    [[nodiscard]] bool deleteFolder(int folderId) const;
+    [[nodiscard]] int currentFolderId() const;
     void setCurrentFolderId(int folderId) const;
-    QVariant settingValue(int folderId, const QString& key, const QVariant& defaultValue = QVariant()) const;
+    [[nodiscard]] QVariant settingValue(int folderId, const QString& key,
+                                        const QVariant& defaultValue = QVariant()) const;
     void setSettingValue(int folderId, const QString& key, const QVariant& value) const;
-    bool updatePriorities(const QVector<int>& folderIds) const;
+    [[nodiscard]] bool updatePriorities(const QVector<int>& folderIds) const;
 
 private:
     NoteFolderRepository* _folderRepository;

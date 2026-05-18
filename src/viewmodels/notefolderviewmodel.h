@@ -18,9 +18,9 @@ public:
                                  QObject* parent = nullptr);
 
     NoteFolderListModel* model();
-    const NoteFolderListModel* model() const;
-    int currentFolderId() const;
-    QString currentFolderName() const;
+    [[nodiscard]] const NoteFolderListModel* model() const;
+    [[nodiscard]] int currentFolderId() const;
+    [[nodiscard]] QString currentFolderName() const;
 
     void setCommandBus(CommandBus* commandBus);
     void setAppState(AppState* appState);

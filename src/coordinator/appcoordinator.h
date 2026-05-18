@@ -66,74 +66,78 @@ public:
 
     void initialize();
 
-    CommandBus* commandBus() const;
-    ActionRegistry* actionRegistry() const;
-    DialogCoordinator* dialogCoordinator() const;
-    AppState* appState() const;
-    EditorState* editorState() const;
-    SearchState* searchState() const;
-    UiState* uiState() const;
+    [[nodiscard]] CommandBus* commandBus() const;
+    [[nodiscard]] ActionRegistry* actionRegistry() const;
+    [[nodiscard]] DialogCoordinator* dialogCoordinator() const;
+    [[nodiscard]] AppState* appState() const;
+    [[nodiscard]] EditorState* editorState() const;
+    [[nodiscard]] SearchState* searchState() const;
+    [[nodiscard]] UiState* uiState() const;
 
-    NoteListViewModel* noteListViewModel() const;
-    NoteEditorViewModel* noteEditorViewModel() const;
-    TagTreeViewModel* tagTreeViewModel() const;
-    NavigationViewModel* navigationViewModel() const;
-    SearchViewModel* searchViewModel() const;
-    NoteFolderViewModel* noteFolderViewModel() const;
-    NoteFolderSettingsViewModel* noteFolderSettingsViewModel() const;
-    NoteSubFolderViewModel* noteSubFolderViewModel() const;
-    SettingsViewModel* settingsViewModel() const;
-    TrashViewModel* trashViewModel() const;
-    QVector<NoteData> allNotes() const;
-    NoteData note(int noteId) const;
-    QList<NoteFolderData> noteFolders() const;
-    QVector<TagData> tags(int parentId = 0) const;
-    QVector<TagData> tagsForNotes(const QVector<int>& noteIds) const;
-    QVector<NoteSubFolderData> noteSubFolders(int parentId = 0) const;
-    NoteSubFolderData noteSubFolder(int subFolderId) const;
-    QString noteSubFolderFullPath(int subFolderId) const;
-    QVariant currentNoteFolderSettingValue(const QString& key, const QVariant& defaultValue = QVariant()) const;
-    NoteData noteByFileUrl(const QUrl& url) const;
-    NoteData noteByUrlString(const QString& urlString) const;
-    NoteData resolveWikiLink(const QString& target, int currentNoteSubFolderId) const;
-    QStringList searchNoteNames(const QString& query) const;
-    QHash<QString, QStringList> tagNamesByNoteFilePath() const;
-    bool wikiLinkSupportEnabled() const;
-    bool noteFileUrlIsInCurrentFolder(const QUrl& url) const;
-    bool noteFileUrlIsExistingInCurrentFolder(const QUrl& url) const;
-    QString noteUrlFragmentFromFileName(const QString& fileName) const;
-    QString noteRelativePathForFileUrlInCurrentFolder(const QUrl& url) const;
-    QString noteUrlForLinkingTo(const NoteData& source, const NoteData& target, bool forceLegacy = false) const;
-    QString noteRelativeFilePath(const NoteData& note, const QString& path) const;
-    QString noteFileUrlFromFileName(const NoteData& note, const QString& fileName, bool withFragment = false) const;
-    QStringList mediaFileList(const NoteData& note) const;
-    QStringList attachmentFileList(const NoteData& note) const;
-    QString mediaUrlStringForFileName(const NoteData& note, const QString& fileName) const;
-    QString attachmentUrlStringForFileName(const NoteData& note, const QString& fileName) const;
+    [[nodiscard]] NoteListViewModel* noteListViewModel() const;
+    [[nodiscard]] NoteEditorViewModel* noteEditorViewModel() const;
+    [[nodiscard]] TagTreeViewModel* tagTreeViewModel() const;
+    [[nodiscard]] NavigationViewModel* navigationViewModel() const;
+    [[nodiscard]] SearchViewModel* searchViewModel() const;
+    [[nodiscard]] NoteFolderViewModel* noteFolderViewModel() const;
+    [[nodiscard]] NoteFolderSettingsViewModel* noteFolderSettingsViewModel() const;
+    [[nodiscard]] NoteSubFolderViewModel* noteSubFolderViewModel() const;
+    [[nodiscard]] SettingsViewModel* settingsViewModel() const;
+    [[nodiscard]] TrashViewModel* trashViewModel() const;
+    [[nodiscard]] QVector<NoteData> allNotes() const;
+    [[nodiscard]] NoteData note(int noteId) const;
+    [[nodiscard]] QList<NoteFolderData> noteFolders() const;
+    [[nodiscard]] QVector<TagData> tags(int parentId = 0) const;
+    [[nodiscard]] QVector<TagData> tagsForNotes(const QVector<int>& noteIds) const;
+    [[nodiscard]] QVector<NoteSubFolderData> noteSubFolders(int parentId = 0) const;
+    [[nodiscard]] NoteSubFolderData noteSubFolder(int subFolderId) const;
+    [[nodiscard]] QString noteSubFolderFullPath(int subFolderId) const;
+    [[nodiscard]] QVariant currentNoteFolderSettingValue(const QString& key,
+                                                         const QVariant& defaultValue = QVariant()) const;
+    [[nodiscard]] NoteData noteByFileUrl(const QUrl& url) const;
+    [[nodiscard]] NoteData noteByUrlString(const QString& urlString) const;
+    [[nodiscard]] NoteData resolveWikiLink(const QString& target, int currentNoteSubFolderId) const;
+    [[nodiscard]] QStringList searchNoteNames(const QString& query) const;
+    [[nodiscard]] QHash<QString, QStringList> tagNamesByNoteFilePath() const;
+    [[nodiscard]] bool wikiLinkSupportEnabled() const;
+    [[nodiscard]] bool noteFileUrlIsInCurrentFolder(const QUrl& url) const;
+    [[nodiscard]] bool noteFileUrlIsExistingInCurrentFolder(const QUrl& url) const;
+    [[nodiscard]] QString noteUrlFragmentFromFileName(const QString& fileName) const;
+    [[nodiscard]] QString noteRelativePathForFileUrlInCurrentFolder(const QUrl& url) const;
+    [[nodiscard]] QString noteUrlForLinkingTo(const NoteData& source, const NoteData& target,
+                                              bool forceLegacy = false) const;
+    [[nodiscard]] QString noteRelativeFilePath(const NoteData& note, const QString& path) const;
+    [[nodiscard]] QString noteFileUrlFromFileName(const NoteData& note, const QString& fileName,
+                                                  bool withFragment = false) const;
+    [[nodiscard]] QStringList mediaFileList(const NoteData& note) const;
+    [[nodiscard]] QStringList attachmentFileList(const NoteData& note) const;
+    [[nodiscard]] QString mediaUrlStringForFileName(const NoteData& note, const QString& fileName) const;
+    [[nodiscard]] QString attachmentUrlStringForFileName(const NoteData& note, const QString& fileName) const;
     QString insertMediaMarkdown(const NoteData& note, const QString& sourcePath, const QString& title = QString(),
                                 bool returnUrlOnly = false);
     QString insertAttachmentMarkdown(const NoteData& note, const QString& sourcePath, const QString& title = QString(),
                                      const QString& fileName = QString(), bool returnUrlOnly = false);
-    QString renderTextToHtml(const NoteData& note, const QString& text, const QString& notesPath,
-                             int maxImageWidth = 980, bool forExport = false, bool base64Images = false) const;
+    [[nodiscard]] QString renderTextToHtml(const NoteData& note, const QString& text, const QString& notesPath,
+                                           int maxImageWidth = 980, bool forExport = false,
+                                           bool base64Images = false) const;
     bool renameMediaReferences(const QVector<int>& noteIds, const QString& oldFileName, const QString& newFileName);
     bool renameAttachmentReferences(const QVector<int>& noteIds, const QString& oldFileName,
                                     const QString& newFileName);
-    NoteSubFolderData noteSubFolderByPath(const QString& pathData) const;
+    [[nodiscard]] NoteSubFolderData noteSubFolderByPath(const QString& pathData) const;
     NoteSubFolderData ensureNoteSubFolderPath(const QString& pathData);
     NoteSubFolderData ensureChildNoteSubFolder(const QString& name, int parentId);
     bool setActiveNoteSubFolder(int noteSubFolderId);
-    QVariant settingValue(const QString& key, const QVariant& defaultValue = QVariant()) const;
-    QVector<QVariantMap> settingsArrayValues(const QString& arrayName, const QStringList& keys) const;
-    QVector<TrashItemData> trashItems() const;
-    QString trashItemText(int trashItemId) const;
-    QString trashItemRestorationPath(int trashItemId) const;
-    bool trashItemFileExists(int trashItemId) const;
+    [[nodiscard]] QVariant settingValue(const QString& key, const QVariant& defaultValue = QVariant()) const;
+    [[nodiscard]] QVector<QVariantMap> settingsArrayValues(const QString& arrayName, const QStringList& keys) const;
+    [[nodiscard]] QVector<TrashItemData> trashItems() const;
+    [[nodiscard]] QString trashItemText(int trashItemId) const;
+    [[nodiscard]] QString trashItemRestorationPath(int trashItemId) const;
+    [[nodiscard]] bool trashItemFileExists(int trashItemId) const;
     bool restoreTrashItems(const QVector<int>& trashItemIds);
     bool removeTrashItems(const QVector<int>& trashItemIds);
-    QVector<BookmarkItemData> noteBookmarks() const;
-    NoteHistoryItemData noteBookmark(int slot) const;
-    NoteData noteForHistoryItem(const NoteHistoryItemData& item) const;
+    [[nodiscard]] QVector<BookmarkItemData> noteBookmarks() const;
+    [[nodiscard]] NoteHistoryItemData noteBookmark(int slot) const;
+    [[nodiscard]] NoteData noteForHistoryItem(const NoteHistoryItemData& item) const;
     void storeNoteBookmark(int slot, const NoteHistoryItemData& item);
     void removeNoteBookmark(int slot);
     bool renameNote(int noteId, const QString& name);

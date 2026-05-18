@@ -28,14 +28,14 @@ public:
     explicit NavigationOutlineModel(QObject* parent = nullptr);
     ~NavigationOutlineModel() override;
 
-    QModelIndex index(int row, int column, const QModelIndex& parent = QModelIndex()) const override;
-    QModelIndex parent(const QModelIndex& index) const override;
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
-    QHash<int, QByteArray> roleNames() const override;
+    [[nodiscard]] QModelIndex index(int row, int column, const QModelIndex& parent = QModelIndex()) const override;
+    [[nodiscard]] QModelIndex parent(const QModelIndex& index) const override;
+    [[nodiscard]] int rowCount(const QModelIndex& parent = QModelIndex()) const override;
+    [[nodiscard]] int columnCount(const QModelIndex& parent = QModelIndex()) const override;
+    [[nodiscard]] QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
-    QVector<NavigationOutlineItemData> headings() const;
+    [[nodiscard]] QVector<NavigationOutlineItemData> headings() const;
 
 public slots:
     void setHeadings(const QVector<NavigationOutlineItemData>& headings);
@@ -48,7 +48,7 @@ private:
         QVector<Node*> children;
     };
 
-    Node* nodeFromIndex(const QModelIndex& index) const;
+    [[nodiscard]] Node* nodeFromIndex(const QModelIndex& index) const;
     int rowOfNode(const Node* node) const;
 
     std::unique_ptr<Node> _root;

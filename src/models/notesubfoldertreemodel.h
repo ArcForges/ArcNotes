@@ -18,16 +18,16 @@ public:
     explicit NoteSubFolderTreeModel(QObject* parent = nullptr);
     ~NoteSubFolderTreeModel() override;
 
-    QModelIndex index(int row, int column, const QModelIndex& parent = QModelIndex()) const override;
-    QModelIndex parent(const QModelIndex& index) const override;
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    int columnCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] QModelIndex index(int row, int column, const QModelIndex& parent = QModelIndex()) const override;
+    [[nodiscard]] QModelIndex parent(const QModelIndex& index) const override;
+    [[nodiscard]] int rowCount(const QModelIndex& parent = QModelIndex()) const override;
+    [[nodiscard]] int columnCount(const QModelIndex& parent = QModelIndex()) const override;
+    [[nodiscard]] QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
     bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) override;
-    Qt::ItemFlags flags(const QModelIndex& index) const override;
-    QHash<int, QByteArray> roleNames() const override;
+    [[nodiscard]] Qt::ItemFlags flags(const QModelIndex& index) const override;
+    [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
-    NoteSubFolderData subFolderForIndex(const QModelIndex& index) const;
+    [[nodiscard]] NoteSubFolderData subFolderForIndex(const QModelIndex& index) const;
 
 signals:
     void subFolderRenameRequested(int subFolderId, const QString& name);
@@ -43,7 +43,7 @@ private:
         QVector<Node*> children;
     };
 
-    Node* nodeFromIndex(const QModelIndex& index) const;
+    [[nodiscard]] Node* nodeFromIndex(const QModelIndex& index) const;
     int rowOfNode(const Node* node) const;
 
     std::unique_ptr<Node> _root;

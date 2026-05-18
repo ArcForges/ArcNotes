@@ -16,8 +16,7 @@
 
 #include <QString>
 
-namespace Utils {
-namespace ListUtils {
+namespace Utils::ListUtils {
 QString normalizeSelectedText(QString text);
 QString toggleCheckboxes(const QString& text);
 QString createUnorderedList(const QString& text);
@@ -26,5 +25,4 @@ QString createAlphabeticalList(const QString& text);
 QString createCheckboxList(const QString& text);
 QString clearListFormatting(const QString& text);
 QString orderCheckboxes(const QString& text);
-}  // namespace ListUtils
-}  // namespace Utils
+}  // namespace Utils::ListUtils

@@ -44,19 +44,19 @@ public:
 
     // Expose QLiteHtmlWidget methods
     void setZoomFactor(qreal scale);
-    qreal zoomFactor() const;
-    QString selectedText() const;
+    [[nodiscard]] qreal zoomFactor() const;
+    [[nodiscard]] QString selectedText() const;
     void setDefaultFont(const QFont& font);
-    QFont defaultFont() const;
+    [[nodiscard]] QFont defaultFont() const;
     bool findText(const QString& text, QTextDocument::FindFlags flags, bool incremental, bool* wrapped = nullptr);
 
     // Update background color and dark mode after a theme change
     void updateBackground();
 
     // Expose QAbstractScrollArea methods
-    QWidget* viewport() const;
-    QScrollBar* verticalScrollBar() const;
-    QScrollBar* horizontalScrollBar() const;
+    [[nodiscard]] QWidget* viewport() const;
+    [[nodiscard]] QScrollBar* verticalScrollBar() const;
+    [[nodiscard]] QScrollBar* horizontalScrollBar() const;
 
 Q_SIGNALS:
     void anchorClicked(const QUrl& url);

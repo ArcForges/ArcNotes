@@ -22,11 +22,11 @@ public:
 
     explicit TrashItemModel(QObject* parent = nullptr);
 
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
-    QHash<int, QByteArray> roleNames() const override;
+    [[nodiscard]] int rowCount(const QModelIndex& parent = QModelIndex()) const override;
+    [[nodiscard]] QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
-    QVector<TrashItemData> trashItems() const;
+    [[nodiscard]] QVector<TrashItemData> trashItems() const;
 
 public slots:
     void setTrashItems(const QVector<TrashItemData>& trashItems);

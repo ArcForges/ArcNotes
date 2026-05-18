@@ -14,11 +14,11 @@ class SearchState : public QObject {
 public:
     explicit SearchState(QObject* parent = nullptr);
 
-    QString query() const;
-    bool isSearching() const;
-    int resultCount() const;
-    QString searchMode() const;
-    QVector<int> resultNoteIds() const;
+    [[nodiscard]] QString query() const;
+    [[nodiscard]] bool isSearching() const;
+    [[nodiscard]] int resultCount() const;
+    [[nodiscard]] QString searchMode() const;
+    [[nodiscard]] QVector<int> resultNoteIds() const;
 
 public slots:
     void setQuery(const QString& query);

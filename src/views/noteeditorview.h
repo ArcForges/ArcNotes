@@ -12,7 +12,7 @@ public:
     explicit NoteEditorView(QWidget* parent = nullptr);
 
     void setViewModel(NoteEditorViewModel* viewModel);
-    ArcNotesMarkdownTextEdit* editor() const;
+    [[nodiscard]] ArcNotesMarkdownTextEdit* editor() const;
 
 private slots:
     void applyViewModelText(const QString& text);

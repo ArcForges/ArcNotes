@@ -37,7 +37,7 @@ private:
     void buildUi();
     void loadTableFromCursor();
     void populateGridFromParsed(const QList<QStringList>& rows);
-    QString buildMarkdownTable() const;
-    int currentColumn() const;
+    [[nodiscard]] QString buildMarkdownTable() const;
+    [[nodiscard]] int currentColumn() const;
     void updateColumnHeaderLabels();
 };

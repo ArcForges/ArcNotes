@@ -8,18 +8,18 @@ public:
     explicit MasterDialog(QWidget* parent = nullptr);
 
 public Q_SLOTS:
-    virtual int exec() override;
+    int exec() override;
 
     virtual void show();
 
-    virtual void open() override;
+    void open() override;
 
 protected:
     bool _ignoreReturnKey = false;
 
     void resizeEvent(QResizeEvent* event) override;
 
-    QString getGeometrySettingKey() const;
+    [[nodiscard]] QString getGeometrySettingKey() const;
 
     void storeGeometrySettings() const;
 
@@ -29,7 +29,7 @@ protected:
 
     void handleOpenDialog();
 
-    virtual void keyPressEvent(QKeyEvent* keyEvent) override;
+    void keyPressEvent(QKeyEvent* keyEvent) override;
 
     void afterSetupUI();
 

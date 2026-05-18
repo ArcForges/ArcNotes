@@ -27,14 +27,14 @@ public:
                                  EditorState* editorState = nullptr, QObject* parent = nullptr);
     ~NoteEditorViewModel() override;
 
-    int noteId() const;
-    QString noteTitle() const;
-    QString noteText() const;
-    bool isDirty() const;
-    bool isReadOnly() const;
-    bool isSaving() const;
-    bool hasConflict() const;
-    int cursorPosition() const;
+    [[nodiscard]] int noteId() const;
+    [[nodiscard]] QString noteTitle() const;
+    [[nodiscard]] QString noteText() const;
+    [[nodiscard]] bool isDirty() const;
+    [[nodiscard]] bool isReadOnly() const;
+    [[nodiscard]] bool isSaving() const;
+    [[nodiscard]] bool hasConflict() const;
+    [[nodiscard]] int cursorPosition() const;
 
     void setCommandBus(CommandBus* commandBus);
     void setAppState(AppState* appState);

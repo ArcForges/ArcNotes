@@ -12,7 +12,7 @@ public:
     explicit NavigationViewModel(QObject* parent = nullptr);
 
     NavigationOutlineModel* model();
-    const NavigationOutlineModel* model() const;
+    [[nodiscard]] const NavigationOutlineModel* model() const;
 
 public slots:
     void parseDocument(const QString& text);

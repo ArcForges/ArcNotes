@@ -22,12 +22,12 @@ class AppState : public QObject {
 public:
     explicit AppState(QObject* parent = nullptr);
 
-    NoteData currentNote() const;
-    NoteFolderData currentNoteFolder() const;
-    NoteSubFolderData currentNoteSubFolder() const;
-    int activeTagId() const;
-    NoteHistoryData noteHistory() const;
-    bool showNotesFromAllSubFolders() const;
+    [[nodiscard]] NoteData currentNote() const;
+    [[nodiscard]] NoteFolderData currentNoteFolder() const;
+    [[nodiscard]] NoteSubFolderData currentNoteSubFolder() const;
+    [[nodiscard]] int activeTagId() const;
+    [[nodiscard]] NoteHistoryData noteHistory() const;
+    [[nodiscard]] bool showNotesFromAllSubFolders() const;
 
 public slots:
     void setCurrentNote(const NoteData& note);

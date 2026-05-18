@@ -38,17 +38,17 @@ class NavigationWidget : public QTreeWidget {
     Q_OBJECT
 
 public:
-    explicit NavigationWidget(QWidget* parent = 0);
+    explicit NavigationWidget(QWidget* parent = nullptr);
 
     void parse(const QTextDocument* document, int textCursorPosition, int noteId = -1);
-    static QVector<Node> parseDocument(const QTextDocument* const document);
+    static QVector<Node> parseDocument(const QTextDocument* document);
     static int headingPositionForCursor(const QTextCursor& cursor);
     void clearCollapsedStateForNote(int noteId);
 
     void selectItemForCursorPosition(int position);
 
-    int getNextHeadingPosition(int currentPosition) const;
-    int getPreviousHeadingPosition(int currentPosition) const;
+    [[nodiscard]] int getNextHeadingPosition(int currentPosition) const;
+    [[nodiscard]] int getPreviousHeadingPosition(int currentPosition) const;
 
 private slots:
     void onCurrentItemChanged(QTreeWidgetItem* current, QTreeWidgetItem* previous);
@@ -83,8 +83,8 @@ private:
     // Only notes where the user actively changed expand/collapse state are stored.
     QHash<int, QSet<QString>> _collapsedHeadingsPerNote;
 
-    QTreeWidgetItem* findSuitableParentItem(int elementType) const;
-    int findItemIndexForCursorPosition(int position) const;
+    [[nodiscard]] QTreeWidgetItem* findSuitableParentItem(int elementType) const;
+    [[nodiscard]] int findItemIndexForCursorPosition(int position) const;
     static QString stripMarkdown(const QString& input);
     void saveExpandState();
     void restoreExpandState();

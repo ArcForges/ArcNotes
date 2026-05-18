@@ -21,10 +21,10 @@ public:
     ~SearchViewModel() override;
 
     SearchResultModel* model();
-    const SearchResultModel* model() const;
-    QString query() const;
-    bool isSearching() const;
-    int resultCount() const;
+    [[nodiscard]] const SearchResultModel* model() const;
+    [[nodiscard]] QString query() const;
+    [[nodiscard]] bool isSearching() const;
+    [[nodiscard]] int resultCount() const;
 
     void setCommandBus(CommandBus* commandBus);
     void setSearchState(SearchState* searchState);

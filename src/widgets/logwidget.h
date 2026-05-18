@@ -17,7 +17,7 @@ public:
 
     static void logMessageOutput(QtMsgType type, const QMessageLogContext& context, const QString& msg);
     bool eventFilter(QObject* obj, QEvent* event) override;
-    QString getLogText() const;
+    [[nodiscard]] QString getLogText() const;
 
 public slots:
     void log(LogWidget::LogType logType, const QString& text);

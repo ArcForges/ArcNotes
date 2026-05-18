@@ -10,8 +10,8 @@ class PendingCommandTracker : public QObject {
 public:
     explicit PendingCommandTracker(QObject* parent = nullptr);
 
-    bool isBusy(const QString& commandType) const;
-    bool isBusy(const QString& commandType, int targetId) const;
+    [[nodiscard]] bool isBusy(const QString& commandType) const;
+    [[nodiscard]] bool isBusy(const QString& commandType, int targetId) const;
     void markBusy(const QString& commandType, int targetId = 0);
     void clearBusy(const QString& commandType, int targetId = 0);
 
@@ -20,7 +20,7 @@ signals:
     void targetBusyChanged(const QString& commandType, int targetId, bool busy);
 
 private:
-    QString targetKey(const QString& commandType, int targetId) const;
+    [[nodiscard]] QString targetKey(const QString& commandType, int targetId) const;
 
     QHash<QString, int> _busyCounts;
     QHash<QString, int> _targetBusyCounts;

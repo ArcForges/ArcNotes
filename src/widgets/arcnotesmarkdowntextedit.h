@@ -50,7 +50,7 @@ public:
      */
     void selectEnclosedText();
 
-    QTextCursor fullLineSelectionCursor() const;
+    [[nodiscard]] QTextCursor fullLineSelectionCursor() const;
     bool replaceFullLineSelection(const QString& text);
     bool changeHeadingDepthOfSelection(int levelDelta);
 
@@ -85,7 +85,7 @@ public:
      *                               word-characters
      * @return
      */
-    QString currentWord(bool withPreviousCharacters = false) const;
+    [[nodiscard]] QString currentWord(bool withPreviousCharacters = false) const;
 
     /**
      * Tries to find words that start with the current word in the note text edit
@@ -96,9 +96,9 @@ public:
     bool autoComplete(QStringList& resultList) const;
     bool wikiLinkAutoComplete(QStringList& resultList, QString& filterText, int& replaceLength) const;
 
-    QString currentBlock() const;
+    [[nodiscard]] QString currentBlock() const;
 
-    QSize minimumSizeHint() const;
+    [[nodiscard]] QSize minimumSizeHint() const override;
 
     void updateIgnoredClickUrlRegexps();
 
@@ -116,10 +116,10 @@ protected:
     bool eventFilter(QObject* obj, QEvent* event) override;
     void keyPressEvent(QKeyEvent* e) override;
     void focusInEvent(QFocusEvent* e) override;
-    int sidebarAdditionalWidth() const override;
+    [[nodiscard]] int sidebarAdditionalWidth() const override;
     void paintSidebar(QPainter* painter, const QRect& eventRect) override;
     bool sidebarMousePressEvent(QMouseEvent* event) override;
-    QVariant inputMethodQuery(Qt::InputMethodQuery property) const override;
+    [[nodiscard]] QVariant inputMethodQuery(Qt::InputMethodQuery property) const override;
 
 private:
     struct FoldRegion {
@@ -142,9 +142,9 @@ private:
     bool foldRegionForHeaderBlock(const QTextBlock& headerBlock, FoldRegion& region) const;
     bool setHeadingFolded(const QTextBlock& headerBlock, bool folded);
     bool setFoldRegionFolded(const FoldRegion& region, bool folded);
-    bool isHeadingFolded(const QTextBlock& headerBlock) const;
+    [[nodiscard]] bool isHeadingFolded(const QTextBlock& headerBlock) const;
     static QString headingStateKey(const QTextBlock& headerBlock, QHash<QString, int>& headingOccurrences);
-    bool hasFoldableHeadings() const;
+    [[nodiscard]] bool hasFoldableHeadings() const;
     bool headerBlockAtSidebarPosition(const QPoint& pos, QTextBlock& headerBlock) const;
     void storeCurrentFoldedHeadingState();
     void scheduleRestoreCurrentFoldedHeadingState();

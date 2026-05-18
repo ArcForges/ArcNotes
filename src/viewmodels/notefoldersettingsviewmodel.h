@@ -20,14 +20,15 @@ public:
                                          NoteSubFolderRepository* noteSubFolderRepository = nullptr,
                                          QObject* parent = nullptr);
 
-    QList<NoteFolderData> noteFolders() const;
-    NoteFolderData noteFolder(int folderId) const;
-    int noteFolderCount() const;
-    int currentFolderId() const;
-    QVariant noteFolderSetting(int folderId, const QString& key, const QVariant& defaultValue = QVariant()) const;
-    QString subFolderTreeExpandStateSettingsKey(int noteFolderId) const;
-    bool willSubFolderBeIgnored(const QString& folderName) const;
-    QString defaultIgnoredSubfoldersPattern() const;
+    [[nodiscard]] QList<NoteFolderData> noteFolders() const;
+    [[nodiscard]] NoteFolderData noteFolder(int folderId) const;
+    [[nodiscard]] int noteFolderCount() const;
+    [[nodiscard]] int currentFolderId() const;
+    [[nodiscard]] QVariant noteFolderSetting(int folderId, const QString& key,
+                                             const QVariant& defaultValue = QVariant()) const;
+    [[nodiscard]] QString subFolderTreeExpandStateSettingsKey(int noteFolderId) const;
+    [[nodiscard]] bool willSubFolderBeIgnored(const QString& folderName) const;
+    [[nodiscard]] QString defaultIgnoredSubfoldersPattern() const;
 
 public slots:
     NoteFolderData saveNoteFolder(const NoteFolderData& folder);

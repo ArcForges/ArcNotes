@@ -27,18 +27,18 @@ class SettingsService : public QObject {
 public:
     static SettingsService& instance();
 
-    QVariant value(const QString& key, const QVariant& defaultValue = QVariant()) const;
+    [[nodiscard]] QVariant value(const QString& key, const QVariant& defaultValue = QVariant()) const;
     void setValue(const QString& key, const QVariant& value);
     void remove(const QString& key);
-    bool contains(const QString& key) const;
+    [[nodiscard]] bool contains(const QString& key) const;
     void sync();
-    QStringList allKeys() const;
+    [[nodiscard]] QStringList allKeys() const;
     void clear();
 
     void beginGroup(const QString& prefix);
     void endGroup();
-    QString group() const;
-    QString fileName() const;
+    [[nodiscard]] QString group() const;
+    [[nodiscard]] QString fileName() const;
     void beginWriteArray(const QString& prefix, int size);
     void setArrayIndex(int i);
     void endArray();
@@ -60,5 +60,5 @@ private:
 
     static QHash<QString, QVariant>* cache();
     static QMutex* cacheMutex();
-    QString getFullKey(const QString& key) const;
+    [[nodiscard]] QString getFullKey(const QString& key) const;
 };

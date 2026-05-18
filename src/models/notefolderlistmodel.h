@@ -23,12 +23,12 @@ public:
 
     explicit NoteFolderListModel(QObject* parent = nullptr);
 
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
-    QHash<int, QByteArray> roleNames() const override;
+    [[nodiscard]] int rowCount(const QModelIndex& parent = QModelIndex()) const override;
+    [[nodiscard]] QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
+    [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
-    QVector<NoteFolderData> folders() const;
-    int rowForFolderId(int folderId) const;
+    [[nodiscard]] QVector<NoteFolderData> folders() const;
+    [[nodiscard]] int rowForFolderId(int folderId) const;
 
 public slots:
     void setFolders(const QVector<NoteFolderData>& folders);

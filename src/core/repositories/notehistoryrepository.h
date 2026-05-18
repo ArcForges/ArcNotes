@@ -10,6 +10,6 @@ public:
     static QVariant variantFromItemData(const NoteHistoryItemData& item);
     static NoteHistoryItemData itemDataFromVariant(const QVariant& variant);
 
-    NoteHistoryData restoreForCurrentFolder() const;
+    [[nodiscard]] NoteHistoryData restoreForCurrentFolder() const;
     void storeForCurrentFolder(const NoteHistoryData& history) const;
 };

@@ -17,13 +17,13 @@ class UiState : public QObject {
 public:
     explicit UiState(QObject* parent = nullptr);
 
-    QVariantMap panelVisibility() const;
-    bool isPanelVisible(const QString& panelId) const;
-    QString currentLayoutUuid() const;
-    bool isDistractionFree() const;
-    bool isFullScreen() const;
-    bool isMenuBarVisible() const;
-    bool isStatusBarVisible() const;
+    [[nodiscard]] QVariantMap panelVisibility() const;
+    [[nodiscard]] bool isPanelVisible(const QString& panelId) const;
+    [[nodiscard]] QString currentLayoutUuid() const;
+    [[nodiscard]] bool isDistractionFree() const;
+    [[nodiscard]] bool isFullScreen() const;
+    [[nodiscard]] bool isMenuBarVisible() const;
+    [[nodiscard]] bool isStatusBarVisible() const;
 
 public slots:
     void setPanelVisibility(const QVariantMap& panelVisibility);

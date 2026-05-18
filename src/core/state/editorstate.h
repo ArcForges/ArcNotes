@@ -21,18 +21,18 @@ class EditorState : public QObject {
 public:
     explicit EditorState(QObject* parent = nullptr);
 
-    int noteId() const;
-    bool isDirty() const;
-    bool isSaving() const;
-    bool hasConflict() const;
-    int cursorPosition() const;
-    int selectionStart() const;
-    int selectionLength() const;
-    QString contentHash() const;
-    QString baseChecksum() const;
-    bool isReadOnly() const;
+    [[nodiscard]] int noteId() const;
+    [[nodiscard]] bool isDirty() const;
+    [[nodiscard]] bool isSaving() const;
+    [[nodiscard]] bool hasConflict() const;
+    [[nodiscard]] int cursorPosition() const;
+    [[nodiscard]] int selectionStart() const;
+    [[nodiscard]] int selectionLength() const;
+    [[nodiscard]] QString contentHash() const;
+    [[nodiscard]] QString baseChecksum() const;
+    [[nodiscard]] bool isReadOnly() const;
 
-    EditorSessionSnapshot toSnapshot() const;
+    [[nodiscard]] EditorSessionSnapshot toSnapshot() const;
 
 public slots:
     void setNoteId(int noteId);

@@ -10,22 +10,23 @@
 
 class TagRepository {
 public:
-    TagData findById(int id) const;
-    TagData findByName(const QString& name, bool startsWith = false) const;
-    QVector<TagData> findAll() const;
-    QVector<TagData> findByParentId(int parentId) const;
-    QVector<TagData> findByNote(const NoteData& note) const;
-    bool linkToNote(int tagId, const NoteData& note) const;
-    bool unlinkFromNote(int tagId, const NoteData& note) const;
-    bool renameNoteFileNamesOfLinks(const QString& oldName, const QString& newName,
-                                    const QString& noteSubFolderPath) const;
-    bool renameNoteSubFolderPathOfLinks(const QString& noteName, const QString& oldPath, const QString& newPath) const;
-    bool renameNoteSubFolderPathsOfLinks(const QString& oldPath, const QString& newPath) const;
-    bool save(const TagData& tag) const;
-    bool remove(int id) const;
-    bool hasDescendant(int tagId, int descendantId) const;
-    int countLinkedNotes(int tagId, bool fromAllSubfolders, bool recursive = true) const;
-    QVector<TagData> searchByName(const QString& name) const;
-    QHash<QString, QVector<int>> allIdsByNoteFilePath() const;
-    QHash<QString, QStringList> allNamesByNoteFilePath() const;
+    [[nodiscard]] TagData findById(int id) const;
+    [[nodiscard]] TagData findByName(const QString& name, bool startsWith = false) const;
+    [[nodiscard]] QVector<TagData> findAll() const;
+    [[nodiscard]] QVector<TagData> findByParentId(int parentId) const;
+    [[nodiscard]] QVector<TagData> findByNote(const NoteData& note) const;
+    [[nodiscard]] bool linkToNote(int tagId, const NoteData& note) const;
+    [[nodiscard]] bool unlinkFromNote(int tagId, const NoteData& note) const;
+    [[nodiscard]] bool renameNoteFileNamesOfLinks(const QString& oldName, const QString& newName,
+                                                  const QString& noteSubFolderPath) const;
+    [[nodiscard]] bool renameNoteSubFolderPathOfLinks(const QString& noteName, const QString& oldPath,
+                                                      const QString& newPath) const;
+    [[nodiscard]] bool renameNoteSubFolderPathsOfLinks(const QString& oldPath, const QString& newPath) const;
+    [[nodiscard]] bool save(const TagData& tag) const;
+    [[nodiscard]] bool remove(int id) const;
+    [[nodiscard]] bool hasDescendant(int tagId, int descendantId) const;
+    [[nodiscard]] int countLinkedNotes(int tagId, bool fromAllSubfolders, bool recursive = true) const;
+    [[nodiscard]] QVector<TagData> searchByName(const QString& name) const;
+    [[nodiscard]] QHash<QString, QVector<int>> allIdsByNoteFilePath() const;
+    [[nodiscard]] QHash<QString, QStringList> allNamesByNoteFilePath() const;
 };

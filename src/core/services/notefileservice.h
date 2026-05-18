@@ -11,7 +11,7 @@ public:
     bool storeNoteTextFileToDisk(NoteData& note) const;
     bool updateNoteTextFromDisk(NoteData& note) const;
     bool renameNoteFile(NoteData& note, const QString& newName) const;
-    bool removeNoteFile(const NoteData& note) const;
-    bool canWriteToNoteFile(const NoteData& note) const;
-    QString calculateChecksum(const QString& text) const;
+    [[nodiscard]] bool removeNoteFile(const NoteData& note) const;
+    [[nodiscard]] bool canWriteToNoteFile(const NoteData& note) const;
+    [[nodiscard]] QString calculateChecksum(const QString& text) const;
 };

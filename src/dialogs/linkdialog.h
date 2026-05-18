@@ -27,16 +27,16 @@ public:
     explicit LinkDialog(int page, const QString& dialogTitle = QString(), QWidget* parent = nullptr);
     ~LinkDialog() override;
 
-    QString getSelectedNoteName() const;
-    NoteData getSelectedNote() const;
-    QString getURL() const;
+    [[nodiscard]] QString getSelectedNoteName() const;
+    [[nodiscard]] NoteData getSelectedNote() const;
+    [[nodiscard]] QString getURL() const;
     void setURL(const QString& text);
-    QString getLinkName() const;
+    [[nodiscard]] QString getLinkName() const;
     void setLinkName(const QString& text);
-    QString getLinkDescription() const;
+    [[nodiscard]] QString getLinkDescription() const;
     static QString getTitleFromHtml(const QString& html);
-    QString getSelectedHeading() const;
-    bool isWikiLink() const;
+    [[nodiscard]] QString getSelectedHeading() const;
+    [[nodiscard]] bool isWikiLink() const;
     void setCurrentNote(const NoteData& note);
 
 private slots:

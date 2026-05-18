@@ -19,9 +19,9 @@ public:
                               QObject* parent = nullptr);
 
     TagTreeModel* model();
-    const TagTreeModel* model() const;
-    int activeTagId() const;
-    int tagCount() const;
+    [[nodiscard]] const TagTreeModel* model() const;
+    [[nodiscard]] int activeTagId() const;
+    [[nodiscard]] int tagCount() const;
 
     void setCommandBus(CommandBus* commandBus);
     void setAppState(AppState* appState);
@@ -43,7 +43,7 @@ signals:
     void commandFailed(const QString& message);
 
 private:
-    QVector<int> selectedNoteIdVector() const;
+    [[nodiscard]] QVector<int> selectedNoteIdVector() const;
 
     CommandBus* _commandBus = nullptr;
     AppState* _appState = nullptr;

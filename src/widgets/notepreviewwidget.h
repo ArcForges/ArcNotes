@@ -39,7 +39,7 @@ protected:
     void resizeEvent(QResizeEvent* event) override;
     bool eventFilter(QObject* obj, QEvent* event) override;
 
-    QStringList extractGifUrls(const QString& text) const;
+    [[nodiscard]] QStringList extractGifUrls(const QString& text) const;
     void animateGif(const QString& text);
 
     void contextMenuEvent(QContextMenuEvent* event) override;

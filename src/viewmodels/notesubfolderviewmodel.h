@@ -18,9 +18,9 @@ public:
                                     QObject* parent = nullptr);
 
     NoteSubFolderTreeModel* model();
-    const NoteSubFolderTreeModel* model() const;
-    int activeSubFolderId() const;
-    bool showNotesFromAll() const;
+    [[nodiscard]] const NoteSubFolderTreeModel* model() const;
+    [[nodiscard]] int activeSubFolderId() const;
+    [[nodiscard]] bool showNotesFromAll() const;
 
     void setCommandBus(CommandBus* commandBus);
     void setAppState(AppState* appState);

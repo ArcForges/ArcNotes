@@ -34,8 +34,7 @@ class QDockWidget;
 #define INTERFACE_OVERRIDE_STYLESHEET_PRE_STRING "/* BEGIN INTERFACE OVERRIDE STYLESHEET */"
 #define INTERFACE_OVERRIDE_STYLESHEET_POST_STRING "/* END INTERFACE OVERRIDE STYLESHEET */"
 
-namespace Utils {
-namespace Gui {
+namespace Utils::Gui {
 enum TreeWidgetSearchFlag {
     None = 0x0000,
 
@@ -133,5 +132,4 @@ void fixDarkModeIcons(QWidget* widget);
 void applyDarkModeSettings();
 QAction* findActionByData(QMenu* menu, const QVariant& data);
 void applyInterfaceStyle(QString interfaceStyle = QString());
-}  // namespace Gui
-}  // namespace Utils
+}  // namespace Utils::Gui

@@ -23,9 +23,7 @@
 
 #include "services/settingsservice.h"
 
-namespace Utils {
-
-namespace Schema {
+namespace Utils::Schema {
 /**
  * @brief The Settings class
  *
@@ -83,5 +81,4 @@ QString encodeCssFont(const QFont& refFont);
 QString getSchemaStyles();
 
 QString lightEditorSchemaKey();
-}  // namespace Schema
-}  // namespace Utils
+}  // namespace Utils::Schema

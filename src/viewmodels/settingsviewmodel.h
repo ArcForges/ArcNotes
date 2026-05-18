@@ -27,21 +27,21 @@ public:
     explicit SettingsViewModel(CommandBus* commandBus = nullptr, SettingsRepository* settingsRepository = nullptr,
                                ColorModeRepository* colorModeRepository = nullptr, QObject* parent = nullptr);
 
-    QVariantMap generalSettings() const;
-    QVariantMap interfaceSettings() const;
-    QVariantMap editorSettings() const;
-    QVariantMap noteFolderSettings() const;
-    QVariantMap debugSettings() const;
-    bool containsPersistentSetting(const QString& key) const;
-    QStringList persistentSettingKeys() const;
-    QVariant persistentSetting(const QString& key, const QVariant& defaultValue = QVariant()) const;
-    QVector<QVariantMap> persistentSettingsArray(const QString& arrayName, const QStringList& keys) const;
-    QList<ColorModeData> colorModes() const;
-    ColorModeData colorModeById(const QString& id) const;
-    ColorModeData currentColorMode() const;
-    QString currentColorModeId() const;
-    bool isBuiltInColorModeId(const QString& id) const;
-    QString lightColorModeId() const;
+    [[nodiscard]] QVariantMap generalSettings() const;
+    [[nodiscard]] QVariantMap interfaceSettings() const;
+    [[nodiscard]] QVariantMap editorSettings() const;
+    [[nodiscard]] QVariantMap noteFolderSettings() const;
+    [[nodiscard]] QVariantMap debugSettings() const;
+    [[nodiscard]] bool containsPersistentSetting(const QString& key) const;
+    [[nodiscard]] QStringList persistentSettingKeys() const;
+    [[nodiscard]] QVariant persistentSetting(const QString& key, const QVariant& defaultValue = QVariant()) const;
+    [[nodiscard]] QVector<QVariantMap> persistentSettingsArray(const QString& arrayName, const QStringList& keys) const;
+    [[nodiscard]] QList<ColorModeData> colorModes() const;
+    [[nodiscard]] ColorModeData colorModeById(const QString& id) const;
+    [[nodiscard]] ColorModeData currentColorMode() const;
+    [[nodiscard]] QString currentColorModeId() const;
+    [[nodiscard]] bool isBuiltInColorModeId(const QString& id) const;
+    [[nodiscard]] QString lightColorModeId() const;
 
 public slots:
     void setGeneralSettings(const QVariantMap& settings);

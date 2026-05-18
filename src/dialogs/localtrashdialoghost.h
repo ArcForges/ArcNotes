@@ -9,10 +9,10 @@ class LocalTrashDialogHost {
 public:
     virtual ~LocalTrashDialogHost() = default;
 
-    virtual QVector<TrashItemData> localTrashItems() const = 0;
-    virtual QString localTrashItemText(int trashItemId) const = 0;
-    virtual QString localTrashItemRestorationPath(int trashItemId) const = 0;
-    virtual bool localTrashItemFileExists(int trashItemId) const = 0;
+    [[nodiscard]] virtual QVector<TrashItemData> localTrashItems() const = 0;
+    [[nodiscard]] virtual QString localTrashItemText(int trashItemId) const = 0;
+    [[nodiscard]] virtual QString localTrashItemRestorationPath(int trashItemId) const = 0;
+    [[nodiscard]] virtual bool localTrashItemFileExists(int trashItemId) const = 0;
     virtual bool localTrashRestoreItems(const QVector<int>& trashItemIds) = 0;
     virtual bool localTrashRemoveItems(const QVector<int>& trashItemIds) = 0;
 };

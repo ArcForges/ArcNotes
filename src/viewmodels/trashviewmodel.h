@@ -14,7 +14,7 @@ public:
     explicit TrashViewModel(CommandBus* commandBus = nullptr, QObject* parent = nullptr);
 
     TrashItemModel* model();
-    const TrashItemModel* model() const;
+    [[nodiscard]] const TrashItemModel* model() const;
 
     void setCommandBus(CommandBus* commandBus);
 

@@ -26,11 +26,11 @@ public:
 
     QAction* registerAction(const QString& id, const QString& text, const QString& category,
                             const QKeySequence& shortcut = QKeySequence(), const QIcon& icon = QIcon());
-    QAction* action(const QString& id) const;
-    QList<QAction*> actionsForCategory(const QString& category) const;
-    QStringList actionIds() const;
-    QStringList categories() const;
-    QKeySequence shortcut(const QString& id) const;
+    [[nodiscard]] QAction* action(const QString& id) const;
+    [[nodiscard]] QList<QAction*> actionsForCategory(const QString& category) const;
+    [[nodiscard]] QStringList actionIds() const;
+    [[nodiscard]] QStringList categories() const;
+    [[nodiscard]] QKeySequence shortcut(const QString& id) const;
 
 public slots:
     void registerDefaultActions();

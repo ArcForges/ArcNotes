@@ -22,12 +22,12 @@ public:
                                QObject* parent = nullptr);
 
     NoteListModel* model();
-    const NoteListModel* model() const;
+    [[nodiscard]] const NoteListModel* model() const;
 
-    QString sortOrder() const;
-    QString sortField() const;
-    int noteCount() const;
-    QVariantList selectedNoteIds() const;
+    [[nodiscard]] QString sortOrder() const;
+    [[nodiscard]] QString sortField() const;
+    [[nodiscard]] int noteCount() const;
+    [[nodiscard]] QVariantList selectedNoteIds() const;
 
     void setCommandBus(CommandBus* commandBus);
     void setAppState(AppState* appState);
@@ -55,8 +55,8 @@ signals:
     void commandFailed(const QString& message);
 
 private:
-    QVector<int> selectedNoteIdVector() const;
-    QVariantList toVariantList(const QVector<int>& noteIds) const;
+    [[nodiscard]] QVector<int> selectedNoteIdVector() const;
+    [[nodiscard]] QVariantList toVariantList(const QVector<int>& noteIds) const;
 
     CommandBus* _commandBus = nullptr;
     AppState* _appState = nullptr;

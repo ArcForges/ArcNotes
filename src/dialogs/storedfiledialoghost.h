@@ -10,15 +10,16 @@ class StoredFileDialogHost {
 public:
     virtual ~StoredFileDialogHost() = default;
 
-    virtual NoteData storedFileDialogCurrentNote() const = 0;
-    virtual QVector<NoteData> storedFileDialogAllNotes() const = 0;
-    virtual QString storedFileDialogMediaPath() const = 0;
-    virtual QString storedFileDialogAttachmentsPath() const = 0;
-    virtual QStringList storedFileDialogMediaFiles(const NoteData& note) const = 0;
-    virtual QStringList storedFileDialogAttachmentFiles(const NoteData& note) const = 0;
-    virtual QString storedFileDialogMediaUrlStringForFileName(const NoteData& note, const QString& fileName) const = 0;
-    virtual QString storedFileDialogAttachmentUrlStringForFileName(const NoteData& note,
-                                                                   const QString& fileName) const = 0;
+    [[nodiscard]] virtual NoteData storedFileDialogCurrentNote() const = 0;
+    [[nodiscard]] virtual QVector<NoteData> storedFileDialogAllNotes() const = 0;
+    [[nodiscard]] virtual QString storedFileDialogMediaPath() const = 0;
+    [[nodiscard]] virtual QString storedFileDialogAttachmentsPath() const = 0;
+    [[nodiscard]] virtual QStringList storedFileDialogMediaFiles(const NoteData& note) const = 0;
+    [[nodiscard]] virtual QStringList storedFileDialogAttachmentFiles(const NoteData& note) const = 0;
+    [[nodiscard]] virtual QString storedFileDialogMediaUrlStringForFileName(const NoteData& note,
+                                                                            const QString& fileName) const = 0;
+    [[nodiscard]] virtual QString storedFileDialogAttachmentUrlStringForFileName(const NoteData& note,
+                                                                                 const QString& fileName) const = 0;
     virtual bool storedFileDialogRenameMediaReferences(const QVector<int>& noteIds, const QString& oldFileName,
                                                        const QString& newFileName) = 0;
     virtual bool storedFileDialogRenameAttachmentReferences(const QVector<int>& noteIds, const QString& oldFileName,
