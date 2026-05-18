@@ -17,6 +17,7 @@
 #include "error.h"
 
 #include <assert.h>
+#include <inttypes.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <string.h>
@@ -171,11 +172,11 @@ void gumbo_error_to_string(
   switch (error->type) {
     case GUMBO_ERR_UTF8_INVALID:
       print_message(
-          parser, output, "Invalid UTF8 character 0x%x", error->v.codepoint);
+          parser, output, "Invalid UTF8 character 0x%" PRIx64, error->v.codepoint);
       break;
     case GUMBO_ERR_UTF8_TRUNCATED:
       print_message(parser, output,
-          "Input stream ends with a truncated UTF8 character 0x%x",
+          "Input stream ends with a truncated UTF8 character 0x%" PRIx64,
           error->v.codepoint);
       break;
     case GUMBO_ERR_NUMERIC_CHAR_REF_NO_DIGITS:
@@ -184,13 +185,13 @@ void gumbo_error_to_string(
       break;
     case GUMBO_ERR_NUMERIC_CHAR_REF_WITHOUT_SEMICOLON:
       print_message(parser, output,
-          "The numeric character reference &#%d should be followed "
+          "The numeric character reference &#%" PRId64 " should be followed "
           "by a semicolon",
           error->v.codepoint);
       break;
     case GUMBO_ERR_NUMERIC_CHAR_REF_INVALID:
       print_message(parser, output,
-          "The numeric character reference &#%d; encodes an invalid "
+          "The numeric character reference &#%" PRId64 "; encodes an invalid "
           "unicode codepoint",
           error->v.codepoint);
       break;
