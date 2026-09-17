@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+dotnet restore ArcNotes.slnx --locked-mode
+dotnet format ArcNotes.slnx --verify-no-changes --no-restore
+dotnet build ArcNotes.slnx -c Release --no-restore
+dotnet test --project tests/ArcForges.ArcNotes.Tests/ArcForges.ArcNotes.Tests.csproj -c Release --no-build
