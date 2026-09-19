@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "contracts-provenance-csharp-r2",
+  "kind": "source",
+  "sourceRepository": "https://github.com/ArcForges/Contracts",
+  "sourceCommit": "18a970c67c463f1971ca05773b80f31a1b1ba1a7",
+  "sourcePaths": [
+    "eng/check_provenance.py"
+  ],
+  "licence": {
+    "spdx": "Apache-2.0",
+    "category": "permissive",
+    "evidence": [
+      {
+        "path": "eng/check_provenance.py",
+        "sha256": "c9e888d9845bd479c36439922c26038f29807214740ad7c467dfb3bb414a3024",
+        "finding": "The individual Python file declares SPDX-License-Identifier: Apache-2.0."
+      }
+    ],
+    "scope": "Rewrite the reviewed Apache provenance checker as C# in the existing AGPL repository tool. Preserve the Apache source attribution and full licence; the derivative implementation is distributed under AGPL-3.0-only. Add no Python/Node runtime requirement and no sibling source build dependency.",
+    "copyingPermission": null
+  },
+  "attribution": [
+    "Copyright ArcForges contributors. Original provenance checker: Apache-2.0; full text in eng/third-party/LICENSE.Contracts.txt.",
+    "ArcForges modifications: C# rewrite, existing repository-tool integration and portable archive notice validation."
+  ],
+  "targets": [
+    {
+      "path": "eng/ArcForges.Repository/ProvenancePolicy.cs",
+      "sha256": "0da29d6f3cd9656640276d27eab25ee38fec68809d4dcc68ef3c1ad96ec1f3b9",
+      "normalization": "lf"
+    }
+  ],
+  "artifactTargets": [],
+  "disposition": "Rewrite",
+  "verification": {
+    "kind": "transformation",
+    "command": "dotnet run --project eng/ArcForges.Repository -- check",
+    "expected": "Independent C# positive/negative provenance tests, real Git inventory and history checks, deterministic NOTICE agreement with the Apache checker, and immutable reviewed target hash.",
+    "artifacts": []
+  },
+  "notice": {
+    "required": true,
+    "text": "Copyright ArcForges contributors. Original provenance checker: Apache-2.0; full text in eng/third-party/LICENSE.Contracts.txt.\nArcForges modifications: C# rewrite, existing repository-tool integration and portable archive notice validation.",
+    "files": [
+      "eng/third-party/LICENSE.Contracts.txt",
+      "eng/provenance/NOTICE.txt"
+    ],
+    "distribution": "source",
+    "reason": "This is source/build tooling; it is absent from the Native AOT application. Retain the original legal text and changed-file attribution with repository source."
+  },
+  "lifetime": {
+    "status": "permanent",
+    "owner": "ArcNotes Licensing and Provenance Owner",
+    "removalTrigger": null
+  },
+  "generation": null,
+  "review": {
+    "owner": "Licensing and Provenance Owner",
+    "reviewer": "Codex, acting under the repository maintainer's implementation and review authorization",
+    "reviewedOn": "2026-09-19",
+    "decision": "approved",
+    "rationale": "Rewrite the reviewed Apache provenance checker as C# in the existing AGPL repository tool. Preserve the Apache source attribution and full licence; the derivative implementation is distributed under AGPL-3.0-only. Add no Python/Node runtime requirement and no sibling source build dependency. Correct the summary heading to match the independently implemented Apache renderer; keep revision 1 unchanged.",
+    "baselineCommit": "ce797cd18d368b57dc4c9bc29112a9467172ac6d",
+    "reconciliation": false
+  },
+  "supersedes": "contracts-provenance-csharp-r1"
+}
