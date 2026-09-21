@@ -80,7 +80,8 @@ public sealed class BuildIdentityTests
             "assembly/release.json" when mode == "version" => "{\"versions\":[{\"subject\":\"app\",\"version\":\"AppVersion\"}]}",
             "assembly/release.json" => "{\"versions\":[{\"subject\":\"app\",\"version\":\"1\"}]}",
             "packages/contracts/source.json" => "{\"schema\":\"fixture.rpc.v1\",\"descriptorSha256\":\"" + new string('a', 64) + "\",\"dirty\":false}",
-            _ => throw new InvalidOperationException("Unexpected fixture source.")
+            "src/ArcForges.ArcNotes/packages.lock.json" => "{\"dependencies\":{}}",
+            _ => "{\"versions\":[{\"subject\":\"app\",\"version\":\"1\"}]}"
         };
         Assert.Throws<InvalidOperationException>(() => BuildIdentity.Resolve(catalog, Read));
     }
