@@ -16,7 +16,7 @@ dotnet run --project src/ArcForges.ArcNotes
 dotnet run --project eng/ArcForges.Repository -- hooks
 ```
 
-The UI, application state and repository tool are C#. Avalonia/Skia supply packaged native UI/rendering dependencies. The application consumes `ArcForges.Contracts.PublicApi` **1.0.0-ci.36.1** and the private build-time `ArcForges.Build.Policy` **1.0.0-ci.7.1**. It does not ship unused DesktopPlatform media engines.
+The UI, application state and repository tool are C#. Avalonia/Skia supply packaged native UI/rendering dependencies. The application consumes `ArcForges.Contracts.PublicApi` **1.0.0-ci.36.1** and the private build-time `ArcForges.Build.Policy` **1.0.0-ci.20.1**. It does not ship unused DesktopPlatform media engines.
 
 ## Downloads and automation
 
@@ -42,3 +42,5 @@ The same tool enforces [source provenance](docs/provenance.md): complete file
 classification, immutable reuse records, full notices and portable-archive checks.
 
 Read [CONTRIBUTING](CONTRIBUTING.md), [security reporting](SECURITY.md) and the [code of conduct](CODE_OF_CONDUCT.md). ArcNotes remains **AGPL-3.0-only**; see [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md).
+
+`--build-info --evidence <absolute-path.json>` writes offline support metadata from the compiled application. See [build identity](docs/build-identity.md).
