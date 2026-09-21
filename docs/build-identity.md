@@ -21,12 +21,14 @@ format, storage, capability, policy or extension version is invented for this
 foundation. Explicit absent states name their later responsible work packages.
 There is no first-party native ABI in this application.
 
-Preparation executes the actual Native AOT candidate offline and compares its
-report with independently obtained Git/run/release and restored dependency inputs.
-The report is included in each portable archive. Archive verification reads it
-and rejects even rehashed metadata changes. Existing native UI/live Cloud checks
-remain required on all five native CI hosts. The `verify-assemblies` command reads
-the actual PE metadata of the app, core, tests and repository tool after compilation.
+The repository tool statically reads actual app/core/test/tool PE metadata once.
+Preparation writes `build-identity.json` from the reviewed Git/run/release, restored
+dependency and committed source inputs without launching the AOT app. This packaged
+build-input receipt is not runtime execution evidence. The app's explicit local
+`--build-info` command remains available for relevant support diagnostics.
+Publication checks candidate identity and legal/source integrity once. CI has three
+Windows/Linux compilation targets, no macOS/UI/live execution and no routine public
+archive download or runtime verification cycle.
 
 Tests mutate each of the nine distinct source kinds, check deterministic output,
 and reject missing/unknown axes, aliases, duplicate subjects, malformed versions,

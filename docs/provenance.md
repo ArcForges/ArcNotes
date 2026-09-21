@@ -46,13 +46,9 @@ absent from the Native AOT application. No sibling source is consumed during bui
 
 Portable staging requires committed, audited source. It retains the root licence,
 six exact upstream legal documents, the generated package source summary and the
-actual source-audit receipt. Packing and independent release verification read the
-real ZIP/tar entries, compare full legal bytes and require a passing receipt for
+actual source-audit receipt. One publication-handoff check reads the
+real ZIP/tar entries, compares full legal bytes and requires a passing receipt for
 the candidate's clean source commit. Existing dependency notices remain intact;
-the summary does not replace them. The same gates run on all five native hosts.
+the summary does not replace them. The repository static-check command runs once on Linux; each of the three Windows/Linux staging steps retains its source-policy receipt and required legal material.
 
-Locked dependencies, Native AOT, native UI actions, real Cloud requests, failure
-cases and exact public release assets retain their existing gates. Source or
-licence checks do not establish product completeness, OS trust signing or later
-commercial readiness. Each contribution records its own observed runtime and
-publication evidence after full review and successful CI.
+Current CI and publication follow the [accepted validation policy](https://github.com/ArcForges/ArcForges-Design/blob/47db6670a727317939b91245e8c0b288834acf99/docs/assurance/ci-and-local-validation-policy.md). Windows/Linux compilation, offline unit/static/security checks and required provenance remain; macOS, UI/live/runtime gates and repeated public downloads are removed. These checks do not establish product completeness or commercial readiness.
