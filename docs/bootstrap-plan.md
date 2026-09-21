@@ -1,5 +1,7 @@
 # ArcNotes desktop Hello bootstrap
 
+> Historical bootstrap record. Its five-platform/live-test release procedure has been superseded by the [CI and local validation policy](https://github.com/ArcForges/ArcForges-Design/blob/47db6670a727317939b91245e8c0b288834acf99/docs/assurance/ci-and-local-validation-policy.md) and [current release mechanics](releasing.md). Retain the original account below as history; do not execute it as current instructions.
+
 ## Source and bounded scope
 
 Copy the complete tracked ArcChat foundation at [merged commit 818ca61b106eb373de94622125a9a54e5a3644d5](https://github.com/ArcForges/ArcChat/commit/818ca61b106eb373de94622125a9a54e5a3644d5), then adapt product identity for ArcNotes (knowledge management). The target started at 9a9de616040622760aa1b8dd213d6310c9996539 with only the same AGPL licence. This is a Hello bootstrap, not implementation of the product's full business workflows.
