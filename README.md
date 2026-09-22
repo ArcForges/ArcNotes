@@ -43,3 +43,5 @@ classification, immutable reuse records, full notices and portable-archive check
 Read [CONTRIBUTING](CONTRIBUTING.md), [security reporting](SECURITY.md) and the [code of conduct](CODE_OF_CONDUCT.md). ArcNotes remains **AGPL-3.0-only**; see [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
 `--build-info --evidence <absolute-path.json>` writes offline support metadata from the compiled application. See [build identity](docs/build-identity.md).
+
+The [dependency admission gate](docs/dependency-policy.md) checks the complete locked package closure, immutable inputs, public publisher boundaries and upgrade evidence.
