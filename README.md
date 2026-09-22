@@ -2,7 +2,7 @@
 
 Native C# desktop entry point for the ArcForges knowledge management product. This bootstrap provides a working Hello screen connected to the deployed Cloud Native AOT service at `https://arcforges.com/api`.
 
-The application starts offline. Enter a name and select **Say hello** to send one binary gRPC-Web request through the published Contracts client. Progress, cancellation and failures are visible; retry is an explicit user action. Names retain whitespace and Unicode, with a 1â€“256 UTF-16 unit limit. Authentication and product-specific workflows are not implemented in this bootstrap.
+The application starts offline. Enter a name and select **Say hello** to send one binary gRPC-Web request through the published Contracts client. Progress, cancellation and failures are visible; retry is an explicit user action. Names retain whitespace and Unicode, with a 1–256 UTF-16 unit limit. Authentication and product-specific workflows are not implemented in this bootstrap.
 
 ## Run and develop
 
