@@ -37,6 +37,17 @@ public static partial class DependencyPolicy
         }
     }
 
+    public static void ValidateBaseline(string reviewJson, string baselineGlobalJson, string baselinePackagesXml)
+    {
+        using var review = JsonDocument.Parse(reviewJson);
+        using var sdk = JsonDocument.Parse(baselineGlobalJson);
+        var declared = review.RootElement.GetProperty("baselineFrameworkVersions");
+        var avalonia = XDocument.Parse(baselinePackagesXml).Descendants("PackageVersion")
+            .Single(p => (string?)p.Attribute("Include") == "Avalonia.Desktop").Attribute("Version")!.Value;
+        Require(Text(declared, "dotnet") == Text(sdk.RootElement.GetProperty("sdk"), "version") && Text(declared, "avalonia") == avalonia,
+            "Framework baseline reset does not match accepted Git source.");
+    }
+
     public static void Validate(string root, IEnumerable<string> inventory)
     {
         var files = inventory.Distinct(StringComparer.Ordinal).ToArray();

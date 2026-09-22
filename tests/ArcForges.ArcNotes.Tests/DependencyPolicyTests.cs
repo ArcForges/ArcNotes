@@ -47,6 +47,15 @@ public sealed class DependencyPolicyTests
     }
 
     [Fact]
+    public void SuccessorReviewCannotResetFrameworkBaseline()
+    {
+        const string sdk = """{"sdk":{"version":"10.0.401"}}""";
+        const string packages = """<Project><ItemGroup><PackageVersion Include="Avalonia.Desktop" Version="12.1.2" /></ItemGroup></Project>""";
+        const string review = """{"baselineFrameworkVersions":{"dotnet":"11.0.100","avalonia":"13.0.0"}}""";
+        Assert.Contains("Framework baseline reset", Assert.Throws<InvalidOperationException>(() => DependencyPolicy.ValidateBaseline(review, sdk, packages)).Message, StringComparison.Ordinal);
+    }
+
+    [Fact]
     public void StableCoreCannotConsumeCandidatePackages()
     {
         using var fixture = new Fixture();

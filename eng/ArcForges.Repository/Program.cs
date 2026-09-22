@@ -314,6 +314,14 @@ public static partial class Program
         }
         Console.WriteLine("Repository text, structured inputs and whitespace checks passed.");
         DependencyPolicy.Validate(Directory.GetCurrentDirectory(), files);
+        using var dependencyReview = JsonDocument.Parse(File.ReadAllText("eng/policy/dependency-review.json"));
+        var dependencyBaseline = dependencyReview.RootElement.GetProperty("baselineCommit").GetString()!;
+        await Run("git", ["merge-base", "--is-ancestor", dependencyBaseline, "origin/main"]);
+        DependencyPolicy.ValidateBaseline(File.ReadAllText("eng/policy/dependency-review.json"),
+            await Capture("git", ["show", dependencyBaseline + ":global.json"]),
+            await Capture("git", ["show", dependencyBaseline + ":Directory.Packages.props"]));
+        if ((await Capture("git", ["rev-parse", "--is-shallow-repository"])).Trim() != "false")
+            throw new InvalidOperationException("Full Git admission history is required.");
         var dependencyHistory = new List<string>();
         foreach (var revision in (await Capture("git", ["log", "--format=%H", "--", "eng/policy/dependency-policy.json"])).Split('\n', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries))
         {
@@ -326,7 +334,7 @@ public static partial class Program
         {
             repository = "ArcNotes",
             result = "passed",
-            sourceCommit = await Capture("git", ["rev-parse", "HEAD"]),
+            sourceCommit = (await Capture("git", ["rev-parse", "HEAD"])).Trim(),
             policySha256 = DependencyPolicy.HashText(File.ReadAllText("eng/policy/dependency-policy.json")),
             reviewSha256 = DependencyPolicy.HashText(File.ReadAllText("eng/policy/dependency-review.json")),
             scope = "offline dependency admission; no new runtime or public-artifact validation"
