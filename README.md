@@ -2,7 +2,7 @@
 
 Native C# desktop entry point for the ArcForges knowledge management product. This bootstrap provides a working Hello screen connected to the deployed Cloud Native AOT service at `https://arcforges.com/api`.
 
-The application starts offline. Enter a name and select **Say hello** to send one binary gRPC-Web request through the published Contracts client. Progress, cancellation and failures are visible; retry is an explicit user action. Names retain whitespace and Unicode, with a 1–256 UTF-16 unit limit. Authentication and product-specific workflows are not implemented in this bootstrap.
+The application starts offline. Enter a name and select **Say hello** to send one binary gRPC-Web request through the published Contracts client. Progress, cancellation and failures are visible; retry is an explicit user action. Names retain whitespace and Unicode, with a 1â€“256 UTF-16 unit limit. Authentication and product-specific workflows are not implemented in this bootstrap.
 
 ## Run and develop
 
@@ -43,3 +43,5 @@ classification, immutable reuse records, full notices and portable-archive check
 Read [CONTRIBUTING](CONTRIBUTING.md), [security reporting](SECURITY.md) and the [code of conduct](CODE_OF_CONDUCT.md). ArcNotes remains **AGPL-3.0-only**; see [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
 `--build-info --evidence <absolute-path.json>` writes offline support metadata from the compiled application. See [build identity](docs/build-identity.md).
+
+The [dependency admission gate](docs/dependency-policy.md) checks the complete locked package closure, immutable inputs, public publisher boundaries and upgrade evidence.
